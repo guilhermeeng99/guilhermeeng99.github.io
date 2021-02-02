@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<report>
+	<report-name>Relatório de campanha</report-name>
+	<date-range>1 de Janeiro de 2021 - 31 de Janeiro de 2021</date-range>
+	<table>
+		<row>
+			<cell>
+				<key>Status da campanha</key>
+				<value>Ativada</value>
+			</cell>
+			<cell>
+				<key>Campanha</key>
+				<value>Rabit - Mundo todo (sem CPA)</value>
+			</cell>
+			<cell>
+				<key>Nome do orçamento</key>
+				<value>--</value>
+			</cell>
+			<cell>
+				<key>Código da moeda</key>
+				<value>BRL</value>
+			</cell>
+			<cell>
+				<key>Orçamento</key>
+				<value>10,00</value>
+			</cell>
+			<cell>
+				<key>Tipo de orçamento</key>
+				<value>Diário</value>
+			</cell>
+			<cell>
+				<key>Status</key>
+				<value>Qualificado</value>
+			</cell>
+			<cell>
+				<key>Motivos do status</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Tipo de campanha</key>
+				<value>App</value>
+			</cell>
+			<cell>
+				<key>Custo</key>
+				<value>395,47</value>
+			</cell>
+			<cell>
+				<key>Taxa de conv.</key>
+				<value>35,88%</value>
+			</cell>
+			<cell>
+				<key>Conversões</key>
+				<value>1.683,00</value>
+			</cell>
+			<cell>
+				<key>Custo / conv.</key>
+				<value>0,23</value>
+			</cell>
+		</row>
+		<row>
+			<cell>
+				<key>Status da campanha</key>
+				<value>Ativada</value>
+			</cell>
+			<cell>
+				<key>Campanha</key>
+				<value>Rabit - Brasil Sudeste (sem CPA definido)</value>
+			</cell>
+			<cell>
+				<key>Nome do orçamento</key>
+				<value>--</value>
+			</cell>
+			<cell>
+				<key>Código da moeda</key>
+				<value>BRL</value>
+			</cell>
+			<cell>
+				<key>Orçamento</key>
+				<value>10,00</value>
+			</cell>
+			<cell>
+				<key>Tipo de orçamento</key>
+				<value>Diário</value>
+			</cell>
+			<cell>
+				<key>Status</key>
+				<value>Qualificado</value>
+			</cell>
+			<cell>
+				<key>Motivos do status</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Tipo de campanha</key>
+				<value>App</value>
+			</cell>
+			<cell>
+				<key>Custo</key>
+				<value>456,84</value>
+			</cell>
+			<cell>
+				<key>Taxa de conv.</key>
+				<value>47,98%</value>
+			</cell>
+			<cell>
+				<key>Conversões</key>
+				<value>2.301,00</value>
+			</cell>
+			<cell>
+				<key>Custo / conv.</key>
+				<value>0,20</value>
+			</cell>
+		</row>
+		<row>
+			<cell>
+				<key>Status da campanha</key>
+				<value>Ativada</value>
+			</cell>
+			<cell>
+				<key>Campanha</key>
+				<value>Rabit - Inglês</value>
+			</cell>
+			<cell>
+				<key>Nome do orçamento</key>
+				<value>--</value>
+			</cell>
+			<cell>
+				<key>Código da moeda</key>
+				<value>BRL</value>
+			</cell>
+			<cell>
+				<key>Orçamento</key>
+				<value>20,00</value>
+			</cell>
+			<cell>
+				<key>Tipo de orçamento</key>
+				<value>Diário</value>
+			</cell>
+			<cell>
+				<key>Status</key>
+				<value>Qualificado</value>
+			</cell>
+			<cell>
+				<key>Motivos do status</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Tipo de campanha</key>
+				<value>App</value>
+			</cell>
+			<cell>
+				<key>Custo</key>
+				<value>802,12</value>
+			</cell>
+			<cell>
+				<key>Taxa de conv.</key>
+				<value>33,63%</value>
+			</cell>
+			<cell>
+				<key>Conversões</key>
+				<value>1.215,00</value>
+			</cell>
+			<cell>
+				<key>Custo / conv.</key>
+				<value>0,66</value>
+			</cell>
+		</row>
+		<summary-row>
+			<cell>
+				<key>Status da campanha</key>
+				<value>Total: Campanhas filtradas</value>
+			</cell>
+			<cell>
+				<key>Campanha</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Nome do orçamento</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Código da moeda</key>
+				<value>BRL</value>
+			</cell>
+			<cell>
+				<key>Orçamento</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Tipo de orçamento</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Status</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Motivos do status</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Tipo de campanha</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Custo</key>
+				<value>1654,43</value>
+			</cell>
+			<cell>
+				<key>Taxa de conv.</key>
+				<value>39,69%</value>
+			</cell>
+			<cell>
+				<key>Conversões</key>
+				<value>5.199,00</value>
+			</cell>
+			<cell>
+				<key>Custo / conv.</key>
+				<value>0,32</value>
+			</cell>
+		</summary-row>
+		<summary-row>
+			<cell>
+				<key>Status da campanha</key>
+				<value>Total: Conta</value>
+			</cell>
+			<cell>
+				<key>Campanha</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Nome do orçamento</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Código da moeda</key>
+				<value>BRL</value>
+			</cell>
+			<cell>
+				<key>Orçamento</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Tipo de orçamento</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Status</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Motivos do status</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Tipo de campanha</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Custo</key>
+				<value>7890,58</value>
+			</cell>
+			<cell>
+				<key>Taxa de conv.</key>
+				<value>4,81%</value>
+			</cell>
+			<cell>
+				<key>Conversões</key>
+				<value>22.404,00</value>
+			</cell>
+			<cell>
+				<key>Custo / conv.</key>
+				<value>0,35</value>
+			</cell>
+		</summary-row>
+		<summary-row>
+			<cell>
+				<key>Status da campanha</key>
+				<value>Total: App</value>
+			</cell>
+			<cell>
+				<key>Campanha</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Nome do orçamento</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Código da moeda</key>
+				<value>BRL</value>
+			</cell>
+			<cell>
+				<key>Orçamento</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Tipo de orçamento</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Status</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Motivos do status</key>
+				<value></value>
+			</cell>
+			<cell>
+				<key>Tipo de campanha</key>
+				<value>App</value>
+			</cell>
+			<cell>
+				<key>Custo</key>
+				<value>7890,58</value>
+			</cell>
+			<cell>
+				<key>Taxa de conv.</key>
+				<value>4,81%</value>
+			</cell>
+			<cell>
+				<key>Conversões</key>
+				<value>22.404,00</value>
+			</cell>
+			<cell>
+				<key>Custo / conv.</key>
+				<value>0,35</value>
+			</cell>
+		</summary-row>
+	</table>
+</report>
