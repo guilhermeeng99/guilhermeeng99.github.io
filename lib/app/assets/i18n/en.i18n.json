@@ -1,0 +1,175 @@
+{
+  "app": {
+    "title": "Guilherme Passos - Flutter Developer"
+  },
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Guilherme\nPassos",
+    "role": "Flutter Developer",
+    "description": "Flutter Developer & Mobile Entrepreneur with 5+ years crafting high-performance apps and games reaching 15M+ downloads worldwide.",
+    "exploreProjects": "Explore Projects",
+    "getInTouch": "Get In Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Building digital products that scale",
+    "bio1": "Pleno Flutter Developer with over five years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.",
+    "bio2": "I've implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I've built and maintained have reached 15M+ downloads worldwide.",
+    "bio3": "I specialize in scalable architectures, long-term code maintainability, and high-performance mobile applications. My expertise spans multiple state management solutions (Riverpod, Bloc, MobX), native plugin integration, and the full Firebase ecosystem.",
+    "stats": {
+      "downloads": {
+        "value": "15M+",
+        "label": "Downloads"
+      },
+      "experience": {
+        "value": "5+",
+        "label": "Years Experience"
+      },
+      "products": {
+        "value": "7+",
+        "label": "Products Shipped"
+      },
+      "teamSize": {
+        "value": "14",
+        "label": "Max Team Size Co-led"
+      }
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Real-world products across games and mobile apps",
+    "items": {
+      "magicSort": {
+        "name": "Magic Sort",
+        "category": "Hybrid Casual Puzzle · 2024 – Present",
+        "description": "First hybrid casual water-sort puzzle game on the market. Designed complex/high-performance UI systems, monetization flows, and live-event mechanics.",
+        "badge": "480K+ downloads",
+        "metric": "480K+"
+      },
+      "rabit": {
+        "name": "Rabit",
+        "category": "Gamified Habit Tracker · 2020 – 2022",
+        "description": "Google Play Best of 2021 – App of the Year Nominee. Implemented gamified habit tracking with notifications, cloud sync, and analytics.",
+        "badge": "Best of 2021",
+        "metric": "3.5M+"
+      },
+      "cups": {
+        "name": "Cups",
+        "category": "Casual Puzzle · 2020 – 2023",
+        "description": "Water sort puzzle game surpassing 4.5M+ downloads with strong traction in the US market. Implemented UIs, monetization systems, and full ads integration.",
+        "metric": "4.5M+"
+      },
+      "farmVsAliens": {
+        "name": "Farm vs Aliens",
+        "category": "Tower Defense · 2023 – 2024",
+        "description": "Winner of the Google Play Indie Games Fund 2024. Led product direction, game design, and monetization strategy for this merge tower defense game.",
+        "badge": "Indie Fund Winner"
+      },
+      "capy": {
+        "name": "Capy: Self-Care Pet",
+        "category": "Wellness App",
+        "description": "Self-care companion app with a virtual pet mechanic. Users maintain their well-being through daily tasks and caring for their capybara."
+      },
+      "dropMerge": {
+        "name": "Drop & Merge",
+        "category": "Casual Puzzle",
+        "description": "Addictive drop and merge puzzle game combining strategic placement with satisfying merge mechanics for an engaging casual experience."
+      }
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My professional journey so far",
+    "items": {
+      "bluStudios": {
+        "title": "Partner & Pleno Flutter Engineer",
+        "company": "Blu Studios",
+        "period": "2019 – 2026",
+        "location": "Remote",
+        "points": [
+          "Built and maintained multiple mobile apps and games totaling 15M+ downloads worldwide.",
+          "Architected scalable systems supporting millions of users, including real-time leaderboards, live events, and ranking systems.",
+          "Owned the full mobile product lifecycle: architecture, development, testing, CI/CD, publishing, ASO, monetization, live ops, and store compliance.",
+          "Integrated backend services using Firebase (Full Suite), GraphQL APIs, and Node.js.",
+          "Designed and optimized monetization systems achieving consistently high eCPM performance.",
+          "Led fully remote teams of up to 14 people.",
+          "Established partnerships with Wildlife Studios and Homa Games."
+        ]
+      },
+      "vxCase": {
+        "title": "Junior Desktop Developer",
+        "company": "VX Case",
+        "period": "Oct 2018 – Mar 2019",
+        "location": "Salvador, Brazil",
+        "points": [
+          "Developed a desktop application focused on user interface implementation using TypeScript, Angular, and VTEX.",
+          "Built reusable UI components ensuring usability, scalability, and design consistency.",
+          "Collaborated with senior engineers to integrate frontend features with backend services."
+        ]
+      },
+      "tecall": {
+        "title": "IT Support Intern",
+        "company": "Tecall Consultoria",
+        "period": "Jan 2018 – Oct 2018",
+        "location": "Salvador, Brazil",
+        "points": [
+          "Provided technical support and infrastructure troubleshooting for corporate clients.",
+          "Assisted in system maintenance and hardware configuration.",
+          "Gained foundational experience in networking, system administration, and customer support."
+        ]
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills & Expertise",
+    "subtitle": "Technologies and tools I use to bring ideas to life",
+    "categories": {
+      "mobileDev": {
+        "title": "Mobile Development",
+        "skills": ["Flutter", "Dart", "Riverpod", "Bloc", "MobX", "MVVM", "Clean Architecture", "TDD", "Native Plugins"]
+      },
+      "backend": {
+        "title": "Backend & Cloud",
+        "skills": ["Firebase (Full Suite)", "Node.js", "GraphQL", "REST APIs", "SQL", "NoSQL"]
+      },
+      "languages": {
+        "title": "Languages",
+        "skills": ["Dart", "Java", "Kotlin", "JavaScript", "TypeScript"]
+      },
+      "tools": {
+        "title": "Tools & Product",
+        "skills": ["Git", "CI/CD", "Figma", "ASO", "Monetization", "Codemagic", "GitHub Actions"]
+      }
+    },
+    "awards": {
+      "title": "Awards & Recognition",
+      "googlePlay": {
+        "title": "Google Play Best of 2021",
+        "subtitle": "App of the Year Nominee (Rabit)"
+      },
+      "indieFund": {
+        "title": "Indie Games Fund 2023",
+        "subtitle": "Winner (Farm vs Aliens)"
+      },
+      "accelerator": {
+        "title": "Indie Games Accelerator 2024",
+        "subtitle": "Graduate"
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "subtitle": "Have a project in mind or want to discuss opportunities? I'm always open to new challenges and collaborations.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "footer": "© 2026 @:app.title. Built with",
+    "flutter": "Flutter."
+  }
+}

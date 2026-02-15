@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import '../theme/app_colors.dart';
-import '../widgets/glass_card.dart';
-import '../widgets/responsive_layout.dart';
-import '../widgets/section_title.dart';
+import 'package:my_portfolio/app/theme/app_colors.dart';
+import 'package:my_portfolio/app/widgets/glass_card.dart';
+import 'package:my_portfolio/app/widgets/responsive_layout.dart';
+import 'package:my_portfolio/app/widgets/section_title.dart';
+import 'package:my_portfolio/gen/i18n/strings.g.dart';
 
 class AboutSection extends StatelessWidget {
   const AboutSection({super.key});
@@ -16,9 +17,9 @@ class AboutSection extends StatelessWidget {
       child: ResponsiveLayout(
         child: Column(
           children: [
-            const SectionTitle(
-              title: 'About Me',
-              subtitle: 'Building digital products that scale',
+            SectionTitle(
+              title: t.about.title,
+              subtitle: t.about.subtitle,
             ),
             if (isMobile) ...[
               _buildStats(context, isMobile),
@@ -44,17 +45,17 @@ class AboutSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Pleno Flutter Developer with over five years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.',
+          t.about.bio1,
           style: Theme.of(context).textTheme.bodyLarge,
         ),
         const SizedBox(height: 20),
         Text(
-          'I\'ve implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I\'ve built and maintained have reached 15M+ downloads worldwide.',
+          t.about.bio2,
           style: Theme.of(context).textTheme.bodyMedium,
         ),
         const SizedBox(height: 20),
         Text(
-          'I specialize in scalable architectures, long-term code maintainability, and high-performance mobile applications. My expertise spans multiple state management solutions (Riverpod, Bloc, MobX), native plugin integration, and the full Firebase ecosystem.',
+          t.about.bio3,
           style: Theme.of(context).textTheme.bodyMedium,
         ),
       ],
@@ -63,10 +64,10 @@ class AboutSection extends StatelessWidget {
 
   Widget _buildStats(BuildContext context, bool isMobile) {
     final stats = [
-      _StatData('15M+', 'Downloads'),
-      _StatData('5+', 'Years Experience'),
-      _StatData('7+', 'Products Shipped'),
-      _StatData('14', 'Max Team Size Led'),
+      _StatData(t.about.stats.downloads.value, t.about.stats.downloads.label),
+      _StatData(t.about.stats.experience.value, t.about.stats.experience.label),
+      _StatData(t.about.stats.products.value, t.about.stats.products.label),
+      _StatData(t.about.stats.teamSize.value, t.about.stats.teamSize.label),
     ];
 
     return Column(
@@ -83,9 +84,9 @@ class AboutSection extends StatelessWidget {
                   child: Text(
                     stat.value,
                     style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700,
-                        ),
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
                 const SizedBox(width: 16),

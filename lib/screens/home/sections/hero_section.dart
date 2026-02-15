@@ -1,40 +1,36 @@
+import 'dart:async';
 import 'dart:math' as math;
-import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../theme/app_colors.dart';
-import '../widgets/responsive_layout.dart';
-import '../widgets/social_button.dart';
 
-class HeroSection extends StatefulWidget {
-  const HeroSection({super.key, required this.onExploreProjects, required this.onContact});
+import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_portfolio/app/app_constants.dart';
+import 'package:my_portfolio/app/theme/app_colors.dart';
+import 'package:my_portfolio/app/widgets/responsive_layout.dart';
+import 'package:my_portfolio/app/widgets/social_button.dart';
+import 'package:my_portfolio/gen/i18n/strings.g.dart';
+
+class HeroSection extends HookWidget {
+  const HeroSection({
+    required this.onExploreProjects,
+    required this.onContact,
+    super.key,
+  });
 
   final VoidCallback onExploreProjects;
   final VoidCallback onContact;
 
   @override
-  State<HeroSection> createState() => _HeroSectionState();
-}
-
-class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStateMixin {
-  late final AnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 8),
-    )..repeat();
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
+    final controller = useAnimationController(
+      duration: const Duration(seconds: 8),
+    );
+
+    useEffect(() {
+      unawaited(controller.repeat());
+      return null;
+    }, const []);
+
     final isMobile = ResponsiveLayout.isMobile(context);
     final screenHeight = MediaQuery.sizeOf(context).height;
 
@@ -44,28 +40,24 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
         children: [
           Positioned.fill(
             child: AnimatedBuilder(
-              animation: _controller,
-              builder: (context, _) => CustomPaint(
-                painter: _OrbPainter(_controller.value),
-              ),
+              animation: controller,
+              builder: (context, _) =>
+                  CustomPaint(painter: _OrbPainter(controller.value)),
             ),
           ),
           Center(
             child: ResponsiveLayout(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: isMobile ? CrossAxisAlignment.center : CrossAxisAlignment.start,
+                crossAxisAlignment: isMobile
+                    ? CrossAxisAlignment.center
+                    : CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '// hello, world',
-                    style: Theme.of(context).textTheme.labelMedium,
-                  ),
-                  const SizedBox(height: 16),
-                  Text(
-                    'Guilherme\nPassos Mendes',
+                    t.hero.name,
                     style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                          fontSize: isMobile ? 42 : 72,
-                        ),
+                      fontSize: isMobile ? 42 : 72,
+                    ),
                     textAlign: isMobile ? TextAlign.center : TextAlign.left,
                   ),
                   const SizedBox(height: 20),
@@ -74,10 +66,10 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
                   SizedBox(
                     width: isMobile ? double.infinity : 560,
                     child: Text(
-                      'Flutter Developer & Mobile Games Entrepreneur with 5+ years crafting high-performance apps and games reaching 15M+ downloads worldwide.',
+                      t.hero.description,
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                            fontSize: isMobile ? 15 : 18,
-                          ),
+                        fontSize: isMobile ? 15 : 18,
+                      ),
                       textAlign: isMobile ? TextAlign.center : TextAlign.left,
                     ),
                   ),
@@ -85,37 +77,39 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
                   Wrap(
                     spacing: 16,
                     runSpacing: 12,
-                    alignment: isMobile ? WrapAlignment.center : WrapAlignment.start,
+                    alignment: isMobile
+                        ? WrapAlignment.center
+                        : WrapAlignment.start,
                     children: [
                       _PrimaryButton(
-                        label: 'Explore Projects',
-                        onTap: widget.onExploreProjects,
+                        label: t.hero.exploreProjects,
+                        onTap: onExploreProjects,
                       ),
                       _OutlineButton(
-                        label: 'Get In Touch',
-                        onTap: widget.onContact,
+                        label: t.hero.getInTouch,
+                        onTap: onContact,
                       ),
                     ],
                   ),
                   const SizedBox(height: 40),
                   Row(
                     mainAxisSize: MainAxisSize.min,
-                    children: const [
+                    children: [
                       SocialButton(
                         icon: FontAwesomeIcons.github,
-                        url: 'https://github.com/guilhermeeng99',
+                        url: AppConstants.githubUrl,
                         tooltip: 'GitHub',
                       ),
-                      SizedBox(width: 12),
+                      const SizedBox(width: 12),
                       SocialButton(
                         icon: FontAwesomeIcons.linkedin,
-                        url: 'https://linkedin.com/in/guigapassos/',
+                        url: AppConstants.linkedinUrl,
                         tooltip: 'LinkedIn',
                       ),
-                      SizedBox(width: 12),
+                      const SizedBox(width: 12),
                       SocialButton(
                         icon: Icons.email_outlined,
-                        url: 'mailto:guilhermeeng99@gmail.com',
+                        url: AppConstants.emailUrl,
                         tooltip: 'Email',
                       ),
                     ],
@@ -130,15 +124,15 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
             right: 0,
             child: Center(
               child: AnimatedBuilder(
-                animation: _controller,
+                animation: controller,
                 builder: (context, child) {
-                  final bounce = math.sin(_controller.value * math.pi * 2) * 6;
+                  final bounce = math.sin(controller.value * math.pi * 2) * 6;
                   return Transform.translate(
                     offset: Offset(0, bounce),
                     child: child,
                   );
                 },
-                child: Icon(
+                child: const Icon(
                   Icons.keyboard_arrow_down_rounded,
                   color: AppColors.textMuted,
                   size: 32,
@@ -150,50 +144,45 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
       ),
     );
   }
-
-  Widget _buildGradientSubtitle(BuildContext context, bool isMobile) {
-    return ShaderMask(
-      shaderCallback: (bounds) => AppColors.primaryGradient.createShader(bounds),
-      child: Text(
-        'Flutter Developer · Game Creator',
-        style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-              color: Colors.white,
-              fontSize: isMobile ? 20 : 28,
-            ),
-        textAlign: isMobile ? TextAlign.center : TextAlign.left,
-      ),
-    );
-  }
 }
 
-class _PrimaryButton extends StatefulWidget {
+Widget _buildGradientSubtitle(BuildContext context, bool isMobile) {
+  return ShaderMask(
+    shaderCallback: (bounds) => AppColors.primaryGradient.createShader(bounds),
+    child: Text(
+      t.hero.role,
+      style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+        color: Colors.white,
+        fontSize: isMobile ? 20 : 28,
+      ),
+      textAlign: isMobile ? TextAlign.center : TextAlign.left,
+    ),
+  );
+}
+
+class _PrimaryButton extends HookWidget {
   const _PrimaryButton({required this.label, required this.onTap});
 
   final String label;
   final VoidCallback onTap;
 
   @override
-  State<_PrimaryButton> createState() => _PrimaryButtonState();
-}
-
-class _PrimaryButtonState extends State<_PrimaryButton> {
-  bool _hovered = false;
-
-  @override
   Widget build(BuildContext context) {
+    final hovered = useState(false);
+
     return MouseRegion(
-      onEnter: (_) => setState(() => _hovered = true),
-      onExit: (_) => setState(() => _hovered = false),
+      onEnter: (_) => hovered.value = true,
+      onExit: (_) => hovered.value = false,
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
-        onTap: widget.onTap,
+        onTap: onTap,
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 200),
           padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
           decoration: BoxDecoration(
             gradient: AppColors.primaryGradient,
             borderRadius: BorderRadius.circular(12),
-            boxShadow: _hovered
+            boxShadow: hovered.value
                 ? [
                     BoxShadow(
                       color: AppColors.primary.withValues(alpha: 0.4),
@@ -203,11 +192,11 @@ class _PrimaryButtonState extends State<_PrimaryButton> {
                 : [],
           ),
           child: Text(
-            widget.label,
+            label,
             style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600,
-                ),
+              color: Colors.white,
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ),
       ),
@@ -215,42 +204,41 @@ class _PrimaryButtonState extends State<_PrimaryButton> {
   }
 }
 
-class _OutlineButton extends StatefulWidget {
+class _OutlineButton extends HookWidget {
   const _OutlineButton({required this.label, required this.onTap});
 
   final String label;
   final VoidCallback onTap;
 
   @override
-  State<_OutlineButton> createState() => _OutlineButtonState();
-}
-
-class _OutlineButtonState extends State<_OutlineButton> {
-  bool _hovered = false;
-
-  @override
   Widget build(BuildContext context) {
+    final hovered = useState(false);
+
     return MouseRegion(
-      onEnter: (_) => setState(() => _hovered = true),
-      onExit: (_) => setState(() => _hovered = false),
+      onEnter: (_) => hovered.value = true,
+      onExit: (_) => hovered.value = false,
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
-        onTap: widget.onTap,
+        onTap: onTap,
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 200),
           padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
           decoration: BoxDecoration(
-            color: _hovered ? AppColors.primary.withValues(alpha: 0.1) : Colors.transparent,
+            color: hovered.value
+                ? AppColors.primary.withValues(alpha: 0.1)
+                : Colors.transparent,
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
-              color: _hovered ? AppColors.primary : AppColors.cardBorder,
+              color: hovered.value ? AppColors.primary : AppColors.cardBorder,
             ),
           ),
           child: Text(
-            widget.label,
+            label,
             style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                  color: _hovered ? AppColors.primary : AppColors.textSecondary,
-                ),
+              color: hovered.value
+                  ? AppColors.primary
+                  : AppColors.textSecondary,
+            ),
           ),
         ),
       ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../theme/app_colors.dart';
+import 'package:my_portfolio/app/theme/app_colors.dart';
 
 class TechChip extends StatelessWidget {
-  const TechChip({super.key, required this.label});
+  const TechChip({required this.label, super.key});
 
   final String label;
 

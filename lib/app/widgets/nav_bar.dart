@@ -1,49 +1,47 @@
 import 'package:flutter/material.dart';
-import '../theme/app_colors.dart';
-import '../widgets/responsive_layout.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:my_portfolio/app/theme/app_colors.dart';
+import 'package:my_portfolio/app/widgets/responsive_layout.dart';
+import 'package:my_portfolio/gen/i18n/strings.g.dart';
 
-class NavBar extends StatefulWidget {
+class NavBar extends HookWidget {
   const NavBar({
-    super.key,
     required this.onSectionTap,
     required this.scrollController,
+    super.key,
   });
 
   final void Function(int index) onSectionTap;
   final ScrollController scrollController;
 
   @override
-  State<NavBar> createState() => _NavBarState();
-}
-
-class _NavBarState extends State<NavBar> {
-  bool _scrolled = false;
-
-  @override
-  void initState() {
-    super.initState();
-    widget.scrollController.addListener(_onScroll);
-  }
-
-  void _onScroll() {
-    final shouldShow = widget.scrollController.offset > 50;
-    if (shouldShow != _scrolled) {
-      setState(() => _scrolled = shouldShow);
-    }
-  }
-
-  @override
   Widget build(BuildContext context) {
+    final scrolled = useState(false);
+
+    useEffect(() {
+      void onScroll() {
+        final shouldShow = scrollController.offset > 50;
+        if (shouldShow != scrolled.value) {
+          scrolled.value = shouldShow;
+        }
+      }
+
+      scrollController.addListener(onScroll);
+      return () => scrollController.removeListener(onScroll);
+    }, [scrollController]);
+
     final isMobile = ResponsiveLayout.isMobile(context);
 
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
       decoration: BoxDecoration(
-        color: _scrolled ? AppColors.background.withValues(alpha: 0.9) : Colors.transparent,
+        color: scrolled.value
+            ? AppColors.background.withValues(alpha: 0.9)
+            : Colors.transparent,
         border: Border(
           bottom: BorderSide(
-            color: _scrolled ? AppColors.divider : Colors.transparent,
+            color: scrolled.value ? AppColors.divider : Colors.transparent,
           ),
         ),
       ),
@@ -54,17 +52,17 @@ class _NavBarState extends State<NavBar> {
             MouseRegion(
               cursor: SystemMouseCursors.click,
               child: GestureDetector(
-                onTap: () => widget.onSectionTap(0),
+                onTap: () => onSectionTap(0),
                 child: ShaderMask(
                   shaderCallback: (bounds) =>
                       AppColors.primaryGradient.createShader(bounds),
                   child: Text(
-                    'GPM',
+                    'GP',
                     style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700,
-                          letterSpacing: 2,
-                        ),
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 2,
+                    ),
                   ),
                 ),
               ),
@@ -73,15 +71,18 @@ class _NavBarState extends State<NavBar> {
             if (!isMobile)
               Row(
                 children: [
-                  _NavItem(label: 'About', onTap: () => widget.onSectionTap(1)),
-                  _NavItem(label: 'Projects', onTap: () => widget.onSectionTap(2)),
-                  _NavItem(label: 'Experience', onTap: () => widget.onSectionTap(3)),
-                  _NavItem(label: 'Skills', onTap: () => widget.onSectionTap(4)),
-                  _NavItem(label: 'Contact', onTap: () => widget.onSectionTap(5)),
+                  _NavItem(label: t.nav.about, onTap: () => onSectionTap(1)),
+                  _NavItem(label: t.nav.projects, onTap: () => onSectionTap(2)),
+                  _NavItem(
+                    label: t.nav.experience,
+                    onTap: () => onSectionTap(3),
+                  ),
+                  _NavItem(label: t.nav.skills, onTap: () => onSectionTap(4)),
+                  _NavItem(label: t.nav.contact, onTap: () => onSectionTap(5)),
                 ],
               )
             else
-              _MobileMenuButton(onSectionTap: widget.onSectionTap),
+              _MobileMenuButton(onSectionTap: onSectionTap),
           ],
         ),
       ),
@@ -89,36 +90,33 @@ class _NavBarState extends State<NavBar> {
   }
 }
 
-class _NavItem extends StatefulWidget {
+class _NavItem extends HookWidget {
   const _NavItem({required this.label, required this.onTap});
 
   final String label;
   final VoidCallback onTap;
 
   @override
-  State<_NavItem> createState() => _NavItemState();
-}
-
-class _NavItemState extends State<_NavItem> {
-  bool _hovered = false;
-
-  @override
   Widget build(BuildContext context) {
+    final hovered = useState(false);
+
     return MouseRegion(
-      onEnter: (_) => setState(() => _hovered = true),
-      onExit: (_) => setState(() => _hovered = false),
+      onEnter: (_) => hovered.value = true,
+      onExit: (_) => hovered.value = false,
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
-        onTap: widget.onTap,
+        onTap: onTap,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           child: AnimatedDefaultTextStyle(
             duration: const Duration(milliseconds: 200),
             style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                  color: _hovered ? AppColors.primary : AppColors.textSecondary,
-                  fontSize: 14,
-                ),
-            child: Text(widget.label),
+              color: hovered.value
+                  ? AppColors.primary
+                  : AppColors.textSecondary,
+              fontSize: 14,
+            ),
+            child: Text(label),
           ),
         ),
       ),
@@ -139,11 +137,11 @@ class _MobileMenuButton extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       onSelected: onSectionTap,
       itemBuilder: (context) => [
-        _menuItem(1, 'About'),
-        _menuItem(2, 'Projects'),
-        _menuItem(3, 'Experience'),
-        _menuItem(4, 'Skills'),
-        _menuItem(5, 'Contact'),
+        _menuItem(1, t.nav.about),
+        _menuItem(2, t.nav.projects),
+        _menuItem(3, t.nav.experience),
+        _menuItem(4, t.nav.skills),
+        _menuItem(5, t.nav.contact),
       ],
     );
   }

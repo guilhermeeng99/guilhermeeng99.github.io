@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ResponsiveLayout extends StatelessWidget {
-  const ResponsiveLayout({super.key, required this.child});
+  const ResponsiveLayout({required this.child, super.key});
 
   final Widget child;
 

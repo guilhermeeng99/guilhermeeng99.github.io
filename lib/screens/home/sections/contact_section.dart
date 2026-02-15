@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_portfolio/app/app_constants.dart';
+import 'package:my_portfolio/app/theme/app_colors.dart';
+import 'package:my_portfolio/app/widgets/responsive_layout.dart';
+import 'package:my_portfolio/gen/i18n/strings.g.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../theme/app_colors.dart';
-import '../widgets/responsive_layout.dart';
 
 class ContactSection extends StatelessWidget {
   const ContactSection({super.key});
@@ -20,11 +23,11 @@ class ContactSection extends StatelessWidget {
               shaderCallback: (bounds) =>
                   AppColors.primaryGradient.createShader(bounds),
               child: Text(
-                'Let\'s Work Together',
+                t.contact.title,
                 style: Theme.of(context).textTheme.displayMedium?.copyWith(
-                      color: Colors.white,
-                      fontSize: isMobile ? 32 : 48,
-                    ),
+                  color: Colors.white,
+                  fontSize: isMobile ? 32 : 48,
+                ),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -32,7 +35,7 @@ class ContactSection extends StatelessWidget {
             SizedBox(
               width: 500,
               child: Text(
-                'Have a project in mind or want to discuss opportunities? I\'m always open to new challenges and collaborations.',
+                t.contact.subtitle,
                 style: Theme.of(context).textTheme.bodyLarge,
                 textAlign: TextAlign.center,
               ),
@@ -42,24 +45,24 @@ class ContactSection extends StatelessWidget {
               spacing: 20,
               runSpacing: 20,
               alignment: WrapAlignment.center,
-              children: const [
+              children: [
                 _ContactCard(
                   icon: Icons.email_outlined,
-                  label: 'Email',
+                  label: t.contact.email,
                   value: 'guilhermeeng99@gmail.com',
-                  url: 'mailto:guilhermeeng99@gmail.com',
+                  url: AppConstants.emailUrl,
                 ),
                 _ContactCard(
                   icon: FontAwesomeIcons.github,
-                  label: 'GitHub',
+                  label: t.contact.github,
                   value: 'guilhermeeng99',
-                  url: 'https://github.com/guilhermeeng99',
+                  url: AppConstants.githubUrl,
                 ),
                 _ContactCard(
                   icon: FontAwesomeIcons.linkedin,
-                  label: 'LinkedIn',
+                  label: t.contact.linkedin,
                   value: 'guigapassos',
-                  url: 'https://linkedin.com/in/guigapassos/',
+                  url: AppConstants.linkedinUrl,
                 ),
               ],
             ),
@@ -74,19 +77,19 @@ class ContactSection extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  '© 2026 Guilherme Passos Mendes. Built with ',
+                  t.contact.footer,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        fontSize: 13,
-                        color: AppColors.textMuted,
-                      ),
+                    fontSize: 13,
+                    color: AppColors.textMuted,
+                  ),
                 ),
                 const FlutterLogo(size: 16),
                 Text(
-                  ' Flutter.',
+                  ' ${t.contact.flutter}',
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        fontSize: 13,
-                        color: AppColors.textMuted,
-                      ),
+                    fontSize: 13,
+                    color: AppColors.textMuted,
+                  ),
                 ),
               ],
             ),
@@ -98,7 +101,7 @@ class ContactSection extends StatelessWidget {
   }
 }
 
-class _ContactCard extends StatefulWidget {
+class _ContactCard extends HookWidget {
   const _ContactCard({
     required this.icon,
     required this.label,
@@ -112,20 +115,15 @@ class _ContactCard extends StatefulWidget {
   final String url;
 
   @override
-  State<_ContactCard> createState() => _ContactCardState();
-}
-
-class _ContactCardState extends State<_ContactCard> {
-  bool _hovered = false;
-
-  @override
   Widget build(BuildContext context) {
+    final hovered = useState(false);
+
     return MouseRegion(
-      onEnter: (_) => setState(() => _hovered = true),
-      onExit: (_) => setState(() => _hovered = false),
+      onEnter: (_) => hovered.value = true,
+      onExit: (_) => hovered.value = false,
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
-        onTap: () => launchUrl(Uri.parse(widget.url)),
+        onTap: () => launchUrl(Uri.parse(url)),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 250),
           padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 24),
@@ -133,11 +131,11 @@ class _ContactCardState extends State<_ContactCard> {
             gradient: AppColors.cardGradient,
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
-              color: _hovered
+              color: hovered.value
                   ? AppColors.primary.withValues(alpha: 0.5)
                   : AppColors.cardBorder,
             ),
-            boxShadow: _hovered
+            boxShadow: hovered.value
                 ? [
                     BoxShadow(
                       color: AppColors.primary.withValues(alpha: 0.1),
@@ -150,22 +148,24 @@ class _ContactCardState extends State<_ContactCard> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Icon(
-                widget.icon,
-                color: _hovered ? AppColors.primary : AppColors.textSecondary,
+                icon,
+                color: hovered.value
+                    ? AppColors.primary
+                    : AppColors.textSecondary,
                 size: 28,
               ),
               const SizedBox(height: 12),
               Text(
-                widget.label,
+                label,
                 style: Theme.of(context).textTheme.labelLarge,
               ),
               const SizedBox(height: 4),
               Text(
-                widget.value,
+                value,
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      fontSize: 13,
-                      color: AppColors.textMuted,
-                    ),
+                  fontSize: 13,
+                  color: AppColors.textMuted,
+                ),
               ),
             ],
           ),

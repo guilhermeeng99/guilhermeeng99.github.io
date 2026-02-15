@@ -1,16 +1,34 @@
-# meu_site
+# Guilherme Passos - Portfolio
 
-A new Flutter project.
+Personal portfolio website built with Flutter Web showcasing my work as a Flutter Developer & Mobile Entrepreneur.
+
+## About
+
+Flutter Developer with 5+ years of experience and 7 years as an entrepreneur focused on mobile games and applications. Products I've built and maintained have reached **15M+ downloads worldwide**.
+
+## Features
+
+- Responsive design (mobile, tablet, desktop)
+- Smooth animations and transitions
+- Sections: About, Projects, Experience, Skills, Contact
+- Glassmorphism UI design
+
+## Tech Stack
+
+- **Framework**: Flutter Web
+- **State Management**: Flutter Hooks
+- **Internationalization**: Slang
+- **Assets**: FlutterGen
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+```bash
+flutter pub get
+flutter run -d chrome
+```
 
-A few resources to get you started if this is your first Flutter project:
+## Links
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [LinkedIn](https://linkedin.com/in/guigapassos/)
+- [GitHub](https://github.com/guilhermeeng99)
+- [Email](mailto:guilhermeeng99@gmail.com)

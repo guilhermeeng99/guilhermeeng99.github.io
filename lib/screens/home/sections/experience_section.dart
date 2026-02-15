@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '../theme/app_colors.dart';
-import '../widgets/responsive_layout.dart';
-import '../widgets/section_title.dart';
+import 'package:my_portfolio/app/theme/app_colors.dart';
+import 'package:my_portfolio/app/widgets/responsive_layout.dart';
+import 'package:my_portfolio/app/widgets/section_title.dart';
+import 'package:my_portfolio/gen/i18n/strings.g.dart';
 
 class ExperienceSection extends StatelessWidget {
   const ExperienceSection({super.key});
@@ -13,9 +14,9 @@ class ExperienceSection extends StatelessWidget {
       child: ResponsiveLayout(
         child: Column(
           children: [
-            const SectionTitle(
-              title: 'Experience',
-              subtitle: 'My professional journey so far',
+            SectionTitle(
+              title: t.experience.title,
+              subtitle: t.experience.subtitle,
             ),
             ...List.generate(_experiences.length, (index) {
               return _TimelineItem(
@@ -55,17 +56,17 @@ class _TimelineItem extends StatelessWidget {
                     Text(
                       experience.period,
                       style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                            color: AppColors.primary,
-                            fontWeight: FontWeight.w600,
-                          ),
+                        color: AppColors.primary,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                     const SizedBox(height: 4),
                     Text(
                       experience.location,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                            fontSize: 12,
-                            color: AppColors.textMuted,
-                          ),
+                        fontSize: 12,
+                        color: AppColors.textMuted,
+                      ),
                     ),
                   ],
                 ),
@@ -119,23 +120,23 @@ class _TimelineItem extends StatelessWidget {
                     Text(
                       experience.period,
                       style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                            color: AppColors.primary,
-                          ),
+                        color: AppColors.primary,
+                      ),
                     ),
                     const SizedBox(height: 4),
                   ],
                   Text(
                     experience.title,
                     style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                          fontSize: 20,
-                        ),
+                      fontSize: 20,
+                    ),
                   ),
                   const SizedBox(height: 4),
                   Text(
                     '${experience.company}${isMobile ? ' · ${experience.location}' : ''}',
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          color: AppColors.textMuted,
-                        ),
+                      color: AppColors.textMuted,
+                    ),
                   ),
                   const SizedBox(height: 16),
                   ...experience.points.map(
@@ -159,7 +160,8 @@ class _TimelineItem extends StatelessWidget {
                           Expanded(
                             child: Text(
                               point,
-                              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              style: Theme.of(context).textTheme.bodyMedium
+                                  ?.copyWith(
                                     fontSize: 14,
                                   ),
                             ),
@@ -180,56 +182,85 @@ class _TimelineItem extends StatelessWidget {
 
 class _ExperienceData {
   const _ExperienceData({
-    required this.title,
-    required this.company,
-    required this.period,
-    required this.location,
-    required this.points,
+    required this.titleKey,
   });
 
-  final String title;
-  final String company;
-  final String period;
-  final String location;
-  final List<String> points;
+  final String titleKey;
+
+  String get title {
+    switch (titleKey) {
+      case 'bluStudios':
+        return t.experience.items.bluStudios.title;
+      case 'vxCase':
+        return t.experience.items.vxCase.title;
+      case 'tecall':
+        return t.experience.items.tecall.title;
+      default:
+        return titleKey;
+    }
+  }
+
+  String get company {
+    switch (titleKey) {
+      case 'bluStudios':
+        return t.experience.items.bluStudios.company;
+      case 'vxCase':
+        return t.experience.items.vxCase.company;
+      case 'tecall':
+        return t.experience.items.tecall.company;
+      default:
+        return '';
+    }
+  }
+
+  String get period {
+    switch (titleKey) {
+      case 'bluStudios':
+        return t.experience.items.bluStudios.period;
+      case 'vxCase':
+        return t.experience.items.vxCase.period;
+      case 'tecall':
+        return t.experience.items.tecall.period;
+      default:
+        return '';
+    }
+  }
+
+  String get location {
+    switch (titleKey) {
+      case 'bluStudios':
+        return t.experience.items.bluStudios.location;
+      case 'vxCase':
+        return t.experience.items.vxCase.location;
+      case 'tecall':
+        return t.experience.items.tecall.location;
+      default:
+        return '';
+    }
+  }
+
+  List<String> get points {
+    switch (titleKey) {
+      case 'bluStudios':
+        return t.experience.items.bluStudios.points;
+      case 'vxCase':
+        return t.experience.items.vxCase.points;
+      case 'tecall':
+        return t.experience.items.tecall.points;
+      default:
+        return [];
+    }
+  }
 }
 
 const _experiences = <_ExperienceData>[
   _ExperienceData(
-    title: 'Partner & Pleno Flutter Engineer',
-    company: 'Blu Studios',
-    period: '2019 – 2026',
-    location: 'Remote',
-    points: [
-      'Built and maintained multiple mobile apps and games totaling 15M+ downloads worldwide.',
-      'Architected scalable systems supporting millions of users, including real-time leaderboards, live events, and ranking systems.',
-      'Owned the full mobile product lifecycle: architecture, development, testing, CI/CD, publishing, ASO, monetization, live ops, and store compliance.',
-      'Integrated backend services using Firebase (Full Suite), GraphQL APIs, and Node.js.',
-      'Designed and optimized monetization systems achieving consistently high eCPM performance.',
-      'Led fully remote teams of up to 14 people.',
-      'Established partnerships with Wildlife Studios and Homa Games.',
-    ],
+    titleKey: 'bluStudios',
   ),
   _ExperienceData(
-    title: 'Junior Desktop Developer',
-    company: 'VX Case',
-    period: 'Oct 2018 – Mar 2019',
-    location: 'Salvador, Brazil',
-    points: [
-      'Developed a desktop application focused on user interface implementation using TypeScript, Angular, and VTEX.',
-      'Built reusable UI components ensuring usability, scalability, and design consistency.',
-      'Collaborated with senior engineers to integrate frontend features with backend services.',
-    ],
+    titleKey: 'vxCase',
   ),
   _ExperienceData(
-    title: 'IT Support Intern',
-    company: 'Tecall Consultoria',
-    period: 'Jan 2018 – Oct 2018',
-    location: 'Salvador, Brazil',
-    points: [
-      'Provided technical support and infrastructure troubleshooting for corporate clients.',
-      'Assisted in system maintenance and hardware configuration.',
-      'Gained foundational experience in networking, system administration, and customer support.',
-    ],
+    titleKey: 'tecall',
   ),
 ];

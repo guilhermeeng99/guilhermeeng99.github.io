@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import '../theme/app_colors.dart';
-import '../widgets/glass_card.dart';
-import '../widgets/responsive_layout.dart';
-import '../widgets/section_title.dart';
+import 'package:my_portfolio/app/theme/app_colors.dart';
+import 'package:my_portfolio/app/widgets/glass_card.dart';
+import 'package:my_portfolio/app/widgets/responsive_layout.dart';
+import 'package:my_portfolio/app/widgets/section_title.dart';
+import 'package:my_portfolio/gen/i18n/strings.g.dart';
 
 class SkillsSection extends StatelessWidget {
   const SkillsSection({super.key});
@@ -17,9 +18,9 @@ class SkillsSection extends StatelessWidget {
       child: ResponsiveLayout(
         child: Column(
           children: [
-            const SectionTitle(
-              title: 'Skills & Expertise',
-              subtitle: 'Technologies and tools I use to bring ideas to life',
+            SectionTitle(
+              title: t.skills.title,
+              subtitle: t.skills.subtitle,
             ),
             GridView.builder(
               shrinkWrap: true,
@@ -49,11 +50,10 @@ class SkillsSection extends StatelessWidget {
           shaderCallback: (bounds) =>
               AppColors.primaryGradient.createShader(bounds),
           child: Text(
-            'Awards & Recognition',
-            style: Theme.of(context)
-                .textTheme
-                .headlineMedium
-                ?.copyWith(color: Colors.white),
+            t.skills.awards.title,
+            style: Theme.of(
+              context,
+            ).textTheme.headlineMedium?.copyWith(color: Colors.white),
             textAlign: TextAlign.center,
           ),
         ),
@@ -62,23 +62,23 @@ class SkillsSection extends StatelessWidget {
           spacing: 16,
           runSpacing: 16,
           alignment: WrapAlignment.center,
-          children: const [
+          children: [
             _AwardBadge(
               icon: Icons.emoji_events_rounded,
-              title: 'Google Play Best of 2021',
-              subtitle: 'App of the Year Nominee (Rabit)',
-              color: Color(0xFFF59E0B),
+              title: t.skills.awards.googlePlay.title,
+              subtitle: t.skills.awards.googlePlay.subtitle,
+              color: const Color(0xFFF59E0B),
             ),
             _AwardBadge(
               icon: Icons.military_tech_rounded,
-              title: 'Indie Games Fund 2023',
-              subtitle: 'Winner (Farm vs Aliens)',
-              color: Color(0xFFEF4444),
+              title: t.skills.awards.indieFund.title,
+              subtitle: t.skills.awards.indieFund.subtitle,
+              color: const Color(0xFFEF4444),
             ),
             _AwardBadge(
               icon: Icons.school_rounded,
-              title: 'Indie Games Accelerator 2024',
-              subtitle: 'Graduate',
+              title: t.skills.awards.accelerator.title,
+              subtitle: t.skills.awards.accelerator.subtitle,
               color: AppColors.primary,
             ),
           ],
@@ -105,7 +105,9 @@ class _SkillCategoryCard extends StatelessWidget {
               const SizedBox(width: 12),
               Text(
                 category.title,
-                style: Theme.of(context).textTheme.titleLarge?.copyWith(fontSize: 18),
+                style: Theme.of(
+                  context,
+                ).textTheme.titleLarge?.copyWith(fontSize: 18),
               ),
             ],
           ),
@@ -116,7 +118,10 @@ class _SkillCategoryCard extends StatelessWidget {
               runSpacing: 8,
               children: category.skills.map((skill) {
                 return Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 14,
+                    vertical: 8,
+                  ),
                   decoration: BoxDecoration(
                     color: AppColors.background,
                     borderRadius: BorderRadius.circular(8),
@@ -125,9 +130,9 @@ class _SkillCategoryCard extends StatelessWidget {
                   child: Text(
                     skill,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          fontSize: 13,
-                          color: AppColors.textPrimary,
-                        ),
+                      fontSize: 13,
+                      color: AppColors.textPrimary,
+                    ),
                   ),
                 );
               }).toList(),
@@ -174,15 +179,17 @@ class _AwardBadge extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: Theme.of(context).textTheme.labelLarge?.copyWith(fontSize: 14),
+                style: Theme.of(
+                  context,
+                ).textTheme.labelLarge?.copyWith(fontSize: 14),
               ),
               const SizedBox(height: 2),
               Text(
                 subtitle,
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      fontSize: 12,
-                      color: AppColors.textMuted,
-                    ),
+                  fontSize: 12,
+                  color: AppColors.textMuted,
+                ),
               ),
             ],
           ),
@@ -194,19 +201,34 @@ class _AwardBadge extends StatelessWidget {
 
 class _SkillCategory {
   const _SkillCategory({
-    required this.title,
+    required this.titleKey,
     required this.icon,
     required this.skills,
   });
 
-  final String title;
+  final String titleKey;
   final IconData icon;
   final List<String> skills;
+
+  String get title {
+    switch (titleKey) {
+      case 'mobileDev':
+        return t.skills.categories.mobileDev.title;
+      case 'backend':
+        return t.skills.categories.backend.title;
+      case 'languages':
+        return t.skills.categories.languages.title;
+      case 'tools':
+        return t.skills.categories.tools.title;
+      default:
+        return titleKey;
+    }
+  }
 }
 
 const _skillCategories = <_SkillCategory>[
   _SkillCategory(
-    title: 'Mobile Development',
+    titleKey: 'mobileDev',
     icon: Icons.phone_android_rounded,
     skills: [
       'Flutter',
@@ -221,7 +243,7 @@ const _skillCategories = <_SkillCategory>[
     ],
   ),
   _SkillCategory(
-    title: 'Backend & Cloud',
+    titleKey: 'backend',
     icon: Icons.cloud_rounded,
     skills: [
       'Firebase (Full Suite)',
@@ -233,12 +255,12 @@ const _skillCategories = <_SkillCategory>[
     ],
   ),
   _SkillCategory(
-    title: 'Languages',
+    titleKey: 'languages',
     icon: Icons.code_rounded,
     skills: ['Dart', 'Java', 'Kotlin', 'JavaScript', 'TypeScript', 'C#'],
   ),
   _SkillCategory(
-    title: 'Tools & Product',
+    titleKey: 'tools',
     icon: Icons.build_rounded,
     skills: [
       'Git',
