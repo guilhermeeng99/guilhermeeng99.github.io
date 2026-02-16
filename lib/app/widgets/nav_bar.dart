@@ -2,7 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:my_portfolio/app/theme/app_colors.dart';
 import 'package:my_portfolio/app/widgets/responsive_layout.dart';
+import 'package:my_portfolio/gen/assets.gen.dart';
 import 'package:my_portfolio/gen/i18n/strings.g.dart';
+
+const _kNavShadow = [
+  BoxShadow(
+    color: Color(0x40000000),
+    blurRadius: 12,
+    offset: Offset(0, 2),
+  ),
+];
 
 class NavBar extends HookWidget {
   const NavBar({
@@ -37,13 +46,14 @@ class NavBar extends HookWidget {
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
       decoration: BoxDecoration(
         color: scrolled.value
-            ? AppColors.background.withValues(alpha: 0.9)
+            ? AppColors.background.withValues(alpha: 0.95)
             : Colors.transparent,
         border: Border(
           bottom: BorderSide(
             color: scrolled.value ? AppColors.divider : Colors.transparent,
           ),
         ),
+        boxShadow: scrolled.value ? _kNavShadow : null,
       ),
       child: SafeArea(
         bottom: false,
@@ -53,18 +63,7 @@ class NavBar extends HookWidget {
               cursor: SystemMouseCursors.click,
               child: GestureDetector(
                 onTap: () => onSectionTap(0),
-                child: ShaderMask(
-                  shaderCallback: (bounds) =>
-                      AppColors.primaryGradient.createShader(bounds),
-                  child: Text(
-                    'GP',
-                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w700,
-                      letterSpacing: 2,
-                    ),
-                  ),
-                ),
+                child: Assets.lib.app.assets.images.logo.image(height: 36),
               ),
             ),
             const Spacer(),
@@ -79,6 +78,11 @@ class NavBar extends HookWidget {
                   ),
                   _NavItem(label: t.nav.skills, onTap: () => onSectionTap(4)),
                   _NavItem(label: t.nav.contact, onTap: () => onSectionTap(5)),
+                  const SizedBox(width: 12),
+                  _NavCta(
+                    label: t.hero.getInTouch,
+                    onTap: () => onSectionTap(5),
+                  ),
                 ],
               )
             else
@@ -117,6 +121,51 @@ class _NavItem extends HookWidget {
               fontSize: 14,
             ),
             child: Text(label),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _NavCta extends HookWidget {
+  const _NavCta({required this.label, required this.onTap});
+
+  final String label;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final hovered = useState(false);
+
+    return MouseRegion(
+      onEnter: (_) => hovered.value = true,
+      onExit: (_) => hovered.value = false,
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: onTap,
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          decoration: BoxDecoration(
+            gradient: AppColors.primaryGradient,
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: hovered.value
+                ? [
+                    BoxShadow(
+                      color: AppColors.primary.withValues(alpha: 0.4),
+                      blurRadius: 16,
+                    ),
+                  ]
+                : [],
+          ),
+          child: Text(
+            label,
+            style: Theme.of(context).textTheme.labelLarge?.copyWith(
+              color: Colors.white,
+              fontWeight: FontWeight.w600,
+              fontSize: 13,
+            ),
           ),
         ),
       ),

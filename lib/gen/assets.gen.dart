@@ -48,12 +48,74 @@ class $LibAppAssetsI18nGen {
 class $LibAppAssetsImagesGen {
   const $LibAppAssetsImagesGen();
 
-  /// File path: lib/app/assets/images/rabit_preview.jpg
-  AssetGenImage get rabitPreview =>
-      const AssetGenImage('lib/app/assets/images/rabit_preview.jpg');
+  /// File path: lib/app/assets/images/logo.png
+  AssetGenImage get logo =>
+      const AssetGenImage('lib/app/assets/images/logo.png');
+
+  /// File path: lib/app/assets/images/my_profile.png
+  AssetGenImage get myProfile =>
+      const AssetGenImage('lib/app/assets/images/my_profile.png');
+
+  /// Directory path: lib/app/assets/images/projects
+  $LibAppAssetsImagesProjectsGen get projects =>
+      const $LibAppAssetsImagesProjectsGen();
 
   /// List of all assets
-  List<AssetGenImage> get values => [rabitPreview];
+  List<AssetGenImage> get values => [logo, myProfile];
+}
+
+class $LibAppAssetsImagesProjectsGen {
+  const $LibAppAssetsImagesProjectsGen();
+
+  /// File path: lib/app/assets/images/projects/INever_preview.png
+  AssetGenImage get iNeverPreview =>
+      const AssetGenImage('lib/app/assets/images/projects/INever_preview.png');
+
+  /// File path: lib/app/assets/images/projects/booze_preview.png
+  AssetGenImage get boozePreview =>
+      const AssetGenImage('lib/app/assets/images/projects/booze_preview.png');
+
+  /// File path: lib/app/assets/images/projects/capy_preview.png
+  AssetGenImage get capyPreview =>
+      const AssetGenImage('lib/app/assets/images/projects/capy_preview.png');
+
+  /// File path: lib/app/assets/images/projects/cups_preview.png
+  AssetGenImage get cupsPreview =>
+      const AssetGenImage('lib/app/assets/images/projects/cups_preview.png');
+
+  /// File path: lib/app/assets/images/projects/drop_preview.png
+  AssetGenImage get dropPreview =>
+      const AssetGenImage('lib/app/assets/images/projects/drop_preview.png');
+
+  /// File path: lib/app/assets/images/projects/farm_preview.png
+  AssetGenImage get farmPreview =>
+      const AssetGenImage('lib/app/assets/images/projects/farm_preview.png');
+
+  /// File path: lib/app/assets/images/projects/magic_sort__preview.png
+  AssetGenImage get magicSortPreview => const AssetGenImage(
+    'lib/app/assets/images/projects/magic_sort__preview.png',
+  );
+
+  /// File path: lib/app/assets/images/projects/rabit_preview.jpg
+  AssetGenImage get rabitPreview =>
+      const AssetGenImage('lib/app/assets/images/projects/rabit_preview.jpg');
+
+  /// File path: lib/app/assets/images/projects/vdx_preview.png
+  AssetGenImage get vdxPreview =>
+      const AssetGenImage('lib/app/assets/images/projects/vdx_preview.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+    iNeverPreview,
+    boozePreview,
+    capyPreview,
+    cupsPreview,
+    dropPreview,
+    farmPreview,
+    magicSortPreview,
+    rabitPreview,
+    vdxPreview,
+  ];
 }
 
 class Assets {

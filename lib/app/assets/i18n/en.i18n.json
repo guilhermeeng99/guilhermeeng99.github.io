@@ -19,7 +19,7 @@
   "about": {
     "title": "About Me",
     "subtitle": "Building digital products that scale",
-    "bio1": "Pleno Flutter Developer with over five years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.",
+    "bio1": "Senior Flutter Developer with over five years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.",
     "bio2": "I've implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I've built and maintained have reached 15M+ downloads worldwide.",
     "bio3": "I specialize in scalable architectures, long-term code maintainability, and high-performance mobile applications. My expertise spans multiple state management solutions (Riverpod, Bloc, MobX), native plugin integration, and the full Firebase ecosystem.",
     "stats": {
@@ -32,7 +32,7 @@
         "label": "Years Experience"
       },
       "products": {
-        "value": "7+",
+        "value": "10+",
         "label": "Products Shipped"
       },
       "teamSize": {
@@ -44,42 +44,49 @@
   "projects": {
     "title": "Featured Projects",
     "subtitle": "Real-world products across games and mobile apps",
+    "details_button": "See more details",
     "items": {
       "magicSort": {
         "name": "Magic Sort",
         "category": "Hybrid Casual Puzzle · 2024 – Present",
         "description": "First hybrid casual water-sort puzzle game on the market. Designed complex/high-performance UI systems, monetization flows, and live-event mechanics.",
         "badge": "480K+ downloads",
-        "metric": "480K+"
+        "metric": "480K+",
+        "details": "Architected and developed the entire Flutter codebase from scratch for this hybrid casual puzzle game. Implemented high-performance UI systems including animated tutorials, live-event mechanics (Battle Pass, Magic League, Treasure Hunts), and a scalable monetization framework with rewarded ads, interstitials, and IAP. Built a custom level system with lazy initialization supporting 1,000+ levels. Integrated Firebase Analytics, Remote Config for A/B testing, and Crashlytics for real-time monitoring."
       },
       "rabit": {
         "name": "Rabit",
         "category": "Gamified Habit Tracker · 2020 – 2022",
         "description": "Google Play Best of 2021 – App of the Year Nominee. Implemented gamified habit tracking with notifications, cloud sync, and analytics.",
         "badge": "Best of 2021",
-        "metric": "3.5M+"
+        "metric": "3.5M+",
+        "details": "Built a gamified habit tracking app where users grow virtual plants by completing daily tasks. Ranked 2nd as App of the Year 2021 on Google Play Brazil. Developed the full Flutter application including push/local notifications, cloud sync with Firebase Firestore, streak tracking, and detailed analytics. Designed custom animations and micro-interactions that boosted user retention."
       },
       "cups": {
         "name": "Cups",
         "category": "Casual Puzzle · 2020 – 2023",
         "description": "Water sort puzzle game surpassing 4.5M+ downloads with strong traction in the US market. Implemented UIs, monetization systems, and full ads integration.",
-        "metric": "4.5M+"
+        "metric": "4.5M+",
+        "details": "Developed the Flutter version of this water sort puzzle game, which reached 4.5M+ downloads with strong organic traction in the US market. Implemented the complete UI layer, monetization systems with multiple ad networks, and level progression. Led the performance optimization efforts that reduced frame build times and improved user experience on low-end devices."
       },
       "farmVsAliens": {
         "name": "Farm vs Aliens",
         "category": "Tower Defense · 2023 – 2024",
         "description": "Winner of the Google Play Indie Games Fund 2024. Led product direction, game design, and monetization strategy for this merge tower defense game.",
-        "badge": "Indie Fund Winner"
+        "badge": "Indie Fund Winner",
+        "details": "Led product direction and game design for this merge tower defense game, which was selected and funded by the Google Play Indie Games Fund 2023 and graduated from the Google Play Indie Games Accelerator 2024. Defined the core gameplay loop combining merge mechanics with strategic tower defense. Managed the full product lifecycle including monetization strategy, Google Play Pass integration, and live ops."
       },
       "capy": {
         "name": "Capy: Self-Care Pet",
         "category": "Wellness App",
-        "description": "Self-care companion app with a virtual pet mechanic. Users maintain their well-being through daily tasks and caring for their capybara."
+        "description": "Self-care companion app with a virtual pet mechanic. Users maintain their well-being through daily tasks and caring for their capybara.",
+        "details": "Built a wellness companion app featuring a virtual capybara pet that users care for by completing self-care activities. Implemented the full Flutter application with habit tracking, mood journaling, and pet evolution mechanics. Integrated push notifications for daily reminders and Firebase for user data persistence."
       },
       "dropMerge": {
         "name": "Drop & Merge",
         "category": "Casual Puzzle",
-        "description": "Addictive drop and merge puzzle game combining strategic placement with satisfying merge mechanics for an engaging casual experience."
+        "description": "Addictive drop and merge puzzle game combining strategic placement with satisfying merge mechanics for an engaging casual experience.",
+        "details": "Developed the Flutter implementation of this casual puzzle game featuring drop and merge mechanics. Built the core game engine with physics-based interactions, scoring systems, and progressive difficulty. Implemented monetization with rewarded ads and integrated analytics for player behavior tracking."
       }
     }
   },
@@ -88,8 +95,7 @@
     "subtitle": "My professional journey so far",
     "items": {
       "bluStudios": {
-        "title": "Partner & Pleno Flutter Engineer",
-        "company": "Blu Studios",
+        "title": "Partner & Senior Flutter Engineer",
         "period": "2019 – 2026",
         "location": "Remote",
         "points": [
@@ -104,7 +110,6 @@
       },
       "vxCase": {
         "title": "Junior Desktop Developer",
-        "company": "VX Case",
         "period": "Oct 2018 – Mar 2019",
         "location": "Salvador, Brazil",
         "points": [
@@ -115,7 +120,6 @@
       },
       "tecall": {
         "title": "IT Support Intern",
-        "company": "Tecall Consultoria",
         "period": "Jan 2018 – Oct 2018",
         "location": "Salvador, Brazil",
         "points": [

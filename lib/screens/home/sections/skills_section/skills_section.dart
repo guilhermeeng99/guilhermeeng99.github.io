@@ -4,6 +4,7 @@ import 'package:my_portfolio/app/widgets/glass_card.dart';
 import 'package:my_portfolio/app/widgets/responsive_layout.dart';
 import 'package:my_portfolio/app/widgets/section_title.dart';
 import 'package:my_portfolio/gen/i18n/strings.g.dart';
+import 'package:my_portfolio/screens/home/sections/skills_section/skills_model.dart';
 
 class SkillsSection extends StatelessWidget {
   const SkillsSection({super.key});
@@ -31,9 +32,10 @@ class SkillsSection extends StatelessWidget {
                 mainAxisSpacing: 24,
                 childAspectRatio: isMobile ? 2.2 : 2.0,
               ),
-              itemCount: _skillCategories.length,
-              itemBuilder: (context, index) =>
-                  _SkillCategoryCard(category: _skillCategories[index]),
+              itemCount: SkillsSectionCategory.categories.length,
+              itemBuilder: (context, index) => _SkillCategoryCard(
+                category: SkillsSectionCategory.categories[index],
+              ),
             ),
             const SizedBox(height: 60),
             _buildAwardsRow(context, isMobile),
@@ -91,7 +93,7 @@ class SkillsSection extends StatelessWidget {
 class _SkillCategoryCard extends StatelessWidget {
   const _SkillCategoryCard({required this.category});
 
-  final _SkillCategory category;
+  final SkillsSectionCategory category;
 
   @override
   Widget build(BuildContext context) {
@@ -198,78 +200,3 @@ class _AwardBadge extends StatelessWidget {
     );
   }
 }
-
-class _SkillCategory {
-  const _SkillCategory({
-    required this.titleKey,
-    required this.icon,
-    required this.skills,
-  });
-
-  final String titleKey;
-  final IconData icon;
-  final List<String> skills;
-
-  String get title {
-    switch (titleKey) {
-      case 'mobileDev':
-        return t.skills.categories.mobileDev.title;
-      case 'backend':
-        return t.skills.categories.backend.title;
-      case 'languages':
-        return t.skills.categories.languages.title;
-      case 'tools':
-        return t.skills.categories.tools.title;
-      default:
-        return titleKey;
-    }
-  }
-}
-
-const _skillCategories = <_SkillCategory>[
-  _SkillCategory(
-    titleKey: 'mobileDev',
-    icon: Icons.phone_android_rounded,
-    skills: [
-      'Flutter',
-      'Dart',
-      'Riverpod',
-      'Bloc',
-      'MobX',
-      'MVVM',
-      'Clean Architecture',
-      'TDD',
-      'Native Plugins',
-    ],
-  ),
-  _SkillCategory(
-    titleKey: 'backend',
-    icon: Icons.cloud_rounded,
-    skills: [
-      'Firebase (Full Suite)',
-      'Node.js',
-      'GraphQL',
-      'REST APIs',
-      'SQL',
-      'NoSQL',
-    ],
-  ),
-  _SkillCategory(
-    titleKey: 'languages',
-    icon: Icons.code_rounded,
-    skills: ['Dart', 'Java', 'Kotlin', 'JavaScript', 'TypeScript', 'C#'],
-  ),
-  _SkillCategory(
-    titleKey: 'tools',
-    icon: Icons.build_rounded,
-    skills: [
-      'Git',
-      'CI/CD',
-      'Figma',
-      'ASO',
-      'Monetization',
-      'Codemagic',
-      'GitHub Actions',
-    ],
-  ),
-];

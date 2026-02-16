@@ -3,6 +3,7 @@ import 'package:my_portfolio/app/theme/app_colors.dart';
 import 'package:my_portfolio/app/widgets/responsive_layout.dart';
 import 'package:my_portfolio/app/widgets/section_title.dart';
 import 'package:my_portfolio/gen/i18n/strings.g.dart';
+import 'package:my_portfolio/screens/home/sections/experience_section/experience_model.dart';
 
 class ExperienceSection extends StatelessWidget {
   const ExperienceSection({super.key});
@@ -18,12 +19,15 @@ class ExperienceSection extends StatelessWidget {
               title: t.experience.title,
               subtitle: t.experience.subtitle,
             ),
-            ...List.generate(_experiences.length, (index) {
-              return _TimelineItem(
-                experience: _experiences[index],
-                isLast: index == _experiences.length - 1,
-              );
-            }),
+            ...List.generate(
+              ExperienceSectionData.experiences.length,
+              (index) {
+                return _TimelineItem(
+                  experience: ExperienceSectionData.experiences[index],
+                  isLast: index == ExperienceSectionData.experiences.length - 1,
+                );
+              },
+            ),
           ],
         ),
       ),
@@ -34,7 +38,7 @@ class ExperienceSection extends StatelessWidget {
 class _TimelineItem extends StatelessWidget {
   const _TimelineItem({required this.experience, required this.isLast});
 
-  final _ExperienceData experience;
+  final ExperienceSectionData experience;
   final bool isLast;
 
   @override
@@ -179,88 +183,3 @@ class _TimelineItem extends StatelessWidget {
     );
   }
 }
-
-class _ExperienceData {
-  const _ExperienceData({
-    required this.titleKey,
-  });
-
-  final String titleKey;
-
-  String get title {
-    switch (titleKey) {
-      case 'bluStudios':
-        return t.experience.items.bluStudios.title;
-      case 'vxCase':
-        return t.experience.items.vxCase.title;
-      case 'tecall':
-        return t.experience.items.tecall.title;
-      default:
-        return titleKey;
-    }
-  }
-
-  String get company {
-    switch (titleKey) {
-      case 'bluStudios':
-        return t.experience.items.bluStudios.company;
-      case 'vxCase':
-        return t.experience.items.vxCase.company;
-      case 'tecall':
-        return t.experience.items.tecall.company;
-      default:
-        return '';
-    }
-  }
-
-  String get period {
-    switch (titleKey) {
-      case 'bluStudios':
-        return t.experience.items.bluStudios.period;
-      case 'vxCase':
-        return t.experience.items.vxCase.period;
-      case 'tecall':
-        return t.experience.items.tecall.period;
-      default:
-        return '';
-    }
-  }
-
-  String get location {
-    switch (titleKey) {
-      case 'bluStudios':
-        return t.experience.items.bluStudios.location;
-      case 'vxCase':
-        return t.experience.items.vxCase.location;
-      case 'tecall':
-        return t.experience.items.tecall.location;
-      default:
-        return '';
-    }
-  }
-
-  List<String> get points {
-    switch (titleKey) {
-      case 'bluStudios':
-        return t.experience.items.bluStudios.points;
-      case 'vxCase':
-        return t.experience.items.vxCase.points;
-      case 'tecall':
-        return t.experience.items.tecall.points;
-      default:
-        return [];
-    }
-  }
-}
-
-const _experiences = <_ExperienceData>[
-  _ExperienceData(
-    titleKey: 'bluStudios',
-  ),
-  _ExperienceData(
-    titleKey: 'vxCase',
-  ),
-  _ExperienceData(
-    titleKey: 'tecall',
-  ),
-];

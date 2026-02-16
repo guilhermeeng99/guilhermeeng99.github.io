@@ -5,10 +5,10 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:my_portfolio/app/widgets/nav_bar.dart';
 import 'package:my_portfolio/screens/home/sections/about_section.dart';
 import 'package:my_portfolio/screens/home/sections/contact_section.dart';
-import 'package:my_portfolio/screens/home/sections/experience_section.dart';
-import 'package:my_portfolio/screens/home/sections/hero_section.dart';
-import 'package:my_portfolio/screens/home/sections/projects_section.dart';
-import 'package:my_portfolio/screens/home/sections/skills_section.dart';
+import 'package:my_portfolio/screens/home/sections/experience_section/experience_section.dart';
+import 'package:my_portfolio/screens/home/sections/hero_section/hero_section.dart';
+import 'package:my_portfolio/screens/home/sections/projects_section/projects_section.dart';
+import 'package:my_portfolio/screens/home/sections/skills_section/skills_section.dart';
 
 class HomePage extends HookWidget {
   const HomePage({super.key});
