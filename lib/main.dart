@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/app/theme/app_theme.dart';
 import 'package:my_portfolio/gen/i18n/strings.g.dart';
-import 'package:my_portfolio/screens/home/home_page.dart';
+import 'package:my_portfolio/screens/loading/loading_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: AppLocaleUtils.supportedLocales,
       debugShowCheckedModeBanner: false,
       theme: AppTheme.darkTheme,
-      home: const HomePage(),
+      home: const LoadingPage(),
     );
   }
 }

@@ -91,9 +91,9 @@ class $LibAppAssetsImagesProjectsGen {
   AssetGenImage get farmPreview =>
       const AssetGenImage('lib/app/assets/images/projects/farm_preview.png');
 
-  /// File path: lib/app/assets/images/projects/magic_sort__preview.png
+  /// File path: lib/app/assets/images/projects/magic_sort_preview.png
   AssetGenImage get magicSortPreview => const AssetGenImage(
-    'lib/app/assets/images/projects/magic_sort__preview.png',
+    'lib/app/assets/images/projects/magic_sort_preview.png',
   );
 
   /// File path: lib/app/assets/images/projects/rabit_preview.jpg

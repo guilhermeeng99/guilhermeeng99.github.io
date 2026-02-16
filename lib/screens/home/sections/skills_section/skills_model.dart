@@ -61,7 +61,7 @@ class SkillsSectionCategory {
       'Git',
       'CI/CD',
       'Figma',
-      'ASO',
+      'Adobe XD',
       'Monetization',
       'Codemagic',
       'GitHub Actions',

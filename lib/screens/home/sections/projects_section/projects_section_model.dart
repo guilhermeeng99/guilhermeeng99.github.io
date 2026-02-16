@@ -5,109 +5,189 @@ import 'package:my_portfolio/gen/i18n/strings.g.dart';
 final $LibAppAssetsImagesProjectsGen _projectImages =
     Assets.lib.app.assets.images.projects;
 
+enum ProjectCompany {
+  bluStudios
+  ;
+
+  String get name {
+    switch (this) {
+      case ProjectCompany.bluStudios:
+        return AppConstants.bluCompany;
+    }
+  }
+
+  String get url {
+    switch (this) {
+      case ProjectCompany.bluStudios:
+        return AppConstants.bluCompanyUrl;
+    }
+  }
+}
+
+enum ProjectAward {
+  indieGamesAccelerator2024,
+  indieGamesFund2023,
+  googlePlayBestOf2021
+  ;
+
+  String get label {
+    switch (this) {
+      case ProjectAward.indieGamesAccelerator2024:
+        return t.skills.awards.accelerator.title;
+      case ProjectAward.indieGamesFund2023:
+        return t.skills.awards.indieFund.title;
+      case ProjectAward.googlePlayBestOf2021:
+        return t.skills.awards.googlePlay.title;
+    }
+  }
+
+  String get url {
+    switch (this) {
+      case ProjectAward.indieGamesAccelerator2024:
+        return AppConstants.googlePlayIndieGamesAccelerator2024Url;
+      case ProjectAward.indieGamesFund2023:
+        return AppConstants.googlePlayIndieGamesFund2023Url;
+      case ProjectAward.googlePlayBestOf2021:
+        return AppConstants.googlePlayBestOf2021Url;
+    }
+  }
+}
+
 class ProjectsSectionData {
   const ProjectsSectionData({
     required this.name,
-    required this.category,
     required this.description,
     required this.details,
     required this.technologies,
     required this.image,
     required this.company,
     required this.downloadLink,
-    this.badge,
+
     this.metric,
+    this.award,
   });
 
   final String name;
-  final String category;
   final String description;
   final String details;
-  final String company;
-  final String? badge;
+  final ProjectCompany company;
+
   final String? metric;
+  final ProjectAward? award;
   final List<String> technologies;
   final AssetGenImage image;
   final String downloadLink;
 
   static final List<ProjectsSectionData> projects = [
-    magicSort,
-    rabit,
-    capy,
-    cups,
-    farmVsAliens,
-    dropMerge,
+    _magicSort,
+    _rabit,
+    _capy,
+    _cups,
+    _farmVsAliens,
+    _dropMerge,
   ];
 
-  static final magicSort = ProjectsSectionData(
+  static final List<ProjectsSectionData> otherProjects = [
+    _vdx,
+    _booze,
+    _neverHaveIEverX,
+  ];
+
+  static final _magicSort = ProjectsSectionData(
     name: t.projects.items.magicSort.name,
-    category: t.projects.items.magicSort.category,
     description: t.projects.items.magicSort.description,
     details: t.projects.items.magicSort.details,
-    badge: t.projects.items.magicSort.badge,
     metric: t.projects.items.magicSort.metric,
+    award: ProjectAward.indieGamesAccelerator2024,
     technologies: const ['Flutter', 'Firebase', 'Riverpod'],
     image: _projectImages.magicSortPreview,
     downloadLink: AppConstants.magicSortUrl,
-    company: AppConstants.bluCompany,
+    company: ProjectCompany.bluStudios,
   );
 
-  static final rabit = ProjectsSectionData(
+  static final _rabit = ProjectsSectionData(
     name: t.projects.items.rabit.name,
-    category: t.projects.items.rabit.category,
     description: t.projects.items.rabit.description,
     details: t.projects.items.rabit.details,
-    badge: t.projects.items.rabit.badge,
     metric: t.projects.items.rabit.metric,
+    award: ProjectAward.googlePlayBestOf2021,
     technologies: const ['Flutter', 'Firebase', 'Analytics'],
     image: _projectImages.rabitPreview,
     downloadLink: AppConstants.rabitUrl,
-    company: AppConstants.bluCompany,
+    company: ProjectCompany.bluStudios,
   );
 
-  static final cups = ProjectsSectionData(
+  static final _cups = ProjectsSectionData(
     name: t.projects.items.cups.name,
-    category: t.projects.items.cups.category,
     description: t.projects.items.cups.description,
     details: t.projects.items.cups.details,
     metric: t.projects.items.cups.metric,
     technologies: const ['Flutter', 'Firebase', 'Ads SDK'],
     image: _projectImages.cupsPreview,
     downloadLink: AppConstants.cupsUrl,
-    company: AppConstants.bluCompany,
+    company: ProjectCompany.bluStudios,
   );
 
-  static final farmVsAliens = ProjectsSectionData(
+  static final _farmVsAliens = ProjectsSectionData(
     name: t.projects.items.farmVsAliens.name,
-    category: t.projects.items.farmVsAliens.category,
     description: t.projects.items.farmVsAliens.description,
     details: t.projects.items.farmVsAliens.details,
-    badge: t.projects.items.farmVsAliens.badge,
+    award: ProjectAward.indieGamesFund2023,
     technologies: const ['Unity', 'C#', 'Firebase'],
     image: _projectImages.farmPreview,
     downloadLink: AppConstants.farmUrl,
-    company: AppConstants.bluCompany,
+    company: ProjectCompany.bluStudios,
   );
 
-  static final capy = ProjectsSectionData(
+  static final _capy = ProjectsSectionData(
     name: t.projects.items.capy.name,
-    category: t.projects.items.capy.category,
     description: t.projects.items.capy.description,
     details: t.projects.items.capy.details,
     technologies: const ['Flutter', 'Firebase'],
     image: _projectImages.capyPreview,
     downloadLink: AppConstants.capyUrl,
-    company: AppConstants.bluCompany,
+    company: ProjectCompany.bluStudios,
   );
 
-  static final dropMerge = ProjectsSectionData(
+  static final _dropMerge = ProjectsSectionData(
     name: t.projects.items.dropMerge.name,
-    category: t.projects.items.dropMerge.category,
     description: t.projects.items.dropMerge.description,
     details: t.projects.items.dropMerge.details,
     technologies: const ['Flutter', 'Firebase'],
     image: _projectImages.dropPreview,
-    company: AppConstants.bluCompany,
+    company: ProjectCompany.bluStudios,
     downloadLink: AppConstants.dropAndMergeUrl,
+  );
+
+  static final _neverHaveIEverX = ProjectsSectionData(
+    name: t.projects.items.neverHaveIEverX.name,
+    description: t.projects.items.neverHaveIEverX.description,
+    details: t.projects.items.neverHaveIEverX.details,
+    metric: t.projects.items.neverHaveIEverX.metric,
+    technologies: const ['Flutter', 'Firebase'],
+    image: _projectImages.iNeverPreview,
+    company: ProjectCompany.bluStudios,
+    downloadLink: AppConstants.neverHaveIEverXUrl,
+  );
+
+  static final _booze = ProjectsSectionData(
+    name: t.projects.items.booze.name,
+    description: t.projects.items.booze.description,
+    details: t.projects.items.booze.details,
+    metric: t.projects.items.booze.metric,
+    technologies: const ['Flutter', 'Firebase'],
+    image: _projectImages.boozePreview,
+    company: ProjectCompany.bluStudios,
+    downloadLink: AppConstants.boozeUrl,
+  );
+
+  static final _vdx = ProjectsSectionData(
+    name: t.projects.items.vdx.name,
+    description: t.projects.items.vdx.description,
+    details: t.projects.items.vdx.details,
+    technologies: const ['Flutter', 'Firebase'],
+    image: _projectImages.vdxPreview,
+    company: ProjectCompany.bluStudios,
+    downloadLink: AppConstants.vdxUrl,
   );
 }

@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:my_portfolio/app/widgets/nav_bar.dart';
+import 'package:my_portfolio/app/widgets/scroll_fade_in.dart';
 import 'package:my_portfolio/screens/home/sections/about_section.dart';
 import 'package:my_portfolio/screens/home/sections/contact_section.dart';
 import 'package:my_portfolio/screens/home/sections/experience_section/experience_section.dart';
@@ -55,26 +56,39 @@ class HomePage extends HookWidget {
             controller: scrollController,
             slivers: [
               SliverToBoxAdapter(
-                child: HeroSection(
-                  key: sectionKeys[0],
-                  onExploreProjects: () => scrollToSection(2),
-                  onContact: () => scrollToSection(5),
+                child: ScrollFadeIn(
+                  visibleThreshold: 0,
+                  child: HeroSection(
+                    key: sectionKeys[0],
+                    onExploreProjects: () => scrollToSection(2),
+                    onContact: () => scrollToSection(5),
+                  ),
                 ),
               ),
               SliverToBoxAdapter(
-                child: AboutSection(key: sectionKeys[1]),
+                child: ScrollFadeIn(
+                  child: AboutSection(key: sectionKeys[1]),
+                ),
               ),
               SliverToBoxAdapter(
-                child: ProjectsSection(key: sectionKeys[2]),
+                child: ScrollFadeIn(
+                  child: ProjectsSection(key: sectionKeys[2]),
+                ),
               ),
               SliverToBoxAdapter(
-                child: ExperienceSection(key: sectionKeys[3]),
+                child: ScrollFadeIn(
+                  child: ExperienceSection(key: sectionKeys[3]),
+                ),
               ),
               SliverToBoxAdapter(
-                child: SkillsSection(key: sectionKeys[4]),
+                child: ScrollFadeIn(
+                  child: SkillsSection(key: sectionKeys[4]),
+                ),
               ),
               SliverToBoxAdapter(
-                child: ContactSection(key: sectionKeys[5]),
+                child: ScrollFadeIn(
+                  child: ContactSection(key: sectionKeys[5]),
+                ),
               ),
             ],
           ),

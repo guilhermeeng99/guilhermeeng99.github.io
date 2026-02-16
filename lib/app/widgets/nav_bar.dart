@@ -77,7 +77,6 @@ class NavBar extends HookWidget {
                     onTap: () => onSectionTap(3),
                   ),
                   _NavItem(label: t.nav.skills, onTap: () => onSectionTap(4)),
-                  _NavItem(label: t.nav.contact, onTap: () => onSectionTap(5)),
                   const SizedBox(width: 12),
                   _NavCta(
                     label: t.hero.getInTouch,

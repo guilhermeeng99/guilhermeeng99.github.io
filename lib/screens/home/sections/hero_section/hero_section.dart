@@ -23,8 +23,8 @@ class HeroSection extends StatelessWidget {
     final isMobile = ResponsiveLayout.isMobile(context);
     final screenHeight = MediaQuery.sizeOf(context).height;
 
-    return SizedBox(
-      height: screenHeight,
+    return ConstrainedBox(
+      constraints: BoxConstraints(minHeight: screenHeight),
       child: Stack(
         children: [
           Center(
@@ -33,6 +33,7 @@ class HeroSection extends StatelessWidget {
                   ? Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
+                        const SizedBox(height: 80),
                         const _ProfileAvatar(size: 180),
                         const SizedBox(height: 32),
                         HeroSectionContent(
@@ -40,20 +41,24 @@ class HeroSection extends StatelessWidget {
                           onExploreProjects: onExploreProjects,
                           onContact: onContact,
                         ),
+                        const SizedBox(height: 64),
                       ],
                     )
-                  : Row(
-                      children: [
-                        Expanded(
-                          child: HeroSectionContent(
-                            isMobile: false,
-                            onExploreProjects: onExploreProjects,
-                            onContact: onContact,
+                  : Padding(
+                      padding: const EdgeInsets.only(top: 115),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: HeroSectionContent(
+                              isMobile: false,
+                              onExploreProjects: onExploreProjects,
+                              onContact: onContact,
+                            ),
                           ),
-                        ),
-                        const SizedBox(width: 48),
-                        const _ProfileAvatar(size: 280),
-                      ],
+                          const SizedBox(width: 48),
+                          const _ProfileAvatar(size: 280),
+                        ],
+                      ),
                     ),
             ),
           ),

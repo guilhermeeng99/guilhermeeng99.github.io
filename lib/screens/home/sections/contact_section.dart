@@ -73,25 +73,28 @@ class ContactSection extends StatelessWidget {
               color: AppColors.divider,
             ),
             const SizedBox(height: 32),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  t.contact.footer,
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    fontSize: 13,
-                    color: AppColors.textMuted,
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    '${t.contact.footer} ',
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      fontSize: 13,
+                      color: AppColors.textMuted,
+                    ),
                   ),
-                ),
-                const FlutterLogo(size: 16),
-                Text(
-                  ' ${t.contact.flutter}',
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    fontSize: 13,
-                    color: AppColors.textMuted,
+                  const FlutterLogo(size: 16),
+                  Text(
+                    ' ${t.contact.flutter}',
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      fontSize: 13,
+                      color: AppColors.textMuted,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             const SizedBox(height: 10),
           ],

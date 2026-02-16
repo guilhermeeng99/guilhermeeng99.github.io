@@ -1,6 +1,7 @@
 class AppConstants {
   static String owner = 'Guilherme Passos';
   static String bluCompany = 'Blu Studios';
+  static String bluCompanyUrl = 'https://blury.studio/';
   static String vxCaseCompany = 'VX Case';
   static String tecallCompany = 'Tecall Consultoria';
   static String linkedin = 'guigapassos';
