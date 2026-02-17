@@ -23,19 +23,19 @@ class ExperienceSectionData {
   ];
 
   static final bluStudios = ExperienceSectionData(
-    title: t.experience.items.bluStudios.title,
+    title: t.experience.items.blu_studios.title,
     company: AppConstants.bluCompany,
-    period: t.experience.items.bluStudios.period,
-    location: t.experience.items.bluStudios.location,
-    points: t.experience.items.bluStudios.points,
+    period: t.experience.items.blu_studios.period,
+    location: t.experience.items.blu_studios.location,
+    points: t.experience.items.blu_studios.points,
   );
 
   static final vxCase = ExperienceSectionData(
-    title: t.experience.items.vxCase.title,
+    title: t.experience.items.vx_case.title,
     company: AppConstants.vxCaseCompany,
-    period: t.experience.items.vxCase.period,
-    location: t.experience.items.vxCase.location,
-    points: t.experience.items.vxCase.points,
+    period: t.experience.items.vx_case.period,
+    location: t.experience.items.vx_case.location,
+    points: t.experience.items.vx_case.points,
   );
 
   static final tecall = ExperienceSectionData(

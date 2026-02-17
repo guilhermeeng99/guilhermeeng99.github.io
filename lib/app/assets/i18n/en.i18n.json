@@ -1,6 +1,7 @@
 {
   "app": {
-    "title": "Guilherme Passos - Flutter Developer"
+    "title": "Guilherme Passos - Flutter Developer",
+    "total_downloads": "12M+"
   },
   "nav": {
     "about": "About",
@@ -12,9 +13,9 @@
   "hero": {
     "name": "Guilherme\nPassos",
     "role": "Flutter Developer",
-    "description": "Flutter Developer & Mobile Entrepreneur with 5+ years crafting high-performance apps and games reaching 15M+ downloads worldwide.",
-    "exploreProjects": "Explore Projects",
-    "getInTouch": "Get In Touch"
+    "description": "Flutter Developer & Mobile Entrepreneur with 5+ years crafting high-performance apps and games reaching @:app.total_downloads downloads worldwide.",
+    "explore_projects": "Explore Projects",
+    "get_in_touch": "Get In Touch"
   },
   "about": {
     "title": "About Me",
@@ -24,7 +25,7 @@
     "bio3": "I specialize in scalable architectures, long-term code maintainability, and high-performance mobile applications. My expertise spans multiple state management solutions (Riverpod, Bloc, MobX), native plugin integration, and the full Firebase ecosystem.",
     "stats": {
       "downloads": {
-        "value": "15M+",
+        "value": "@:app.total_downloads",
         "label": "Downloads"
       },
       "experience": {
@@ -44,62 +45,61 @@
   "projects": {
     "title": "Featured Projects",
     "subtitle": "Real-world products across games and mobile apps",
-    "details_button": "See more details",
-    "otherProjectsToggle": "Other Projects",
+    "details_button": "What i did in this project",
+    "other_projects_toggle": "Other Projects",
+    "view_on_store": "View on Store",
     "items": {
-      "magicSort": {
+      "magic_sort": {
         "name": "Magic Sort",
-        "description": "First hybrid casual water-sort puzzle game on the market. Designed complex/high-performance UI systems, monetization flows, and live-event mechanics.",
-        "badge": "480K+ downloads",
+        "description": "First hybrid casual water-sort puzzle game on the market. Partnership with Wildlife Studios",
         "metric": "480K+",
-        "details": "Architected and developed the entire Flutter codebase from scratch for this hybrid casual puzzle game. Implemented high-performance UI systems including animated tutorials, live-event mechanics (Battle Pass, Magic League, Treasure Hunts), and a scalable monetization framework with rewarded ads, interstitials, and IAP. Built a custom level system with lazy initialization supporting 1,000+ levels. Integrated Firebase Analytics, Remote Config for A/B testing, and Crashlytics for real-time monitoring."
+        "details": "Implemented high-performance UI systems including animated tutorials, live-event mechanics (Battle Pass, Magic League, Treasure Hunts), and a scalable monetization framework with rewarded ads, interstitials, and IAP. Integrated Firebase Analytics, Remote Config for A/B testing, and Crashlytics for real-time monitoring."
       },
       "rabit": {
         "name": "Rabit",
-        "description": "Google Play Best of 2021 – App of the Year Nominee. Implemented gamified habit tracking with notifications, cloud sync, and analytics.",
-        "badge": "Best of 2021",
+        "description": "Gamified habit tracking app where users grow virtual plants by completing daily tasks. Ranked 2nd as App of the Year 2021 on Google Play Brazil.",
         "metric": "5M+",
-        "details": "Built a gamified habit tracking app where users grow virtual plants by completing daily tasks. Ranked 2nd as App of the Year 2021 on Google Play Brazil. Developed the full Flutter application including push/local notifications, cloud sync with Firebase Firestore, streak tracking, and detailed analytics. Designed custom animations and micro-interactions that boosted user retention."
+        "details": "Implemented push/local notifications, cloud sync with Firebase Firestore, streak tracking, and detailed analytics. Designed custom animations, high-performance UI systems and micro-interactions that boosted user retention."
       },
       "cups": {
         "name": "Cups",
-        "description": "Water sort puzzle game surpassing 4.5M+ downloads with strong traction in the US market. Implemented UIs, monetization systems, and full ads integration.",
+        "description": "Water sort puzzle game surpassing 4.5M+ downloads with strong traction in the US market. Partnership with Homa Games",
         "metric": "4.5M+",
-        "details": "Developed the Flutter version of this water sort puzzle game, which reached 4.5M+ downloads with strong organic traction in the US market. Implemented the complete UI layer, monetization systems with multiple ad networks, and level progression. Led the performance optimization efforts that reduced frame build times and improved user experience on low-end devices."
+        "details": "Implemented the complete UI layer, monetization systems. Co-led the performance optimization efforts that reduced frame build times and improved user experience on low-end devices."
       },
-      "farmVsAliens": {
+      "farm_vs_aliens": {
         "name": "Farm vs Aliens",
-        "description": "Winner of the Google Play Indie Games Fund 2024. Led product direction, game design, and monetization strategy for this merge tower defense game.",
+        "description": "A merge tower defense game where players defend their farm from alien invaders by merging and upgrading towers.",
         "badge": "Indie Fund Winner",
-        "details": "Led product direction and game design for this merge tower defense game, which was selected and funded by the Google Play Indie Games Fund 2023 and graduated from the Google Play Indie Games Accelerator 2024. Defined the core gameplay loop combining merge mechanics with strategic tower defense. Managed the full product lifecycle including monetization strategy, Google Play Pass integration, and live ops."
+        "details": "Led product direction and game design for this merge tower defense game. Defined the core gameplay loop combining merge mechanics with strategic tower defense."
       },
       "capy": {
         "name": "Capy: Self-Care Pet",
         "description": "Self-care companion app with a virtual pet mechanic. Users maintain their well-being through daily tasks and caring for their capybara.",
-        "details": "Built a wellness companion app featuring a virtual capybara pet that users care for by completing self-care activities. Implemented the full Flutter application with habit tracking, mood journaling, and pet evolution mechanics. Integrated push notifications for daily reminders and Firebase for user data persistence."
+        "details": "Implemented habit tracking, mood journaling, and pet evolution mechanics. Integrated push notifications for daily reminders and Firebase for user data persistence."
       },
-      "dropMerge": {
+      "drop_merge": {
         "name": "Drop & Merge",
         "description": "Addictive drop and merge puzzle game combining strategic placement with satisfying merge mechanics for an engaging casual experience.",
-        "details": "Developed the Flutter implementation of this casual puzzle game featuring drop and merge mechanics. Built the core game engine with physics-based interactions, scoring systems, and progressive difficulty. Implemented monetization with rewarded ads and integrated analytics for player behavior tracking."
+        "details": "Implemented the complete UI layer"
       },
-      "neverHaveIEverX": {
+      "never_have_i_ever_x": {
         "name": "Never Have I Ever X",
         "description": "A fun party game app where players discover surprising facts about each other through classic 'Never Have I Ever' questions.",
         "metric": "500K+",
-        "details": "Developed the full Flutter application for this popular party game. Implemented hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue."
+        "details": "Implemented UI and hundreds of curated questions across multiple categories, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue."
       },
       "booze": {
         "name": "Booze",
         "description": "A drinking game app with creative challenges, mini-games, and social dynamics designed for fun group gatherings.",
         "metric": "500K+",
-        "details": "Built the Flutter application for this party drinking game featuring diverse challenge modes, customizable game rules, and group play mechanics. Implemented smooth animations, ad monetization, and Firebase analytics for tracking user engagement and session data."
+        "details": "Implemented UI and diverse challenge modes, customizable game rules, and group play mechanics. Implemented smooth animations, ad monetization, and Firebase analytics for tracking user engagement and session data."
       },
       "vdx": {
-        "name": "VDX",
-        "description": "A fun party game app where players discover surprising facts about each other through classic 'Never Have I Ever' questions.",
+        "name": "Truth or Dare X",
+        "description": "A fun party game app where players discover surprising facts about each other through classic 'Truth or Dare' questions.",
         "metric": "1M+",
-        "details": "Developed the full Flutter application for this popular party game. Implemented hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue."
+        "details": "Implemented UI and hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue."
       }
     }
   },
@@ -107,21 +107,21 @@
     "title": "Experience",
     "subtitle": "My professional journey so far",
     "items": {
-      "bluStudios": {
+      "blu_studios": {
         "title": "Partner & Senior Flutter Engineer",
         "period": "2019 – 2026",
         "location": "Remote",
         "points": [
-          "Built and maintained multiple mobile apps and games totaling 15M+ downloads worldwide.",
+          "Built and maintained multiple mobile apps and games totaling @:app.total_downloads downloads worldwide.",
           "Architected scalable systems supporting millions of users, including real-time leaderboards, live events, and ranking systems.",
-          "Owned the full mobile product lifecycle: architecture, development, testing, CI/CD, publishing, ASO, monetization, live ops, and store compliance.",
+          "Co-owned the full mobile product lifecycle: architecture, development, testing, CI/CD, publishing, ASO, monetization, live ops, and store compliance.",
           "Integrated backend services using Firebase (Full Suite), GraphQL APIs, and Node.js.",
           "Designed and optimized monetization systems achieving consistently high eCPM performance.",
-          "Led fully remote teams of up to 14 people.",
+          "Co-led fully remote teams of up to 14 people.",
           "Established partnerships with Wildlife Studios and Homa Games."
         ]
       },
-      "vxCase": {
+      "vx_case": {
         "title": "Junior Desktop Developer",
         "period": "Oct 2018 – Mar 2019",
         "location": "Salvador, Brazil",
@@ -147,7 +147,7 @@
     "title": "Skills & Expertise",
     "subtitle": "Technologies and tools I use to bring ideas to life",
     "categories": {
-      "mobileDev": {
+      "mobile_dev": {
         "title": "Mobile Development",
         "skills": ["Flutter", "Dart", "Riverpod", "Bloc", "MobX", "MVVM", "Clean Architecture", "TDD", "Native Plugins"]
       },
@@ -166,15 +166,15 @@
     },
     "awards": {
       "title": "Awards & Recognition",
-      "googlePlay": {
+      "google_play": {
         "title": "Google Play Best of 2021",
         "subtitle": "App of the Year Nominee (Rabit)"
       },
-      "indieFund": {
+      "indie_games_fund": {
         "title": "Indie Games Fund 2023",
         "subtitle": "Winner (Farm vs Aliens)"
       },
-      "accelerator": {
+      "indie_games_accelerator": {
         "title": "Indie Games Accelerator 2024",
         "subtitle": "Graduate"
       }

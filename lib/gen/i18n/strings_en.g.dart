@@ -60,6 +60,9 @@ class TranslationsAppEn {
 
 	/// en: 'Guilherme Passos - Flutter Developer'
 	String get title => 'Guilherme Passos - Flutter Developer';
+
+	/// en: '12M+'
+	String get total_downloads => '12M+';
 }
 
 // Path: nav
@@ -100,14 +103,14 @@ class TranslationsHeroEn {
 	/// en: 'Flutter Developer'
 	String get role => 'Flutter Developer';
 
-	/// en: 'Flutter Developer & Mobile Entrepreneur with 5+ years crafting high-performance apps and games reaching 15M+ downloads worldwide.'
-	String get description => 'Flutter Developer & Mobile Entrepreneur with 5+ years crafting high-performance apps and games reaching 15M+ downloads worldwide.';
+	/// en: 'Flutter Developer & Mobile Entrepreneur with 5+ years crafting high-performance apps and games reaching 12M+ downloads worldwide.'
+	String get description => 'Flutter Developer & Mobile Entrepreneur with 5+ years crafting high-performance apps and games reaching ${_root.app.total_downloads} downloads worldwide.';
 
 	/// en: 'Explore Projects'
-	String get exploreProjects => 'Explore Projects';
+	String get explore_projects => 'Explore Projects';
 
 	/// en: 'Get In Touch'
-	String get getInTouch => 'Get In Touch';
+	String get get_in_touch => 'Get In Touch';
 }
 
 // Path: about
@@ -150,11 +153,14 @@ class TranslationsProjectsEn {
 	/// en: 'Real-world products across games and mobile apps'
 	String get subtitle => 'Real-world products across games and mobile apps';
 
-	/// en: 'See more details'
-	String get details_button => 'See more details';
+	/// en: 'What i did in this project'
+	String get details_button => 'What i did in this project';
 
 	/// en: 'Other Projects'
-	String get otherProjectsToggle => 'Other Projects';
+	String get other_projects_toggle => 'Other Projects';
+
+	/// en: 'View on Store'
+	String get view_on_store => 'View on Store';
 
 	late final TranslationsProjectsItemsEn items = TranslationsProjectsItemsEn._(_root);
 }
@@ -244,13 +250,13 @@ class TranslationsProjectsItemsEn {
 	final Translations _root; // ignore: unused_field
 
 	// Translations
-	late final TranslationsProjectsItemsMagicSortEn magicSort = TranslationsProjectsItemsMagicSortEn._(_root);
+	late final TranslationsProjectsItemsMagicSortEn magic_sort = TranslationsProjectsItemsMagicSortEn._(_root);
 	late final TranslationsProjectsItemsRabitEn rabit = TranslationsProjectsItemsRabitEn._(_root);
 	late final TranslationsProjectsItemsCupsEn cups = TranslationsProjectsItemsCupsEn._(_root);
-	late final TranslationsProjectsItemsFarmVsAliensEn farmVsAliens = TranslationsProjectsItemsFarmVsAliensEn._(_root);
+	late final TranslationsProjectsItemsFarmVsAliensEn farm_vs_aliens = TranslationsProjectsItemsFarmVsAliensEn._(_root);
 	late final TranslationsProjectsItemsCapyEn capy = TranslationsProjectsItemsCapyEn._(_root);
-	late final TranslationsProjectsItemsDropMergeEn dropMerge = TranslationsProjectsItemsDropMergeEn._(_root);
-	late final TranslationsProjectsItemsNeverHaveIEverXEn neverHaveIEverX = TranslationsProjectsItemsNeverHaveIEverXEn._(_root);
+	late final TranslationsProjectsItemsDropMergeEn drop_merge = TranslationsProjectsItemsDropMergeEn._(_root);
+	late final TranslationsProjectsItemsNeverHaveIEverXEn never_have_i_ever_x = TranslationsProjectsItemsNeverHaveIEverXEn._(_root);
 	late final TranslationsProjectsItemsBoozeEn booze = TranslationsProjectsItemsBoozeEn._(_root);
 	late final TranslationsProjectsItemsVdxEn vdx = TranslationsProjectsItemsVdxEn._(_root);
 }
@@ -262,8 +268,8 @@ class TranslationsExperienceItemsEn {
 	final Translations _root; // ignore: unused_field
 
 	// Translations
-	late final TranslationsExperienceItemsBluStudiosEn bluStudios = TranslationsExperienceItemsBluStudiosEn._(_root);
-	late final TranslationsExperienceItemsVxCaseEn vxCase = TranslationsExperienceItemsVxCaseEn._(_root);
+	late final TranslationsExperienceItemsBluStudiosEn blu_studios = TranslationsExperienceItemsBluStudiosEn._(_root);
+	late final TranslationsExperienceItemsVxCaseEn vx_case = TranslationsExperienceItemsVxCaseEn._(_root);
 	late final TranslationsExperienceItemsTecallEn tecall = TranslationsExperienceItemsTecallEn._(_root);
 }
 
@@ -274,7 +280,7 @@ class TranslationsSkillsCategoriesEn {
 	final Translations _root; // ignore: unused_field
 
 	// Translations
-	late final TranslationsSkillsCategoriesMobileDevEn mobileDev = TranslationsSkillsCategoriesMobileDevEn._(_root);
+	late final TranslationsSkillsCategoriesMobileDevEn mobile_dev = TranslationsSkillsCategoriesMobileDevEn._(_root);
 	late final TranslationsSkillsCategoriesBackendEn backend = TranslationsSkillsCategoriesBackendEn._(_root);
 	late final TranslationsSkillsCategoriesLanguagesEn languages = TranslationsSkillsCategoriesLanguagesEn._(_root);
 	late final TranslationsSkillsCategoriesToolsEn tools = TranslationsSkillsCategoriesToolsEn._(_root);
@@ -291,9 +297,9 @@ class TranslationsSkillsAwardsEn {
 	/// en: 'Awards & Recognition'
 	String get title => 'Awards & Recognition';
 
-	late final TranslationsSkillsAwardsGooglePlayEn googlePlay = TranslationsSkillsAwardsGooglePlayEn._(_root);
-	late final TranslationsSkillsAwardsIndieFundEn indieFund = TranslationsSkillsAwardsIndieFundEn._(_root);
-	late final TranslationsSkillsAwardsAcceleratorEn accelerator = TranslationsSkillsAwardsAcceleratorEn._(_root);
+	late final TranslationsSkillsAwardsGooglePlayEn google_play = TranslationsSkillsAwardsGooglePlayEn._(_root);
+	late final TranslationsSkillsAwardsIndieGamesFundEn indie_games_fund = TranslationsSkillsAwardsIndieGamesFundEn._(_root);
+	late final TranslationsSkillsAwardsIndieGamesAcceleratorEn indie_games_accelerator = TranslationsSkillsAwardsIndieGamesAcceleratorEn._(_root);
 }
 
 // Path: about.stats.downloads
@@ -304,8 +310,8 @@ class TranslationsAboutStatsDownloadsEn {
 
 	// Translations
 
-	/// en: '15M+'
-	String get value => '15M+';
+	/// en: '12M+'
+	String get value => _root.app.total_downloads;
 
 	/// en: 'Downloads'
 	String get label => 'Downloads';
@@ -356,7 +362,7 @@ class TranslationsAboutStatsTeamSizeEn {
 	String get label => 'Max Team Size Co-led';
 }
 
-// Path: projects.items.magicSort
+// Path: projects.items.magic_sort
 class TranslationsProjectsItemsMagicSortEn {
 	TranslationsProjectsItemsMagicSortEn._(this._root);
 
@@ -367,17 +373,14 @@ class TranslationsProjectsItemsMagicSortEn {
 	/// en: 'Magic Sort'
 	String get name => 'Magic Sort';
 
-	/// en: 'First hybrid casual water-sort puzzle game on the market. Designed complex/high-performance UI systems, monetization flows, and live-event mechanics.'
-	String get description => 'First hybrid casual water-sort puzzle game on the market. Designed complex/high-performance UI systems, monetization flows, and live-event mechanics.';
-
-	/// en: '480K+ downloads'
-	String get badge => '480K+ downloads';
+	/// en: 'First hybrid casual water-sort puzzle game on the market. Partnership with Wildlife Studios'
+	String get description => 'First hybrid casual water-sort puzzle game on the market. Partnership with Wildlife Studios';
 
 	/// en: '480K+'
 	String get metric => '480K+';
 
-	/// en: 'Architected and developed the entire Flutter codebase from scratch for this hybrid casual puzzle game. Implemented high-performance UI systems including animated tutorials, live-event mechanics (Battle Pass, Magic League, Treasure Hunts), and a scalable monetization framework with rewarded ads, interstitials, and IAP. Built a custom level system with lazy initialization supporting 1,000+ levels. Integrated Firebase Analytics, Remote Config for A/B testing, and Crashlytics for real-time monitoring.'
-	String get details => 'Architected and developed the entire Flutter codebase from scratch for this hybrid casual puzzle game. Implemented high-performance UI systems including animated tutorials, live-event mechanics (Battle Pass, Magic League, Treasure Hunts), and a scalable monetization framework with rewarded ads, interstitials, and IAP. Built a custom level system with lazy initialization supporting 1,000+ levels. Integrated Firebase Analytics, Remote Config for A/B testing, and Crashlytics for real-time monitoring.';
+	/// en: 'Implemented high-performance UI systems including animated tutorials, live-event mechanics (Battle Pass, Magic League, Treasure Hunts), and a scalable monetization framework with rewarded ads, interstitials, and IAP. Integrated Firebase Analytics, Remote Config for A/B testing, and Crashlytics for real-time monitoring.'
+	String get details => 'Implemented high-performance UI systems including animated tutorials, live-event mechanics (Battle Pass, Magic League, Treasure Hunts), and a scalable monetization framework with rewarded ads, interstitials, and IAP. Integrated Firebase Analytics, Remote Config for A/B testing, and Crashlytics for real-time monitoring.';
 }
 
 // Path: projects.items.rabit
@@ -391,17 +394,14 @@ class TranslationsProjectsItemsRabitEn {
 	/// en: 'Rabit'
 	String get name => 'Rabit';
 
-	/// en: 'Google Play Best of 2021 – App of the Year Nominee. Implemented gamified habit tracking with notifications, cloud sync, and analytics.'
-	String get description => 'Google Play Best of 2021 – App of the Year Nominee. Implemented gamified habit tracking with notifications, cloud sync, and analytics.';
-
-	/// en: 'Best of 2021'
-	String get badge => 'Best of 2021';
+	/// en: 'Gamified habit tracking app where users grow virtual plants by completing daily tasks. Ranked 2nd as App of the Year 2021 on Google Play Brazil.'
+	String get description => 'Gamified habit tracking app where users grow virtual plants by completing daily tasks. Ranked 2nd as App of the Year 2021 on Google Play Brazil.';
 
 	/// en: '5M+'
 	String get metric => '5M+';
 
-	/// en: 'Built a gamified habit tracking app where users grow virtual plants by completing daily tasks. Ranked 2nd as App of the Year 2021 on Google Play Brazil. Developed the full Flutter application including push/local notifications, cloud sync with Firebase Firestore, streak tracking, and detailed analytics. Designed custom animations and micro-interactions that boosted user retention.'
-	String get details => 'Built a gamified habit tracking app where users grow virtual plants by completing daily tasks. Ranked 2nd as App of the Year 2021 on Google Play Brazil. Developed the full Flutter application including push/local notifications, cloud sync with Firebase Firestore, streak tracking, and detailed analytics. Designed custom animations and micro-interactions that boosted user retention.';
+	/// en: 'Implemented push/local notifications, cloud sync with Firebase Firestore, streak tracking, and detailed analytics. Designed custom animations, high-performance UI systems and micro-interactions that boosted user retention.'
+	String get details => 'Implemented push/local notifications, cloud sync with Firebase Firestore, streak tracking, and detailed analytics. Designed custom animations, high-performance UI systems and micro-interactions that boosted user retention.';
 }
 
 // Path: projects.items.cups
@@ -415,17 +415,17 @@ class TranslationsProjectsItemsCupsEn {
 	/// en: 'Cups'
 	String get name => 'Cups';
 
-	/// en: 'Water sort puzzle game surpassing 4.5M+ downloads with strong traction in the US market. Implemented UIs, monetization systems, and full ads integration.'
-	String get description => 'Water sort puzzle game surpassing 4.5M+ downloads with strong traction in the US market. Implemented UIs, monetization systems, and full ads integration.';
+	/// en: 'Water sort puzzle game surpassing 4.5M+ downloads with strong traction in the US market. Partnership with Homa Games'
+	String get description => 'Water sort puzzle game surpassing 4.5M+ downloads with strong traction in the US market. Partnership with Homa Games';
 
 	/// en: '4.5M+'
 	String get metric => '4.5M+';
 
-	/// en: 'Developed the Flutter version of this water sort puzzle game, which reached 4.5M+ downloads with strong organic traction in the US market. Implemented the complete UI layer, monetization systems with multiple ad networks, and level progression. Led the performance optimization efforts that reduced frame build times and improved user experience on low-end devices.'
-	String get details => 'Developed the Flutter version of this water sort puzzle game, which reached 4.5M+ downloads with strong organic traction in the US market. Implemented the complete UI layer, monetization systems with multiple ad networks, and level progression. Led the performance optimization efforts that reduced frame build times and improved user experience on low-end devices.';
+	/// en: 'Implemented the complete UI layer, monetization systems. Co-led the performance optimization efforts that reduced frame build times and improved user experience on low-end devices.'
+	String get details => 'Implemented the complete UI layer, monetization systems. Co-led the performance optimization efforts that reduced frame build times and improved user experience on low-end devices.';
 }
 
-// Path: projects.items.farmVsAliens
+// Path: projects.items.farm_vs_aliens
 class TranslationsProjectsItemsFarmVsAliensEn {
 	TranslationsProjectsItemsFarmVsAliensEn._(this._root);
 
@@ -436,14 +436,14 @@ class TranslationsProjectsItemsFarmVsAliensEn {
 	/// en: 'Farm vs Aliens'
 	String get name => 'Farm vs Aliens';
 
-	/// en: 'Winner of the Google Play Indie Games Fund 2024. Led product direction, game design, and monetization strategy for this merge tower defense game.'
-	String get description => 'Winner of the Google Play Indie Games Fund 2024. Led product direction, game design, and monetization strategy for this merge tower defense game.';
+	/// en: 'A merge tower defense game where players defend their farm from alien invaders by merging and upgrading towers.'
+	String get description => 'A merge tower defense game where players defend their farm from alien invaders by merging and upgrading towers.';
 
 	/// en: 'Indie Fund Winner'
 	String get badge => 'Indie Fund Winner';
 
-	/// en: 'Led product direction and game design for this merge tower defense game, which was selected and funded by the Google Play Indie Games Fund 2023 and graduated from the Google Play Indie Games Accelerator 2024. Defined the core gameplay loop combining merge mechanics with strategic tower defense. Managed the full product lifecycle including monetization strategy, Google Play Pass integration, and live ops.'
-	String get details => 'Led product direction and game design for this merge tower defense game, which was selected and funded by the Google Play Indie Games Fund 2023 and graduated from the Google Play Indie Games Accelerator 2024. Defined the core gameplay loop combining merge mechanics with strategic tower defense. Managed the full product lifecycle including monetization strategy, Google Play Pass integration, and live ops.';
+	/// en: 'Led product direction and game design for this merge tower defense game. Defined the core gameplay loop combining merge mechanics with strategic tower defense.'
+	String get details => 'Led product direction and game design for this merge tower defense game. Defined the core gameplay loop combining merge mechanics with strategic tower defense.';
 }
 
 // Path: projects.items.capy
@@ -460,11 +460,11 @@ class TranslationsProjectsItemsCapyEn {
 	/// en: 'Self-care companion app with a virtual pet mechanic. Users maintain their well-being through daily tasks and caring for their capybara.'
 	String get description => 'Self-care companion app with a virtual pet mechanic. Users maintain their well-being through daily tasks and caring for their capybara.';
 
-	/// en: 'Built a wellness companion app featuring a virtual capybara pet that users care for by completing self-care activities. Implemented the full Flutter application with habit tracking, mood journaling, and pet evolution mechanics. Integrated push notifications for daily reminders and Firebase for user data persistence.'
-	String get details => 'Built a wellness companion app featuring a virtual capybara pet that users care for by completing self-care activities. Implemented the full Flutter application with habit tracking, mood journaling, and pet evolution mechanics. Integrated push notifications for daily reminders and Firebase for user data persistence.';
+	/// en: 'Implemented habit tracking, mood journaling, and pet evolution mechanics. Integrated push notifications for daily reminders and Firebase for user data persistence.'
+	String get details => 'Implemented habit tracking, mood journaling, and pet evolution mechanics. Integrated push notifications for daily reminders and Firebase for user data persistence.';
 }
 
-// Path: projects.items.dropMerge
+// Path: projects.items.drop_merge
 class TranslationsProjectsItemsDropMergeEn {
 	TranslationsProjectsItemsDropMergeEn._(this._root);
 
@@ -478,11 +478,11 @@ class TranslationsProjectsItemsDropMergeEn {
 	/// en: 'Addictive drop and merge puzzle game combining strategic placement with satisfying merge mechanics for an engaging casual experience.'
 	String get description => 'Addictive drop and merge puzzle game combining strategic placement with satisfying merge mechanics for an engaging casual experience.';
 
-	/// en: 'Developed the Flutter implementation of this casual puzzle game featuring drop and merge mechanics. Built the core game engine with physics-based interactions, scoring systems, and progressive difficulty. Implemented monetization with rewarded ads and integrated analytics for player behavior tracking.'
-	String get details => 'Developed the Flutter implementation of this casual puzzle game featuring drop and merge mechanics. Built the core game engine with physics-based interactions, scoring systems, and progressive difficulty. Implemented monetization with rewarded ads and integrated analytics for player behavior tracking.';
+	/// en: 'Implemented the complete UI layer'
+	String get details => 'Implemented the complete UI layer';
 }
 
-// Path: projects.items.neverHaveIEverX
+// Path: projects.items.never_have_i_ever_x
 class TranslationsProjectsItemsNeverHaveIEverXEn {
 	TranslationsProjectsItemsNeverHaveIEverXEn._(this._root);
 
@@ -499,8 +499,8 @@ class TranslationsProjectsItemsNeverHaveIEverXEn {
 	/// en: '500K+'
 	String get metric => '500K+';
 
-	/// en: 'Developed the full Flutter application for this popular party game. Implemented hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.'
-	String get details => 'Developed the full Flutter application for this popular party game. Implemented hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.';
+	/// en: 'Implemented UI and hundreds of curated questions across multiple categories, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.'
+	String get details => 'Implemented UI and hundreds of curated questions across multiple categories, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.';
 }
 
 // Path: projects.items.booze
@@ -520,8 +520,8 @@ class TranslationsProjectsItemsBoozeEn {
 	/// en: '500K+'
 	String get metric => '500K+';
 
-	/// en: 'Built the Flutter application for this party drinking game featuring diverse challenge modes, customizable game rules, and group play mechanics. Implemented smooth animations, ad monetization, and Firebase analytics for tracking user engagement and session data.'
-	String get details => 'Built the Flutter application for this party drinking game featuring diverse challenge modes, customizable game rules, and group play mechanics. Implemented smooth animations, ad monetization, and Firebase analytics for tracking user engagement and session data.';
+	/// en: 'Implemented UI and diverse challenge modes, customizable game rules, and group play mechanics. Implemented smooth animations, ad monetization, and Firebase analytics for tracking user engagement and session data.'
+	String get details => 'Implemented UI and diverse challenge modes, customizable game rules, and group play mechanics. Implemented smooth animations, ad monetization, and Firebase analytics for tracking user engagement and session data.';
 }
 
 // Path: projects.items.vdx
@@ -532,20 +532,20 @@ class TranslationsProjectsItemsVdxEn {
 
 	// Translations
 
-	/// en: 'VDX'
-	String get name => 'VDX';
+	/// en: 'Truth or Dare X'
+	String get name => 'Truth or Dare X';
 
-	/// en: 'A fun party game app where players discover surprising facts about each other through classic 'Never Have I Ever' questions.'
-	String get description => 'A fun party game app where players discover surprising facts about each other through classic \'Never Have I Ever\' questions.';
+	/// en: 'A fun party game app where players discover surprising facts about each other through classic 'Truth or Dare' questions.'
+	String get description => 'A fun party game app where players discover surprising facts about each other through classic \'Truth or Dare\' questions.';
 
 	/// en: '1M+'
 	String get metric => '1M+';
 
-	/// en: 'Developed the full Flutter application for this popular party game. Implemented hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.'
-	String get details => 'Developed the full Flutter application for this popular party game. Implemented hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.';
+	/// en: 'Implemented UI and hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.'
+	String get details => 'Implemented UI and hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.';
 }
 
-// Path: experience.items.bluStudios
+// Path: experience.items.blu_studios
 class TranslationsExperienceItemsBluStudiosEn {
 	TranslationsExperienceItemsBluStudiosEn._(this._root);
 
@@ -563,17 +563,17 @@ class TranslationsExperienceItemsBluStudiosEn {
 	String get location => 'Remote';
 
 	List<String> get points => [
-		'Built and maintained multiple mobile apps and games totaling 15M+ downloads worldwide.',
+		'Built and maintained multiple mobile apps and games totaling ${_root.app.total_downloads} downloads worldwide.',
 		'Architected scalable systems supporting millions of users, including real-time leaderboards, live events, and ranking systems.',
-		'Owned the full mobile product lifecycle: architecture, development, testing, CI/CD, publishing, ASO, monetization, live ops, and store compliance.',
+		'Co-owned the full mobile product lifecycle: architecture, development, testing, CI/CD, publishing, ASO, monetization, live ops, and store compliance.',
 		'Integrated backend services using Firebase (Full Suite), GraphQL APIs, and Node.js.',
 		'Designed and optimized monetization systems achieving consistently high eCPM performance.',
-		'Led fully remote teams of up to 14 people.',
+		'Co-led fully remote teams of up to 14 people.',
 		'Established partnerships with Wildlife Studios and Homa Games.',
 	];
 }
 
-// Path: experience.items.vxCase
+// Path: experience.items.vx_case
 class TranslationsExperienceItemsVxCaseEn {
 	TranslationsExperienceItemsVxCaseEn._(this._root);
 
@@ -621,7 +621,7 @@ class TranslationsExperienceItemsTecallEn {
 	];
 }
 
-// Path: skills.categories.mobileDev
+// Path: skills.categories.mobile_dev
 class TranslationsSkillsCategoriesMobileDevEn {
 	TranslationsSkillsCategoriesMobileDevEn._(this._root);
 
@@ -708,7 +708,7 @@ class TranslationsSkillsCategoriesToolsEn {
 	];
 }
 
-// Path: skills.awards.googlePlay
+// Path: skills.awards.google_play
 class TranslationsSkillsAwardsGooglePlayEn {
 	TranslationsSkillsAwardsGooglePlayEn._(this._root);
 
@@ -723,9 +723,9 @@ class TranslationsSkillsAwardsGooglePlayEn {
 	String get subtitle => 'App of the Year Nominee (Rabit)';
 }
 
-// Path: skills.awards.indieFund
-class TranslationsSkillsAwardsIndieFundEn {
-	TranslationsSkillsAwardsIndieFundEn._(this._root);
+// Path: skills.awards.indie_games_fund
+class TranslationsSkillsAwardsIndieGamesFundEn {
+	TranslationsSkillsAwardsIndieGamesFundEn._(this._root);
 
 	final Translations _root; // ignore: unused_field
 
@@ -738,9 +738,9 @@ class TranslationsSkillsAwardsIndieFundEn {
 	String get subtitle => 'Winner (Farm vs Aliens)';
 }
 
-// Path: skills.awards.accelerator
-class TranslationsSkillsAwardsAcceleratorEn {
-	TranslationsSkillsAwardsAcceleratorEn._(this._root);
+// Path: skills.awards.indie_games_accelerator
+class TranslationsSkillsAwardsIndieGamesAcceleratorEn {
+	TranslationsSkillsAwardsIndieGamesAcceleratorEn._(this._root);
 
 	final Translations _root; // ignore: unused_field
 
@@ -762,6 +762,7 @@ extension on Translations {
 	dynamic _flatMapFunction(String path) {
 		return switch (path) {
 			'app.title' => 'Guilherme Passos - Flutter Developer',
+			'app.total_downloads' => '12M+',
 			'nav.about' => 'About',
 			'nav.projects' => 'Projects',
 			'nav.experience' => 'Experience',
@@ -769,15 +770,15 @@ extension on Translations {
 			'nav.contact' => 'Contact',
 			'hero.name' => 'Guilherme\nPassos',
 			'hero.role' => 'Flutter Developer',
-			'hero.description' => 'Flutter Developer & Mobile Entrepreneur with 5+ years crafting high-performance apps and games reaching 15M+ downloads worldwide.',
-			'hero.exploreProjects' => 'Explore Projects',
-			'hero.getInTouch' => 'Get In Touch',
+			'hero.description' => 'Flutter Developer & Mobile Entrepreneur with 5+ years crafting high-performance apps and games reaching ${_root.app.total_downloads} downloads worldwide.',
+			'hero.explore_projects' => 'Explore Projects',
+			'hero.get_in_touch' => 'Get In Touch',
 			'about.title' => 'About Me',
 			'about.subtitle' => 'Building digital products that scale',
 			'about.bio1' => 'Senior Flutter Developer with over five years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.',
 			'about.bio2' => 'I\'ve implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I\'ve built and maintained have reached 15M+ downloads worldwide.',
 			'about.bio3' => 'I specialize in scalable architectures, long-term code maintainability, and high-performance mobile applications. My expertise spans multiple state management solutions (Riverpod, Bloc, MobX), native plugin integration, and the full Firebase ecosystem.',
-			'about.stats.downloads.value' => '15M+',
+			'about.stats.downloads.value' => _root.app.total_downloads,
 			'about.stats.downloads.label' => 'Downloads',
 			'about.stats.experience.value' => '5+',
 			'about.stats.experience.label' => 'Years Experience',
@@ -787,62 +788,61 @@ extension on Translations {
 			'about.stats.teamSize.label' => 'Max Team Size Co-led',
 			'projects.title' => 'Featured Projects',
 			'projects.subtitle' => 'Real-world products across games and mobile apps',
-			'projects.details_button' => 'See more details',
-			'projects.otherProjectsToggle' => 'Other Projects',
-			'projects.items.magicSort.name' => 'Magic Sort',
-			'projects.items.magicSort.description' => 'First hybrid casual water-sort puzzle game on the market. Designed complex/high-performance UI systems, monetization flows, and live-event mechanics.',
-			'projects.items.magicSort.badge' => '480K+ downloads',
-			'projects.items.magicSort.metric' => '480K+',
-			'projects.items.magicSort.details' => 'Architected and developed the entire Flutter codebase from scratch for this hybrid casual puzzle game. Implemented high-performance UI systems including animated tutorials, live-event mechanics (Battle Pass, Magic League, Treasure Hunts), and a scalable monetization framework with rewarded ads, interstitials, and IAP. Built a custom level system with lazy initialization supporting 1,000+ levels. Integrated Firebase Analytics, Remote Config for A/B testing, and Crashlytics for real-time monitoring.',
+			'projects.details_button' => 'What i did in this project',
+			'projects.other_projects_toggle' => 'Other Projects',
+			'projects.view_on_store' => 'View on Store',
+			'projects.items.magic_sort.name' => 'Magic Sort',
+			'projects.items.magic_sort.description' => 'First hybrid casual water-sort puzzle game on the market. Partnership with Wildlife Studios',
+			'projects.items.magic_sort.metric' => '480K+',
+			'projects.items.magic_sort.details' => 'Implemented high-performance UI systems including animated tutorials, live-event mechanics (Battle Pass, Magic League, Treasure Hunts), and a scalable monetization framework with rewarded ads, interstitials, and IAP. Integrated Firebase Analytics, Remote Config for A/B testing, and Crashlytics for real-time monitoring.',
 			'projects.items.rabit.name' => 'Rabit',
-			'projects.items.rabit.description' => 'Google Play Best of 2021 – App of the Year Nominee. Implemented gamified habit tracking with notifications, cloud sync, and analytics.',
-			'projects.items.rabit.badge' => 'Best of 2021',
+			'projects.items.rabit.description' => 'Gamified habit tracking app where users grow virtual plants by completing daily tasks. Ranked 2nd as App of the Year 2021 on Google Play Brazil.',
 			'projects.items.rabit.metric' => '5M+',
-			'projects.items.rabit.details' => 'Built a gamified habit tracking app where users grow virtual plants by completing daily tasks. Ranked 2nd as App of the Year 2021 on Google Play Brazil. Developed the full Flutter application including push/local notifications, cloud sync with Firebase Firestore, streak tracking, and detailed analytics. Designed custom animations and micro-interactions that boosted user retention.',
+			'projects.items.rabit.details' => 'Implemented push/local notifications, cloud sync with Firebase Firestore, streak tracking, and detailed analytics. Designed custom animations, high-performance UI systems and micro-interactions that boosted user retention.',
 			'projects.items.cups.name' => 'Cups',
-			'projects.items.cups.description' => 'Water sort puzzle game surpassing 4.5M+ downloads with strong traction in the US market. Implemented UIs, monetization systems, and full ads integration.',
+			'projects.items.cups.description' => 'Water sort puzzle game surpassing 4.5M+ downloads with strong traction in the US market. Partnership with Homa Games',
 			'projects.items.cups.metric' => '4.5M+',
-			'projects.items.cups.details' => 'Developed the Flutter version of this water sort puzzle game, which reached 4.5M+ downloads with strong organic traction in the US market. Implemented the complete UI layer, monetization systems with multiple ad networks, and level progression. Led the performance optimization efforts that reduced frame build times and improved user experience on low-end devices.',
-			'projects.items.farmVsAliens.name' => 'Farm vs Aliens',
-			'projects.items.farmVsAliens.description' => 'Winner of the Google Play Indie Games Fund 2024. Led product direction, game design, and monetization strategy for this merge tower defense game.',
-			'projects.items.farmVsAliens.badge' => 'Indie Fund Winner',
-			'projects.items.farmVsAliens.details' => 'Led product direction and game design for this merge tower defense game, which was selected and funded by the Google Play Indie Games Fund 2023 and graduated from the Google Play Indie Games Accelerator 2024. Defined the core gameplay loop combining merge mechanics with strategic tower defense. Managed the full product lifecycle including monetization strategy, Google Play Pass integration, and live ops.',
+			'projects.items.cups.details' => 'Implemented the complete UI layer, monetization systems. Co-led the performance optimization efforts that reduced frame build times and improved user experience on low-end devices.',
+			'projects.items.farm_vs_aliens.name' => 'Farm vs Aliens',
+			'projects.items.farm_vs_aliens.description' => 'A merge tower defense game where players defend their farm from alien invaders by merging and upgrading towers.',
+			'projects.items.farm_vs_aliens.badge' => 'Indie Fund Winner',
+			'projects.items.farm_vs_aliens.details' => 'Led product direction and game design for this merge tower defense game. Defined the core gameplay loop combining merge mechanics with strategic tower defense.',
 			'projects.items.capy.name' => 'Capy: Self-Care Pet',
 			'projects.items.capy.description' => 'Self-care companion app with a virtual pet mechanic. Users maintain their well-being through daily tasks and caring for their capybara.',
-			'projects.items.capy.details' => 'Built a wellness companion app featuring a virtual capybara pet that users care for by completing self-care activities. Implemented the full Flutter application with habit tracking, mood journaling, and pet evolution mechanics. Integrated push notifications for daily reminders and Firebase for user data persistence.',
-			'projects.items.dropMerge.name' => 'Drop & Merge',
-			'projects.items.dropMerge.description' => 'Addictive drop and merge puzzle game combining strategic placement with satisfying merge mechanics for an engaging casual experience.',
-			'projects.items.dropMerge.details' => 'Developed the Flutter implementation of this casual puzzle game featuring drop and merge mechanics. Built the core game engine with physics-based interactions, scoring systems, and progressive difficulty. Implemented monetization with rewarded ads and integrated analytics for player behavior tracking.',
-			'projects.items.neverHaveIEverX.name' => 'Never Have I Ever X',
-			'projects.items.neverHaveIEverX.description' => 'A fun party game app where players discover surprising facts about each other through classic \'Never Have I Ever\' questions.',
-			'projects.items.neverHaveIEverX.metric' => '500K+',
-			'projects.items.neverHaveIEverX.details' => 'Developed the full Flutter application for this popular party game. Implemented hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.',
+			'projects.items.capy.details' => 'Implemented habit tracking, mood journaling, and pet evolution mechanics. Integrated push notifications for daily reminders and Firebase for user data persistence.',
+			'projects.items.drop_merge.name' => 'Drop & Merge',
+			'projects.items.drop_merge.description' => 'Addictive drop and merge puzzle game combining strategic placement with satisfying merge mechanics for an engaging casual experience.',
+			'projects.items.drop_merge.details' => 'Implemented the complete UI layer',
+			'projects.items.never_have_i_ever_x.name' => 'Never Have I Ever X',
+			'projects.items.never_have_i_ever_x.description' => 'A fun party game app where players discover surprising facts about each other through classic \'Never Have I Ever\' questions.',
+			'projects.items.never_have_i_ever_x.metric' => '500K+',
+			'projects.items.never_have_i_ever_x.details' => 'Implemented UI and hundreds of curated questions across multiple categories, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.',
 			'projects.items.booze.name' => 'Booze',
 			'projects.items.booze.description' => 'A drinking game app with creative challenges, mini-games, and social dynamics designed for fun group gatherings.',
 			'projects.items.booze.metric' => '500K+',
-			'projects.items.booze.details' => 'Built the Flutter application for this party drinking game featuring diverse challenge modes, customizable game rules, and group play mechanics. Implemented smooth animations, ad monetization, and Firebase analytics for tracking user engagement and session data.',
-			'projects.items.vdx.name' => 'VDX',
-			'projects.items.vdx.description' => 'A fun party game app where players discover surprising facts about each other through classic \'Never Have I Ever\' questions.',
+			'projects.items.booze.details' => 'Implemented UI and diverse challenge modes, customizable game rules, and group play mechanics. Implemented smooth animations, ad monetization, and Firebase analytics for tracking user engagement and session data.',
+			'projects.items.vdx.name' => 'Truth or Dare X',
+			'projects.items.vdx.description' => 'A fun party game app where players discover surprising facts about each other through classic \'Truth or Dare\' questions.',
 			'projects.items.vdx.metric' => '1M+',
-			'projects.items.vdx.details' => 'Developed the full Flutter application for this popular party game. Implemented hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.',
+			'projects.items.vdx.details' => 'Implemented UI and hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.',
 			'experience.title' => 'Experience',
 			'experience.subtitle' => 'My professional journey so far',
-			'experience.items.bluStudios.title' => 'Partner & Senior Flutter Engineer',
-			'experience.items.bluStudios.period' => '2019 – 2026',
-			'experience.items.bluStudios.location' => 'Remote',
-			'experience.items.bluStudios.points.0' => 'Built and maintained multiple mobile apps and games totaling 15M+ downloads worldwide.',
-			'experience.items.bluStudios.points.1' => 'Architected scalable systems supporting millions of users, including real-time leaderboards, live events, and ranking systems.',
-			'experience.items.bluStudios.points.2' => 'Owned the full mobile product lifecycle: architecture, development, testing, CI/CD, publishing, ASO, monetization, live ops, and store compliance.',
-			'experience.items.bluStudios.points.3' => 'Integrated backend services using Firebase (Full Suite), GraphQL APIs, and Node.js.',
-			'experience.items.bluStudios.points.4' => 'Designed and optimized monetization systems achieving consistently high eCPM performance.',
-			'experience.items.bluStudios.points.5' => 'Led fully remote teams of up to 14 people.',
-			'experience.items.bluStudios.points.6' => 'Established partnerships with Wildlife Studios and Homa Games.',
-			'experience.items.vxCase.title' => 'Junior Desktop Developer',
-			'experience.items.vxCase.period' => 'Oct 2018 – Mar 2019',
-			'experience.items.vxCase.location' => 'Salvador, Brazil',
-			'experience.items.vxCase.points.0' => 'Developed a desktop application focused on user interface implementation using TypeScript, Angular, and VTEX.',
-			'experience.items.vxCase.points.1' => 'Built reusable UI components ensuring usability, scalability, and design consistency.',
-			'experience.items.vxCase.points.2' => 'Collaborated with senior engineers to integrate frontend features with backend services.',
+			'experience.items.blu_studios.title' => 'Partner & Senior Flutter Engineer',
+			'experience.items.blu_studios.period' => '2019 – 2026',
+			'experience.items.blu_studios.location' => 'Remote',
+			'experience.items.blu_studios.points.0' => 'Built and maintained multiple mobile apps and games totaling ${_root.app.total_downloads} downloads worldwide.',
+			'experience.items.blu_studios.points.1' => 'Architected scalable systems supporting millions of users, including real-time leaderboards, live events, and ranking systems.',
+			'experience.items.blu_studios.points.2' => 'Co-owned the full mobile product lifecycle: architecture, development, testing, CI/CD, publishing, ASO, monetization, live ops, and store compliance.',
+			'experience.items.blu_studios.points.3' => 'Integrated backend services using Firebase (Full Suite), GraphQL APIs, and Node.js.',
+			'experience.items.blu_studios.points.4' => 'Designed and optimized monetization systems achieving consistently high eCPM performance.',
+			'experience.items.blu_studios.points.5' => 'Co-led fully remote teams of up to 14 people.',
+			'experience.items.blu_studios.points.6' => 'Established partnerships with Wildlife Studios and Homa Games.',
+			'experience.items.vx_case.title' => 'Junior Desktop Developer',
+			'experience.items.vx_case.period' => 'Oct 2018 – Mar 2019',
+			'experience.items.vx_case.location' => 'Salvador, Brazil',
+			'experience.items.vx_case.points.0' => 'Developed a desktop application focused on user interface implementation using TypeScript, Angular, and VTEX.',
+			'experience.items.vx_case.points.1' => 'Built reusable UI components ensuring usability, scalability, and design consistency.',
+			'experience.items.vx_case.points.2' => 'Collaborated with senior engineers to integrate frontend features with backend services.',
 			'experience.items.tecall.title' => 'IT Support Intern',
 			'experience.items.tecall.period' => 'Jan 2018 – Oct 2018',
 			'experience.items.tecall.location' => 'Salvador, Brazil',
@@ -851,16 +851,16 @@ extension on Translations {
 			'experience.items.tecall.points.2' => 'Gained foundational experience in networking, system administration, and customer support.',
 			'skills.title' => 'Skills & Expertise',
 			'skills.subtitle' => 'Technologies and tools I use to bring ideas to life',
-			'skills.categories.mobileDev.title' => 'Mobile Development',
-			'skills.categories.mobileDev.skills.0' => 'Flutter',
-			'skills.categories.mobileDev.skills.1' => 'Dart',
-			'skills.categories.mobileDev.skills.2' => 'Riverpod',
-			'skills.categories.mobileDev.skills.3' => 'Bloc',
-			'skills.categories.mobileDev.skills.4' => 'MobX',
-			'skills.categories.mobileDev.skills.5' => 'MVVM',
-			'skills.categories.mobileDev.skills.6' => 'Clean Architecture',
-			'skills.categories.mobileDev.skills.7' => 'TDD',
-			'skills.categories.mobileDev.skills.8' => 'Native Plugins',
+			'skills.categories.mobile_dev.title' => 'Mobile Development',
+			'skills.categories.mobile_dev.skills.0' => 'Flutter',
+			'skills.categories.mobile_dev.skills.1' => 'Dart',
+			'skills.categories.mobile_dev.skills.2' => 'Riverpod',
+			'skills.categories.mobile_dev.skills.3' => 'Bloc',
+			'skills.categories.mobile_dev.skills.4' => 'MobX',
+			'skills.categories.mobile_dev.skills.5' => 'MVVM',
+			'skills.categories.mobile_dev.skills.6' => 'Clean Architecture',
+			'skills.categories.mobile_dev.skills.7' => 'TDD',
+			'skills.categories.mobile_dev.skills.8' => 'Native Plugins',
 			'skills.categories.backend.title' => 'Backend & Cloud',
 			'skills.categories.backend.skills.0' => 'Firebase (Full Suite)',
 			'skills.categories.backend.skills.1' => 'Node.js',
@@ -883,12 +883,12 @@ extension on Translations {
 			'skills.categories.tools.skills.5' => 'Codemagic',
 			'skills.categories.tools.skills.6' => 'GitHub Actions',
 			'skills.awards.title' => 'Awards & Recognition',
-			'skills.awards.googlePlay.title' => 'Google Play Best of 2021',
-			'skills.awards.googlePlay.subtitle' => 'App of the Year Nominee (Rabit)',
-			'skills.awards.indieFund.title' => 'Indie Games Fund 2023',
-			'skills.awards.indieFund.subtitle' => 'Winner (Farm vs Aliens)',
-			'skills.awards.accelerator.title' => 'Indie Games Accelerator 2024',
-			'skills.awards.accelerator.subtitle' => 'Graduate',
+			'skills.awards.google_play.title' => 'Google Play Best of 2021',
+			'skills.awards.google_play.subtitle' => 'App of the Year Nominee (Rabit)',
+			'skills.awards.indie_games_fund.title' => 'Indie Games Fund 2023',
+			'skills.awards.indie_games_fund.subtitle' => 'Winner (Farm vs Aliens)',
+			'skills.awards.indie_games_accelerator.title' => 'Indie Games Accelerator 2024',
+			'skills.awards.indie_games_accelerator.subtitle' => 'Graduate',
 			'contact.title' => 'Let\'s Work Together',
 			'contact.subtitle' => 'Have a project in mind or want to discuss opportunities? I\'m always open to new challenges and collaborations.',
 			'contact.email' => 'Email',

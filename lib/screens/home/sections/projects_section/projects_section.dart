@@ -143,7 +143,7 @@ class _OtherProjectsToggle extends HookWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                t.projects.otherProjectsToggle,
+                t.projects.other_projects_toggle,
                 style: Theme.of(context).textTheme.titleSmall?.copyWith(
                   color: hovered.value
                       ? AppColors.primary

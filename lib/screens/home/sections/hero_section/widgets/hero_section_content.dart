@@ -53,11 +53,11 @@ class HeroSectionContent extends StatelessWidget {
           alignment: isMobile ? WrapAlignment.center : WrapAlignment.start,
           children: [
             _PrimaryButton(
-              label: t.hero.exploreProjects,
+              label: t.hero.explore_projects,
               onTap: onExploreProjects,
             ),
             _OutlineButton(
-              label: t.hero.getInTouch,
+              label: t.hero.get_in_touch,
               onTap: onContact,
             ),
           ],

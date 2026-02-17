@@ -33,11 +33,11 @@ enum ProjectAward {
   String get label {
     switch (this) {
       case ProjectAward.indieGamesAccelerator2024:
-        return t.skills.awards.accelerator.title;
+        return t.skills.awards.indie_games_accelerator.title;
       case ProjectAward.indieGamesFund2023:
-        return t.skills.awards.indieFund.title;
+        return t.skills.awards.indie_games_fund.title;
       case ProjectAward.googlePlayBestOf2021:
-        return t.skills.awards.googlePlay.title;
+        return t.skills.awards.google_play.title;
     }
   }
 
@@ -94,10 +94,10 @@ class ProjectsSectionData {
   ];
 
   static final _magicSort = ProjectsSectionData(
-    name: t.projects.items.magicSort.name,
-    description: t.projects.items.magicSort.description,
-    details: t.projects.items.magicSort.details,
-    metric: t.projects.items.magicSort.metric,
+    name: t.projects.items.magic_sort.name,
+    description: t.projects.items.magic_sort.description,
+    details: t.projects.items.magic_sort.details,
+    metric: t.projects.items.magic_sort.metric,
     award: ProjectAward.indieGamesAccelerator2024,
     technologies: const ['Flutter', 'Firebase', 'Riverpod'],
     image: _projectImages.magicSortPreview,
@@ -129,9 +129,9 @@ class ProjectsSectionData {
   );
 
   static final _farmVsAliens = ProjectsSectionData(
-    name: t.projects.items.farmVsAliens.name,
-    description: t.projects.items.farmVsAliens.description,
-    details: t.projects.items.farmVsAliens.details,
+    name: t.projects.items.farm_vs_aliens.name,
+    description: t.projects.items.farm_vs_aliens.description,
+    details: t.projects.items.farm_vs_aliens.details,
     award: ProjectAward.indieGamesFund2023,
     technologies: const ['Unity', 'C#', 'Firebase'],
     image: _projectImages.farmPreview,
@@ -150,9 +150,9 @@ class ProjectsSectionData {
   );
 
   static final _dropMerge = ProjectsSectionData(
-    name: t.projects.items.dropMerge.name,
-    description: t.projects.items.dropMerge.description,
-    details: t.projects.items.dropMerge.details,
+    name: t.projects.items.drop_merge.name,
+    description: t.projects.items.drop_merge.description,
+    details: t.projects.items.drop_merge.details,
     technologies: const ['Flutter', 'Firebase'],
     image: _projectImages.dropPreview,
     company: ProjectCompany.bluStudios,
@@ -160,10 +160,10 @@ class ProjectsSectionData {
   );
 
   static final _neverHaveIEverX = ProjectsSectionData(
-    name: t.projects.items.neverHaveIEverX.name,
-    description: t.projects.items.neverHaveIEverX.description,
-    details: t.projects.items.neverHaveIEverX.details,
-    metric: t.projects.items.neverHaveIEverX.metric,
+    name: t.projects.items.never_have_i_ever_x.name,
+    description: t.projects.items.never_have_i_ever_x.description,
+    details: t.projects.items.never_have_i_ever_x.details,
+    metric: t.projects.items.never_have_i_ever_x.metric,
     technologies: const ['Flutter', 'Firebase'],
     image: _projectImages.iNeverPreview,
     company: ProjectCompany.bluStudios,
@@ -185,6 +185,7 @@ class ProjectsSectionData {
     name: t.projects.items.vdx.name,
     description: t.projects.items.vdx.description,
     details: t.projects.items.vdx.details,
+    metric: t.projects.items.vdx.metric,
     technologies: const ['Flutter', 'Firebase'],
     image: _projectImages.vdxPreview,
     company: ProjectCompany.bluStudios,

@@ -20,7 +20,7 @@ class SkillsSectionCategory {
   ];
 
   static final mobileDev = SkillsSectionCategory(
-    title: t.skills.categories.mobileDev.title,
+    title: t.skills.categories.mobile_dev.title,
     icon: Icons.phone_android_rounded,
     skills: const [
       'Flutter',
