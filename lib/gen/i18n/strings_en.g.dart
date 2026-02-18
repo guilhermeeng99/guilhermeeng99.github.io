@@ -100,11 +100,11 @@ class TranslationsHeroEn {
 	/// en: 'Guilherme Passos'
 	String get name => 'Guilherme\nPassos';
 
-	/// en: 'Flutter Developer'
-	String get role => 'Flutter Developer';
+	/// en: 'Senior Flutter Developer'
+	String get role => 'Senior Flutter Developer';
 
-	/// en: 'Flutter Developer & Mobile Entrepreneur with 5+ years crafting high-performance apps and games reaching 12M+ downloads worldwide.'
-	String get description => 'Flutter Developer & Mobile Entrepreneur with 5+ years crafting high-performance apps and games reaching ${_root.app.total_downloads} downloads worldwide.';
+	/// en: 'Flutter Developer & Mobile Entrepreneur with 7+ years crafting high-performance apps and games reaching 12M+ downloads worldwide.'
+	String get description => 'Flutter Developer & Mobile Entrepreneur with 7+ years crafting high-performance apps and games reaching ${_root.app.total_downloads} downloads worldwide.';
 
 	/// en: 'Explore Projects'
 	String get explore_projects => 'Explore Projects';
@@ -127,8 +127,8 @@ class TranslationsAboutEn {
 	/// en: 'Building digital products that scale'
 	String get subtitle => 'Building digital products that scale';
 
-	/// en: 'Senior Flutter Developer with over five years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.'
-	String get bio1 => 'Senior Flutter Developer with over five years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.';
+	/// en: 'Senior Flutter Developer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.'
+	String get bio1 => 'Senior Flutter Developer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.';
 
 	/// en: 'I've implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I've built and maintained have reached 15M+ downloads worldwide.'
 	String get bio2 => 'I\'ve implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I\'ve built and maintained have reached 15M+ downloads worldwide.';
@@ -330,8 +330,8 @@ class TranslationsAboutStatsExperienceEn {
 
 	// Translations
 
-	/// en: '5+'
-	String get value => '5+';
+	/// en: '7+'
+	String get value => '7+';
 
 	/// en: 'Years Experience'
 	String get label => 'Years Experience';
@@ -592,8 +592,8 @@ class TranslationsResumeExperienceVxCaseEn {
 
 	// Translations
 
-	/// en: 'Junior Desktop Developer'
-	String get title => 'Junior Desktop Developer';
+	/// en: 'Desktop Developer'
+	String get title => 'Desktop Developer';
 
 	/// en: 'Oct 2018 – Mar 2019'
 	String get period => 'Oct 2018 – Mar 2019';
@@ -616,8 +616,8 @@ class TranslationsResumeExperienceTecallEn {
 
 	// Translations
 
-	/// en: 'IT Support Intern'
-	String get title => 'IT Support Intern';
+	/// en: 'IT Support'
+	String get title => 'IT Support';
 
 	/// en: 'Jan 2018 – Oct 2018'
 	String get period => 'Jan 2018 – Oct 2018';
@@ -664,8 +664,8 @@ class TranslationsResumeEducationSenaiCimatecEn {
 
 	// Translations
 
-	/// en: 'Bachelor's Degree in Software Engineering'
-	String get degree => 'Bachelor\'s Degree in Software Engineering';
+	/// en: 'Technical Course in Computer Networks'
+	String get degree => 'Technical Course in Computer Networks';
 
 	/// en: '2017 – 2018'
 	String get period => '2017 – 2018';
@@ -805,18 +805,18 @@ extension on Translations {
 			'nav.skills' => 'Skills',
 			'nav.contact' => 'Contact',
 			'hero.name' => 'Guilherme\nPassos',
-			'hero.role' => 'Flutter Developer',
-			'hero.description' => 'Flutter Developer & Mobile Entrepreneur with 5+ years crafting high-performance apps and games reaching ${_root.app.total_downloads} downloads worldwide.',
+			'hero.role' => 'Senior Flutter Developer',
+			'hero.description' => 'Flutter Developer & Mobile Entrepreneur with 7+ years crafting high-performance apps and games reaching ${_root.app.total_downloads} downloads worldwide.',
 			'hero.explore_projects' => 'Explore Projects',
 			'hero.get_in_touch' => 'Get In Touch',
 			'about.title' => 'About Me',
 			'about.subtitle' => 'Building digital products that scale',
-			'about.bio1' => 'Senior Flutter Developer with over five years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.',
+			'about.bio1' => 'Senior Flutter Developer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.',
 			'about.bio2' => 'I\'ve implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I\'ve built and maintained have reached 15M+ downloads worldwide.',
 			'about.bio3' => 'I specialize in scalable architectures, long-term code maintainability, and high-performance mobile applications. My expertise spans multiple state management solutions (Riverpod, Bloc, MobX), native plugin integration, and the full Firebase ecosystem.',
 			'about.stats.downloads.value' => _root.app.total_downloads,
 			'about.stats.downloads.label' => 'Downloads',
-			'about.stats.experience.value' => '5+',
+			'about.stats.experience.value' => '7+',
 			'about.stats.experience.label' => 'Years Experience',
 			'about.stats.products.value' => '10+',
 			'about.stats.products.label' => 'Products Shipped',
@@ -878,13 +878,13 @@ extension on Translations {
 			'resume.experience.blu_studios.points.4' => 'Designed and optimized monetization systems achieving consistently high eCPM performance.',
 			'resume.experience.blu_studios.points.5' => 'Co-led fully remote teams of up to 14 people.',
 			'resume.experience.blu_studios.points.6' => 'Established partnerships with Wildlife Studios and Homa Games.',
-			'resume.experience.vx_case.title' => 'Junior Desktop Developer',
+			'resume.experience.vx_case.title' => 'Desktop Developer',
 			'resume.experience.vx_case.period' => 'Oct 2018 – Mar 2019',
 			'resume.experience.vx_case.location' => 'Salvador, Brazil',
 			'resume.experience.vx_case.points.0' => 'Developed a desktop application focused on user interface implementation using TypeScript, Angular, and VTEX.',
 			'resume.experience.vx_case.points.1' => 'Built reusable UI components ensuring usability, scalability, and design consistency.',
 			'resume.experience.vx_case.points.2' => 'Collaborated with senior engineers to integrate frontend features with backend services.',
-			'resume.experience.tecall.title' => 'IT Support Intern',
+			'resume.experience.tecall.title' => 'IT Support',
 			'resume.experience.tecall.period' => 'Jan 2018 – Oct 2018',
 			'resume.experience.tecall.location' => 'Salvador, Brazil',
 			'resume.experience.tecall.points.0' => 'Provided technical support and infrastructure troubleshooting for corporate clients.',
@@ -896,7 +896,7 @@ extension on Translations {
 			'resume.education.ucsal.points.0' => 'Emphasis on software development methodologies, object-oriented programming, data structures, algorithms, databases, and system architecture.',
 			'resume.education.ucsal.points.1' => 'Gained experience in designing, developing, testing, and maintaining software applications using modern technologies and industry best practices.',
 			'resume.education.ucsal.points.2' => 'Participated in collaborative projects and hands-on activities that strengthened problem-solving skills and prepared me to work effectively in team-based development environments.',
-			'resume.education.senai_cimatec.degree' => 'Bachelor\'s Degree in Software Engineering',
+			'resume.education.senai_cimatec.degree' => 'Technical Course in Computer Networks',
 			'resume.education.senai_cimatec.period' => '2017 – 2018',
 			'resume.education.senai_cimatec.location' => 'Salvador, Brazil',
 			'resume.education.senai_cimatec.points.0' => 'Focusing on the installation, configuration, administration, and maintenance of computer networks in both home and corporate environments.',

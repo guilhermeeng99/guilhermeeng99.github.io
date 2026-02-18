@@ -12,15 +12,15 @@
   },
   "hero": {
     "name": "Guilherme\nPassos",
-    "role": "Flutter Developer",
-    "description": "Flutter Developer & Mobile Entrepreneur with 5+ years crafting high-performance apps and games reaching @:app.total_downloads downloads worldwide.",
+    "role": "Senior Flutter Developer",
+    "description": "Flutter Developer & Mobile Entrepreneur with 7+ years crafting high-performance apps and games reaching @:app.total_downloads downloads worldwide.",
     "explore_projects": "Explore Projects",
     "get_in_touch": "Get In Touch"
   },
   "about": {
     "title": "About Me",
     "subtitle": "Building digital products that scale",
-    "bio1": "Senior Flutter Developer with over five years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.",
+    "bio1": "Senior Flutter Developer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.",
     "bio2": "I've implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I've built and maintained have reached 15M+ downloads worldwide.",
     "bio3": "I specialize in scalable architectures, long-term code maintainability, and high-performance mobile applications. My expertise spans multiple state management solutions (Riverpod, Bloc, MobX), native plugin integration, and the full Firebase ecosystem.",
     "stats": {
@@ -29,7 +29,7 @@
         "label": "Downloads"
       },
       "experience": {
-        "value": "5+",
+        "value": "7+",
         "label": "Years Experience"
       },
       "products": {
@@ -127,7 +127,7 @@
         ]
       },
       "vx_case": {
-        "title": "Junior Desktop Developer",
+        "title": "Desktop Developer",
         "period": "Oct 2018 – Mar 2019",
         "location": "Salvador, Brazil",
         "points": [
@@ -137,7 +137,7 @@
         ]
       },
       "tecall": {
-        "title": "IT Support Intern",
+        "title": "IT Support",
         "period": "Jan 2018 – Oct 2018",
         "location": "Salvador, Brazil",
         "points": [
@@ -159,7 +159,7 @@
         ]
       },
       "senai_cimatec": {
-        "degree": "Bachelor's Degree in Software Engineering",
+        "degree": "Technical Course in Computer Networks",
         "period": "2017 – 2018",
         "location": "Salvador, Brazil",
         "points": [
