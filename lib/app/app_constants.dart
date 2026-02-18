@@ -4,6 +4,9 @@ class AppConstants {
   static String bluCompanyUrl = 'https://blury.studio/';
   static String vxCaseCompany = 'VX Case';
   static String tecallCompany = 'Tecall Consultoria';
+  static String ucsalInstitution = 'Universidade Católica do Salvador';
+  static String senaiInstitution = 'SENAI CIMATEC';
+  static String allInstitution = 'Alternative Language Learning (ALL)';
   static String linkedin = 'guigapassos';
   static String linkedinUrl = 'https://linkedin.com/in/$linkedin';
   static String github = 'guilhermeeng99';
@@ -24,8 +27,7 @@ class AppConstants {
       'https://appmagic.rocks/google-play/magic-sort/com.blu.wsp';
   static String rabitUrl =
       'https://appmagic.rocks/google-play/rabit/com.blu.rabito';
-  static String cupsUrl =
-      'https://appmagic.rocks/ipad/cups/1541421297';
+  static String cupsUrl = 'https://appmagic.rocks/ipad/cups/1541421297';
   static String farmUrl =
       'https://play.google.com/store/apps/details?gl=US&hl=en-US&id=com.blu.farmvsaliens';
   static String capyUrl =

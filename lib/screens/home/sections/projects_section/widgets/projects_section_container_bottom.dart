@@ -168,7 +168,7 @@ class _SeeMoreDetails extends HookWidget {
                     style: Theme.of(context).textTheme.labelMedium?.copyWith(
                       color: hovered.value
                           ? AppColors.primary
-                          : AppColors.textSecondary,
+                          : AppColors.textPrimary,
                       fontSize: 13,
                       fontWeight: FontWeight.w500,
                     ),
@@ -182,7 +182,7 @@ class _SeeMoreDetails extends HookWidget {
                       size: 20,
                       color: hovered.value
                           ? AppColors.primary
-                          : AppColors.textSecondary,
+                          : AppColors.textPrimary,
                     ),
                   ),
                 ],

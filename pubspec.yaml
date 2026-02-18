@@ -22,6 +22,7 @@ dependencies:
   slang_flutter: ^4.12.1
   url_launcher: ^6.3.2
   very_good_analysis: ^10.1.0
+  web: ^1.1.1
   yaml_edit: ^2.2.1
 
 dev_dependencies:
@@ -52,6 +53,7 @@ flutter:
 
   assets:
     - lib/app/assets/i18n/
+    - lib/app/assets/pdfs/
     - lib/app/assets/images/
     - lib/app/assets/images/projects/
   uses-material-design: true

@@ -45,7 +45,7 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 	late final TranslationsHeroEn hero = TranslationsHeroEn._(_root);
 	late final TranslationsAboutEn about = TranslationsAboutEn._(_root);
 	late final TranslationsProjectsEn projects = TranslationsProjectsEn._(_root);
-	late final TranslationsExperienceEn experience = TranslationsExperienceEn._(_root);
+	late final TranslationsResumeEn resume = TranslationsResumeEn._(_root);
 	late final TranslationsSkillsEn skills = TranslationsSkillsEn._(_root);
 	late final TranslationsContactEn contact = TranslationsContactEn._(_root);
 }
@@ -165,21 +165,31 @@ class TranslationsProjectsEn {
 	late final TranslationsProjectsItemsEn items = TranslationsProjectsItemsEn._(_root);
 }
 
-// Path: experience
-class TranslationsExperienceEn {
-	TranslationsExperienceEn._(this._root);
+// Path: resume
+class TranslationsResumeEn {
+	TranslationsResumeEn._(this._root);
 
 	final Translations _root; // ignore: unused_field
 
 	// Translations
 
-	/// en: 'Experience'
-	String get title => 'Experience';
+	/// en: 'Resume'
+	String get title => 'Resume';
 
-	/// en: 'My professional journey so far'
-	String get subtitle => 'My professional journey so far';
+	/// en: 'A summary of my professional experience and education'
+	String get subtitle => 'A summary of my professional experience and education';
 
-	late final TranslationsExperienceItemsEn items = TranslationsExperienceItemsEn._(_root);
+	/// en: 'Professional Experience'
+	String get experience_title => 'Professional Experience';
+
+	/// en: 'Education'
+	String get education_title => 'Education';
+
+	/// en: 'Download Resume'
+	String get download_resume => 'Download Resume';
+
+	late final TranslationsResumeExperienceEn experience = TranslationsResumeExperienceEn._(_root);
+	late final TranslationsResumeEducationEn education = TranslationsResumeEducationEn._(_root);
 }
 
 // Path: skills
@@ -197,7 +207,6 @@ class TranslationsSkillsEn {
 	String get subtitle => 'Technologies and tools I use to bring ideas to life';
 
 	late final TranslationsSkillsCategoriesEn categories = TranslationsSkillsCategoriesEn._(_root);
-	late final TranslationsSkillsAwardsEn awards = TranslationsSkillsAwardsEn._(_root);
 }
 
 // Path: contact
@@ -261,16 +270,28 @@ class TranslationsProjectsItemsEn {
 	late final TranslationsProjectsItemsVdxEn vdx = TranslationsProjectsItemsVdxEn._(_root);
 }
 
-// Path: experience.items
-class TranslationsExperienceItemsEn {
-	TranslationsExperienceItemsEn._(this._root);
+// Path: resume.experience
+class TranslationsResumeExperienceEn {
+	TranslationsResumeExperienceEn._(this._root);
 
 	final Translations _root; // ignore: unused_field
 
 	// Translations
-	late final TranslationsExperienceItemsBluStudiosEn blu_studios = TranslationsExperienceItemsBluStudiosEn._(_root);
-	late final TranslationsExperienceItemsVxCaseEn vx_case = TranslationsExperienceItemsVxCaseEn._(_root);
-	late final TranslationsExperienceItemsTecallEn tecall = TranslationsExperienceItemsTecallEn._(_root);
+	late final TranslationsResumeExperienceBluStudiosEn blu_studios = TranslationsResumeExperienceBluStudiosEn._(_root);
+	late final TranslationsResumeExperienceVxCaseEn vx_case = TranslationsResumeExperienceVxCaseEn._(_root);
+	late final TranslationsResumeExperienceTecallEn tecall = TranslationsResumeExperienceTecallEn._(_root);
+}
+
+// Path: resume.education
+class TranslationsResumeEducationEn {
+	TranslationsResumeEducationEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	late final TranslationsResumeEducationUcsalEn ucsal = TranslationsResumeEducationUcsalEn._(_root);
+	late final TranslationsResumeEducationSenaiCimatecEn senai_cimatec = TranslationsResumeEducationSenaiCimatecEn._(_root);
+	late final TranslationsResumeEducationAllEn all = TranslationsResumeEducationAllEn._(_root);
 }
 
 // Path: skills.categories
@@ -284,22 +305,6 @@ class TranslationsSkillsCategoriesEn {
 	late final TranslationsSkillsCategoriesBackendEn backend = TranslationsSkillsCategoriesBackendEn._(_root);
 	late final TranslationsSkillsCategoriesLanguagesEn languages = TranslationsSkillsCategoriesLanguagesEn._(_root);
 	late final TranslationsSkillsCategoriesToolsEn tools = TranslationsSkillsCategoriesToolsEn._(_root);
-}
-
-// Path: skills.awards
-class TranslationsSkillsAwardsEn {
-	TranslationsSkillsAwardsEn._(this._root);
-
-	final Translations _root; // ignore: unused_field
-
-	// Translations
-
-	/// en: 'Awards & Recognition'
-	String get title => 'Awards & Recognition';
-
-	late final TranslationsSkillsAwardsGooglePlayEn google_play = TranslationsSkillsAwardsGooglePlayEn._(_root);
-	late final TranslationsSkillsAwardsIndieGamesFundEn indie_games_fund = TranslationsSkillsAwardsIndieGamesFundEn._(_root);
-	late final TranslationsSkillsAwardsIndieGamesAcceleratorEn indie_games_accelerator = TranslationsSkillsAwardsIndieGamesAcceleratorEn._(_root);
 }
 
 // Path: about.stats.downloads
@@ -379,6 +384,9 @@ class TranslationsProjectsItemsMagicSortEn {
 	/// en: '480K+'
 	String get metric => '480K+';
 
+	/// en: 'Indie Games Accelerator 2024'
+	String get award => 'Indie Games Accelerator 2024';
+
 	/// en: 'Implemented high-performance UI systems including animated tutorials, live-event mechanics (Battle Pass, Magic League, Treasure Hunts), and a scalable monetization framework with rewarded ads, interstitials, and IAP. Integrated Firebase Analytics, Remote Config for A/B testing, and Crashlytics for real-time monitoring.'
 	String get details => 'Implemented high-performance UI systems including animated tutorials, live-event mechanics (Battle Pass, Magic League, Treasure Hunts), and a scalable monetization framework with rewarded ads, interstitials, and IAP. Integrated Firebase Analytics, Remote Config for A/B testing, and Crashlytics for real-time monitoring.';
 }
@@ -399,6 +407,9 @@ class TranslationsProjectsItemsRabitEn {
 
 	/// en: '5M+'
 	String get metric => '5M+';
+
+	/// en: 'Google Play Best of 2021'
+	String get award => 'Google Play Best of 2021';
 
 	/// en: 'Implemented push/local notifications, cloud sync with Firebase Firestore, streak tracking, and detailed analytics. Designed custom animations, high-performance UI systems and micro-interactions that boosted user retention.'
 	String get details => 'Implemented push/local notifications, cloud sync with Firebase Firestore, streak tracking, and detailed analytics. Designed custom animations, high-performance UI systems and micro-interactions that boosted user retention.';
@@ -439,8 +450,8 @@ class TranslationsProjectsItemsFarmVsAliensEn {
 	/// en: 'A merge tower defense game where players defend their farm from alien invaders by merging and upgrading towers.'
 	String get description => 'A merge tower defense game where players defend their farm from alien invaders by merging and upgrading towers.';
 
-	/// en: 'Indie Fund Winner'
-	String get badge => 'Indie Fund Winner';
+	/// en: 'Indie Games Fund 2023'
+	String get award => 'Indie Games Fund 2023';
 
 	/// en: 'Led product direction and game design for this merge tower defense game. Defined the core gameplay loop combining merge mechanics with strategic tower defense.'
 	String get details => 'Led product direction and game design for this merge tower defense game. Defined the core gameplay loop combining merge mechanics with strategic tower defense.';
@@ -545,16 +556,16 @@ class TranslationsProjectsItemsVdxEn {
 	String get details => 'Implemented UI and hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.';
 }
 
-// Path: experience.items.blu_studios
-class TranslationsExperienceItemsBluStudiosEn {
-	TranslationsExperienceItemsBluStudiosEn._(this._root);
+// Path: resume.experience.blu_studios
+class TranslationsResumeExperienceBluStudiosEn {
+	TranslationsResumeExperienceBluStudiosEn._(this._root);
 
 	final Translations _root; // ignore: unused_field
 
 	// Translations
 
-	/// en: 'Partner & Senior Flutter Engineer'
-	String get title => 'Partner & Senior Flutter Engineer';
+	/// en: 'Co-founder & Senior Flutter Engineer'
+	String get title => 'Co-founder & Senior Flutter Engineer';
 
 	/// en: '2019 – 2026'
 	String get period => '2019 – 2026';
@@ -573,9 +584,9 @@ class TranslationsExperienceItemsBluStudiosEn {
 	];
 }
 
-// Path: experience.items.vx_case
-class TranslationsExperienceItemsVxCaseEn {
-	TranslationsExperienceItemsVxCaseEn._(this._root);
+// Path: resume.experience.vx_case
+class TranslationsResumeExperienceVxCaseEn {
+	TranslationsResumeExperienceVxCaseEn._(this._root);
 
 	final Translations _root; // ignore: unused_field
 
@@ -597,9 +608,9 @@ class TranslationsExperienceItemsVxCaseEn {
 	];
 }
 
-// Path: experience.items.tecall
-class TranslationsExperienceItemsTecallEn {
-	TranslationsExperienceItemsTecallEn._(this._root);
+// Path: resume.experience.tecall
+class TranslationsResumeExperienceTecallEn {
+	TranslationsResumeExperienceTecallEn._(this._root);
 
 	final Translations _root; // ignore: unused_field
 
@@ -618,6 +629,76 @@ class TranslationsExperienceItemsTecallEn {
 		'Provided technical support and infrastructure troubleshooting for corporate clients.',
 		'Assisted in system maintenance and hardware configuration.',
 		'Gained foundational experience in networking, system administration, and customer support.',
+	];
+}
+
+// Path: resume.education.ucsal
+class TranslationsResumeEducationUcsalEn {
+	TranslationsResumeEducationUcsalEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Bachelor's Degree in Software Engineering'
+	String get degree => 'Bachelor\'s Degree in Software Engineering';
+
+	/// en: '2017 – 2019'
+	String get period => '2017 – 2019';
+
+	/// en: 'Salvador, Brazil'
+	String get location => 'Salvador, Brazil';
+
+	List<String> get points => [
+		'Emphasis on software development methodologies, object-oriented programming, data structures, algorithms, databases, and system architecture.',
+		'Gained experience in designing, developing, testing, and maintaining software applications using modern technologies and industry best practices.',
+		'Participated in collaborative projects and hands-on activities that strengthened problem-solving skills and prepared me to work effectively in team-based development environments.',
+	];
+}
+
+// Path: resume.education.senai_cimatec
+class TranslationsResumeEducationSenaiCimatecEn {
+	TranslationsResumeEducationSenaiCimatecEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Bachelor's Degree in Software Engineering'
+	String get degree => 'Bachelor\'s Degree in Software Engineering';
+
+	/// en: '2017 – 2018'
+	String get period => '2017 – 2018';
+
+	/// en: 'Salvador, Brazil'
+	String get location => 'Salvador, Brazil';
+
+	List<String> get points => [
+		'Focusing on the installation, configuration, administration, and maintenance of computer networks in both home and corporate environments.',
+		'Throughout the training, I developed skills in network topologies, device connectivity, network infrastructure, communication protocols, and information security practices.',
+		'The program included extensive hands-on lab experience, enabling me to implement network solutions effectively and apply industry-standard technical best practices.',
+	];
+}
+
+// Path: resume.education.all
+class TranslationsResumeEducationAllEn {
+	TranslationsResumeEducationAllEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Certificate in English Language'
+	String get degree => 'Certificate in English Language';
+
+	/// en: '2013 – 2016'
+	String get period => '2013 – 2016';
+
+	/// en: 'Salvador, Brazil'
+	String get location => 'Salvador, Brazil';
+
+	List<String> get points => [
+		'Intensive English language program with focus on grammar, reading, writing, listening and speaking skills. Prepared for advanced communication in academic and professional environments.',
 	];
 }
 
@@ -708,51 +789,6 @@ class TranslationsSkillsCategoriesToolsEn {
 	];
 }
 
-// Path: skills.awards.google_play
-class TranslationsSkillsAwardsGooglePlayEn {
-	TranslationsSkillsAwardsGooglePlayEn._(this._root);
-
-	final Translations _root; // ignore: unused_field
-
-	// Translations
-
-	/// en: 'Google Play Best of 2021'
-	String get title => 'Google Play Best of 2021';
-
-	/// en: 'App of the Year Nominee (Rabit)'
-	String get subtitle => 'App of the Year Nominee (Rabit)';
-}
-
-// Path: skills.awards.indie_games_fund
-class TranslationsSkillsAwardsIndieGamesFundEn {
-	TranslationsSkillsAwardsIndieGamesFundEn._(this._root);
-
-	final Translations _root; // ignore: unused_field
-
-	// Translations
-
-	/// en: 'Indie Games Fund 2023'
-	String get title => 'Indie Games Fund 2023';
-
-	/// en: 'Winner (Farm vs Aliens)'
-	String get subtitle => 'Winner (Farm vs Aliens)';
-}
-
-// Path: skills.awards.indie_games_accelerator
-class TranslationsSkillsAwardsIndieGamesAcceleratorEn {
-	TranslationsSkillsAwardsIndieGamesAcceleratorEn._(this._root);
-
-	final Translations _root; // ignore: unused_field
-
-	// Translations
-
-	/// en: 'Indie Games Accelerator 2024'
-	String get title => 'Indie Games Accelerator 2024';
-
-	/// en: 'Graduate'
-	String get subtitle => 'Graduate';
-}
-
 /// The flat map containing all translations for locale <en>.
 /// Only for edge cases! For simple maps, use the map function of this library.
 ///
@@ -794,10 +830,12 @@ extension on Translations {
 			'projects.items.magic_sort.name' => 'Magic Sort',
 			'projects.items.magic_sort.description' => 'First hybrid casual water-sort puzzle game on the market. Partnership with Wildlife Studios',
 			'projects.items.magic_sort.metric' => '480K+',
+			'projects.items.magic_sort.award' => 'Indie Games Accelerator 2024',
 			'projects.items.magic_sort.details' => 'Implemented high-performance UI systems including animated tutorials, live-event mechanics (Battle Pass, Magic League, Treasure Hunts), and a scalable monetization framework with rewarded ads, interstitials, and IAP. Integrated Firebase Analytics, Remote Config for A/B testing, and Crashlytics for real-time monitoring.',
 			'projects.items.rabit.name' => 'Rabit',
 			'projects.items.rabit.description' => 'Gamified habit tracking app where users grow virtual plants by completing daily tasks. Ranked 2nd as App of the Year 2021 on Google Play Brazil.',
 			'projects.items.rabit.metric' => '5M+',
+			'projects.items.rabit.award' => 'Google Play Best of 2021',
 			'projects.items.rabit.details' => 'Implemented push/local notifications, cloud sync with Firebase Firestore, streak tracking, and detailed analytics. Designed custom animations, high-performance UI systems and micro-interactions that boosted user retention.',
 			'projects.items.cups.name' => 'Cups',
 			'projects.items.cups.description' => 'Water sort puzzle game surpassing 4.5M+ downloads with strong traction in the US market. Partnership with Homa Games',
@@ -805,7 +843,7 @@ extension on Translations {
 			'projects.items.cups.details' => 'Implemented the complete UI layer, monetization systems. Co-led the performance optimization efforts that reduced frame build times and improved user experience on low-end devices.',
 			'projects.items.farm_vs_aliens.name' => 'Farm vs Aliens',
 			'projects.items.farm_vs_aliens.description' => 'A merge tower defense game where players defend their farm from alien invaders by merging and upgrading towers.',
-			'projects.items.farm_vs_aliens.badge' => 'Indie Fund Winner',
+			'projects.items.farm_vs_aliens.award' => 'Indie Games Fund 2023',
 			'projects.items.farm_vs_aliens.details' => 'Led product direction and game design for this merge tower defense game. Defined the core gameplay loop combining merge mechanics with strategic tower defense.',
 			'projects.items.capy.name' => 'Capy: Self-Care Pet',
 			'projects.items.capy.description' => 'Self-care companion app with a virtual pet mechanic. Users maintain their well-being through daily tasks and caring for their capybara.',
@@ -825,30 +863,49 @@ extension on Translations {
 			'projects.items.vdx.description' => 'A fun party game app where players discover surprising facts about each other through classic \'Truth or Dare\' questions.',
 			'projects.items.vdx.metric' => '1M+',
 			'projects.items.vdx.details' => 'Implemented UI and hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.',
-			'experience.title' => 'Experience',
-			'experience.subtitle' => 'My professional journey so far',
-			'experience.items.blu_studios.title' => 'Partner & Senior Flutter Engineer',
-			'experience.items.blu_studios.period' => '2019 – 2026',
-			'experience.items.blu_studios.location' => 'Remote',
-			'experience.items.blu_studios.points.0' => 'Built and maintained multiple mobile apps and games totaling ${_root.app.total_downloads} downloads worldwide.',
-			'experience.items.blu_studios.points.1' => 'Architected scalable systems supporting millions of users, including real-time leaderboards, live events, and ranking systems.',
-			'experience.items.blu_studios.points.2' => 'Co-owned the full mobile product lifecycle: architecture, development, testing, CI/CD, publishing, ASO, monetization, live ops, and store compliance.',
-			'experience.items.blu_studios.points.3' => 'Integrated backend services using Firebase (Full Suite), GraphQL APIs, and Node.js.',
-			'experience.items.blu_studios.points.4' => 'Designed and optimized monetization systems achieving consistently high eCPM performance.',
-			'experience.items.blu_studios.points.5' => 'Co-led fully remote teams of up to 14 people.',
-			'experience.items.blu_studios.points.6' => 'Established partnerships with Wildlife Studios and Homa Games.',
-			'experience.items.vx_case.title' => 'Junior Desktop Developer',
-			'experience.items.vx_case.period' => 'Oct 2018 – Mar 2019',
-			'experience.items.vx_case.location' => 'Salvador, Brazil',
-			'experience.items.vx_case.points.0' => 'Developed a desktop application focused on user interface implementation using TypeScript, Angular, and VTEX.',
-			'experience.items.vx_case.points.1' => 'Built reusable UI components ensuring usability, scalability, and design consistency.',
-			'experience.items.vx_case.points.2' => 'Collaborated with senior engineers to integrate frontend features with backend services.',
-			'experience.items.tecall.title' => 'IT Support Intern',
-			'experience.items.tecall.period' => 'Jan 2018 – Oct 2018',
-			'experience.items.tecall.location' => 'Salvador, Brazil',
-			'experience.items.tecall.points.0' => 'Provided technical support and infrastructure troubleshooting for corporate clients.',
-			'experience.items.tecall.points.1' => 'Assisted in system maintenance and hardware configuration.',
-			'experience.items.tecall.points.2' => 'Gained foundational experience in networking, system administration, and customer support.',
+			'resume.title' => 'Resume',
+			'resume.subtitle' => 'A summary of my professional experience and education',
+			'resume.experience_title' => 'Professional Experience',
+			'resume.education_title' => 'Education',
+			'resume.download_resume' => 'Download Resume',
+			'resume.experience.blu_studios.title' => 'Co-founder & Senior Flutter Engineer',
+			'resume.experience.blu_studios.period' => '2019 – 2026',
+			'resume.experience.blu_studios.location' => 'Remote',
+			'resume.experience.blu_studios.points.0' => 'Built and maintained multiple mobile apps and games totaling ${_root.app.total_downloads} downloads worldwide.',
+			'resume.experience.blu_studios.points.1' => 'Architected scalable systems supporting millions of users, including real-time leaderboards, live events, and ranking systems.',
+			'resume.experience.blu_studios.points.2' => 'Co-owned the full mobile product lifecycle: architecture, development, testing, CI/CD, publishing, ASO, monetization, live ops, and store compliance.',
+			'resume.experience.blu_studios.points.3' => 'Integrated backend services using Firebase (Full Suite), GraphQL APIs, and Node.js.',
+			'resume.experience.blu_studios.points.4' => 'Designed and optimized monetization systems achieving consistently high eCPM performance.',
+			'resume.experience.blu_studios.points.5' => 'Co-led fully remote teams of up to 14 people.',
+			'resume.experience.blu_studios.points.6' => 'Established partnerships with Wildlife Studios and Homa Games.',
+			'resume.experience.vx_case.title' => 'Junior Desktop Developer',
+			'resume.experience.vx_case.period' => 'Oct 2018 – Mar 2019',
+			'resume.experience.vx_case.location' => 'Salvador, Brazil',
+			'resume.experience.vx_case.points.0' => 'Developed a desktop application focused on user interface implementation using TypeScript, Angular, and VTEX.',
+			'resume.experience.vx_case.points.1' => 'Built reusable UI components ensuring usability, scalability, and design consistency.',
+			'resume.experience.vx_case.points.2' => 'Collaborated with senior engineers to integrate frontend features with backend services.',
+			'resume.experience.tecall.title' => 'IT Support Intern',
+			'resume.experience.tecall.period' => 'Jan 2018 – Oct 2018',
+			'resume.experience.tecall.location' => 'Salvador, Brazil',
+			'resume.experience.tecall.points.0' => 'Provided technical support and infrastructure troubleshooting for corporate clients.',
+			'resume.experience.tecall.points.1' => 'Assisted in system maintenance and hardware configuration.',
+			'resume.experience.tecall.points.2' => 'Gained foundational experience in networking, system administration, and customer support.',
+			'resume.education.ucsal.degree' => 'Bachelor\'s Degree in Software Engineering',
+			'resume.education.ucsal.period' => '2017 – 2019',
+			'resume.education.ucsal.location' => 'Salvador, Brazil',
+			'resume.education.ucsal.points.0' => 'Emphasis on software development methodologies, object-oriented programming, data structures, algorithms, databases, and system architecture.',
+			'resume.education.ucsal.points.1' => 'Gained experience in designing, developing, testing, and maintaining software applications using modern technologies and industry best practices.',
+			'resume.education.ucsal.points.2' => 'Participated in collaborative projects and hands-on activities that strengthened problem-solving skills and prepared me to work effectively in team-based development environments.',
+			'resume.education.senai_cimatec.degree' => 'Bachelor\'s Degree in Software Engineering',
+			'resume.education.senai_cimatec.period' => '2017 – 2018',
+			'resume.education.senai_cimatec.location' => 'Salvador, Brazil',
+			'resume.education.senai_cimatec.points.0' => 'Focusing on the installation, configuration, administration, and maintenance of computer networks in both home and corporate environments.',
+			'resume.education.senai_cimatec.points.1' => 'Throughout the training, I developed skills in network topologies, device connectivity, network infrastructure, communication protocols, and information security practices.',
+			'resume.education.senai_cimatec.points.2' => 'The program included extensive hands-on lab experience, enabling me to implement network solutions effectively and apply industry-standard technical best practices.',
+			'resume.education.all.degree' => 'Certificate in English Language',
+			'resume.education.all.period' => '2013 – 2016',
+			'resume.education.all.location' => 'Salvador, Brazil',
+			'resume.education.all.points.0' => 'Intensive English language program with focus on grammar, reading, writing, listening and speaking skills. Prepared for advanced communication in academic and professional environments.',
 			'skills.title' => 'Skills & Expertise',
 			'skills.subtitle' => 'Technologies and tools I use to bring ideas to life',
 			'skills.categories.mobile_dev.title' => 'Mobile Development',
@@ -882,13 +939,6 @@ extension on Translations {
 			'skills.categories.tools.skills.4' => 'Monetization',
 			'skills.categories.tools.skills.5' => 'Codemagic',
 			'skills.categories.tools.skills.6' => 'GitHub Actions',
-			'skills.awards.title' => 'Awards & Recognition',
-			'skills.awards.google_play.title' => 'Google Play Best of 2021',
-			'skills.awards.google_play.subtitle' => 'App of the Year Nominee (Rabit)',
-			'skills.awards.indie_games_fund.title' => 'Indie Games Fund 2023',
-			'skills.awards.indie_games_fund.subtitle' => 'Winner (Farm vs Aliens)',
-			'skills.awards.indie_games_accelerator.title' => 'Indie Games Accelerator 2024',
-			'skills.awards.indie_games_accelerator.subtitle' => 'Graduate',
 			'contact.title' => 'Let\'s Work Together',
 			'contact.subtitle' => 'Have a project in mind or want to discuss opportunities? I\'m always open to new challenges and collaborations.',
 			'contact.email' => 'Email',

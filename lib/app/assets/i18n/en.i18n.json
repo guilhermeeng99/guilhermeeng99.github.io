@@ -53,12 +53,14 @@
         "name": "Magic Sort",
         "description": "First hybrid casual water-sort puzzle game on the market. Partnership with Wildlife Studios",
         "metric": "480K+",
+        "award": "Indie Games Accelerator 2024",
         "details": "Implemented high-performance UI systems including animated tutorials, live-event mechanics (Battle Pass, Magic League, Treasure Hunts), and a scalable monetization framework with rewarded ads, interstitials, and IAP. Integrated Firebase Analytics, Remote Config for A/B testing, and Crashlytics for real-time monitoring."
       },
       "rabit": {
         "name": "Rabit",
         "description": "Gamified habit tracking app where users grow virtual plants by completing daily tasks. Ranked 2nd as App of the Year 2021 on Google Play Brazil.",
         "metric": "5M+",
+        "award": "Google Play Best of 2021",
         "details": "Implemented push/local notifications, cloud sync with Firebase Firestore, streak tracking, and detailed analytics. Designed custom animations, high-performance UI systems and micro-interactions that boosted user retention."
       },
       "cups": {
@@ -70,7 +72,7 @@
       "farm_vs_aliens": {
         "name": "Farm vs Aliens",
         "description": "A merge tower defense game where players defend their farm from alien invaders by merging and upgrading towers.",
-        "badge": "Indie Fund Winner",
+        "award": "Indie Games Fund 2023",
         "details": "Led product direction and game design for this merge tower defense game. Defined the core gameplay loop combining merge mechanics with strategic tower defense."
       },
       "capy": {
@@ -103,12 +105,15 @@
       }
     }
   },
-  "experience": {
-    "title": "Experience",
-    "subtitle": "My professional journey so far",
-    "items": {
+  "resume": {
+    "title": "Resume",
+    "subtitle": "A summary of my professional experience and education",
+    "experience_title": "Professional Experience",
+    "education_title": "Education",
+    "download_resume": "Download Resume",
+    "experience": {
       "blu_studios": {
-        "title": "Partner & Senior Flutter Engineer",
+        "title": "Co-founder & Senior Flutter Engineer",
         "period": "2019 – 2026",
         "location": "Remote",
         "points": [
@@ -141,6 +146,36 @@
           "Gained foundational experience in networking, system administration, and customer support."
         ]
       }
+    },
+    "education": {
+      "ucsal": {
+        "degree": "Bachelor's Degree in Software Engineering",
+        "period": "2017 – 2019",
+        "location": "Salvador, Brazil",
+        "points": [
+          "Emphasis on software development methodologies, object-oriented programming, data structures, algorithms, databases, and system architecture.",
+          "Gained experience in designing, developing, testing, and maintaining software applications using modern technologies and industry best practices.",
+          "Participated in collaborative projects and hands-on activities that strengthened problem-solving skills and prepared me to work effectively in team-based development environments."
+        ]
+      },
+      "senai_cimatec": {
+        "degree": "Bachelor's Degree in Software Engineering",
+        "period": "2017 – 2018",
+        "location": "Salvador, Brazil",
+        "points": [
+          "Focusing on the installation, configuration, administration, and maintenance of computer networks in both home and corporate environments.",
+          "Throughout the training, I developed skills in network topologies, device connectivity, network infrastructure, communication protocols, and information security practices.",
+          "The program included extensive hands-on lab experience, enabling me to implement network solutions effectively and apply industry-standard technical best practices."
+        ]
+      },
+      "all": {
+        "degree": "Certificate in English Language",
+        "period": "2013 – 2016",
+        "location": "Salvador, Brazil",
+        "points": [
+          "Intensive English language program with focus on grammar, reading, writing, listening and speaking skills. Prepared for advanced communication in academic and professional environments."
+        ]
+      }
     }
   },
   "skills": {
@@ -162,21 +197,6 @@
       "tools": {
         "title": "Tools & Product",
         "skills": ["Git", "CI/CD", "Figma", "ASO", "Monetization", "Codemagic", "GitHub Actions"]
-      }
-    },
-    "awards": {
-      "title": "Awards & Recognition",
-      "google_play": {
-        "title": "Google Play Best of 2021",
-        "subtitle": "App of the Year Nominee (Rabit)"
-      },
-      "indie_games_fund": {
-        "title": "Indie Games Fund 2023",
-        "subtitle": "Winner (Farm vs Aliens)"
-      },
-      "indie_games_accelerator": {
-        "title": "Indie Games Accelerator 2024",
-        "subtitle": "Graduate"
       }
     }
   },

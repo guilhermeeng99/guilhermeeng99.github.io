@@ -6,9 +6,9 @@ import 'package:my_portfolio/app/widgets/nav_bar.dart';
 import 'package:my_portfolio/app/widgets/scroll_fade_in.dart';
 import 'package:my_portfolio/screens/home/sections/about_section.dart';
 import 'package:my_portfolio/screens/home/sections/contact_section.dart';
-import 'package:my_portfolio/screens/home/sections/experience_section/experience_section.dart';
 import 'package:my_portfolio/screens/home/sections/hero_section/hero_section.dart';
 import 'package:my_portfolio/screens/home/sections/projects_section/projects_section.dart';
+import 'package:my_portfolio/screens/home/sections/resume_section/resume_section.dart';
 import 'package:my_portfolio/screens/home/sections/skills_section/skills_section.dart';
 
 class HomePage extends HookWidget {
@@ -77,7 +77,7 @@ class HomePage extends HookWidget {
               ),
               SliverToBoxAdapter(
                 child: ScrollFadeIn(
-                  child: ExperienceSection(key: sectionKeys[3]),
+                  child: ResumeSection(key: sectionKeys[3]),
                 ),
               ),
               SliverToBoxAdapter(

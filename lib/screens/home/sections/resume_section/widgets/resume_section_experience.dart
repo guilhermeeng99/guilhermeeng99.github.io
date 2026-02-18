@@ -1,56 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/app/theme/app_colors.dart';
-import 'package:my_portfolio/app/widgets/responsive_layout.dart';
-import 'package:my_portfolio/app/widgets/section_title.dart';
-import 'package:my_portfolio/gen/i18n/strings.g.dart';
-import 'package:my_portfolio/screens/home/sections/experience_section/experience_model.dart';
+import 'package:my_portfolio/screens/home/sections/resume_section/resume_model.dart';
 
-class ExperienceSection extends StatelessWidget {
-  const ExperienceSection({super.key});
+class ResumeSectionExperienceTimelineItem extends StatelessWidget {
+  const ResumeSectionExperienceTimelineItem({
+    required this.resume,
+    required this.isLast,
+    super.key,
+  });
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: ResponsiveLayout.sectionPadding(context),
-      child: ResponsiveLayout(
-        child: Column(
-          children: [
-            SectionTitle(
-              title: t.experience.title,
-              subtitle: t.experience.subtitle,
-            ),
-            ...List.generate(
-              ExperienceSectionData.experiences.length,
-              (index) {
-                return _TimelineItem(
-                  experience: ExperienceSectionData.experiences[index],
-                  isLast: index == ExperienceSectionData.experiences.length - 1,
-                );
-              },
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class _TimelineItem extends StatelessWidget {
-  const _TimelineItem({required this.experience, required this.isLast});
-
-  final ExperienceSectionData experience;
+  final ResumeSectionData resume;
   final bool isLast;
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = ResponsiveLayout.isMobile(context);
-    final lineLeft = isMobile ? 6.0 : (140.0 + 24.0 + 6.0);
-
     return Stack(
       children: [
         if (!isLast)
           Positioned(
-            left: lineLeft,
+            left: 6,
             top: 14,
             bottom: 0,
             child: Container(
@@ -70,36 +38,6 @@ class _TimelineItem extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            if (!isMobile) ...[
-              SizedBox(
-                width: 140,
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 4),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Text(
-                        experience.period,
-                        style: Theme.of(context).textTheme.labelMedium
-                            ?.copyWith(
-                              color: AppColors.primary,
-                              fontWeight: FontWeight.w600,
-                            ),
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        experience.location,
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          fontSize: 12,
-                          color: AppColors.textMuted,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(width: 24),
-            ],
             Container(
               width: 14,
               height: 14,
@@ -121,18 +59,16 @@ class _TimelineItem extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    if (isMobile) ...[
-                      Text(
-                        experience.period,
-                        style: Theme.of(context).textTheme.labelMedium
-                            ?.copyWith(
-                              color: AppColors.primary,
-                            ),
-                      ),
-                      const SizedBox(height: 4),
-                    ],
                     Text(
-                      experience.title,
+                      resume.period,
+                      style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                        color: AppColors.primary,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      resume.title,
                       style: Theme.of(context).textTheme.headlineSmall
                           ?.copyWith(
                             fontSize: 20,
@@ -140,13 +76,13 @@ class _TimelineItem extends StatelessWidget {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      '${experience.company}${isMobile ? ' · ${experience.location}' : ''}',
+                      '${resume.company} · ${resume.location}',
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: AppColors.textMuted,
                       ),
                     ),
                     const SizedBox(height: 16),
-                    ...experience.points.map(
+                    ...resume.points.map(
                       (point) => Padding(
                         padding: const EdgeInsets.only(bottom: 8),
                         child: Row(

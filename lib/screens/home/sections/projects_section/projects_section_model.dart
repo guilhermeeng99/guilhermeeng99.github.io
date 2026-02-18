@@ -33,11 +33,11 @@ enum ProjectAward {
   String get label {
     switch (this) {
       case ProjectAward.indieGamesAccelerator2024:
-        return t.skills.awards.indie_games_accelerator.title;
+        return t.projects.items.magic_sort.award;
       case ProjectAward.indieGamesFund2023:
-        return t.skills.awards.indie_games_fund.title;
+        return t.projects.items.farm_vs_aliens.award;
       case ProjectAward.googlePlayBestOf2021:
-        return t.skills.awards.google_play.title;
+        return t.projects.items.rabit.award;
     }
   }
 
