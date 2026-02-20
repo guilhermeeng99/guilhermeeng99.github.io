@@ -13,58 +13,84 @@ class SkillsSectionCategory {
   final List<String> skills;
 
   static final List<SkillsSectionCategory> categories = [
-    mobileDev,
-    backend,
-    languages,
-    tools,
+    coreEngineering,
+    architectureBackend,
+    devopsProduction,
   ];
 
-  static final mobileDev = SkillsSectionCategory(
-    title: t.skills.categories.mobile_dev.title,
+  static final coreEngineering = SkillsSectionCategory(
+    title: t.skills.categories.core_engineering.title,
     icon: Icons.phone_android_rounded,
     skills: const [
       'Flutter',
       'Dart',
-      'Riverpod',
-      'Bloc',
-      'MobX',
-      'MVVM',
+      'Design Patterns',
+      'REST APIs',
       'Clean Architecture',
+      'State Management',
+      'WebSockets',
+      'BLoC',
+      'Unit Tests',
+      'SOLID',
+      'DDD',
       'TDD',
-      'Native Plugins',
+      'Cubit',
+      'Riverpod',
+      'KISS',
+      'DRY',
+      'OOP',
+      'Provider',
+      'GetX',
+      'MobX',
+      'Widget Tests',
     ],
   );
 
-  static final backend = SkillsSectionCategory(
-    title: t.skills.categories.backend.title,
+  static final architectureBackend = SkillsSectionCategory(
+    title: t.skills.categories.architecture_backend.title,
     icon: Icons.cloud_rounded,
     skills: const [
-      'Firebase (Full Suite)',
-      'Node.js',
-      'GraphQL',
-      'REST APIs',
-      'SQL',
-      'NoSQL',
+      'Feature-First Architecture',
+      'Hive Database',
+      'DI',
+      'Drift Database',
+      'Realtime Database',
+      'FCM',
+      'GetIt',
+      'Modular',
+      'Firebase Auth',
+      'Firebase Cloud Storage',
+      'Provider',
+      'Firestore',
+      'Supabase',
+      'Isar Database',
+      'Remote Config',
+      'Analytics',
+      'Platform Channels',
+      'Android',
+      'Crashlytics',
+      'iOS',
     ],
   );
 
-  static final languages = SkillsSectionCategory(
-    title: t.skills.categories.languages.title,
-    icon: Icons.code_rounded,
-    skills: const ['Dart', 'Java', 'Kotlin', 'JavaScript', 'TypeScript'],
-  );
-
-  static final tools = SkillsSectionCategory(
-    title: t.skills.categories.tools.title,
+  static final devopsProduction = SkillsSectionCategory(
+    title: t.skills.categories.devops_production.title,
     icon: Icons.build_rounded,
     skills: const [
+      'CI/CD Pipelines',
+      'CodeMagic',
+      'Performance Optimization',
+      'Braze',
+      'Fastlane',
+      'Firebase App Distribution',
+      'Crash & ANR Reduction',
       'Git',
-      'CI/CD',
-      'Figma',
-      'Adobe XD',
-      'Monetization',
-      'Codemagic',
-      'GitHub Actions',
+      'Memory Leak Debugging',
+      'GitHub',
+      'Build Flavors',
+      'NewRelic',
+      'Optimizely',
+      'Rive',
     ],
   );
 }

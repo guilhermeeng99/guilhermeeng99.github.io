@@ -81,11 +81,13 @@ class _SkillCategoryCard extends StatelessWidget {
             children: [
               Icon(category.icon, color: AppColors.primary, size: 22),
               const SizedBox(width: 12),
-              Text(
-                category.title,
-                style: Theme.of(
-                  context,
-                ).textTheme.titleLarge?.copyWith(fontSize: 18),
+              Expanded(
+                child: Text(
+                  category.title,
+                  style: Theme.of(
+                    context,
+                  ).textTheme.titleLarge?.copyWith(fontSize: 18),
+                ),
               ),
             ],
           ),

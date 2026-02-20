@@ -301,10 +301,9 @@ class TranslationsSkillsCategoriesEn {
 	final Translations _root; // ignore: unused_field
 
 	// Translations
-	late final TranslationsSkillsCategoriesMobileDevEn mobile_dev = TranslationsSkillsCategoriesMobileDevEn._(_root);
-	late final TranslationsSkillsCategoriesBackendEn backend = TranslationsSkillsCategoriesBackendEn._(_root);
-	late final TranslationsSkillsCategoriesLanguagesEn languages = TranslationsSkillsCategoriesLanguagesEn._(_root);
-	late final TranslationsSkillsCategoriesToolsEn tools = TranslationsSkillsCategoriesToolsEn._(_root);
+	late final TranslationsSkillsCategoriesCoreEngineeringEn core_engineering = TranslationsSkillsCategoriesCoreEngineeringEn._(_root);
+	late final TranslationsSkillsCategoriesArchitectureBackendEn architecture_backend = TranslationsSkillsCategoriesArchitectureBackendEn._(_root);
+	late final TranslationsSkillsCategoriesDevopsProductionEn devops_production = TranslationsSkillsCategoriesDevopsProductionEn._(_root);
 }
 
 // Path: about.stats.downloads
@@ -378,17 +377,17 @@ class TranslationsProjectsItemsMagicSortEn {
 	/// en: 'Magic Sort'
 	String get name => 'Magic Sort';
 
-	/// en: 'First hybrid casual water-sort puzzle game on the market. Partnership with Wildlife Studios'
-	String get description => 'First hybrid casual water-sort puzzle game on the market. Partnership with Wildlife Studios';
+	/// en: 'Hybrid casual puzzle game developed in partnership with Wildlife Studios. Selected for the Google Play Indie Games Accelerator 2024 program, with 1M+ downloads and live-ops driven monetization systems.'
+	String get description => 'Hybrid casual puzzle game developed in partnership with Wildlife Studios. Selected for the Google Play Indie Games Accelerator 2024 program, with 1M+ downloads and live-ops driven monetization systems.';
 
-	/// en: '480K+'
-	String get metric => '480K+';
+	/// en: '1M+'
+	String get metric => '1M+';
 
 	/// en: 'Indie Games Accelerator 2024'
 	String get award => 'Indie Games Accelerator 2024';
 
-	/// en: 'Implemented high-performance UI systems including animated tutorials, live-event mechanics (Battle Pass, Magic League, Treasure Hunts), and a scalable monetization framework with rewarded ads, interstitials, and IAP. Integrated Firebase Analytics, Remote Config for A/B testing, and Crashlytics for real-time monitoring.'
-	String get details => 'Implemented high-performance UI systems including animated tutorials, live-event mechanics (Battle Pass, Magic League, Treasure Hunts), and a scalable monetization framework with rewarded ads, interstitials, and IAP. Integrated Firebase Analytics, Remote Config for A/B testing, and Crashlytics for real-time monitoring.';
+	/// en: 'Led high-performance UI architecture. Built monetization pipelines using Firebase Remote Config and A/B testing, improving engagement and revenue performance. Architected and stabilized a high-performance Flutter codebase optimized for low-end Android devices, focusing on rendering efficiency, memory footprint reduction, and frame stability through deep profiling and refactoring. Implemented event-driven state management and feature isolation to support scalable Live Ops releases.'
+	String get details => 'Led high-performance UI architecture. Built monetization pipelines using Firebase Remote Config and A/B testing, improving engagement and revenue performance. Architected and stabilized a high-performance Flutter codebase optimized for low-end Android devices, focusing on rendering efficiency, memory footprint reduction, and frame stability through deep profiling and refactoring. Implemented event-driven state management and feature isolation to support scalable Live Ops releases.';
 }
 
 // Path: projects.items.rabit
@@ -402,8 +401,8 @@ class TranslationsProjectsItemsRabitEn {
 	/// en: 'Rabit'
 	String get name => 'Rabit';
 
-	/// en: 'Gamified habit tracking app where users grow virtual plants by completing daily tasks. Ranked 2nd as App of the Year 2021 on Google Play Brazil.'
-	String get description => 'Gamified habit tracking app where users grow virtual plants by completing daily tasks. Ranked 2nd as App of the Year 2021 on Google Play Brazil.';
+	/// en: 'Gamified habit tracker that reached 5M+ downloads and ranked #2 App of the Year 2021 (Google Play Brazil).'
+	String get description => 'Gamified habit tracker that reached 5M+ downloads and ranked #2 App of the Year 2021 (Google Play Brazil).';
 
 	/// en: '5M+'
 	String get metric => '5M+';
@@ -411,8 +410,8 @@ class TranslationsProjectsItemsRabitEn {
 	/// en: 'Google Play Best of 2021'
 	String get award => 'Google Play Best of 2021';
 
-	/// en: 'Implemented push/local notifications, cloud sync with Firebase Firestore, streak tracking, and detailed analytics. Designed custom animations, high-performance UI systems and micro-interactions that boosted user retention.'
-	String get details => 'Implemented push/local notifications, cloud sync with Firebase Firestore, streak tracking, and detailed analytics. Designed custom animations, high-performance UI systems and micro-interactions that boosted user retention.';
+	/// en: 'Developed core engagement systems including push notifications, streak logic, Firestore sync, and high-performance animated UI. Implemented data-driven retention features that significantly improved user engagement and long-term retention.'
+	String get details => 'Developed core engagement systems including push notifications, streak logic, Firestore sync, and high-performance animated UI. Implemented data-driven retention features that significantly improved user engagement and long-term retention.';
 }
 
 // Path: projects.items.cups
@@ -426,14 +425,14 @@ class TranslationsProjectsItemsCupsEn {
 	/// en: 'Cups'
 	String get name => 'Cups';
 
-	/// en: 'Water sort puzzle game surpassing 4.5M+ downloads with strong traction in the US market. Partnership with Homa Games'
-	String get description => 'Water sort puzzle game surpassing 4.5M+ downloads with strong traction in the US market. Partnership with Homa Games';
+	/// en: 'Water sort puzzle game with 4.5M+ downloads and strong traction in the US market, developed in partnership with Homa Games.'
+	String get description => 'Water sort puzzle game with 4.5M+ downloads and strong traction in the US market, developed in partnership with Homa Games.';
 
 	/// en: '4.5M+'
 	String get metric => '4.5M+';
 
-	/// en: 'Implemented the complete UI layer, monetization systems. Co-led the performance optimization efforts that reduced frame build times and improved user experience on low-end devices.'
-	String get details => 'Implemented the complete UI layer, monetization systems. Co-led the performance optimization efforts that reduced frame build times and improved user experience on low-end devices.';
+	/// en: 'Implemented the full UI layer and monetization systems. Co-led performance optimization initiatives reducing frame build time and improving performance on low-end devices.'
+	String get details => 'Implemented the full UI layer and monetization systems. Co-led performance optimization initiatives reducing frame build time and improving performance on low-end devices.';
 }
 
 // Path: projects.items.farm_vs_aliens
@@ -447,14 +446,14 @@ class TranslationsProjectsItemsFarmVsAliensEn {
 	/// en: 'Farm vs Aliens'
 	String get name => 'Farm vs Aliens';
 
-	/// en: 'A merge tower defense game where players defend their farm from alien invaders by merging and upgrading towers.'
-	String get description => 'A merge tower defense game where players defend their farm from alien invaders by merging and upgrading towers.';
+	/// en: 'Mobile game combining merge mechanics and tower defense systems, backed by Google Play Indie Games Fund 2023.'
+	String get description => 'Mobile game combining merge mechanics and tower defense systems, backed by Google Play Indie Games Fund 2023.';
 
 	/// en: 'Indie Games Fund 2023'
 	String get award => 'Indie Games Fund 2023';
 
-	/// en: 'Led product direction and game design for this merge tower defense game. Defined the core gameplay loop combining merge mechanics with strategic tower defense.'
-	String get details => 'Led product direction and game design for this merge tower defense game. Defined the core gameplay loop combining merge mechanics with strategic tower defense.';
+	/// en: 'Led product direction and designed the core gameplay loop. Oversaw feature prioritization and implementation strategy, contributing to the studio securing fund backing.'
+	String get details => 'Led product direction and designed the core gameplay loop. Oversaw feature prioritization and implementation strategy, contributing to the studio securing fund backing.';
 }
 
 // Path: projects.items.capy
@@ -465,14 +464,14 @@ class TranslationsProjectsItemsCapyEn {
 
 	// Translations
 
-	/// en: 'Capy: Self-Care Pet'
-	String get name => 'Capy: Self-Care Pet';
+	/// en: 'Capy – AI-Powered Virtual Wellness Companion'
+	String get name => 'Capy – AI-Powered Virtual Wellness Companion';
 
-	/// en: 'Self-care companion app with a virtual pet mechanic. Users maintain their well-being through daily tasks and caring for their capybara.'
-	String get description => 'Self-care companion app with a virtual pet mechanic. Users maintain their well-being through daily tasks and caring for their capybara.';
+	/// en: 'AI-powered self-care mobile application featuring a virtual pet driven by OpenAI APIs, combining habit tracking, mood journaling, and intelligent conversational interactions.'
+	String get description => 'AI-powered self-care mobile application featuring a virtual pet driven by OpenAI APIs, combining habit tracking, mood journaling, and intelligent conversational interactions.';
 
-	/// en: 'Implemented habit tracking, mood journaling, and pet evolution mechanics. Integrated push notifications for daily reminders and Firebase for user data persistence.'
-	String get details => 'Implemented habit tracking, mood journaling, and pet evolution mechanics. Integrated push notifications for daily reminders and Firebase for user data persistence.';
+	/// en: 'Built scalable daily engagement loops using push notifications and behavioral tracking, improving retention and reinforcing consistent user habits. Led high-performance UI architecture.'
+	String get details => 'Built scalable daily engagement loops using push notifications and behavioral tracking, improving retention and reinforcing consistent user habits. Led high-performance UI architecture.';
 }
 
 // Path: projects.items.drop_merge
@@ -575,11 +574,15 @@ class TranslationsResumeExperienceBluStudiosEn {
 
 	List<String> get points => [
 		'Built and maintained multiple mobile apps and games totaling ${_root.app.total_downloads} downloads worldwide.',
-		'Architected scalable systems supporting millions of users, including real-time leaderboards, live events, and ranking systems.',
-		'Co-owned the full mobile product lifecycle: architecture, development, testing, CI/CD, publishing, ASO, monetization, live ops, and store compliance.',
-		'Integrated backend services using Firebase (Full Suite), GraphQL APIs, and Node.js.',
-		'Designed and optimized monetization systems achieving consistently high eCPM performance.',
-		'Co-led fully remote teams of up to 14 people.',
+		'Architected scalable Flutter applications supporting millions of users.',
+		'Executed deep performance optimization initiatives, reducing ANR rates from approximately 30% to below 2% and improving frame rendering stability on low-end Android devices.',
+		'Designed and implemented live ops systems (Battle Pass, Leaderboards, Events, Ranking Systems).',
+		'Improved D1 retention from approximately 25% to approximately 40% through UX performance tuning and data-driven iteration.',
+		'Reduced APK size by 45% through asset restructuring, rendering optimizations, and build configuration improvements.',
+		'Integrated Firebase (Analytics, Firestore, Remote Config, Crashlytics, Cloud Messaging).',
+		'Implemented monetization systems (Rewarded Ads, Interstitials, IAP) achieving high eCPM performance.',
+		'Co-owned the full product lifecycle: architecture, development, CI/CD, publishing, ASO, live ops, store compliance.',
+		'Co-led fully remote teams of up to 14 members.',
 		'Established partnerships with Wildlife Studios and Homa Games.',
 	];
 }
@@ -702,91 +705,40 @@ class TranslationsResumeEducationAllEn {
 	];
 }
 
-// Path: skills.categories.mobile_dev
-class TranslationsSkillsCategoriesMobileDevEn {
-	TranslationsSkillsCategoriesMobileDevEn._(this._root);
+// Path: skills.categories.core_engineering
+class TranslationsSkillsCategoriesCoreEngineeringEn {
+	TranslationsSkillsCategoriesCoreEngineeringEn._(this._root);
 
 	final Translations _root; // ignore: unused_field
 
 	// Translations
 
-	/// en: 'Mobile Development'
-	String get title => 'Mobile Development';
-
-	List<String> get skills => [
-		'Flutter',
-		'Dart',
-		'Riverpod',
-		'Bloc',
-		'MobX',
-		'MVVM',
-		'Clean Architecture',
-		'TDD',
-		'Native Plugins',
-	];
+	/// en: 'Core Engineering'
+	String get title => 'Core Engineering';
 }
 
-// Path: skills.categories.backend
-class TranslationsSkillsCategoriesBackendEn {
-	TranslationsSkillsCategoriesBackendEn._(this._root);
+// Path: skills.categories.architecture_backend
+class TranslationsSkillsCategoriesArchitectureBackendEn {
+	TranslationsSkillsCategoriesArchitectureBackendEn._(this._root);
 
 	final Translations _root; // ignore: unused_field
 
 	// Translations
 
-	/// en: 'Backend & Cloud'
-	String get title => 'Backend & Cloud';
-
-	List<String> get skills => [
-		'Firebase (Full Suite)',
-		'Node.js',
-		'GraphQL',
-		'REST APIs',
-		'SQL',
-		'NoSQL',
-	];
+	/// en: 'Architecture & Backend Systems'
+	String get title => 'Architecture & Backend Systems';
 }
 
-// Path: skills.categories.languages
-class TranslationsSkillsCategoriesLanguagesEn {
-	TranslationsSkillsCategoriesLanguagesEn._(this._root);
+// Path: skills.categories.devops_production
+class TranslationsSkillsCategoriesDevopsProductionEn {
+	TranslationsSkillsCategoriesDevopsProductionEn._(this._root);
 
 	final Translations _root; // ignore: unused_field
 
 	// Translations
 
-	/// en: 'Languages'
-	String get title => 'Languages';
-
-	List<String> get skills => [
-		'Dart',
-		'Java',
-		'Kotlin',
-		'JavaScript',
-		'TypeScript',
-	];
-}
-
-// Path: skills.categories.tools
-class TranslationsSkillsCategoriesToolsEn {
-	TranslationsSkillsCategoriesToolsEn._(this._root);
-
-	final Translations _root; // ignore: unused_field
-
-	// Translations
-
-	/// en: 'Tools & Product'
-	String get title => 'Tools & Product';
-
-	List<String> get skills => [
-		'Git',
-		'CI/CD',
-		'Figma',
-		'ASO',
-		'Monetization',
-		'Codemagic',
-		'GitHub Actions',
-	];
+	/// en: 'DevOps, Observability & Production'
+	String get title => 'DevOps, Observability & Production';
 }
 
 /// The flat map containing all translations for locale <en>.
@@ -828,26 +780,26 @@ extension on Translations {
 			'projects.other_projects_toggle' => 'Other Projects',
 			'projects.view_on_store' => 'View on Store',
 			'projects.items.magic_sort.name' => 'Magic Sort',
-			'projects.items.magic_sort.description' => 'First hybrid casual water-sort puzzle game on the market. Partnership with Wildlife Studios',
-			'projects.items.magic_sort.metric' => '480K+',
+			'projects.items.magic_sort.description' => 'Hybrid casual puzzle game developed in partnership with Wildlife Studios. Selected for the Google Play Indie Games Accelerator 2024 program, with 1M+ downloads and live-ops driven monetization systems.',
+			'projects.items.magic_sort.metric' => '1M+',
 			'projects.items.magic_sort.award' => 'Indie Games Accelerator 2024',
-			'projects.items.magic_sort.details' => 'Implemented high-performance UI systems including animated tutorials, live-event mechanics (Battle Pass, Magic League, Treasure Hunts), and a scalable monetization framework with rewarded ads, interstitials, and IAP. Integrated Firebase Analytics, Remote Config for A/B testing, and Crashlytics for real-time monitoring.',
+			'projects.items.magic_sort.details' => 'Led high-performance UI architecture. Built monetization pipelines using Firebase Remote Config and A/B testing, improving engagement and revenue performance. Architected and stabilized a high-performance Flutter codebase optimized for low-end Android devices, focusing on rendering efficiency, memory footprint reduction, and frame stability through deep profiling and refactoring. Implemented event-driven state management and feature isolation to support scalable Live Ops releases.',
 			'projects.items.rabit.name' => 'Rabit',
-			'projects.items.rabit.description' => 'Gamified habit tracking app where users grow virtual plants by completing daily tasks. Ranked 2nd as App of the Year 2021 on Google Play Brazil.',
+			'projects.items.rabit.description' => 'Gamified habit tracker that reached 5M+ downloads and ranked #2 App of the Year 2021 (Google Play Brazil).',
 			'projects.items.rabit.metric' => '5M+',
 			'projects.items.rabit.award' => 'Google Play Best of 2021',
-			'projects.items.rabit.details' => 'Implemented push/local notifications, cloud sync with Firebase Firestore, streak tracking, and detailed analytics. Designed custom animations, high-performance UI systems and micro-interactions that boosted user retention.',
+			'projects.items.rabit.details' => 'Developed core engagement systems including push notifications, streak logic, Firestore sync, and high-performance animated UI. Implemented data-driven retention features that significantly improved user engagement and long-term retention.',
 			'projects.items.cups.name' => 'Cups',
-			'projects.items.cups.description' => 'Water sort puzzle game surpassing 4.5M+ downloads with strong traction in the US market. Partnership with Homa Games',
+			'projects.items.cups.description' => 'Water sort puzzle game with 4.5M+ downloads and strong traction in the US market, developed in partnership with Homa Games.',
 			'projects.items.cups.metric' => '4.5M+',
-			'projects.items.cups.details' => 'Implemented the complete UI layer, monetization systems. Co-led the performance optimization efforts that reduced frame build times and improved user experience on low-end devices.',
+			'projects.items.cups.details' => 'Implemented the full UI layer and monetization systems. Co-led performance optimization initiatives reducing frame build time and improving performance on low-end devices.',
 			'projects.items.farm_vs_aliens.name' => 'Farm vs Aliens',
-			'projects.items.farm_vs_aliens.description' => 'A merge tower defense game where players defend their farm from alien invaders by merging and upgrading towers.',
+			'projects.items.farm_vs_aliens.description' => 'Mobile game combining merge mechanics and tower defense systems, backed by Google Play Indie Games Fund 2023.',
 			'projects.items.farm_vs_aliens.award' => 'Indie Games Fund 2023',
-			'projects.items.farm_vs_aliens.details' => 'Led product direction and game design for this merge tower defense game. Defined the core gameplay loop combining merge mechanics with strategic tower defense.',
-			'projects.items.capy.name' => 'Capy: Self-Care Pet',
-			'projects.items.capy.description' => 'Self-care companion app with a virtual pet mechanic. Users maintain their well-being through daily tasks and caring for their capybara.',
-			'projects.items.capy.details' => 'Implemented habit tracking, mood journaling, and pet evolution mechanics. Integrated push notifications for daily reminders and Firebase for user data persistence.',
+			'projects.items.farm_vs_aliens.details' => 'Led product direction and designed the core gameplay loop. Oversaw feature prioritization and implementation strategy, contributing to the studio securing fund backing.',
+			'projects.items.capy.name' => 'Capy – AI-Powered Virtual Wellness Companion',
+			'projects.items.capy.description' => 'AI-powered self-care mobile application featuring a virtual pet driven by OpenAI APIs, combining habit tracking, mood journaling, and intelligent conversational interactions.',
+			'projects.items.capy.details' => 'Built scalable daily engagement loops using push notifications and behavioral tracking, improving retention and reinforcing consistent user habits. Led high-performance UI architecture.',
 			'projects.items.drop_merge.name' => 'Drop & Merge',
 			'projects.items.drop_merge.description' => 'Addictive drop and merge puzzle game combining strategic placement with satisfying merge mechanics for an engaging casual experience.',
 			'projects.items.drop_merge.details' => 'Implemented the complete UI layer',
@@ -872,12 +824,16 @@ extension on Translations {
 			'resume.experience.blu_studios.period' => '2019 – 2026',
 			'resume.experience.blu_studios.location' => 'Remote',
 			'resume.experience.blu_studios.points.0' => 'Built and maintained multiple mobile apps and games totaling ${_root.app.total_downloads} downloads worldwide.',
-			'resume.experience.blu_studios.points.1' => 'Architected scalable systems supporting millions of users, including real-time leaderboards, live events, and ranking systems.',
-			'resume.experience.blu_studios.points.2' => 'Co-owned the full mobile product lifecycle: architecture, development, testing, CI/CD, publishing, ASO, monetization, live ops, and store compliance.',
-			'resume.experience.blu_studios.points.3' => 'Integrated backend services using Firebase (Full Suite), GraphQL APIs, and Node.js.',
-			'resume.experience.blu_studios.points.4' => 'Designed and optimized monetization systems achieving consistently high eCPM performance.',
-			'resume.experience.blu_studios.points.5' => 'Co-led fully remote teams of up to 14 people.',
-			'resume.experience.blu_studios.points.6' => 'Established partnerships with Wildlife Studios and Homa Games.',
+			'resume.experience.blu_studios.points.1' => 'Architected scalable Flutter applications supporting millions of users.',
+			'resume.experience.blu_studios.points.2' => 'Executed deep performance optimization initiatives, reducing ANR rates from approximately 30% to below 2% and improving frame rendering stability on low-end Android devices.',
+			'resume.experience.blu_studios.points.3' => 'Designed and implemented live ops systems (Battle Pass, Leaderboards, Events, Ranking Systems).',
+			'resume.experience.blu_studios.points.4' => 'Improved D1 retention from approximately 25% to approximately 40% through UX performance tuning and data-driven iteration.',
+			'resume.experience.blu_studios.points.5' => 'Reduced APK size by 45% through asset restructuring, rendering optimizations, and build configuration improvements.',
+			'resume.experience.blu_studios.points.6' => 'Integrated Firebase (Analytics, Firestore, Remote Config, Crashlytics, Cloud Messaging).',
+			'resume.experience.blu_studios.points.7' => 'Implemented monetization systems (Rewarded Ads, Interstitials, IAP) achieving high eCPM performance.',
+			'resume.experience.blu_studios.points.8' => 'Co-owned the full product lifecycle: architecture, development, CI/CD, publishing, ASO, live ops, store compliance.',
+			'resume.experience.blu_studios.points.9' => 'Co-led fully remote teams of up to 14 members.',
+			'resume.experience.blu_studios.points.10' => 'Established partnerships with Wildlife Studios and Homa Games.',
 			'resume.experience.vx_case.title' => 'Desktop Developer',
 			'resume.experience.vx_case.period' => 'Oct 2018 – Mar 2019',
 			'resume.experience.vx_case.location' => 'Salvador, Brazil',
@@ -908,37 +864,9 @@ extension on Translations {
 			'resume.education.all.points.0' => 'Intensive English language program with focus on grammar, reading, writing, listening and speaking skills. Prepared for advanced communication in academic and professional environments.',
 			'skills.title' => 'Skills & Expertise',
 			'skills.subtitle' => 'Technologies and tools I use to bring ideas to life',
-			'skills.categories.mobile_dev.title' => 'Mobile Development',
-			'skills.categories.mobile_dev.skills.0' => 'Flutter',
-			'skills.categories.mobile_dev.skills.1' => 'Dart',
-			'skills.categories.mobile_dev.skills.2' => 'Riverpod',
-			'skills.categories.mobile_dev.skills.3' => 'Bloc',
-			'skills.categories.mobile_dev.skills.4' => 'MobX',
-			'skills.categories.mobile_dev.skills.5' => 'MVVM',
-			'skills.categories.mobile_dev.skills.6' => 'Clean Architecture',
-			'skills.categories.mobile_dev.skills.7' => 'TDD',
-			'skills.categories.mobile_dev.skills.8' => 'Native Plugins',
-			'skills.categories.backend.title' => 'Backend & Cloud',
-			'skills.categories.backend.skills.0' => 'Firebase (Full Suite)',
-			'skills.categories.backend.skills.1' => 'Node.js',
-			'skills.categories.backend.skills.2' => 'GraphQL',
-			'skills.categories.backend.skills.3' => 'REST APIs',
-			'skills.categories.backend.skills.4' => 'SQL',
-			'skills.categories.backend.skills.5' => 'NoSQL',
-			'skills.categories.languages.title' => 'Languages',
-			'skills.categories.languages.skills.0' => 'Dart',
-			'skills.categories.languages.skills.1' => 'Java',
-			'skills.categories.languages.skills.2' => 'Kotlin',
-			'skills.categories.languages.skills.3' => 'JavaScript',
-			'skills.categories.languages.skills.4' => 'TypeScript',
-			'skills.categories.tools.title' => 'Tools & Product',
-			'skills.categories.tools.skills.0' => 'Git',
-			'skills.categories.tools.skills.1' => 'CI/CD',
-			'skills.categories.tools.skills.2' => 'Figma',
-			'skills.categories.tools.skills.3' => 'ASO',
-			'skills.categories.tools.skills.4' => 'Monetization',
-			'skills.categories.tools.skills.5' => 'Codemagic',
-			'skills.categories.tools.skills.6' => 'GitHub Actions',
+			'skills.categories.core_engineering.title' => 'Core Engineering',
+			'skills.categories.architecture_backend.title' => 'Architecture & Backend Systems',
+			'skills.categories.devops_production.title' => 'DevOps, Observability & Production',
 			'contact.title' => 'Let\'s Work Together',
 			'contact.subtitle' => 'Have a project in mind or want to discuss opportunities? I\'m always open to new challenges and collaborations.',
 			'contact.email' => 'Email',

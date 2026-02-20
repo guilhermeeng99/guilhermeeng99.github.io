@@ -51,34 +51,34 @@
     "items": {
       "magic_sort": {
         "name": "Magic Sort",
-        "description": "First hybrid casual water-sort puzzle game on the market. Partnership with Wildlife Studios",
-        "metric": "480K+",
+        "description": "Hybrid casual puzzle game developed in partnership with Wildlife Studios. Selected for the Google Play Indie Games Accelerator 2024 program, with 1M+ downloads and live-ops driven monetization systems.",
+        "metric": "1M+",
         "award": "Indie Games Accelerator 2024",
-        "details": "Implemented high-performance UI systems including animated tutorials, live-event mechanics (Battle Pass, Magic League, Treasure Hunts), and a scalable monetization framework with rewarded ads, interstitials, and IAP. Integrated Firebase Analytics, Remote Config for A/B testing, and Crashlytics for real-time monitoring."
+        "details": "Led high-performance UI architecture. Built monetization pipelines using Firebase Remote Config and A/B testing, improving engagement and revenue performance. Architected and stabilized a high-performance Flutter codebase optimized for low-end Android devices, focusing on rendering efficiency, memory footprint reduction, and frame stability through deep profiling and refactoring. Implemented event-driven state management and feature isolation to support scalable Live Ops releases."
       },
       "rabit": {
         "name": "Rabit",
-        "description": "Gamified habit tracking app where users grow virtual plants by completing daily tasks. Ranked 2nd as App of the Year 2021 on Google Play Brazil.",
+        "description": "Gamified habit tracker that reached 5M+ downloads and ranked #2 App of the Year 2021 (Google Play Brazil).",
         "metric": "5M+",
         "award": "Google Play Best of 2021",
-        "details": "Implemented push/local notifications, cloud sync with Firebase Firestore, streak tracking, and detailed analytics. Designed custom animations, high-performance UI systems and micro-interactions that boosted user retention."
+        "details": "Developed core engagement systems including push notifications, streak logic, Firestore sync, and high-performance animated UI. Implemented data-driven retention features that significantly improved user engagement and long-term retention."
       },
       "cups": {
         "name": "Cups",
-        "description": "Water sort puzzle game surpassing 4.5M+ downloads with strong traction in the US market. Partnership with Homa Games",
+        "description": "Water sort puzzle game with 4.5M+ downloads and strong traction in the US market, developed in partnership with Homa Games.",
         "metric": "4.5M+",
-        "details": "Implemented the complete UI layer, monetization systems. Co-led the performance optimization efforts that reduced frame build times and improved user experience on low-end devices."
+        "details": "Implemented the full UI layer and monetization systems. Co-led performance optimization initiatives reducing frame build time and improving performance on low-end devices."
       },
       "farm_vs_aliens": {
         "name": "Farm vs Aliens",
-        "description": "A merge tower defense game where players defend their farm from alien invaders by merging and upgrading towers.",
+        "description": "Mobile game combining merge mechanics and tower defense systems, backed by Google Play Indie Games Fund 2023.",
         "award": "Indie Games Fund 2023",
-        "details": "Led product direction and game design for this merge tower defense game. Defined the core gameplay loop combining merge mechanics with strategic tower defense."
+        "details": "Led product direction and designed the core gameplay loop. Oversaw feature prioritization and implementation strategy, contributing to the studio securing fund backing."
       },
       "capy": {
-        "name": "Capy: Self-Care Pet",
-        "description": "Self-care companion app with a virtual pet mechanic. Users maintain their well-being through daily tasks and caring for their capybara.",
-        "details": "Implemented habit tracking, mood journaling, and pet evolution mechanics. Integrated push notifications for daily reminders and Firebase for user data persistence."
+        "name": "Capy – AI-Powered Virtual Wellness Companion",
+        "description": "AI-powered self-care mobile application featuring a virtual pet driven by OpenAI APIs, combining habit tracking, mood journaling, and intelligent conversational interactions.",
+        "details": "Built scalable daily engagement loops using push notifications and behavioral tracking, improving retention and reinforcing consistent user habits. Led high-performance UI architecture."
       },
       "drop_merge": {
         "name": "Drop & Merge",
@@ -118,11 +118,15 @@
         "location": "Remote",
         "points": [
           "Built and maintained multiple mobile apps and games totaling @:app.total_downloads downloads worldwide.",
-          "Architected scalable systems supporting millions of users, including real-time leaderboards, live events, and ranking systems.",
-          "Co-owned the full mobile product lifecycle: architecture, development, testing, CI/CD, publishing, ASO, monetization, live ops, and store compliance.",
-          "Integrated backend services using Firebase (Full Suite), GraphQL APIs, and Node.js.",
-          "Designed and optimized monetization systems achieving consistently high eCPM performance.",
-          "Co-led fully remote teams of up to 14 people.",
+          "Architected scalable Flutter applications supporting millions of users.",
+          "Executed deep performance optimization initiatives, reducing ANR rates from approximately 30% to below 2% and improving frame rendering stability on low-end Android devices.",
+          "Designed and implemented live ops systems (Battle Pass, Leaderboards, Events, Ranking Systems).",
+          "Improved D1 retention from approximately 25% to approximately 40% through UX performance tuning and data-driven iteration.",
+          "Reduced APK size by 45% through asset restructuring, rendering optimizations, and build configuration improvements.",
+          "Integrated Firebase (Analytics, Firestore, Remote Config, Crashlytics, Cloud Messaging).",
+          "Implemented monetization systems (Rewarded Ads, Interstitials, IAP) achieving high eCPM performance.",
+          "Co-owned the full product lifecycle: architecture, development, CI/CD, publishing, ASO, live ops, store compliance.",
+          "Co-led fully remote teams of up to 14 members.",
           "Established partnerships with Wildlife Studios and Homa Games."
         ]
       },
@@ -182,21 +186,14 @@
     "title": "Skills & Expertise",
     "subtitle": "Technologies and tools I use to bring ideas to life",
     "categories": {
-      "mobile_dev": {
-        "title": "Mobile Development",
-        "skills": ["Flutter", "Dart", "Riverpod", "Bloc", "MobX", "MVVM", "Clean Architecture", "TDD", "Native Plugins"]
+      "core_engineering": {
+        "title": "Core Engineering"
       },
-      "backend": {
-        "title": "Backend & Cloud",
-        "skills": ["Firebase (Full Suite)", "Node.js", "GraphQL", "REST APIs", "SQL", "NoSQL"]
+      "architecture_backend": {
+        "title": "Architecture & Backend Systems"
       },
-      "languages": {
-        "title": "Languages",
-        "skills": ["Dart", "Java", "Kotlin", "JavaScript", "TypeScript"]
-      },
-      "tools": {
-        "title": "Tools & Product",
-        "skills": ["Git", "CI/CD", "Figma", "ASO", "Monetization", "Codemagic", "GitHub Actions"]
+      "devops_production": {
+        "title": "DevOps, Observability & Production"
       }
     }
   },

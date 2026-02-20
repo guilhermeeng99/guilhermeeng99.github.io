@@ -70,11 +70,12 @@ class $LibAppAssetsImagesGen {
 class $LibAppAssetsPdfsGen {
   const $LibAppAssetsPdfsGen();
 
-  /// File path: lib/app/assets/pdfs/Curriculum.pdf
-  String get curriculum => 'lib/app/assets/pdfs/Curriculum.pdf';
+  /// File path: lib/app/assets/pdfs/Guilherme_Passos_Resume.pdf
+  String get guilhermePassosResume =>
+      'lib/app/assets/pdfs/Guilherme_Passos_Resume.pdf';
 
   /// List of all assets
-  List<String> get values => [curriculum];
+  List<String> get values => [guilhermePassosResume];
 }
 
 class $LibAppAssetsImagesProjectsGen {

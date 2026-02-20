@@ -4,7 +4,7 @@ Personal portfolio website built with Flutter Web showcasing my work as a Flutte
 
 ## About
 
-Flutter Developer with 5+ years of experience and 7 years as an entrepreneur focused on mobile games and applications. Products I've built and maintained have reached **15M+ downloads worldwide**.
+Flutter Developer & Mobile Entrepreneur with 7+ years focused on mobile games and applications. Products I've built and maintained have reached **15M+ downloads worldwide**.
 
 ## Features
 

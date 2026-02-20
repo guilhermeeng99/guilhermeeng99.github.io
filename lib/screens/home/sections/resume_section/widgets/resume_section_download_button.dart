@@ -1,4 +1,4 @@
-import 'dart:convert';
+import 'dart:js_interop';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -16,13 +16,16 @@ class ResumeSectionDownloadResumeButton extends HookWidget {
     final hovering = useState(false);
 
     Future<void> downloadResume() async {
-      final byteData = await rootBundle.load(Assets.lib.app.assets.pdfs.curriculum);
+      final byteData = await rootBundle.load(
+        Assets.lib.app.assets.pdfs.guilhermePassosResume,
+      );
       final bytes = byteData.buffer.asUint8List();
-      final base64Data = base64Encode(bytes);
-      (web.HTMLAnchorElement()
-            ..href = 'data:application/pdf;base64,$base64Data'
-            ..download = 'Guilherme_Passos_Resume.pdf')
-          .click();
+      final blob = web.Blob(
+        [bytes.toJS].toJS,
+        web.BlobPropertyBag(type: 'application/pdf'),
+      );
+      final url = web.URL.createObjectURL(blob);
+      web.window.open(url, '_blank');
     }
 
     return MouseRegion(
