@@ -1,0 +1,35 @@
+{
+    "name": "Guilherme Passos - Flutter Developer",
+    "short_name": "GP Portfolio",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0D0D0D",
+    "theme_color": "#6C63FF",
+    "description": "Flutter Developer & Mobile Entrepreneur with 5+ years crafting high-performance apps and games reaching 15M+ downloads worldwide.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

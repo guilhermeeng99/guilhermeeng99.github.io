@@ -1,0 +1,209 @@
+{
+  "app": {
+    "title": "Guilherme Passos - Flutter Developer",
+    "total_downloads": "12M+"
+  },
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Guilherme\nPassos",
+    "role": "Senior Flutter Developer",
+    "description": "Flutter Developer & Mobile Entrepreneur with 7+ years crafting high-performance apps and games reaching @:app.total_downloads downloads worldwide.",
+    "explore_projects": "Explore Projects",
+    "get_in_touch": "Get In Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Building digital products that scale",
+    "bio1": "Senior Flutter Developer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.",
+    "bio2": "I've implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I've built and maintained have reached 15M+ downloads worldwide.",
+    "bio3": "I specialize in scalable architectures, long-term code maintainability, and high-performance mobile applications. My expertise spans multiple state management solutions (Riverpod, Bloc, MobX), native plugin integration, and the full Firebase ecosystem.",
+    "stats": {
+      "downloads": {
+        "value": "@:app.total_downloads",
+        "label": "Downloads"
+      },
+      "experience": {
+        "value": "7+",
+        "label": "Years Experience"
+      },
+      "products": {
+        "value": "10+",
+        "label": "Products Shipped"
+      },
+      "teamSize": {
+        "value": "14",
+        "label": "Max Team Size Co-led"
+      }
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Real-world products across games and mobile apps",
+    "details_button": "What i did in this project",
+    "other_projects_toggle": "Other Projects",
+    "view_on_store": "View on Store",
+    "items": {
+      "magic_sort": {
+        "name": "Magic Sort",
+        "description": "Hybrid casual puzzle game developed in partnership with Wildlife Studios. Selected for the Google Play Indie Games Accelerator 2024 program, with 1M+ downloads and live-ops driven monetization systems.",
+        "metric": "1M+",
+        "award": "Indie Games Accelerator 2024",
+        "details": "Led high-performance UI architecture. Built monetization pipelines using Firebase Remote Config and A/B testing, improving engagement and revenue performance. Architected and stabilized a high-performance Flutter codebase optimized for low-end Android devices, focusing on rendering efficiency, memory footprint reduction, and frame stability through deep profiling and refactoring. Implemented event-driven state management and feature isolation to support scalable Live Ops releases."
+      },
+      "rabit": {
+        "name": "Rabit",
+        "description": "Gamified habit tracker that reached 5M+ downloads and ranked #2 App of the Year 2021 (Google Play Brazil).",
+        "metric": "5M+",
+        "award": "Google Play Best of 2021",
+        "details": "Developed core engagement systems including push notifications, streak logic, Firestore sync, and high-performance animated UI. Implemented data-driven retention features that significantly improved user engagement and long-term retention."
+      },
+      "cups": {
+        "name": "Cups",
+        "description": "Water sort puzzle game with 4.5M+ downloads and strong traction in the US market, developed in partnership with Homa Games.",
+        "metric": "4.5M+",
+        "details": "Implemented the full UI layer and monetization systems. Co-led performance optimization initiatives reducing frame build time and improving performance on low-end devices."
+      },
+      "farm_vs_aliens": {
+        "name": "Farm vs Aliens",
+        "description": "Mobile game combining merge mechanics and tower defense systems, backed by Google Play Indie Games Fund 2023.",
+        "award": "Indie Games Fund 2023",
+        "details": "Led product direction and designed the core gameplay loop. Oversaw feature prioritization and implementation strategy, contributing to the studio securing fund backing."
+      },
+      "capy": {
+        "name": "Capy – AI-Powered Virtual Wellness Companion",
+        "description": "AI-powered self-care mobile application featuring a virtual pet driven by OpenAI APIs, combining habit tracking, mood journaling, and intelligent conversational interactions.",
+        "details": "Built scalable daily engagement loops using push notifications and behavioral tracking, improving retention and reinforcing consistent user habits. Led high-performance UI architecture."
+      },
+      "drop_merge": {
+        "name": "Drop & Merge",
+        "description": "Addictive drop and merge puzzle game combining strategic placement with satisfying merge mechanics for an engaging casual experience.",
+        "details": "Implemented the complete UI layer"
+      },
+      "never_have_i_ever_x": {
+        "name": "Never Have I Ever X",
+        "description": "A fun party game app where players discover surprising facts about each other through classic 'Never Have I Ever' questions.",
+        "metric": "500K+",
+        "details": "Implemented UI and hundreds of curated questions across multiple categories, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue."
+      },
+      "booze": {
+        "name": "Booze",
+        "description": "A drinking game app with creative challenges, mini-games, and social dynamics designed for fun group gatherings.",
+        "metric": "500K+",
+        "details": "Implemented UI and diverse challenge modes, customizable game rules, and group play mechanics. Implemented smooth animations, ad monetization, and Firebase analytics for tracking user engagement and session data."
+      },
+      "vdx": {
+        "name": "Truth or Dare X",
+        "description": "A fun party game app where players discover surprising facts about each other through classic 'Truth or Dare' questions.",
+        "metric": "1M+",
+        "details": "Implemented UI and hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue."
+      }
+    }
+  },
+  "resume": {
+    "title": "Resume",
+    "subtitle": "A summary of my professional experience and education",
+    "experience_title": "Professional Experience",
+    "education_title": "Education",
+    "download_resume": "Download Resume",
+    "experience": {
+      "blu_studios": {
+        "title": "Co-founder & Senior Flutter Engineer",
+        "period": "2019 – 2026",
+        "location": "Remote",
+        "points": [
+          "Built and maintained multiple mobile apps and games totaling @:app.total_downloads downloads worldwide.",
+          "Architected scalable Flutter applications supporting millions of users.",
+          "Executed deep performance optimization initiatives, reducing ANR rates from approximately 30% to below 2% and improving frame rendering stability on low-end Android devices.",
+          "Designed and implemented live ops systems (Battle Pass, Leaderboards, Events, Ranking Systems).",
+          "Improved D1 retention from approximately 25% to approximately 40% through UX performance tuning and data-driven iteration.",
+          "Reduced APK size by 45% through asset restructuring, rendering optimizations, and build configuration improvements.",
+          "Integrated Firebase (Analytics, Firestore, Remote Config, Crashlytics, Cloud Messaging).",
+          "Implemented monetization systems (Rewarded Ads, Interstitials, IAP) achieving high eCPM performance.",
+          "Co-owned the full product lifecycle: architecture, development, CI/CD, publishing, ASO, live ops, store compliance.",
+          "Co-led fully remote teams of up to 14 members.",
+          "Established partnerships with Wildlife Studios and Homa Games."
+        ]
+      },
+      "vx_case": {
+        "title": "Desktop Developer",
+        "period": "Oct 2018 – Mar 2019",
+        "location": "Salvador, Brazil",
+        "points": [
+          "Developed a desktop application focused on user interface implementation using TypeScript, Angular, and VTEX.",
+          "Built reusable UI components ensuring usability, scalability, and design consistency.",
+          "Collaborated with senior engineers to integrate frontend features with backend services."
+        ]
+      },
+      "tecall": {
+        "title": "IT Support",
+        "period": "Jan 2018 – Oct 2018",
+        "location": "Salvador, Brazil",
+        "points": [
+          "Provided technical support and infrastructure troubleshooting for corporate clients.",
+          "Assisted in system maintenance and hardware configuration.",
+          "Gained foundational experience in networking, system administration, and customer support."
+        ]
+      }
+    },
+    "education": {
+      "ucsal": {
+        "degree": "Bachelor's Degree in Software Engineering",
+        "period": "2017 – 2019",
+        "location": "Salvador, Brazil",
+        "points": [
+          "Emphasis on software development methodologies, object-oriented programming, data structures, algorithms, databases, and system architecture.",
+          "Gained experience in designing, developing, testing, and maintaining software applications using modern technologies and industry best practices.",
+          "Participated in collaborative projects and hands-on activities that strengthened problem-solving skills and prepared me to work effectively in team-based development environments."
+        ]
+      },
+      "senai_cimatec": {
+        "degree": "Technical Course in Computer Networks",
+        "period": "2017 – 2018",
+        "location": "Salvador, Brazil",
+        "points": [
+          "Focusing on the installation, configuration, administration, and maintenance of computer networks in both home and corporate environments.",
+          "Throughout the training, I developed skills in network topologies, device connectivity, network infrastructure, communication protocols, and information security practices.",
+          "The program included extensive hands-on lab experience, enabling me to implement network solutions effectively and apply industry-standard technical best practices."
+        ]
+      },
+      "all": {
+        "degree": "Certificate in English Language",
+        "period": "2013 – 2016",
+        "location": "Salvador, Brazil",
+        "points": [
+          "Intensive English language program with focus on grammar, reading, writing, listening and speaking skills. Prepared for advanced communication in academic and professional environments."
+        ]
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills & Expertise",
+    "subtitle": "Technologies and tools I use to bring ideas to life",
+    "categories": {
+      "core_engineering": {
+        "title": "Core Engineering"
+      },
+      "architecture_backend": {
+        "title": "Architecture & Backend Systems"
+      },
+      "devops_production": {
+        "title": "DevOps, Observability & Production"
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "subtitle": "Have a project in mind or want to discuss opportunities? I'm always open to new challenges and collaborations.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "footer": "© 2026 @:app.title. Built with",
+    "flutter": "Flutter."
+  }
+}
