@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:my_portfolio/app/widgets/nav_bar.dart';
 import 'package:my_portfolio/app/widgets/scroll_fade_in.dart';
+import 'package:my_portfolio/gen/assets.gen.dart';
 import 'package:my_portfolio/screens/home/sections/about_section.dart';
 import 'package:my_portfolio/screens/home/sections/contact_section.dart';
 import 'package:my_portfolio/screens/home/sections/hero_section/hero_section.dart';
@@ -18,6 +19,26 @@ class HomePage extends HookWidget {
   Widget build(BuildContext context) {
     final scrollController = useScrollController();
     final sectionKeys = useMemoized(() => List.generate(6, (_) => GlobalKey()));
+
+    useEffect(() {
+      Future<void> precacheProjectImages() async {
+        await WidgetsBinding.instance.endOfFrame;
+        if (!context.mounted) return;
+        final projects = Assets.lib.app.assets.images.projects.values;
+        await Future.wait(
+          projects.map(
+            (img) => precacheImage(
+              img.provider(),
+              context,
+              onError: (_, _) {},
+            ),
+          ),
+        );
+      }
+
+      unawaited(precacheProjectImages());
+      return null;
+    }, const []);
 
     void scrollToSection(int index) {
       if (index == 0) {

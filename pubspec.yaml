@@ -10,18 +10,23 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.8
+  firebase_analytics: ^12.1.2
+  firebase_core: ^4.4.0
+  firebase_remote_config: ^6.1.4
   flutter:
     sdk: flutter
   flutter_hooks: ^0.21.3+1
   font_awesome_flutter: ^10.12.0
-  google_fonts: ^8.0.1
+  google_fonts: ^8.0.2
   logger: ^2.6.2
   melos: ^7.4.0
   path: ^1.9.1
+  remote_config:
+    path: packages/remote_config
   slang: ^4.12.1
   slang_flutter: ^4.12.1
   url_launcher: ^6.3.2
-  very_good_analysis: ^10.1.0
+  very_good_analysis: ^10.2.0
   web: ^1.1.1
   yaml_edit: ^2.2.1
 
@@ -53,7 +58,6 @@ flutter:
 
   assets:
     - lib/app/assets/i18n/
-    - lib/app/assets/pdfs/
     - lib/app/assets/images/
     - lib/app/assets/images/projects/
   uses-material-design: true

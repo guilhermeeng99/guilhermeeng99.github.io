@@ -2,9 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:logger/logger.dart';
 import 'package:my_portfolio/app/theme/app_colors.dart';
 import 'package:my_portfolio/gen/assets.gen.dart';
 import 'package:my_portfolio/screens/home/home_page.dart';
+import 'package:remote_config/remote_config.dart';
 
 class LoadingPage extends HookWidget {
   const LoadingPage({super.key});
@@ -24,7 +26,10 @@ class LoadingPage extends HookWidget {
         if (!context.mounted) return;
 
         try {
-          await _precacheImages(context);
+          await Future.wait([
+            _initializeFirebase(),
+            _precacheImages(context),
+          ]);
         } on Exception catch (_) {}
 
         final elapsed = stopwatch.elapsed;
@@ -68,22 +73,21 @@ class LoadingPage extends HookWidget {
     );
   }
 
+  Future<void> _initializeFirebase() async {
+    try {
+      await const RemoteConfigInitializeUseCase().call();
+    } on Exception catch (e) {
+      Logger().e('Remote Config initialization failed', error: e);
+    }
+  }
+
   Future<void> _precacheImages(BuildContext context) async {
     final images = Assets.lib.app.assets.images;
-    final allImages = [
-      images.logo,
-      images.myProfile,
-      ...images.projects.values,
-    ];
 
-    await Future.wait(
-      allImages.map(
-        (img) => precacheImage(
-          img.provider(),
-          context,
-          onError: (_, _) {},
-        ),
-      ),
+    await precacheImage(
+      images.myProfile.provider(),
+      context,
+      onError: (_, _) {},
     );
   }
 }

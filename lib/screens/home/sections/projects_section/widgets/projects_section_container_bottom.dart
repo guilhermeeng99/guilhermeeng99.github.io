@@ -5,7 +5,7 @@ import 'package:my_portfolio/app/widgets/responsive_layout.dart';
 import 'package:my_portfolio/app/widgets/tech_chip.dart';
 import 'package:my_portfolio/gen/i18n/strings.g.dart';
 import 'package:my_portfolio/screens/home/sections/projects_section/projects_section_model.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:my_portfolio/utils/url_launch.dart';
 
 const _kBadgeRadius = BorderRadius.all(Radius.circular(16));
 const _kBadgePadding = EdgeInsets.symmetric(horizontal: 10, vertical: 4);
@@ -94,7 +94,7 @@ class _DownloadLink extends HookWidget {
       onExit: (_) => hovered.value = false,
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
-        onTap: () => launchUrl(Uri.parse(project.downloadLink)),
+        onTap: () => appUrlLaunch(project.downloadLink),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 200),
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
@@ -262,7 +262,7 @@ class _AwardBadge extends StatelessWidget {
     return MouseRegion(
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
-        onTap: () => launchUrl(Uri.parse(award.url)),
+        onTap: () => appUrlLaunch(award.url),
         child: Container(
           padding: _kBadgePadding,
           decoration: BoxDecoration(

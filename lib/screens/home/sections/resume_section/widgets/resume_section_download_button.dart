@@ -1,12 +1,9 @@
-import 'dart:js_interop';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:my_portfolio/app/app_constants.dart';
 import 'package:my_portfolio/app/theme/app_colors.dart';
-import 'package:my_portfolio/gen/assets.gen.dart';
 import 'package:my_portfolio/gen/i18n/strings.g.dart';
-import 'package:web/web.dart' as web;
+import 'package:my_portfolio/utils/url_launch.dart';
 
 class ResumeSectionDownloadResumeButton extends HookWidget {
   const ResumeSectionDownloadResumeButton({super.key});
@@ -15,25 +12,13 @@ class ResumeSectionDownloadResumeButton extends HookWidget {
   Widget build(BuildContext context) {
     final hovering = useState(false);
 
-    Future<void> downloadResume() async {
-      final byteData = await rootBundle.load(
-        Assets.lib.app.assets.pdfs.guilhermePassosResume,
-      );
-      final bytes = byteData.buffer.asUint8List();
-      final blob = web.Blob(
-        [bytes.toJS].toJS,
-        web.BlobPropertyBag(type: 'application/pdf'),
-      );
-      final url = web.URL.createObjectURL(blob);
-      web.window.open(url, '_blank');
-    }
 
     return MouseRegion(
       onEnter: (_) => hovering.value = true,
       onExit: (_) => hovering.value = false,
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
-        onTap: downloadResume,
+        onTap: () => appUrlLaunch(AppConstants.resumeUrl),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 250),
           curve: Curves.easeOut,

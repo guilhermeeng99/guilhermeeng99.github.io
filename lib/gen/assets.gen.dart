@@ -33,9 +33,6 @@ class $LibAppAssetsGen {
 
   /// Directory path: lib/app/assets/images
   $LibAppAssetsImagesGen get images => const $LibAppAssetsImagesGen();
-
-  /// Directory path: lib/app/assets/pdfs
-  $LibAppAssetsPdfsGen get pdfs => const $LibAppAssetsPdfsGen();
 }
 
 class $LibAppAssetsI18nGen {
@@ -65,17 +62,6 @@ class $LibAppAssetsImagesGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [logo, myProfile];
-}
-
-class $LibAppAssetsPdfsGen {
-  const $LibAppAssetsPdfsGen();
-
-  /// File path: lib/app/assets/pdfs/Guilherme_Passos_Resume.pdf
-  String get guilhermePassosResume =>
-      'lib/app/assets/pdfs/Guilherme_Passos_Resume.pdf';
-
-  /// List of all assets
-  List<String> get values => [guilhermePassosResume];
 }
 
 class $LibAppAssetsImagesProjectsGen {

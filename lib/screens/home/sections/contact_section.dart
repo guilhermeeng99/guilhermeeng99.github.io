@@ -5,7 +5,7 @@ import 'package:my_portfolio/app/app_constants.dart';
 import 'package:my_portfolio/app/theme/app_colors.dart';
 import 'package:my_portfolio/app/widgets/responsive_layout.dart';
 import 'package:my_portfolio/gen/i18n/strings.g.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:my_portfolio/utils/url_launch.dart';
 
 class ContactSection extends StatelessWidget {
   const ContactSection({super.key});
@@ -126,7 +126,7 @@ class _ContactCard extends HookWidget {
       onExit: (_) => hovered.value = false,
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
-        onTap: () => launchUrl(Uri.parse(url)),
+          onTap: () => appUrlLaunch(url),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 250),
           padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 24),

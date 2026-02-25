@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/app/theme/app_colors.dart';
 import 'package:my_portfolio/screens/home/sections/projects_section/projects_section_model.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:my_portfolio/utils/url_launch.dart';
 
 const _kBadgeRadius = BorderRadius.all(Radius.circular(16));
 const _kBadgePadding = EdgeInsets.symmetric(horizontal: 12, vertical: 6);
@@ -76,7 +76,7 @@ class _CompanyName extends StatelessWidget {
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: GestureDetector(
-          onTap: () => launchUrl(Uri.parse(project.company.url)),
+          onTap: () => appUrlLaunch(project.company.url),
           child: Container(
             padding: _kBadgePadding,
             decoration: BoxDecoration(
