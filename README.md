@@ -1,10 +1,10 @@
 # Guilherme Passos - Portfolio
 
-Personal portfolio website built with Flutter Web showcasing my work as a Flutter Developer & Mobile Entrepreneur.
+Personal portfolio website built with Flutter Web showcasing my work as a Flutter Engineer & Mobile Entrepreneur.
 
 ## About
 
-Flutter Developer & Mobile Entrepreneur with 7+ years focused on mobile games and applications. Products I've built and maintained have reached **15M+ downloads worldwide**.
+Flutter Engineer & Mobile Entrepreneur with 7+ years focused on mobile games and applications. Products I've built and maintained have reached **15M+ downloads worldwide**.
 
 ## Features
 

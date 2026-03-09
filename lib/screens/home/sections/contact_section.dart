@@ -112,7 +112,7 @@ class _ContactCard extends HookWidget {
     required this.url,
   });
 
-  final IconData icon;
+  final Object icon;
   final String label;
   final String value;
   final String url;
@@ -126,7 +126,7 @@ class _ContactCard extends HookWidget {
       onExit: (_) => hovered.value = false,
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
-          onTap: () => appUrlLaunch(url),
+        onTap: () => appUrlLaunch(url),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 250),
           padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 24),
@@ -150,13 +150,22 @@ class _ContactCard extends HookWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(
-                icon,
-                color: hovered.value
-                    ? AppColors.primary
-                    : AppColors.textSecondary,
-                size: 28,
-              ),
+              if (icon is FaIconData)
+                FaIcon(
+                  icon as FaIconData,
+                  color: hovered.value
+                      ? AppColors.primary
+                      : AppColors.textSecondary,
+                  size: 28,
+                )
+              else
+                Icon(
+                  icon as IconData,
+                  color: hovered.value
+                      ? AppColors.primary
+                      : AppColors.textSecondary,
+                  size: 28,
+                ),
               const SizedBox(height: 12),
               Text(
                 label,

@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_portfolio/app/theme/app_colors.dart';
 import 'package:my_portfolio/utils/url_launch.dart';
 
 class SocialButton extends HookWidget {
   const SocialButton({
-    required this.icon, required this.url, super.key,
+    required this.icon,
+    required this.url,
+    super.key,
     this.tooltip = '',
   });
 
-  final IconData icon;
+  final Object icon;
   final String url;
   final String tooltip;
 
@@ -39,13 +42,21 @@ class SocialButton extends HookWidget {
                     : AppColors.cardBorder,
               ),
             ),
-            child: Icon(
-              icon,
-              color: hovered.value
-                  ? AppColors.primary
-                  : AppColors.textSecondary,
-              size: 22,
-            ),
+            child: icon is FaIconData
+                ? FaIcon(
+                    icon as FaIconData,
+                    color: hovered.value
+                        ? AppColors.primary
+                        : AppColors.textSecondary,
+                    size: 22,
+                  )
+                : Icon(
+                    icon as IconData,
+                    color: hovered.value
+                        ? AppColors.primary
+                        : AppColors.textSecondary,
+                    size: 22,
+                  ),
           ),
         ),
       ),

@@ -58,8 +58,8 @@ class TranslationsAppEn {
 
 	// Translations
 
-	/// en: 'Guilherme Passos - Flutter Developer'
-	String get title => 'Guilherme Passos - Flutter Developer';
+	/// en: 'Guilherme Passos - Flutter Engineer'
+	String get title => 'Guilherme Passos - Flutter Engineer';
 
 	/// en: '12M+'
 	String get total_downloads => '12M+';
@@ -100,11 +100,11 @@ class TranslationsHeroEn {
 	/// en: 'Guilherme Passos'
 	String get name => 'Guilherme\nPassos';
 
-	/// en: 'Senior Flutter Developer'
-	String get role => 'Senior Flutter Developer';
+	/// en: 'Senior Flutter Engineer'
+	String get role => 'Senior Flutter Engineer';
 
-	/// en: 'Flutter Developer & Mobile Entrepreneur with 7+ years crafting high-performance apps and games reaching 12M+ downloads worldwide.'
-	String get description => 'Flutter Developer & Mobile Entrepreneur with 7+ years crafting high-performance apps and games reaching ${_root.app.total_downloads} downloads worldwide.';
+	/// en: 'Flutter Engineer & Mobile Entrepreneur with 7+ years crafting high-performance apps and games reaching 12M+ downloads worldwide.'
+	String get description => 'Flutter Engineer & Mobile Entrepreneur with 7+ years crafting high-performance apps and games reaching ${_root.app.total_downloads} downloads worldwide.';
 
 	/// en: 'Explore Projects'
 	String get explore_projects => 'Explore Projects';
@@ -127,8 +127,8 @@ class TranslationsAboutEn {
 	/// en: 'Building digital products that scale'
 	String get subtitle => 'Building digital products that scale';
 
-	/// en: 'Senior Flutter Developer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.'
-	String get bio1 => 'Senior Flutter Developer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.';
+	/// en: 'Senior Flutter Engineer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.'
+	String get bio1 => 'Senior Flutter Engineer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.';
 
 	/// en: 'I've implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I've built and maintained have reached 15M+ downloads worldwide.'
 	String get bio2 => 'I\'ve implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I\'ve built and maintained have reached 15M+ downloads worldwide.';
@@ -232,7 +232,7 @@ class TranslationsContactEn {
 	/// en: 'LinkedIn'
 	String get linkedin => 'LinkedIn';
 
-	/// en: '© 2026 Guilherme Passos - Flutter Developer. Built with'
+	/// en: '© 2026 Guilherme Passos - Flutter Engineer. Built with'
 	String get footer => '© 2026 ${_root.app.title}. Built with';
 
 	/// en: 'Flutter.'
@@ -595,8 +595,8 @@ class TranslationsResumeExperienceVxCaseEn {
 
 	// Translations
 
-	/// en: 'Desktop Developer'
-	String get title => 'Desktop Developer';
+	/// en: 'Desktop Engineer'
+	String get title => 'Desktop Engineer';
 
 	/// en: 'Oct 2018 – Mar 2019'
 	String get period => 'Oct 2018 – Mar 2019';
@@ -749,7 +749,7 @@ class TranslationsSkillsCategoriesDevopsProductionEn {
 extension on Translations {
 	dynamic _flatMapFunction(String path) {
 		return switch (path) {
-			'app.title' => 'Guilherme Passos - Flutter Developer',
+			'app.title' => 'Guilherme Passos - Flutter Engineer',
 			'app.total_downloads' => '12M+',
 			'nav.about' => 'About',
 			'nav.projects' => 'Projects',
@@ -757,13 +757,13 @@ extension on Translations {
 			'nav.skills' => 'Skills',
 			'nav.contact' => 'Contact',
 			'hero.name' => 'Guilherme\nPassos',
-			'hero.role' => 'Senior Flutter Developer',
-			'hero.description' => 'Flutter Developer & Mobile Entrepreneur with 7+ years crafting high-performance apps and games reaching ${_root.app.total_downloads} downloads worldwide.',
+			'hero.role' => 'Senior Flutter Engineer',
+			'hero.description' => 'Flutter Engineer & Mobile Entrepreneur with 7+ years crafting high-performance apps and games reaching ${_root.app.total_downloads} downloads worldwide.',
 			'hero.explore_projects' => 'Explore Projects',
 			'hero.get_in_touch' => 'Get In Touch',
 			'about.title' => 'About Me',
 			'about.subtitle' => 'Building digital products that scale',
-			'about.bio1' => 'Senior Flutter Developer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.',
+			'about.bio1' => 'Senior Flutter Engineer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.',
 			'about.bio2' => 'I\'ve implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I\'ve built and maintained have reached 15M+ downloads worldwide.',
 			'about.bio3' => 'I specialize in scalable architectures, long-term code maintainability, and high-performance mobile applications. My expertise spans multiple state management solutions (Riverpod, Bloc, MobX), native plugin integration, and the full Firebase ecosystem.',
 			'about.stats.downloads.value' => _root.app.total_downloads,
@@ -834,7 +834,7 @@ extension on Translations {
 			'resume.experience.blu_studios.points.8' => 'Co-owned the full product lifecycle: architecture, development, CI/CD, publishing, ASO, live ops, store compliance.',
 			'resume.experience.blu_studios.points.9' => 'Co-led fully remote teams of up to 14 members.',
 			'resume.experience.blu_studios.points.10' => 'Established partnerships with Wildlife Studios and Homa Games.',
-			'resume.experience.vx_case.title' => 'Desktop Developer',
+			'resume.experience.vx_case.title' => 'Desktop Engineer',
 			'resume.experience.vx_case.period' => 'Oct 2018 – Mar 2019',
 			'resume.experience.vx_case.location' => 'Salvador, Brazil',
 			'resume.experience.vx_case.points.0' => 'Developed a desktop application focused on user interface implementation using TypeScript, Angular, and VTEX.',
