@@ -26,7 +26,7 @@ enum TypeEnum implements RemoteConfigEnum {
   vdx_url(
       'https://drive.google.com/file/d/11Dj0-tAeB0LPlH9yPZUon_XQVrOVAf-l/view?usp=drive_link'),
   resume_url(
-      'https://drive.google.com/file/d/1Zxgc1FjOn8K8nM-gUh5lDwYqQkLB2Art/view?usp=sharing');
+      'https://drive.google.com/file/d/1SoUNPSx_SgQX25yy_znxPR3DBGqPq-h3/view?usp=sharing');
 
   @override
   final dynamic defaultValue;
