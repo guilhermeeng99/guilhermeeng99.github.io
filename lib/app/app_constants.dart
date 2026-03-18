@@ -20,6 +20,7 @@ class AppConstants {
   static String linkedinUrl = 'https://linkedin.com/in/$linkedin';
   static String github = 'guilhermeeng99';
   static String githubUrl = 'https://github.com/$github';
+  static String flutterBaseUrl = 'https://guilhermeeng99.github.io/flutter_base/';
   static String email = 'guilhermeeng99@gmail.com';
   static String emailUrl = 'mailto:$email';
   static String get resumeUrl =>

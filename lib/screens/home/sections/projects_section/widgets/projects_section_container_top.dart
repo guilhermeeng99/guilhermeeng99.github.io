@@ -70,20 +70,21 @@ class _CompanyName extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (project.company == null) return const SizedBox.shrink();
     return Positioned(
       right: 12,
       top: 12,
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: GestureDetector(
-          onTap: () => appUrlLaunch(project.company.url),
+          onTap: () => appUrlLaunch(project.company!.url),
           child: Container(
             padding: _kBadgePadding,
             decoration: BoxDecoration(
               color: AppColors.background.withValues(alpha: 0.75),
               borderRadius: _kBadgeRadius,
             ),
-            child: Text(project.company.name, style: labelStyle),
+            child: Text(project.company!.name, style: labelStyle),
           ),
         ),
       ),

@@ -58,7 +58,7 @@
       },
       "rabit": {
         "name": "Rabit",
-        "description": "Gamified habit tracker that reached 5M+ downloads and ranked #2 App of the Year 2021 (Google Play Brazil).",
+        "description": "Gamified habit tracker that reached 5M+ downloads and selected for App of the Year 2021 (Google Play).",
         "metric": "5M+",
         "award": "Google Play Best of 2021",
         "details": "Developed core engagement systems including push notifications, streak logic, Firestore sync, and high-performance animated UI. Implemented data-driven retention features that significantly improved user engagement and long-term retention."
@@ -102,6 +102,11 @@
         "description": "A fun party game app where players discover surprising facts about each other through classic 'Truth or Dare' questions.",
         "metric": "1M+",
         "details": "Implemented UI and hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue."
+      },
+      "flutter_base": {
+        "name": "Flutter Base",
+        "description": "Interactive Flutter learning platform. The goal is to make learning Flutter progressive and engaging, with gamification mechanics like XP, daily streaks, levels, and daily challenges.",
+        "details": "Architected the platform following Clean Architecture principles with strict layer separation (presentation, domain, data), ensuring scalability and long-term maintainability. Applied SOLID, KISS, and DRY principles throughout the codebase to produce modular, readable, and reusable components. Implemented a complete authentication system with secure login, registration, and session persistence. Integrated a relational database layer with repository pattern abstraction, enabling flexible data source swapping. Leveraged AI-assisted development workflows to accelerate feature delivery, code generation, and iterative prototyping, significantly reducing implementation time without compromising code quality."
       }
     }
   },

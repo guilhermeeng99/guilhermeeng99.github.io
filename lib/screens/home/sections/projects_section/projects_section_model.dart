@@ -60,8 +60,8 @@ class ProjectsSectionData {
     required this.details,
     required this.technologies,
     required this.image,
-    required this.company,
     required this.downloadLink,
+    this.company,
 
     this.metric,
     this.award,
@@ -70,7 +70,7 @@ class ProjectsSectionData {
   final String name;
   final String description;
   final String details;
-  final ProjectCompany company;
+  final ProjectCompany? company;
 
   final String? metric;
   final ProjectAward? award;
@@ -89,6 +89,7 @@ class ProjectsSectionData {
 
   static final List<ProjectsSectionData> otherProjects = [
     _vdx,
+    _flutterBase,
     _booze,
     _neverHaveIEverX,
   ];
@@ -190,5 +191,14 @@ class ProjectsSectionData {
     image: _projectImages.vdxPreview,
     company: ProjectCompany.bluStudios,
     downloadLink: AppConstants.vdxUrl,
+  );
+
+  static final _flutterBase = ProjectsSectionData(
+    name: t.projects.items.flutter_base.name,
+    description: t.projects.items.flutter_base.description,
+    details: t.projects.items.flutter_base.details,
+    technologies: const ['Flutter', 'Riverpod', 'SOLID'],
+    image: _projectImages.flutterBasePreview,
+    downloadLink: AppConstants.flutterBaseUrl,
   );
 }

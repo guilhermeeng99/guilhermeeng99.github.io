@@ -268,6 +268,7 @@ class TranslationsProjectsItemsEn {
 	late final TranslationsProjectsItemsNeverHaveIEverXEn never_have_i_ever_x = TranslationsProjectsItemsNeverHaveIEverXEn._(_root);
 	late final TranslationsProjectsItemsBoozeEn booze = TranslationsProjectsItemsBoozeEn._(_root);
 	late final TranslationsProjectsItemsVdxEn vdx = TranslationsProjectsItemsVdxEn._(_root);
+	late final TranslationsProjectsItemsFlutterBaseEn flutter_base = TranslationsProjectsItemsFlutterBaseEn._(_root);
 }
 
 // Path: resume.experience
@@ -401,8 +402,8 @@ class TranslationsProjectsItemsRabitEn {
 	/// en: 'Rabit'
 	String get name => 'Rabit';
 
-	/// en: 'Gamified habit tracker that reached 5M+ downloads and ranked #2 App of the Year 2021 (Google Play Brazil).'
-	String get description => 'Gamified habit tracker that reached 5M+ downloads and ranked #2 App of the Year 2021 (Google Play Brazil).';
+	/// en: 'Gamified habit tracker that reached 5M+ downloads and selected for App of the Year 2021 (Google Play).'
+	String get description => 'Gamified habit tracker that reached 5M+ downloads and selected for App of the Year 2021 (Google Play).';
 
 	/// en: '5M+'
 	String get metric => '5M+';
@@ -553,6 +554,24 @@ class TranslationsProjectsItemsVdxEn {
 
 	/// en: 'Implemented UI and hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.'
 	String get details => 'Implemented UI and hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.';
+}
+
+// Path: projects.items.flutter_base
+class TranslationsProjectsItemsFlutterBaseEn {
+	TranslationsProjectsItemsFlutterBaseEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Flutter Base'
+	String get name => 'Flutter Base';
+
+	/// en: 'interactive Flutter learning platform. The goal is to make learning Flutter progressive and engaging, with gamification mechanics like XP, daily streaks, levels, and daily challenges.'
+	String get description => 'interactive Flutter learning platform. The goal is to make learning Flutter progressive and engaging, with gamification mechanics like XP, daily streaks, levels, and daily challenges.';
+
+	/// en: 'Architected the platform following Clean Architecture principles with strict layer separation (presentation, domain, data), ensuring scalability and long-term maintainability. Applied SOLID, KISS, and DRY principles throughout the codebase to produce modular, readable, and reusable components. Implemented a complete authentication system with secure login, registration, and session persistence. Integrated a relational database layer with repository pattern abstraction, enabling flexible data source swapping. Leveraged AI-assisted development workflows to accelerate feature delivery, code generation, and iterative prototyping, significantly reducing implementation time without compromising code quality.'
+	String get details => 'Architected the platform following Clean Architecture principles with strict layer separation (presentation, domain, data), ensuring scalability and long-term maintainability. Applied SOLID, KISS, and DRY principles throughout the codebase to produce modular, readable, and reusable components. Implemented a complete authentication system with secure login, registration, and session persistence. Integrated a relational database layer with repository pattern abstraction, enabling flexible data source swapping. Leveraged AI-assisted development workflows to accelerate feature delivery, code generation, and iterative prototyping, significantly reducing implementation time without compromising code quality.';
 }
 
 // Path: resume.experience.blu_studios
@@ -785,7 +804,7 @@ extension on Translations {
 			'projects.items.magic_sort.award' => 'Indie Games Accelerator 2024',
 			'projects.items.magic_sort.details' => 'Led high-performance UI architecture. Built monetization pipelines using Firebase Remote Config and A/B testing, improving engagement and revenue performance. Architected and stabilized a high-performance Flutter codebase optimized for low-end Android devices, focusing on rendering efficiency, memory footprint reduction, and frame stability through deep profiling and refactoring. Implemented event-driven state management and feature isolation to support scalable Live Ops releases.',
 			'projects.items.rabit.name' => 'Rabit',
-			'projects.items.rabit.description' => 'Gamified habit tracker that reached 5M+ downloads and ranked #2 App of the Year 2021 (Google Play Brazil).',
+			'projects.items.rabit.description' => 'Gamified habit tracker that reached 5M+ downloads and selected for App of the Year 2021 (Google Play).',
 			'projects.items.rabit.metric' => '5M+',
 			'projects.items.rabit.award' => 'Google Play Best of 2021',
 			'projects.items.rabit.details' => 'Developed core engagement systems including push notifications, streak logic, Firestore sync, and high-performance animated UI. Implemented data-driven retention features that significantly improved user engagement and long-term retention.',
@@ -815,6 +834,9 @@ extension on Translations {
 			'projects.items.vdx.description' => 'A fun party game app where players discover surprising facts about each other through classic \'Truth or Dare\' questions.',
 			'projects.items.vdx.metric' => '1M+',
 			'projects.items.vdx.details' => 'Implemented UI and hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.',
+			'projects.items.flutter_base.name' => 'Flutter Base',
+			'projects.items.flutter_base.description' => 'interactive Flutter learning platform. The goal is to make learning Flutter progressive and engaging, with gamification mechanics like XP, daily streaks, levels, and daily challenges.',
+			'projects.items.flutter_base.details' => 'Architected the platform following Clean Architecture principles with strict layer separation (presentation, domain, data), ensuring scalability and long-term maintainability. Applied SOLID, KISS, and DRY principles throughout the codebase to produce modular, readable, and reusable components. Implemented a complete authentication system with secure login, registration, and session persistence. Integrated a relational database layer with repository pattern abstraction, enabling flexible data source swapping. Leveraged AI-assisted development workflows to accelerate feature delivery, code generation, and iterative prototyping, significantly reducing implementation time without compromising code quality.',
 			'resume.title' => 'Resume',
 			'resume.subtitle' => 'A summary of my professional experience and education',
 			'resume.experience_title' => 'Professional Experience',

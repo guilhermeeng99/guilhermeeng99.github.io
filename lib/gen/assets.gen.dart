@@ -91,6 +91,11 @@ class $LibAppAssetsImagesProjectsGen {
   AssetGenImage get farmPreview =>
       const AssetGenImage('lib/app/assets/images/projects/farm_preview.png');
 
+  /// File path: lib/app/assets/images/projects/flutter_base_preview.png
+  AssetGenImage get flutterBasePreview => const AssetGenImage(
+    'lib/app/assets/images/projects/flutter_base_preview.png',
+  );
+
   /// File path: lib/app/assets/images/projects/magic_sort_preview.png
   AssetGenImage get magicSortPreview => const AssetGenImage(
     'lib/app/assets/images/projects/magic_sort_preview.png',
@@ -112,6 +117,7 @@ class $LibAppAssetsImagesProjectsGen {
     cupsPreview,
     dropPreview,
     farmPreview,
+    flutterBasePreview,
     magicSortPreview,
     rabitPreview,
     vdxPreview,
