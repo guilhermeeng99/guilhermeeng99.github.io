@@ -60,7 +60,7 @@ class ProjectsSectionData {
     required this.details,
     required this.technologies,
     required this.image,
-    required this.downloadLink,
+    this.downloadLink,
     this.company,
 
     this.metric,
@@ -76,7 +76,7 @@ class ProjectsSectionData {
   final ProjectAward? award;
   final List<String> technologies;
   final AssetGenImage image;
-  final String downloadLink;
+  final String? downloadLink;
 
   static final List<ProjectsSectionData> projects = [
     _magicSort,
@@ -90,6 +90,8 @@ class ProjectsSectionData {
   static final List<ProjectsSectionData> otherProjects = [
     _vdx,
     _flutterBase,
+    _financo,
+    _bluBi,
     _booze,
     _neverHaveIEverX,
   ];
@@ -200,5 +202,22 @@ class ProjectsSectionData {
     technologies: const ['Flutter', 'Riverpod', 'SOLID'],
     image: _projectImages.flutterBasePreview,
     downloadLink: AppConstants.flutterBaseUrl,
+  );
+
+  static final _financo = ProjectsSectionData(
+    name: t.projects.items.financo.name,
+    description: t.projects.items.financo.description,
+    details: t.projects.items.financo.details,
+    technologies: const ['Flutter', 'GetX'],
+    image: _projectImages.financoPreview,
+    downloadLink: AppConstants.financoUrl,
+  );
+
+  static final _bluBi = ProjectsSectionData(
+    name: t.projects.items.blu_bi.name,
+    description: t.projects.items.blu_bi.description,
+    details: t.projects.items.blu_bi.details,
+    technologies: const ['Flutter', 'GetX'],
+    image: _projectImages.bluBiPreview,
   );
 }

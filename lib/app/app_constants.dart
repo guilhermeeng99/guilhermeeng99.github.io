@@ -23,6 +23,7 @@ class AppConstants {
   static String flutterBaseUrl = 'https://guilhermeeng99.github.io/flutter_base/';
   static String email = 'guilhermeeng99@gmail.com';
   static String emailUrl = 'mailto:$email';
+  static String financoUrl = 'https://github.com/guilhermeeng99/financo';
   static String get resumeUrl =>
       _getRemoteValueUseCase.callString(TypeEnum.resume_url);
   static String get googlePlayIndieGamesAccelerator2024Url =>

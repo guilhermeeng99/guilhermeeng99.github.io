@@ -48,13 +48,13 @@ class $LibAppAssetsI18nGen {
 class $LibAppAssetsImagesGen {
   const $LibAppAssetsImagesGen();
 
-  /// File path: lib/app/assets/images/logo.png
+  /// File path: lib/app/assets/images/logo.webp
   AssetGenImage get logo =>
-      const AssetGenImage('lib/app/assets/images/logo.png');
+      const AssetGenImage('lib/app/assets/images/logo.webp');
 
-  /// File path: lib/app/assets/images/my_profile.png
+  /// File path: lib/app/assets/images/my_profile.webp
   AssetGenImage get myProfile =>
-      const AssetGenImage('lib/app/assets/images/my_profile.png');
+      const AssetGenImage('lib/app/assets/images/my_profile.webp');
 
   /// Directory path: lib/app/assets/images/projects
   $LibAppAssetsImagesProjectsGen get projects =>
@@ -67,56 +67,67 @@ class $LibAppAssetsImagesGen {
 class $LibAppAssetsImagesProjectsGen {
   const $LibAppAssetsImagesProjectsGen();
 
-  /// File path: lib/app/assets/images/projects/INever_preview.png
+  /// File path: lib/app/assets/images/projects/INever_preview.webp
   AssetGenImage get iNeverPreview =>
-      const AssetGenImage('lib/app/assets/images/projects/INever_preview.png');
+      const AssetGenImage('lib/app/assets/images/projects/INever_preview.webp');
 
-  /// File path: lib/app/assets/images/projects/booze_preview.png
+  /// File path: lib/app/assets/images/projects/blu_bi_preview.webp
+  AssetGenImage get bluBiPreview =>
+      const AssetGenImage('lib/app/assets/images/projects/blu_bi_preview.webp');
+
+  /// File path: lib/app/assets/images/projects/booze_preview.webp
   AssetGenImage get boozePreview =>
-      const AssetGenImage('lib/app/assets/images/projects/booze_preview.png');
+      const AssetGenImage('lib/app/assets/images/projects/booze_preview.webp');
 
-  /// File path: lib/app/assets/images/projects/capy_preview.png
+  /// File path: lib/app/assets/images/projects/capy_preview.webp
   AssetGenImage get capyPreview =>
-      const AssetGenImage('lib/app/assets/images/projects/capy_preview.png');
+      const AssetGenImage('lib/app/assets/images/projects/capy_preview.webp');
 
-  /// File path: lib/app/assets/images/projects/cups_preview.png
+  /// File path: lib/app/assets/images/projects/cups_preview.webp
   AssetGenImage get cupsPreview =>
-      const AssetGenImage('lib/app/assets/images/projects/cups_preview.png');
+      const AssetGenImage('lib/app/assets/images/projects/cups_preview.webp');
 
-  /// File path: lib/app/assets/images/projects/drop_preview.png
+  /// File path: lib/app/assets/images/projects/drop_preview.webp
   AssetGenImage get dropPreview =>
-      const AssetGenImage('lib/app/assets/images/projects/drop_preview.png');
+      const AssetGenImage('lib/app/assets/images/projects/drop_preview.webp');
 
-  /// File path: lib/app/assets/images/projects/farm_preview.png
+  /// File path: lib/app/assets/images/projects/farm_preview.webp
   AssetGenImage get farmPreview =>
-      const AssetGenImage('lib/app/assets/images/projects/farm_preview.png');
+      const AssetGenImage('lib/app/assets/images/projects/farm_preview.webp');
 
-  /// File path: lib/app/assets/images/projects/flutter_base_preview.png
+  /// File path: lib/app/assets/images/projects/financo_preview.webp
+  AssetGenImage get financoPreview => const AssetGenImage(
+    'lib/app/assets/images/projects/financo_preview.webp',
+  );
+
+  /// File path: lib/app/assets/images/projects/flutter_base_preview.webp
   AssetGenImage get flutterBasePreview => const AssetGenImage(
-    'lib/app/assets/images/projects/flutter_base_preview.png',
+    'lib/app/assets/images/projects/flutter_base_preview.webp',
   );
 
-  /// File path: lib/app/assets/images/projects/magic_sort_preview.png
+  /// File path: lib/app/assets/images/projects/magic_sort_preview.webp
   AssetGenImage get magicSortPreview => const AssetGenImage(
-    'lib/app/assets/images/projects/magic_sort_preview.png',
+    'lib/app/assets/images/projects/magic_sort_preview.webp',
   );
 
-  /// File path: lib/app/assets/images/projects/rabit_preview.jpg
+  /// File path: lib/app/assets/images/projects/rabit_preview.webp
   AssetGenImage get rabitPreview =>
-      const AssetGenImage('lib/app/assets/images/projects/rabit_preview.jpg');
+      const AssetGenImage('lib/app/assets/images/projects/rabit_preview.webp');
 
-  /// File path: lib/app/assets/images/projects/vdx_preview.png
+  /// File path: lib/app/assets/images/projects/vdx_preview.webp
   AssetGenImage get vdxPreview =>
-      const AssetGenImage('lib/app/assets/images/projects/vdx_preview.png');
+      const AssetGenImage('lib/app/assets/images/projects/vdx_preview.webp');
 
   /// List of all assets
   List<AssetGenImage> get values => [
     iNeverPreview,
+    bluBiPreview,
     boozePreview,
     capyPreview,
     cupsPreview,
     dropPreview,
     farmPreview,
+    financoPreview,
     flutterBasePreview,
     magicSortPreview,
     rabitPreview,

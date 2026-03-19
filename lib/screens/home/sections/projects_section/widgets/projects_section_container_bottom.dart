@@ -87,6 +87,7 @@ class _DownloadLink extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (project.downloadLink == null) return const SizedBox.shrink();
     final hovered = useState(false);
 
     return MouseRegion(
@@ -94,7 +95,7 @@ class _DownloadLink extends HookWidget {
       onExit: (_) => hovered.value = false,
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
-        onTap: () => appUrlLaunch(project.downloadLink),
+        onTap: () => appUrlLaunch(project.downloadLink!),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 200),
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),

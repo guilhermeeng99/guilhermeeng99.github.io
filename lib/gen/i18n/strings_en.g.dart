@@ -269,6 +269,8 @@ class TranslationsProjectsItemsEn {
 	late final TranslationsProjectsItemsBoozeEn booze = TranslationsProjectsItemsBoozeEn._(_root);
 	late final TranslationsProjectsItemsVdxEn vdx = TranslationsProjectsItemsVdxEn._(_root);
 	late final TranslationsProjectsItemsFlutterBaseEn flutter_base = TranslationsProjectsItemsFlutterBaseEn._(_root);
+	late final TranslationsProjectsItemsFinancoEn financo = TranslationsProjectsItemsFinancoEn._(_root);
+	late final TranslationsProjectsItemsBluBiEn blu_bi = TranslationsProjectsItemsBluBiEn._(_root);
 }
 
 // Path: resume.experience
@@ -567,11 +569,47 @@ class TranslationsProjectsItemsFlutterBaseEn {
 	/// en: 'Flutter Base'
 	String get name => 'Flutter Base';
 
-	/// en: 'interactive Flutter learning platform. The goal is to make learning Flutter progressive and engaging, with gamification mechanics like XP, daily streaks, levels, and daily challenges.'
-	String get description => 'interactive Flutter learning platform. The goal is to make learning Flutter progressive and engaging, with gamification mechanics like XP, daily streaks, levels, and daily challenges.';
+	/// en: 'Interactive Flutter learning platform. The goal is to make learning Flutter progressive and engaging, with gamification mechanics like XP, daily streaks, levels, and daily challenges.'
+	String get description => 'Interactive Flutter learning platform. The goal is to make learning Flutter progressive and engaging, with gamification mechanics like XP, daily streaks, levels, and daily challenges.';
 
 	/// en: 'Architected the platform following Clean Architecture principles with strict layer separation (presentation, domain, data), ensuring scalability and long-term maintainability. Applied SOLID, KISS, and DRY principles throughout the codebase to produce modular, readable, and reusable components. Implemented a complete authentication system with secure login, registration, and session persistence. Integrated a relational database layer with repository pattern abstraction, enabling flexible data source swapping. Leveraged AI-assisted development workflows to accelerate feature delivery, code generation, and iterative prototyping, significantly reducing implementation time without compromising code quality.'
 	String get details => 'Architected the platform following Clean Architecture principles with strict layer separation (presentation, domain, data), ensuring scalability and long-term maintainability. Applied SOLID, KISS, and DRY principles throughout the codebase to produce modular, readable, and reusable components. Implemented a complete authentication system with secure login, registration, and session persistence. Integrated a relational database layer with repository pattern abstraction, enabling flexible data source swapping. Leveraged AI-assisted development workflows to accelerate feature delivery, code generation, and iterative prototyping, significantly reducing implementation time without compromising code quality.';
+}
+
+// Path: projects.items.financo
+class TranslationsProjectsItemsFinancoEn {
+	TranslationsProjectsItemsFinancoEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Financo'
+	String get name => 'Financo';
+
+	/// en: 'A personal finance manager desktop app for tracking transactions, credit cards, and financial movements, with support for importing and exporting data.'
+	String get description => 'A personal finance manager desktop app for tracking transactions, credit cards, and financial movements, with support for importing and exporting data.';
+
+	/// en: 'Built with Flutter targeting Windows desktop. Monorepo structure managed with Melos, split into app_core, app_database, and app_widgets packages. Uses flutter_modular for routing and dependency injection, Drift (SQLite) for local persistence, GetX and flutter_hooks for state management, and slang for internationalization (EN/PT).'
+	String get details => 'Built with Flutter targeting Windows desktop. Monorepo structure managed with Melos, split into app_core, app_database, and app_widgets packages. Uses flutter_modular for routing and dependency injection, Drift (SQLite) for local persistence, GetX and flutter_hooks for state management, and slang for internationalization (EN/PT).';
+}
+
+// Path: projects.items.blu_bi
+class TranslationsProjectsItemsBluBiEn {
+	TranslationsProjectsItemsBluBiEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Blu BI'
+	String get name => 'Blu BI';
+
+	/// en: 'A Business Intelligence app for tracking and visualizing financial data, including revenue, expenses, and project-based results with reports such as Income Statement (DRE) and period analysis.'
+	String get description => 'A Business Intelligence app for tracking and visualizing financial data, including revenue, expenses, and project-based results with reports such as Income Statement (DRE) and period analysis.';
+
+	/// en: 'Flutter • GetX (state management & navigation) • Firebase Auth + Google Sign-In • Firebase Remote Config • Dio (REST API) • Isar (local database) • fl_chart (charts) • Freezed + json_serializable (models) • get_it (dependency injection) • local_auth (biometric authentication) • Clean Architecture (data/domain/presentation) • Multiplatform: Android, iOS, Web & Desktop'
+	String get details => 'Flutter • GetX (state management & navigation) • Firebase Auth + Google Sign-In • Firebase Remote Config • Dio (REST API) • Isar (local database) • fl_chart (charts) • Freezed + json_serializable (models) • get_it (dependency injection) • local_auth (biometric authentication) • Clean Architecture (data/domain/presentation) • Multiplatform: Android, iOS, Web & Desktop';
 }
 
 // Path: resume.experience.blu_studios
@@ -835,8 +873,14 @@ extension on Translations {
 			'projects.items.vdx.metric' => '1M+',
 			'projects.items.vdx.details' => 'Implemented UI and hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.',
 			'projects.items.flutter_base.name' => 'Flutter Base',
-			'projects.items.flutter_base.description' => 'interactive Flutter learning platform. The goal is to make learning Flutter progressive and engaging, with gamification mechanics like XP, daily streaks, levels, and daily challenges.',
+			'projects.items.flutter_base.description' => 'Interactive Flutter learning platform. The goal is to make learning Flutter progressive and engaging, with gamification mechanics like XP, daily streaks, levels, and daily challenges.',
 			'projects.items.flutter_base.details' => 'Architected the platform following Clean Architecture principles with strict layer separation (presentation, domain, data), ensuring scalability and long-term maintainability. Applied SOLID, KISS, and DRY principles throughout the codebase to produce modular, readable, and reusable components. Implemented a complete authentication system with secure login, registration, and session persistence. Integrated a relational database layer with repository pattern abstraction, enabling flexible data source swapping. Leveraged AI-assisted development workflows to accelerate feature delivery, code generation, and iterative prototyping, significantly reducing implementation time without compromising code quality.',
+			'projects.items.financo.name' => 'Financo',
+			'projects.items.financo.description' => 'A personal finance manager desktop app for tracking transactions, credit cards, and financial movements, with support for importing and exporting data.',
+			'projects.items.financo.details' => 'Built with Flutter targeting Windows desktop. Monorepo structure managed with Melos, split into app_core, app_database, and app_widgets packages. Uses flutter_modular for routing and dependency injection, Drift (SQLite) for local persistence, GetX and flutter_hooks for state management, and slang for internationalization (EN/PT).',
+			'projects.items.blu_bi.name' => 'Blu BI',
+			'projects.items.blu_bi.description' => 'A Business Intelligence app for tracking and visualizing financial data, including revenue, expenses, and project-based results with reports such as Income Statement (DRE) and period analysis.',
+			'projects.items.blu_bi.details' => 'Flutter • GetX (state management & navigation) • Firebase Auth + Google Sign-In • Firebase Remote Config • Dio (REST API) • Isar (local database) • fl_chart (charts) • Freezed + json_serializable (models) • get_it (dependency injection) • local_auth (biometric authentication) • Clean Architecture (data/domain/presentation) • Multiplatform: Android, iOS, Web & Desktop',
 			'resume.title' => 'Resume',
 			'resume.subtitle' => 'A summary of my professional experience and education',
 			'resume.experience_title' => 'Professional Experience',
