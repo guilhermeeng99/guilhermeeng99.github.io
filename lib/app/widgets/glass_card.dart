@@ -1,33 +1,37 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:my_portfolio/app/theme/app_colors.dart';
 
-class GlassCard extends HookWidget {
+class GlassCard extends StatefulWidget {
   const GlassCard({required this.child, super.key, this.padding});
 
   final Widget child;
   final EdgeInsetsGeometry? padding;
 
   @override
-  Widget build(BuildContext context) {
-    final hovered = useState(false);
+  State<GlassCard> createState() => _GlassCardState();
+}
 
+class _GlassCardState extends State<GlassCard> {
+  bool _hovered = false;
+
+  @override
+  Widget build(BuildContext context) {
     return MouseRegion(
-      onEnter: (_) => hovered.value = true,
-      onExit: (_) => hovered.value = false,
+      onEnter: (_) => setState(() => _hovered = true),
+      onExit: (_) => setState(() => _hovered = false),
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
         curve: Curves.easeOut,
-        padding: padding ?? const EdgeInsets.all(24),
+        padding: widget.padding ?? const EdgeInsets.all(24),
         decoration: BoxDecoration(
           gradient: AppColors.cardGradient,
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
-            color: hovered.value
+            color: _hovered
                 ? AppColors.primary.withValues(alpha: 0.4)
                 : AppColors.cardBorder,
           ),
-          boxShadow: hovered.value
+          boxShadow: _hovered
               ? [
                   BoxShadow(
                     color: AppColors.primary.withValues(alpha: 0.08),
@@ -36,7 +40,7 @@ class GlassCard extends HookWidget {
                 ]
               : [],
         ),
-        child: child,
+        child: widget.child,
       ),
     );
   }

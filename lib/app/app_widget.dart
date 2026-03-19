@@ -1,8 +1,8 @@
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/app/routes/app_router.dart';
 import 'package:my_portfolio/app/theme/app_theme.dart';
 import 'package:my_portfolio/gen/i18n/strings.g.dart';
-import 'package:my_portfolio/screens/loading/loading_page.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
@@ -14,14 +14,13 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: t.app.title,
       locale: TranslationProvider.of(context).flutterLocale,
       supportedLocales: AppLocaleUtils.supportedLocales,
       debugShowCheckedModeBanner: false,
       theme: AppTheme.darkTheme,
-      navigatorObservers: [observer],
-      home: const LoadingPage(),
+      routerConfig: appRouter,
     );
   }
 }

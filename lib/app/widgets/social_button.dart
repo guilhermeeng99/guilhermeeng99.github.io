@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_portfolio/app/theme/app_colors.dart';
-import 'package:my_portfolio/utils/url_launch.dart';
+import 'package:my_portfolio/core/utils/url_launch.dart';
 
-class SocialButton extends HookWidget {
+class SocialButton extends StatefulWidget {
   const SocialButton({
     required this.icon,
     required this.url,
@@ -17,42 +16,47 @@ class SocialButton extends HookWidget {
   final String tooltip;
 
   @override
-  Widget build(BuildContext context) {
-    final hovered = useState(false);
+  State<SocialButton> createState() => _SocialButtonState();
+}
 
+class _SocialButtonState extends State<SocialButton> {
+  bool _hovered = false;
+
+  @override
+  Widget build(BuildContext context) {
     return Tooltip(
-      message: tooltip,
+      message: widget.tooltip,
       child: MouseRegion(
-        onEnter: (_) => hovered.value = true,
-        onExit: (_) => hovered.value = false,
+        onEnter: (_) => setState(() => _hovered = true),
+        onExit: (_) => setState(() => _hovered = false),
         cursor: SystemMouseCursors.click,
         child: GestureDetector(
-          onTap: () => appUrlLaunch(url),
+          onTap: () => appUrlLaunch(widget.url),
           child: AnimatedContainer(
             duration: const Duration(milliseconds: 200),
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: hovered.value
+              color: _hovered
                   ? AppColors.primary.withValues(alpha: 0.15)
                   : Colors.transparent,
               borderRadius: BorderRadius.circular(12),
               border: Border.all(
-                color: hovered.value
+                color: _hovered
                     ? AppColors.primary.withValues(alpha: 0.4)
                     : AppColors.cardBorder,
               ),
             ),
-            child: icon is FaIconData
+            child: widget.icon is FaIconData
                 ? FaIcon(
-                    icon as FaIconData,
-                    color: hovered.value
+                    widget.icon as FaIconData,
+                    color: _hovered
                         ? AppColors.primary
                         : AppColors.textSecondary,
                     size: 22,
                   )
                 : Icon(
-                    icon as IconData,
-                    color: hovered.value
+                    widget.icon as IconData,
+                    color: _hovered
                         ? AppColors.primary
                         : AppColors.textSecondary,
                     size: 22,

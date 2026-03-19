@@ -16,7 +16,6 @@ Flutter Engineer & Mobile Entrepreneur with 7+ years focused on mobile games and
 ## Tech Stack
 
 - **Framework**: Flutter Web
-- **State Management**: Flutter Hooks
 - **Internationalization**: Slang
 - **Assets**: FlutterGen
 
