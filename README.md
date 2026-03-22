@@ -4,27 +4,7 @@ Personal portfolio website built with Flutter Web showcasing my work as a Flutte
 
 ## About
 
-Flutter Engineer & Mobile Entrepreneur with 7+ years focused on mobile games and applications. Products I've built and maintained have reached **15M+ downloads worldwide**.
-
-## Features
-
-- Responsive design (mobile, tablet, desktop)
-- Smooth animations and transitions
-- Sections: About, Projects, Experience, Skills, Contact
-- Glassmorphism UI design
-
-## Tech Stack
-
-- **Framework**: Flutter Web
-- **Internationalization**: Slang
-- **Assets**: FlutterGen
-
-## Getting Started
-
-```bash
-flutter pub get
-flutter run -d chrome
-```
+Flutter Engineer & Mobile Entrepreneur with 7+ years focused on mobile games and applications. Products I've built and maintained have reached **12M+ downloads worldwide**.
 
 ## Links
 

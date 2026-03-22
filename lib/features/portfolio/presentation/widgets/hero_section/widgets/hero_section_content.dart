@@ -98,7 +98,7 @@ class _GradientSubtitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return ShaderMask(
       shaderCallback: (bounds) =>
-          AppColors.primaryGradient.createShader(bounds),
+          context.appColors.primaryGradient.createShader(bounds),
       child: Text(
         t.hero.role,
         style: Theme.of(context).textTheme.headlineMedium?.copyWith(
@@ -136,12 +136,12 @@ class _PrimaryButtonState extends State<_PrimaryButton> {
           duration: const Duration(milliseconds: 200),
           padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
           decoration: BoxDecoration(
-            gradient: AppColors.primaryGradient,
+            gradient: context.appColors.primaryGradient,
             borderRadius: BorderRadius.circular(12),
             boxShadow: _hovered
                 ? [
                     BoxShadow(
-                      color: AppColors.primary.withValues(alpha: 0.4),
+                      color: context.appColors.primary.withValues(alpha: 0.4),
                       blurRadius: 20,
                     ),
                   ]
@@ -186,17 +186,21 @@ class _OutlineButtonState extends State<_OutlineButton> {
           padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
           decoration: BoxDecoration(
             color: _hovered
-                ? AppColors.primary.withValues(alpha: 0.1)
+                ? context.appColors.primary.withValues(alpha: 0.1)
                 : Colors.transparent,
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
-              color: _hovered ? AppColors.primary : AppColors.cardBorder,
+              color: _hovered
+                  ? context.appColors.primary
+                  : context.appColors.cardBorder,
             ),
           ),
           child: Text(
             widget.label,
             style: Theme.of(context).textTheme.labelLarge?.copyWith(
-              color: _hovered ? AppColors.primary : AppColors.textSecondary,
+              color: _hovered
+                  ? context.appColors.primary
+                  : context.appColors.textSecondary,
             ),
           ),
         ),

@@ -19,7 +19,7 @@ class ProjectsSectionProjectImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final labelStyle = Theme.of(context).textTheme.labelMedium?.copyWith(
-      color: AppColors.textPrimary,
+      color: context.appColors.textPrimary,
       fontWeight: FontWeight.w600,
       fontSize: 12,
     );
@@ -44,7 +44,7 @@ class ProjectsSectionProjectImage extends StatelessWidget {
                     end: Alignment.bottomCenter,
                     colors: [
                       Colors.transparent,
-                      AppColors.background.withValues(alpha: 0.5),
+                      context.appColors.background.withValues(alpha: 0.5),
                     ],
                     stops: const [0.5, 1.0],
                   ),
@@ -81,7 +81,7 @@ class _CompanyName extends StatelessWidget {
           child: Container(
             padding: _kBadgePadding,
             decoration: BoxDecoration(
-              color: AppColors.background.withValues(alpha: 0.75),
+              color: context.appColors.background.withValues(alpha: 0.75),
               borderRadius: _kBadgeRadius,
             ),
             child: Text(project.company!.name, style: labelStyle),

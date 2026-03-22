@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_portfolio/app/theme/app_colors.dart';
 import 'package:my_portfolio/app/widgets/responsive_layout.dart';
 import 'package:my_portfolio/app/widgets/tech_chip.dart';
-import 'package:my_portfolio/core/constants/app_constants.dart';
 import 'package:my_portfolio/core/utils/url_launch.dart';
 import 'package:my_portfolio/features/portfolio/domain/entities/project_data.dart';
 import 'package:my_portfolio/gen/i18n/strings.g.dart';
@@ -74,7 +72,7 @@ class ProjectsSectionProjectContent extends StatelessWidget {
         const SizedBox(height: 14),
         _DownloadLink(project: project),
         const SizedBox(height: 14),
-        const Divider(color: AppColors.divider, height: 1),
+        Divider(color: context.appColors.divider, height: 1),
         _SeeMoreDetails(project: project),
       ],
     );
@@ -108,16 +106,21 @@ class _DownloadLinkState extends State<_DownloadLink> {
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
           decoration: BoxDecoration(
             gradient: _hovered
-                ? const LinearGradient(
-                    colors: [AppColors.primary, AppColors.accent],
+                ? LinearGradient(
+                    colors: [
+                      context.appColors.primary,
+                      context.appColors.accent,
+                    ],
                   )
                 : null,
-            color: _hovered ? null : AppColors.primary.withValues(alpha: 0.15),
+            color: _hovered
+                ? null
+                : context.appColors.primary.withValues(alpha: 0.15),
             borderRadius: const BorderRadius.all(Radius.circular(10)),
             border: Border.all(
               color: _hovered
                   ? Colors.transparent
-                  : AppColors.primary.withValues(alpha: 0.4),
+                  : context.appColors.primary.withValues(alpha: 0.4),
             ),
           ),
           child: Row(
@@ -126,13 +129,13 @@ class _DownloadLinkState extends State<_DownloadLink> {
               Icon(
                 Icons.open_in_new_rounded,
                 size: 16,
-                color: _hovered ? Colors.white : AppColors.primary,
+                color: _hovered ? Colors.white : context.appColors.primary,
               ),
               const SizedBox(width: 8),
               Text(
                 t.projects.view_on_store,
                 style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                  color: _hovered ? Colors.white : AppColors.primary,
+                  color: _hovered ? Colors.white : context.appColors.primary,
                   fontSize: 13,
                   fontWeight: FontWeight.w600,
                 ),
@@ -178,8 +181,8 @@ class _SeeMoreDetailsState extends State<_SeeMoreDetails> {
                     t.projects.details_button,
                     style: Theme.of(context).textTheme.labelMedium?.copyWith(
                       color: _hovered
-                          ? AppColors.primary
-                          : AppColors.textPrimary,
+                          ? context.appColors.primary
+                          : context.appColors.textPrimary,
                       fontSize: 13,
                       fontWeight: FontWeight.w500,
                     ),
@@ -192,8 +195,8 @@ class _SeeMoreDetailsState extends State<_SeeMoreDetails> {
                       Icons.keyboard_arrow_down_rounded,
                       size: 20,
                       color: _hovered
-                          ? AppColors.primary
-                          : AppColors.textPrimary,
+                          ? context.appColors.primary
+                          : context.appColors.textPrimary,
                     ),
                   ),
                 ],
@@ -207,10 +210,10 @@ class _SeeMoreDetailsState extends State<_SeeMoreDetails> {
             width: double.infinity,
             padding: const EdgeInsets.fromLTRB(12, 12, 12, 4),
             decoration: BoxDecoration(
-              color: AppColors.surfaceLight.withValues(alpha: 0.5),
+              color: context.appColors.surfaceLight.withValues(alpha: 0.5),
               borderRadius: const BorderRadius.all(Radius.circular(10)),
               border: Border.all(
-                color: AppColors.cardBorder.withValues(alpha: 0.5),
+                color: context.appColors.cardBorder.withValues(alpha: 0.5),
               ),
             ),
             child: Text(
@@ -218,7 +221,7 @@ class _SeeMoreDetailsState extends State<_SeeMoreDetails> {
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                 fontSize: 13,
                 height: 1.6,
-                color: AppColors.textSecondary,
+                color: context.appColors.textSecondary,
               ),
             ),
           ),
@@ -249,7 +252,7 @@ class _MetricBadge extends StatelessWidget {
     return Container(
       padding: _kBadgePadding,
       decoration: BoxDecoration(
-        color: AppColors.primary.withValues(alpha: 0.85),
+        color: context.appColors.primary.withValues(alpha: 0.85),
         borderRadius: _kBadgeRadius,
       ),
       child: Text('$metric downloads', style: labelStyle),
@@ -264,7 +267,6 @@ class _AwardBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final remote = context.read<RemoteConstants>();
     final labelStyle = Theme.of(context).textTheme.labelMedium?.copyWith(
       color: const Color(0xFF1A1A1A),
       fontWeight: FontWeight.w700,
@@ -274,7 +276,7 @@ class _AwardBadge extends StatelessWidget {
     return MouseRegion(
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
-        onTap: () => appUrlLaunch(award.awardUrl(remote)),
+        onTap: () => appUrlLaunch(award.awardUrl),
         child: Container(
           padding: _kBadgePadding,
           decoration: BoxDecoration(

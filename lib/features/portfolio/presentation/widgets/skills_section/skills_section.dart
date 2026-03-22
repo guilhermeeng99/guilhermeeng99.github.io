@@ -16,7 +16,7 @@ class SkillsSection extends StatelessWidget {
 
     return Container(
       padding: ResponsiveLayout.sectionPadding(context),
-      decoration: const BoxDecoration(color: AppColors.surface),
+      decoration: BoxDecoration(color: context.appColors.surface),
       child: ResponsiveLayout(
         child: Column(
           children: [
@@ -79,7 +79,7 @@ class _SkillCategoryCard extends StatelessWidget {
         children: [
           Row(
             children: [
-              Icon(category.icon, color: AppColors.primary, size: 22),
+              Icon(category.icon, color: context.appColors.primary, size: 22),
               const SizedBox(width: 12),
               Expanded(
                 child: Text(
@@ -102,15 +102,15 @@ class _SkillCategoryCard extends StatelessWidget {
                   vertical: 8,
                 ),
                 decoration: BoxDecoration(
-                  color: AppColors.background,
+                  color: context.appColors.background,
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: AppColors.cardBorder),
+                  border: Border.all(color: context.appColors.cardBorder),
                 ),
                 child: Text(
                   skill,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     fontSize: 13,
-                    color: AppColors.textPrimary,
+                    color: context.appColors.textPrimary,
                   ),
                 ),
               );

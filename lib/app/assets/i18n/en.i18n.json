@@ -21,7 +21,7 @@
     "title": "About Me",
     "subtitle": "Building digital products that scale",
     "bio1": "Senior Flutter Engineer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.",
-    "bio2": "I've implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I've built and maintained have reached 15M+ downloads worldwide.",
+    "bio2": "I've implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I've built and maintained have reached 12M+ downloads worldwide.",
     "bio3": "I specialize in scalable architectures, long-term code maintainability, and high-performance mobile applications. My expertise spans multiple state management solutions (Riverpod, Bloc, MobX), native plugin integration, and the full Firebase ecosystem.",
     "stats": {
       "downloads": {

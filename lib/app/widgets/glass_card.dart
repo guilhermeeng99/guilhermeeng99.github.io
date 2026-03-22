@@ -24,17 +24,17 @@ class _GlassCardState extends State<GlassCard> {
         curve: Curves.easeOut,
         padding: widget.padding ?? const EdgeInsets.all(24),
         decoration: BoxDecoration(
-          gradient: AppColors.cardGradient,
+          gradient: context.appColors.cardGradient,
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
             color: _hovered
-                ? AppColors.primary.withValues(alpha: 0.4)
-                : AppColors.cardBorder,
+                ? context.appColors.primary.withValues(alpha: 0.4)
+                : context.appColors.cardBorder,
           ),
           boxShadow: _hovered
               ? [
                   BoxShadow(
-                    color: AppColors.primary.withValues(alpha: 0.08),
+                    color: context.appColors.primary.withValues(alpha: 0.08),
                     blurRadius: 24,
                   ),
                 ]

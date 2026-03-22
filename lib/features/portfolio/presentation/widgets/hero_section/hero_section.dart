@@ -113,9 +113,9 @@ class _BouncingArrowState extends State<_BouncingArrow>
           child: child,
         );
       },
-      child: const Icon(
+      child: Icon(
         Icons.keyboard_arrow_down_rounded,
-        color: AppColors.textMuted,
+        color: context.appColors.textMuted,
         size: 32,
       ),
     );
@@ -132,20 +132,21 @@ class _ProfileAvatar extends StatelessWidget {
     return Container(
       width: size + 8,
       height: size + 8,
-      decoration: const BoxDecoration(
-        shape: BoxShape.circle,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(25),
         gradient: SweepGradient(
           colors: [
-            AppColors.primary,
-            AppColors.secondary,
-            AppColors.accent,
-            AppColors.primary,
+            context.appColors.primary,
+            context.appColors.secondary,
+            context.appColors.accent,
+            context.appColors.primary,
           ],
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(4),
-        child: ClipOval(
+        padding: const EdgeInsets.all(2),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(23),
           child: Assets.lib.app.assets.images.myProfile.image(
             width: size,
             height: size,

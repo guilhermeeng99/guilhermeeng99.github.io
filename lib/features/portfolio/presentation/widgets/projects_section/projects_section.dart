@@ -30,7 +30,7 @@ class _ProjectsSectionState extends State<ProjectsSection> {
 
     return Container(
       padding: ResponsiveLayout.sectionPadding(context),
-      decoration: const BoxDecoration(color: AppColors.surface),
+      decoration: BoxDecoration(color: context.appColors.surface),
       child: ResponsiveLayout(
         child: Column(
           children: [
@@ -145,13 +145,13 @@ class _OtherProjectsToggleState extends State<_OtherProjectsToggle> {
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
           decoration: BoxDecoration(
             color: _hovered
-                ? AppColors.primary.withValues(alpha: 0.12)
-                : AppColors.surfaceLight.withValues(alpha: 0.5),
+                ? context.appColors.primary.withValues(alpha: 0.12)
+                : context.appColors.surfaceLight.withValues(alpha: 0.5),
             borderRadius: const BorderRadius.all(Radius.circular(12)),
             border: Border.all(
               color: _hovered
-                  ? AppColors.primary.withValues(alpha: 0.4)
-                  : AppColors.cardBorder,
+                  ? context.appColors.primary.withValues(alpha: 0.4)
+                  : context.appColors.cardBorder,
             ),
           ),
           child: Row(
@@ -160,7 +160,9 @@ class _OtherProjectsToggleState extends State<_OtherProjectsToggle> {
               Text(
                 t.projects.other_projects_toggle,
                 style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                  color: _hovered ? AppColors.primary : AppColors.textSecondary,
+                  color: _hovered
+                      ? context.appColors.primary
+                      : context.appColors.textSecondary,
                   fontWeight: FontWeight.w600,
                 ),
               ),
@@ -171,7 +173,9 @@ class _OtherProjectsToggleState extends State<_OtherProjectsToggle> {
                 child: Icon(
                   Icons.keyboard_arrow_down_rounded,
                   size: 20,
-                  color: _hovered ? AppColors.primary : AppColors.textSecondary,
+                  color: _hovered
+                      ? context.appColors.primary
+                      : context.appColors.textSecondary,
                 ),
               ),
             ],
@@ -203,17 +207,17 @@ class _ProjectCardState extends State<_ProjectCard> {
         duration: const Duration(milliseconds: 250),
         curve: Curves.easeOut,
         decoration: BoxDecoration(
-          gradient: AppColors.cardGradient,
+          gradient: context.appColors.cardGradient,
           borderRadius: _kCardRadius,
           border: Border.all(
             color: _hovered
-                ? AppColors.primary.withValues(alpha: 0.4)
-                : AppColors.cardBorder,
+                ? context.appColors.primary.withValues(alpha: 0.4)
+                : context.appColors.cardBorder,
           ),
           boxShadow: _hovered
               ? [
                   BoxShadow(
-                    color: AppColors.primary.withValues(alpha: 0.08),
+                    color: context.appColors.primary.withValues(alpha: 0.08),
                     blurRadius: 24,
                   ),
                 ]

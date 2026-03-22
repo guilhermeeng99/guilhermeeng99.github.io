@@ -32,12 +32,12 @@ class _ResumeSectionDownloadResumeButtonState
           curve: Curves.easeOut,
           padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
           decoration: BoxDecoration(
-            gradient: _hovering ? AppColors.primaryGradient : null,
+            gradient: _hovering ? context.appColors.primaryGradient : null,
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
               color: _hovering
                   ? Colors.transparent
-                  : AppColors.primary.withValues(alpha: 0.5),
+                  : context.appColors.primary.withValues(alpha: 0.5),
             ),
           ),
           child: Row(
@@ -46,14 +46,14 @@ class _ResumeSectionDownloadResumeButtonState
               Icon(
                 Icons.download_rounded,
                 size: 20,
-                color: _hovering ? Colors.white : AppColors.primary,
+                color: _hovering ? Colors.white : context.appColors.primary,
               ),
               const SizedBox(width: 12),
               Text(
                 t.resume.download_resume,
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   fontWeight: FontWeight.w600,
-                  color: _hovering ? Colors.white : AppColors.primary,
+                  color: _hovering ? Colors.white : context.appColors.primary,
                 ),
               ),
             ],

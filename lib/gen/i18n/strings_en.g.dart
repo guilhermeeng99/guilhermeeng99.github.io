@@ -130,8 +130,8 @@ class TranslationsAboutEn {
 	/// en: 'Senior Flutter Engineer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.'
 	String get bio1 => 'Senior Flutter Engineer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.';
 
-	/// en: 'I've implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I've built and maintained have reached 15M+ downloads worldwide.'
-	String get bio2 => 'I\'ve implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I\'ve built and maintained have reached 15M+ downloads worldwide.';
+	/// en: 'I've implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I've built and maintained have reached 12M+ downloads worldwide.'
+	String get bio2 => 'I\'ve implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I\'ve built and maintained have reached 12M+ downloads worldwide.';
 
 	/// en: 'I specialize in scalable architectures, long-term code maintainability, and high-performance mobile applications. My expertise spans multiple state management solutions (Riverpod, Bloc, MobX), native plugin integration, and the full Firebase ecosystem.'
 	String get bio3 => 'I specialize in scalable architectures, long-term code maintainability, and high-performance mobile applications. My expertise spans multiple state management solutions (Riverpod, Bloc, MobX), native plugin integration, and the full Firebase ecosystem.';
@@ -821,7 +821,7 @@ extension on Translations {
 			'about.title' => 'About Me',
 			'about.subtitle' => 'Building digital products that scale',
 			'about.bio1' => 'Senior Flutter Engineer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.',
-			'about.bio2' => 'I\'ve implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I\'ve built and maintained have reached 15M+ downloads worldwide.',
+			'about.bio2' => 'I\'ve implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I\'ve built and maintained have reached 12M+ downloads worldwide.',
 			'about.bio3' => 'I specialize in scalable architectures, long-term code maintainability, and high-performance mobile applications. My expertise spans multiple state management solutions (Riverpod, Bloc, MobX), native plugin integration, and the full Firebase ecosystem.',
 			'about.stats.downloads.value' => _root.app.total_downloads,
 			'about.stats.downloads.label' => 'Downloads',

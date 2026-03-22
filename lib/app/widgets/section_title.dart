@@ -12,10 +12,13 @@ class SectionTitle extends StatelessWidget {
     return Column(
       children: [
         ShaderMask(
-          shaderCallback: (bounds) => AppColors.primaryGradient.createShader(bounds),
+          shaderCallback: (bounds) =>
+              context.appColors.primaryGradient.createShader(bounds),
           child: Text(
             title,
-            style: Theme.of(context).textTheme.displaySmall?.copyWith(color: Colors.white),
+            style: Theme.of(
+              context,
+            ).textTheme.displaySmall?.copyWith(color: Colors.white),
             textAlign: TextAlign.center,
           ),
         ),

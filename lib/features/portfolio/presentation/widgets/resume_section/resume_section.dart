@@ -125,7 +125,7 @@ class _SubsectionHeader extends StatelessWidget {
       children: [
         ShaderMask(
           shaderCallback: (bounds) =>
-              AppColors.primaryGradient.createShader(bounds),
+              context.appColors.primaryGradient.createShader(bounds),
           child: Icon(icon, size: 24, color: Colors.white),
         ),
         const SizedBox(width: 12),

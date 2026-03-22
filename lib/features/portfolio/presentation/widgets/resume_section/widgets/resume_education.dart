@@ -28,8 +28,8 @@ class ResumeSectionEducationTimelineItem extends StatelessWidget {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    AppColors.primary.withValues(alpha: 0.4),
-                    AppColors.primary.withValues(alpha: 0.05),
+                    context.appColors.primary.withValues(alpha: 0.4),
+                    context.appColors.primary.withValues(alpha: 0.05),
                   ],
                 ),
               ),
@@ -43,10 +43,10 @@ class ResumeSectionEducationTimelineItem extends StatelessWidget {
               height: 14,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                gradient: AppColors.primaryGradient,
+                gradient: context.appColors.primaryGradient,
                 boxShadow: [
                   BoxShadow(
-                    color: AppColors.primary.withValues(alpha: 0.3),
+                    color: context.appColors.primary.withValues(alpha: 0.3),
                     blurRadius: 8,
                   ),
                 ],
@@ -62,7 +62,7 @@ class ResumeSectionEducationTimelineItem extends StatelessWidget {
                     Text(
                       education.period,
                       style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                        color: AppColors.primary,
+                        color: context.appColors.primary,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -78,7 +78,7 @@ class ResumeSectionEducationTimelineItem extends StatelessWidget {
                     Text(
                       '${education.institution} · ${education.location}',
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        color: AppColors.textMuted,
+                        color: context.appColors.textMuted,
                       ),
                     ),
                     const SizedBox(height: 16),
@@ -93,9 +93,9 @@ class ResumeSectionEducationTimelineItem extends StatelessWidget {
                               child: Container(
                                 width: 5,
                                 height: 5,
-                                decoration: const BoxDecoration(
+                                decoration: BoxDecoration(
                                   shape: BoxShape.circle,
-                                  color: AppColors.primary,
+                                  color: context.appColors.primary,
                                 ),
                               ),
                             ),

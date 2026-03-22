@@ -74,7 +74,7 @@ class _LoadingPageState extends State<LoadingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: context.appColors.background,
       body: AnimatedOpacity(
         opacity: _fadeOut ? 0.0 : 1.0,
         duration: const Duration(milliseconds: 500),
@@ -209,10 +209,12 @@ class _LoadingIndicatorState extends State<_LoadingIndicator>
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(2),
-              child: const LinearProgressIndicator(
+              child: LinearProgressIndicator(
                 minHeight: 3,
-                backgroundColor: AppColors.surfaceLight,
-                valueColor: AlwaysStoppedAnimation<Color>(AppColors.primary),
+                backgroundColor: context.appColors.surfaceLight,
+                valueColor: AlwaysStoppedAnimation<Color>(
+                  context.appColors.primary,
+                ),
               ),
             ),
           ],

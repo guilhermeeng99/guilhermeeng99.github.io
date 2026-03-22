@@ -12,6 +12,18 @@ const _kNavShadow = [
   ),
 ];
 
+const _kHoverDuration = Duration(milliseconds: 200);
+const _kContactIndex = 5;
+
+typedef _NavEntry = ({int index, String label});
+
+List<_NavEntry> _buildNavEntries() => [
+  (index: 1, label: t.nav.about),
+  (index: 2, label: t.nav.projects),
+  (index: 3, label: t.nav.experience),
+  (index: 4, label: t.nav.skills),
+];
+
 class NavBar extends StatefulWidget {
   const NavBar({
     required this.onSectionTap,
@@ -27,86 +39,70 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-  bool _scrolled = false;
-
-  @override
-  void initState() {
-    super.initState();
-    widget.scrollController.addListener(_onScroll);
-  }
-
-  @override
-  void dispose() {
-    widget.scrollController.removeListener(_onScroll);
-    super.dispose();
-  }
-
-  void _onScroll() {
-    final shouldShow = widget.scrollController.offset > 50;
-    if (shouldShow != _scrolled) {
-      setState(() => _scrolled = shouldShow);
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     final isMobile = ResponsiveLayout.isMobile(context);
+    final entries = _buildNavEntries();
 
-    return AnimatedContainer(
-      duration: const Duration(milliseconds: 300),
+    return Container(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
       decoration: BoxDecoration(
-        color: _scrolled
-            ? AppColors.background.withValues(alpha: 0.95)
-            : Colors.transparent,
+        color: context.appColors.background,
         border: Border(
           bottom: BorderSide(
-            color: _scrolled ? AppColors.divider : Colors.transparent,
+            color: context.appColors.divider,
           ),
         ),
-        boxShadow: _scrolled ? _kNavShadow : null,
+        boxShadow: _kNavShadow,
       ),
       child: SafeArea(
         bottom: false,
         child: Row(
           children: [
-            MouseRegion(
-              cursor: SystemMouseCursors.click,
-              child: GestureDetector(
-                onTap: () => widget.onSectionTap(0),
-                child: Assets.lib.app.assets.images.logo.image(height: 36),
-              ),
-            ),
+            _LogoButton(onTap: () => widget.onSectionTap(0)),
             const Spacer(),
             if (!isMobile)
               Row(
                 children: [
-                  _NavItem(
-                    label: t.nav.about,
-                    onTap: () => widget.onSectionTap(1),
-                  ),
-                  _NavItem(
-                    label: t.nav.projects,
-                    onTap: () => widget.onSectionTap(2),
-                  ),
-                  _NavItem(
-                    label: t.nav.experience,
-                    onTap: () => widget.onSectionTap(3),
-                  ),
-                  _NavItem(
-                    label: t.nav.skills,
-                    onTap: () => widget.onSectionTap(4),
-                  ),
+                  for (final entry in entries)
+                    _NavItem(
+                      label: entry.label,
+                      onTap: () => widget.onSectionTap(entry.index),
+                    ),
                   const SizedBox(width: 12),
                   _NavCta(
                     label: t.hero.get_in_touch,
-                    onTap: () => widget.onSectionTap(5),
+                    onTap: () => widget.onSectionTap(_kContactIndex),
                   ),
                 ],
               )
             else
-              _MobileMenuButton(onSectionTap: widget.onSectionTap),
+              _MobileMenuButton(
+                entries: entries,
+                onSectionTap: widget.onSectionTap,
+              ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class _LogoButton extends StatelessWidget {
+  const _LogoButton({required this.onTap});
+
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Semantics(
+      label: 'Home',
+      button: true,
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click,
+        child: GestureDetector(
+          onTap: onTap,
+          child: Assets.lib.app.assets.images.logo.image(height: 36),
         ),
       ),
     );
@@ -137,11 +133,11 @@ class _NavItemState extends State<_NavItem> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           child: AnimatedDefaultTextStyle(
-            duration: const Duration(milliseconds: 200),
+            duration: _kHoverDuration,
             style: Theme.of(context).textTheme.labelLarge!.copyWith(
               color: _hovered
-                  ? AppColors.primary
-                  : AppColors.textSecondary,
+                  ? context.appColors.primary
+                  : context.appColors.textSecondary,
               fontSize: 14,
             ),
             child: Text(widget.label),
@@ -174,15 +170,15 @@ class _NavCtaState extends State<_NavCta> {
       child: GestureDetector(
         onTap: widget.onTap,
         child: AnimatedContainer(
-          duration: const Duration(milliseconds: 200),
+          duration: _kHoverDuration,
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           decoration: BoxDecoration(
-            gradient: AppColors.primaryGradient,
+            gradient: context.appColors.primaryGradient,
             borderRadius: BorderRadius.circular(10),
             boxShadow: _hovered
                 ? [
                     BoxShadow(
-                      color: AppColors.primary.withValues(alpha: 0.4),
+                      color: context.appColors.primary.withValues(alpha: 0.4),
                       blurRadius: 16,
                     ),
                   ]
@@ -203,31 +199,39 @@ class _NavCtaState extends State<_NavCta> {
 }
 
 class _MobileMenuButton extends StatelessWidget {
-  const _MobileMenuButton({required this.onSectionTap});
+  const _MobileMenuButton({
+    required this.entries,
+    required this.onSectionTap,
+  });
 
+  final List<_NavEntry> entries;
   final void Function(int index) onSectionTap;
 
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<int>(
-      icon: const Icon(Icons.menu_rounded, color: AppColors.textSecondary),
-      color: AppColors.surface,
+      tooltip: 'Menu',
+      icon: Icon(Icons.menu_rounded, color: context.appColors.textSecondary),
+      color: context.appColors.surface,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       onSelected: onSectionTap,
       itemBuilder: (context) => [
-        _menuItem(1, t.nav.about),
-        _menuItem(2, t.nav.projects),
-        _menuItem(3, t.nav.experience),
-        _menuItem(4, t.nav.skills),
-        _menuItem(5, t.nav.contact),
+        for (final entry in entries)
+          PopupMenuItem(
+            value: entry.index,
+            child: Text(
+              entry.label,
+              style: TextStyle(color: context.appColors.textPrimary),
+            ),
+          ),
+        PopupMenuItem(
+          value: _kContactIndex,
+          child: Text(
+            t.nav.contact,
+            style: TextStyle(color: context.appColors.textPrimary),
+          ),
+        ),
       ],
-    );
-  }
-
-  PopupMenuItem<int> _menuItem(int value, String label) {
-    return PopupMenuItem(
-      value: value,
-      child: Text(label, style: const TextStyle(color: AppColors.textPrimary)),
     );
   }
 }

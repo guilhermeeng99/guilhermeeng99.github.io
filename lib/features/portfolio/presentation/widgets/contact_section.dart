@@ -20,7 +20,7 @@ class ContactSection extends StatelessWidget {
           children: [
             ShaderMask(
               shaderCallback: (bounds) =>
-                  AppColors.primaryGradient.createShader(bounds),
+                  context.appColors.primaryGradient.createShader(bounds),
               child: Text(
                 t.contact.title,
                 style: Theme.of(context).textTheme.displayMedium?.copyWith(
@@ -69,7 +69,7 @@ class ContactSection extends StatelessWidget {
             Container(
               width: double.infinity,
               height: 1,
-              color: AppColors.divider,
+              color: context.appColors.divider,
             ),
             const SizedBox(height: 32),
             FittedBox(
@@ -81,7 +81,7 @@ class ContactSection extends StatelessWidget {
                     '${t.contact.footer} ',
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       fontSize: 13,
-                      color: AppColors.textMuted,
+                      color: context.appColors.textMuted,
                     ),
                   ),
                   const FlutterLogo(size: 16),
@@ -89,7 +89,7 @@ class ContactSection extends StatelessWidget {
                     ' ${t.contact.flutter}',
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       fontSize: 13,
-                      color: AppColors.textMuted,
+                      color: context.appColors.textMuted,
                     ),
                   ),
                 ],
@@ -135,17 +135,17 @@ class _ContactCardState extends State<_ContactCard> {
           duration: const Duration(milliseconds: 250),
           padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 24),
           decoration: BoxDecoration(
-            gradient: AppColors.cardGradient,
+            gradient: context.appColors.cardGradient,
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
               color: _hovered
-                  ? AppColors.primary.withValues(alpha: 0.5)
-                  : AppColors.cardBorder,
+                  ? context.appColors.primary.withValues(alpha: 0.5)
+                  : context.appColors.cardBorder,
             ),
             boxShadow: _hovered
                 ? [
                     BoxShadow(
-                      color: AppColors.primary.withValues(alpha: 0.1),
+                      color: context.appColors.primary.withValues(alpha: 0.1),
                       blurRadius: 20,
                     ),
                   ]
@@ -158,16 +158,16 @@ class _ContactCardState extends State<_ContactCard> {
                 FaIcon(
                   widget.icon as FaIconData,
                   color: _hovered
-                      ? AppColors.primary
-                      : AppColors.textSecondary,
+                      ? context.appColors.primary
+                      : context.appColors.textSecondary,
                   size: 28,
                 )
               else
                 Icon(
                   widget.icon as IconData,
                   color: _hovered
-                      ? AppColors.primary
-                      : AppColors.textSecondary,
+                      ? context.appColors.primary
+                      : context.appColors.textSecondary,
                   size: 28,
                 ),
               const SizedBox(height: 12),
@@ -180,7 +180,7 @@ class _ContactCardState extends State<_ContactCard> {
                 widget.value,
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   fontSize: 13,
-                  color: AppColors.textMuted,
+                  color: context.appColors.textMuted,
                 ),
               ),
             ],

@@ -37,28 +37,28 @@ class _SocialButtonState extends State<SocialButton> {
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
               color: _hovered
-                  ? AppColors.primary.withValues(alpha: 0.15)
+                  ? context.appColors.primary.withValues(alpha: 0.15)
                   : Colors.transparent,
               borderRadius: BorderRadius.circular(12),
               border: Border.all(
                 color: _hovered
-                    ? AppColors.primary.withValues(alpha: 0.4)
-                    : AppColors.cardBorder,
+                    ? context.appColors.primary.withValues(alpha: 0.4)
+                    : context.appColors.cardBorder,
               ),
             ),
             child: widget.icon is FaIconData
                 ? FaIcon(
                     widget.icon as FaIconData,
                     color: _hovered
-                        ? AppColors.primary
-                        : AppColors.textSecondary,
+                        ? context.appColors.primary
+                        : context.appColors.textSecondary,
                     size: 22,
                   )
                 : Icon(
                     widget.icon as IconData,
                     color: _hovered
-                        ? AppColors.primary
-                        : AppColors.textSecondary,
+                        ? context.appColors.primary
+                        : context.appColors.textSecondary,
                     size: 22,
                   ),
           ),

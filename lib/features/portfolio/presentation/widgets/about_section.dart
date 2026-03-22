@@ -80,7 +80,7 @@ class AboutSection extends StatelessWidget {
               children: [
                 ShaderMask(
                   shaderCallback: (bounds) =>
-                      AppColors.primaryGradient.createShader(bounds),
+                      context.appColors.primaryGradient.createShader(bounds),
                   child: Text(
                     stat.value,
                     style: Theme.of(context).textTheme.headlineMedium?.copyWith(
