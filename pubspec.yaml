@@ -44,7 +44,7 @@ melos:
       run: dart run my_portfolio:assets_linux
 
     run_release_deploy:
-      run: flutter build web --release && call deploy_web.bat
+      run: powershell -ExecutionPolicy Bypass -File deploy_web.ps1
 
 flutter:
 
