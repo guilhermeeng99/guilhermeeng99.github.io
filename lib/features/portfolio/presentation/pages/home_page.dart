@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/app/widgets/nav_bar.dart';
+import 'package:my_portfolio/app/widgets/nav_bar/nav_bar.dart';
 import 'package:my_portfolio/app/widgets/scroll_fade_in.dart';
 import 'package:my_portfolio/features/portfolio/presentation/widgets/about_section.dart';
 import 'package:my_portfolio/features/portfolio/presentation/widgets/contact_section.dart';

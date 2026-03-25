@@ -37,19 +37,20 @@ class ProjectsSectionProjectImage extends StatelessWidget {
               project.image.image(
                 fit: BoxFit.cover,
               ),
-              DecoratedBox(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Colors.transparent,
-                      context.appColors.background.withValues(alpha: 0.5),
-                    ],
-                    stops: const [0.5, 1.0],
+              if (Theme.of(context).brightness == Brightness.dark)
+                DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Colors.transparent,
+                        context.appColors.background.withValues(alpha: 0.5),
+                      ],
+                      stops: const [0.5, 1.0],
+                    ),
                   ),
                 ),
-              ),
             ],
           ),
         ),

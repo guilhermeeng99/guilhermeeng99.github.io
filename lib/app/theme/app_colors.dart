@@ -65,6 +65,36 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
     ),
   );
 
+  static const arcticLight = AppColorsExtension(
+    background: Color(0xFFF5F7FA),
+    surface: Color(0xFFFFFFFF),
+    surfaceLight: Color(0xFFEDF1F7),
+    cardBorder: Color(0xFFD8DEE9),
+    textPrimary: Color(0xFF1A2332),
+    textSecondary: Color(0xFF4A5568),
+    textMuted: Color(0xFF8696A7),
+    primary: Color(0xFF5A52E0),
+    secondary: Color(0xFF0097B2),
+    accent: Color(0xFF0891B2),
+    success: Color(0xFF059669),
+    divider: Color(0xFFE2E8F0),
+    primaryGradient: LinearGradient(
+      colors: [Color(0xFF5A52E0), Color(0xFF0097B2)],
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+    ),
+    heroGradient: LinearGradient(
+      colors: [Color(0xFFF5F7FA), Color(0xFFE8EDF5), Color(0xFFF5F7FA)],
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+    ),
+    cardGradient: LinearGradient(
+      colors: [Color(0xFFFFFFFF), Color(0xFFF8FAFC)],
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+    ),
+  );
+
   @override
   AppColorsExtension copyWith({
     Color? background,
