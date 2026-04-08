@@ -13,11 +13,8 @@ abstract final class AppConstants {
   static const String linkedinUrl = 'https://linkedin.com/in/$linkedin';
   static const String github = 'guilhermeeng99';
   static const String githubUrl = 'https://github.com/$github';
-  static const String flutterBaseUrl =
-      'https://guilhermeeng99.github.io/flutter_base/';
   static const String email = 'guilhermeeng99@gmail.com';
   static const String emailUrl = 'mailto:$email';
-  static const String financoUrl = 'https://github.com/guilhermeeng99/financo';
 }
 
 class RemoteConstants {
@@ -34,6 +31,10 @@ class RemoteConstants {
 
   String get googlePlayIndieGamesFund2023Url => _getRemoteValue.callString(
     TypeEnum.google_play_indie_games_fund_2023_url,
+  );
+
+  String get harvestArticleUrl => _getRemoteValue.callString(
+    TypeEnum.harvest_article_url,
   );
 
   String get googlePlayBestOf2021Url =>
@@ -65,4 +66,11 @@ class RemoteConstants {
   String get boozeUrl => _getRemoteValue.callString(TypeEnum.booze_url);
 
   String get vdxUrl => _getRemoteValue.callString(TypeEnum.vdx_url);
+
+  String get flutterBaseUrl =>
+      _getRemoteValue.callString(TypeEnum.flutter_base_url);
+
+  String get harvestUrl => _getRemoteValue.callString(TypeEnum.harvest_url);
+
+  String get financoUrl => _getRemoteValue.callString(TypeEnum.financo_url);
 }

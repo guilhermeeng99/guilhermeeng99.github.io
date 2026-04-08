@@ -270,6 +270,7 @@ class TranslationsProjectsItemsEn {
 	late final TranslationsProjectsItemsVdxEn vdx = TranslationsProjectsItemsVdxEn._(_root);
 	late final TranslationsProjectsItemsFlutterBaseEn flutter_base = TranslationsProjectsItemsFlutterBaseEn._(_root);
 	late final TranslationsProjectsItemsFinancoEn financo = TranslationsProjectsItemsFinancoEn._(_root);
+	late final TranslationsProjectsItemsHarvestEn harvest = TranslationsProjectsItemsHarvestEn._(_root);
 	late final TranslationsProjectsItemsBluBiEn blu_bi = TranslationsProjectsItemsBluBiEn._(_root);
 }
 
@@ -594,6 +595,27 @@ class TranslationsProjectsItemsFinancoEn {
 	String get details => 'Built with Flutter targeting Windows desktop. Monorepo structure managed with Melos, split into app_core, app_database, and app_widgets packages. Uses flutter_modular for routing and dependency injection, Drift (SQLite) for local persistence, GetX and flutter_hooks for state management, and slang for internationalization (EN/PT).';
 }
 
+// Path: projects.items.harvest
+class TranslationsProjectsItemsHarvestEn {
+	TranslationsProjectsItemsHarvestEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Harvest'
+	String get name => 'Harvest';
+
+	/// en: 'Production-Ready App 24-Hours-AI'
+	String get award => 'Production-Ready App 24-Hours-AI';
+
+	/// en: 'A fresh food e-commerce app connecting communities directly with local farmers, focused on perishable products with a fast, reliable, and elegant user experience.'
+	String get description => 'A fresh food e-commerce app connecting communities directly with local farmers, focused on perishable products with a fast, reliable, and elegant user experience.';
+
+	/// en: 'Architected the app with Clean Architecture and a feature-first structure across 13 features, ensuring long-term scalability and maintainability. Implemented Firebase Auth with email/password and Google Sign-In using platform-specific OAuth flows (popup on web, credential on mobile). Built a reusable UI component system with 8+ shared widgets and a complete design system (colors, typography, theme). Designed a centralized startup coordinator using BLoC to pre-load all data before navigation, eliminating per-page loading states. Structured a role-based admin system via a secure Firestore collection guarded by server-side security rules. Wrote 48+ unit tests covering domain entities, repository cache logic, and BLoC state machines using bloc_test and mocktail.'
+	String get details => 'Architected the app with Clean Architecture and a feature-first structure across 13 features, ensuring long-term scalability and maintainability. Implemented Firebase Auth with email/password and Google Sign-In using platform-specific OAuth flows (popup on web, credential on mobile). Built a reusable UI component system with 8+ shared widgets and a complete design system (colors, typography, theme). Designed a centralized startup coordinator using BLoC to pre-load all data before navigation, eliminating per-page loading states. Structured a role-based admin system via a secure Firestore collection guarded by server-side security rules. Wrote 48+ unit tests covering domain entities, repository cache logic, and BLoC state machines using bloc_test and mocktail.';
+}
+
 // Path: projects.items.blu_bi
 class TranslationsProjectsItemsBluBiEn {
 	TranslationsProjectsItemsBluBiEn._(this._root);
@@ -878,6 +900,10 @@ extension on Translations {
 			'projects.items.financo.name' => 'Financo',
 			'projects.items.financo.description' => 'A personal finance manager desktop app for tracking transactions, credit cards, and financial movements, with support for importing and exporting data.',
 			'projects.items.financo.details' => 'Built with Flutter targeting Windows desktop. Monorepo structure managed with Melos, split into app_core, app_database, and app_widgets packages. Uses flutter_modular for routing and dependency injection, Drift (SQLite) for local persistence, GetX and flutter_hooks for state management, and slang for internationalization (EN/PT).',
+			'projects.items.harvest.name' => 'Harvest',
+			'projects.items.harvest.award' => 'Production-Ready App 24-Hours-AI',
+			'projects.items.harvest.description' => 'A fresh food e-commerce app connecting communities directly with local farmers, focused on perishable products with a fast, reliable, and elegant user experience.',
+			'projects.items.harvest.details' => 'Architected the app with Clean Architecture and a feature-first structure across 13 features, ensuring long-term scalability and maintainability. Implemented Firebase Auth with email/password and Google Sign-In using platform-specific OAuth flows (popup on web, credential on mobile). Built a reusable UI component system with 8+ shared widgets and a complete design system (colors, typography, theme). Designed a centralized startup coordinator using BLoC to pre-load all data before navigation, eliminating per-page loading states. Structured a role-based admin system via a secure Firestore collection guarded by server-side security rules. Wrote 48+ unit tests covering domain entities, repository cache logic, and BLoC state machines using bloc_test and mocktail.',
 			'projects.items.blu_bi.name' => 'Blu BI',
 			'projects.items.blu_bi.description' => 'A Business Intelligence app for tracking and visualizing financial data, including revenue, expenses, and project-based results with reports such as Income Statement (DRE) and period analysis.',
 			'projects.items.blu_bi.details' => 'Flutter • GetX (state management & navigation) • Firebase Auth + Google Sign-In • Firebase Remote Config • Dio (REST API) • Isar (local database) • fl_chart (charts) • Freezed + json_serializable (models) • get_it (dependency injection) • local_auth (biometric authentication) • Clean Architecture (data/domain/presentation) • Multiplatform: Android, iOS, Web & Desktop',

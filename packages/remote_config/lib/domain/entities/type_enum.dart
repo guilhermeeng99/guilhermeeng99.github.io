@@ -11,6 +11,8 @@ enum TypeEnum implements RemoteConfigEnum {
       'https://blog.google/products-and-platforms/platforms/google-play/google-plays-best-of-2021/'),
   google_play_store_url(
       'https://play.google.com/store/apps/dev?id=6372918774674573544'),
+  harvest_article_url(
+      'https://www.linkedin.com/pulse/i-built-production-ready-app-24-hours-using-ai-heres-what-passos-e6fcf/'),
   apple_store_url('https://apps.apple.com/developer/bluebook/id1467351824'),
   magic_sort_url('https://appmagic.rocks/google-play/magic-sort/com.blu.wsp'),
   rabit_url('https://appmagic.rocks/google-play/rabit/com.blu.rabito'),
@@ -26,7 +28,10 @@ enum TypeEnum implements RemoteConfigEnum {
   vdx_url(
       'https://drive.google.com/file/d/11Dj0-tAeB0LPlH9yPZUon_XQVrOVAf-l/view?usp=drive_link'),
   resume_url(
-      'https://drive.google.com/file/d/1SoUNPSx_SgQX25yy_znxPR3DBGqPq-h3/view?usp=sharing');
+      'https://drive.google.com/file/d/1SoUNPSx_SgQX25yy_znxPR3DBGqPq-h3/view?usp=sharing'),
+  financo_url('https://github.com/guilhermeeng99/financo'),
+  flutter_base_url('https://guilhermeeng99.github.io/flutter_base/'),
+  harvest_url('https://guilhermeeng99.github.io/harvest/');
 
   @override
   final dynamic defaultValue;

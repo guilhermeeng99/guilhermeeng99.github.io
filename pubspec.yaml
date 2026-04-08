@@ -17,10 +17,10 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^9.1.1
   font_awesome_flutter: ^11.0.0
-  go_router: ^17.1.0
+  go_router: ^17.2.0
   google_fonts: ^8.0.2
   logger: ^2.7.0
-  melos: ^7.5.0
+  melos: ^7.5.1
   path: ^1.9.1
   remote_config:
     path: packages/remote_config
@@ -40,11 +40,9 @@ melos:
     slang:
       run: dart run slang
 
-    generate_assets_folders:
-      run: dart run my_portfolio:assets_linux
-
-    run_release_deploy:
-      run: powershell -ExecutionPolicy Bypass -File deploy_web.ps1
+    build:web:
+      description: Build Flutter web (main app) for production.
+      run: flutter build web --release
 
 flutter:
 

@@ -58,16 +58,17 @@ class ProjectsSectionData {
   static List<ProjectsSectionData> projects(RemoteConstants remote) => [
     _magicSort(remote),
     _rabit(remote),
+    _harvest(remote),
     _capy(remote),
     _cups(remote),
     _farmVsAliens(remote),
-    _dropMerge(remote),
   ];
 
   static List<ProjectsSectionData> otherProjects(RemoteConstants remote) => [
     _vdx(remote),
-    _flutterBase,
-    _financo,
+    _dropMerge(remote),
+    _flutterBase(remote),
+    _financo(remote),
     _bluBi,
     _booze(remote),
     _neverHaveIEverX(remote),
@@ -190,23 +191,39 @@ class ProjectsSectionData {
         downloadLink: remote.vdxUrl,
       );
 
-  static final _flutterBase = ProjectsSectionData(
-    name: t.projects.items.flutter_base.name,
-    description: t.projects.items.flutter_base.description,
-    details: t.projects.items.flutter_base.details,
-    technologies: const ['Flutter', 'Riverpod', 'SOLID'],
-    image: _projectImages.flutterBasePreview,
-    downloadLink: AppConstants.flutterBaseUrl,
-  );
+  static ProjectsSectionData _harvest(RemoteConstants remote) =>
+      ProjectsSectionData(
+        name: t.projects.items.harvest.name,
+        description: t.projects.items.harvest.description,
+        details: t.projects.items.harvest.details,
+        award: ProjectAward(
+          label: t.projects.items.harvest.award,
+          awardUrl: remote.harvestArticleUrl,
+        ),
+        technologies: const ['Flutter', 'Firebase', 'BLoC'],
+        image: _projectImages.harvestPreview,
+        downloadLink: remote.harvestUrl,
+      );
 
-  static final _financo = ProjectsSectionData(
-    name: t.projects.items.financo.name,
-    description: t.projects.items.financo.description,
-    details: t.projects.items.financo.details,
-    technologies: const ['Flutter', 'GetX'],
-    image: _projectImages.financoPreview,
-    downloadLink: AppConstants.financoUrl,
-  );
+  static ProjectsSectionData _flutterBase(RemoteConstants remote) =>
+      ProjectsSectionData(
+        name: t.projects.items.flutter_base.name,
+        description: t.projects.items.flutter_base.description,
+        details: t.projects.items.flutter_base.details,
+        technologies: const ['Flutter', 'Riverpod', 'SOLID'],
+        image: _projectImages.flutterBasePreview,
+        downloadLink: remote.flutterBaseUrl,
+      );
+
+  static ProjectsSectionData _financo(RemoteConstants remote) =>
+      ProjectsSectionData(
+        name: t.projects.items.financo.name,
+        description: t.projects.items.financo.description,
+        details: t.projects.items.financo.details,
+        technologies: const ['Flutter', 'GetX'],
+        image: _projectImages.financoPreview,
+        downloadLink: remote.financoUrl,
+      );
 
   static final _bluBi = ProjectsSectionData(
     name: t.projects.items.blu_bi.name,
