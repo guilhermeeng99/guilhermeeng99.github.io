@@ -24,6 +24,10 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
+      - name: Install remote_config dependencies
+        run: flutter pub get
+        working-directory: packages/remote_config
+
       - name: Generate i18n (slang)
         run: dart run slang
 
