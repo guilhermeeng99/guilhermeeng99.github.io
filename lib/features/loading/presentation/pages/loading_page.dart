@@ -6,8 +6,8 @@ import 'package:go_router/go_router.dart';
 import 'package:logger/logger.dart';
 import 'package:my_portfolio/app/routes/app_router.dart';
 import 'package:my_portfolio/app/theme/app_colors.dart';
+import 'package:my_portfolio/core/remote_config/remote_config.dart';
 import 'package:my_portfolio/gen/assets.gen.dart';
-import 'package:remote_config/remote_config.dart';
 
 class LoadingPage extends StatefulWidget {
   const LoadingPage({super.key});

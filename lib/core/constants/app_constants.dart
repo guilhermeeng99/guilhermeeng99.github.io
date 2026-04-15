@@ -1,4 +1,4 @@
-import 'package:remote_config/remote_config.dart';
+import 'package:my_portfolio/core/remote_config/remote_config.dart';
 
 abstract final class AppConstants {
   static const String owner = 'Guilherme Passos';
@@ -22,55 +22,54 @@ class RemoteConstants {
 
   final GetRemoteValueUseCase _getRemoteValue;
 
-  String get resumeUrl => _getRemoteValue.callString(TypeEnum.resume_url);
+  String get resumeUrl => _getRemoteValue.callString(TypeEnum.resumeUrl);
 
   String get googlePlayIndieGamesAccelerator2024Url =>
       _getRemoteValue.callString(
-        TypeEnum.google_play_indie_games_accelerator_2024_url,
+        TypeEnum.googlePlayIndieGamesAccelerator2024Url,
       );
 
   String get googlePlayIndieGamesFund2023Url => _getRemoteValue.callString(
-    TypeEnum.google_play_indie_games_fund_2023_url,
+    TypeEnum.googlePlayIndieGamesFund2023Url,
   );
 
   String get harvestArticleUrl => _getRemoteValue.callString(
-    TypeEnum.harvest_article_url,
+    TypeEnum.harvestArticleUrl,
   );
 
   String get googlePlayBestOf2021Url =>
-      _getRemoteValue.callString(TypeEnum.google_play_best_of_2021_url);
+      _getRemoteValue.callString(TypeEnum.googlePlayBestOf2021Url);
 
   String get googlePlayStoreUrl =>
-      _getRemoteValue.callString(TypeEnum.google_play_store_url);
+      _getRemoteValue.callString(TypeEnum.googlePlayStoreUrl);
 
   String get appleStoreUrl =>
-      _getRemoteValue.callString(TypeEnum.apple_store_url);
+      _getRemoteValue.callString(TypeEnum.appleStoreUrl);
 
-  String get magicSortUrl =>
-      _getRemoteValue.callString(TypeEnum.magic_sort_url);
+  String get magicSortUrl => _getRemoteValue.callString(TypeEnum.magicSortUrl);
 
-  String get rabitUrl => _getRemoteValue.callString(TypeEnum.rabit_url);
+  String get rabitUrl => _getRemoteValue.callString(TypeEnum.rabitUrl);
 
-  String get cupsUrl => _getRemoteValue.callString(TypeEnum.cups_url);
+  String get cupsUrl => _getRemoteValue.callString(TypeEnum.cupsUrl);
 
-  String get farmUrl => _getRemoteValue.callString(TypeEnum.farm_url);
+  String get farmUrl => _getRemoteValue.callString(TypeEnum.farmUrl);
 
-  String get capyUrl => _getRemoteValue.callString(TypeEnum.capy_url);
+  String get capyUrl => _getRemoteValue.callString(TypeEnum.capyUrl);
 
   String get dropAndMergeUrl =>
-      _getRemoteValue.callString(TypeEnum.drop_and_merge_url);
+      _getRemoteValue.callString(TypeEnum.dropAndMergeUrl);
 
   String get neverHaveIEverXUrl =>
-      _getRemoteValue.callString(TypeEnum.never_have_i_ever_x_url);
+      _getRemoteValue.callString(TypeEnum.neverHaveIEverXUrl);
 
-  String get boozeUrl => _getRemoteValue.callString(TypeEnum.booze_url);
+  String get boozeUrl => _getRemoteValue.callString(TypeEnum.boozeUrl);
 
-  String get vdxUrl => _getRemoteValue.callString(TypeEnum.vdx_url);
+  String get vdxUrl => _getRemoteValue.callString(TypeEnum.vdxUrl);
 
   String get flutterBaseUrl =>
-      _getRemoteValue.callString(TypeEnum.flutter_base_url);
+      _getRemoteValue.callString(TypeEnum.flutterBaseUrl);
 
-  String get harvestUrl => _getRemoteValue.callString(TypeEnum.harvest_url);
+  String get harvestUrl => _getRemoteValue.callString(TypeEnum.harvestUrl);
 
-  String get financoUrl => _getRemoteValue.callString(TypeEnum.financo_url);
+  String get financoUrl => _getRemoteValue.callString(TypeEnum.financoUrl);
 }
