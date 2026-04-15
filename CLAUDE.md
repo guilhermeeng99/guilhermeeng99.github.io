@@ -1,4 +1,4 @@
-# My Portfolio — Copilot Instructions
+# My Portfolio — Claude Code Guide
 
 You are assisting in a **Flutter Web portfolio** project called **my_portfolio**.
 This is Guilherme Passos' personal portfolio website — a single-page application hosted on **GitHub Pages** (`guilhermeeng99.github.io`) showcasing projects, skills, experience, and contact information with a polished, responsive, dark-themed design.
@@ -17,7 +17,7 @@ Generate **high-quality, performant, and maintainable** code that follows the co
 | **DI** | `MultiRepositoryProvider` via `AppDependencies` widget |
 | **Routing** | `go_router` (declarative, path-based — 2 routes) |
 | **Firebase** | `firebase_core`, `firebase_analytics`, `firebase_remote_config` |
-| **Remote Config** | Modularised in `packages/remote_config/` — dynamic URLs for stores, awards, resume |
+| **Remote Config** | Located in `lib/core/remote_config/` — dynamic URLs for stores, awards, resume |
 | **Code Generation** | `slang` (i18n) |
 | **Linting** | `very_good_analysis` ^10.2.0 (strict) |
 | **Fonts** | `google_fonts` — SpaceGrotesk (headings), Inter (body), JetBrainsMono (labels) |
@@ -44,6 +44,9 @@ lib/
 │   └── widgets/                  # Shared reusable widgets
 ├── core/                         # Shared across all features
 │   ├── constants/                # AppConstants (URLs, social links)
+│   ├── remote_config/            # Shared Remote Config infrastructure
+│   │   ├── domain/               # TypeEnum, repository contract, use cases
+│   │   └── infra/                # Firebase implementation
 │   └── utils/                    # Firebase options, URL launcher helper
 ├── features/
 │   ├── loading/
@@ -53,17 +56,12 @@ lib/
 │       │   └── entities/         # ProjectData, SkillCategory, ResumeData
 │       └── presentation/
 │           ├── pages/            # HomePage
-│           ├── sections/         # Hero, About, Projects, Resume, Skills, Contact
-│           └── widgets/          # Section-specific widgets
-├── gen/                          # Auto-generated (slang strings, asset refs)
-│   ├── assets.gen.dart
-│   └── i18n/
-│       ├── strings.g.dart
-│       └── strings_en.g.dart
-packages/
-└── remote_config/                # Modular package for Firebase Remote Config
-    ├── domain/                   # TypeEnum, repository contract, use cases
-    └── infra/                    # Firebase implementation
+│           └── widgets/          # Section widgets (hero/about/projects/resume/skills/contact) + section-specific subwidgets
+└── gen/                          # Auto-generated (slang strings, asset refs)
+    ├── assets.gen.dart
+    └── i18n/
+        ├── strings.g.dart
+        └── strings_en.g.dart
 ```
 
 ### Data Flow
@@ -73,7 +71,7 @@ UI (Page/Section/Widget) → UseCase → Repository (abstract) → Service (Fire
 ```
 
 - Domain entities (`ProjectData`, `SkillCategory`, `ResumeData`) are plain Dart classes with no external dependencies.
-- The `remote_config` package follows a clean layered architecture: `domain/` (contracts + use cases) → `infra/` (Firebase implementation).
+- The `remote_config` module follows a clean layered architecture: `domain/` (contracts + use cases) → `infra/` (Firebase implementation).
 - `AppDependencies` widget uses `MultiRepositoryProvider` to inject use cases across the widget tree.
 
 ---
@@ -95,7 +93,7 @@ Only **2 routes** exist:
 
 ## Remote Config
 
-The `packages/remote_config/` package encapsulates all Firebase Remote Config logic:
+The `lib/core/remote_config/` module encapsulates all Firebase Remote Config logic:
 
 - **`TypeEnum`** — Defines all remote config keys (store URLs, award links, resume PDF).
 - **`RemoteConfigInitializeUseCase`** — Initializes Firebase Remote Config with default values.
@@ -160,7 +158,9 @@ Remote config values drive dynamic content like Play Store/App Store links, awar
 
 ---
 
-## Portfolio Sections (`lib/features/portfolio/presentation/sections/`)
+## Portfolio Sections (`lib/features/portfolio/presentation/widgets/`)
+
+Sections live directly under `widgets/`. Small sections are single files (`about_section.dart`, `contact_section.dart`); larger sections have their own folder with a `widgets/` subfolder for section-specific children (e.g., `projects_section/projects_section.dart` + `projects_section/widgets/project_content.dart`).
 
 The `HomePage` is a `CustomScrollView` with these sections in order:
 
@@ -199,6 +199,8 @@ The `HomePage` is a `CustomScrollView` with these sections in order:
 2. Initialises git in `build/web/`, commits, and force-pushes to the `gh-pages` branch.
 3. Hosted at **`guilhermeeng99.github.io`**.
 
+CI (`.github/workflows/deploy.yml`) mirrors this: `flutter pub get` → `dart run slang` → `flutter analyze` → `flutter build web --release` → publish to `gh-pages`.
+
 ---
 
 ## Design Principles
@@ -221,7 +223,7 @@ The `HomePage` is a `CustomScrollView` with these sections in order:
 | **Private fields** | Prefix with `_`; expose only what's needed |
 | **File length** | Keep files under 200 lines; split if larger |
 | **Widget decomposition** | Extract widgets when they exceed ~50 lines or are reused |
-| **Sections** | Each portfolio section lives in its own file under `presentation/sections/` |
+| **Sections** | Each portfolio section lives under `presentation/widgets/` — as a flat file for simple sections, or a subfolder with its own `widgets/` for sections with nested pieces |
 | **Comments** | Only where the *why* isn't obvious; avoid restating the code |
 | **Lint rules** | Follow `very_good_analysis`; never add `// ignore` without justification |
 | **Animations** | Use `ScrollFadeIn` for scroll-triggered animations; prefer `AnimationController` + `CurvedAnimation` for custom effects |
@@ -229,31 +231,53 @@ The `HomePage` is a `CustomScrollView` with these sections in order:
 
 ---
 
-## When Adding a New Section
+## Checklists
 
-1. Create a new section widget under `lib/features/portfolio/presentation/sections/`.
+### When Adding a New Section
+
+1. Create a new section widget under `lib/features/portfolio/presentation/widgets/` — as a flat file (`<name>_section.dart`) if simple, or as a subfolder (`<name>_section/<name>_section.dart` + `<name>_section/widgets/`) if the section has its own nested pieces.
 2. Add any required entity in `lib/features/portfolio/domain/entities/`.
 3. Add all user-facing strings to `lib/app/assets/i18n/en.i18n.json` under a new key and run `dart run slang`.
-4. If the section needs Remote Config values, add the new key to `TypeEnum` in `packages/remote_config/`.
+4. If the section needs Remote Config values, add the new key to `TypeEnum` in `lib/core/remote_config/`.
 5. Register the section in `HomePage`'s `CustomScrollView` children, wrapped in `ScrollFadeIn`.
 6. Add a nav entry in `NavBar` with the corresponding `GlobalKey` for scroll-to navigation.
 7. Ensure responsive layout using `ResponsiveLayout` breakpoints.
 
-## When Adding a New Project
+### When Adding a New Project
 
 1. Add the project data in the `ProjectData` entity list within the projects section.
 2. Add the project image to `lib/app/assets/images/projects/` and re-run asset generation if needed.
 3. If the project has dynamic URLs (store links, awards), add Remote Config keys in `TypeEnum` with defaults.
 4. Add all display strings to the i18n JSON and regenerate.
 
----
-
-## Post-Implementation Checklist
+### Post-Implementation Checklist
 
 After every code change (new features, bug fixes, refactors), **always**:
 
 1. Run `dart run slang` if any i18n JSON file was modified.
 2. Run `flutter analyze` and verify **zero** errors, warnings, **and** info-level issues.
-3. Fix every reported issue — this project uses `very_good_analysis`:
+3. Fix every reported issue — this project uses `very_good_analysis`.
 4. Never add `// ignore` without clear justification in a comment.
 5. Treat info-level lint hints the same as warnings — they must be resolved.
+
+> Once the `/ship-check` command lands (Stage 3 of the harness rollout), run it to automate the above.
+
+---
+
+## Spec Workflow
+
+Non-trivial changes (new sections, new infrastructure, cross-cutting refactors) start in `docs/specs/` as a numbered single-file spec before code is written.
+
+- Location: `docs/specs/NNNN-slug.md` (zero-padded number, monotonic, kebab-case slug).
+- Template and numbering rules live in `docs/specs/README.md`.
+- Fixed sections: `## Context`, `## Requirements`, `## Design`, `## Tasks`, `## Verification`.
+- Once `/spec` is available (Stage 2 of the harness rollout), use it to scaffold new specs. Until then, copy the template from `docs/specs/README.md` manually.
+- Trivial changes (typo fixes, dependency bumps, one-line bug fixes) skip the spec.
+
+## Quality Gate
+
+Before claiming any task complete, the Post-Implementation Checklist above must pass. Once `/ship-check` is available (Stage 3 of the harness rollout), that command codifies the gate — a green `/ship-check` predicts a green CI deploy.
+
+## Plan Mode
+
+For any feature with a spec, fill the `## Design` section **in plan mode** before writing code. Plan mode outputs land in the spec file rather than in a scratch plan file, so the design thinking is preserved with the feature and not lost between sessions.

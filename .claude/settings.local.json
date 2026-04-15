@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git rm:*)",
+      "Bash(wc -l /c/Users/guiga/Documents/Projetos/guilhermeeng99.github.io/.claude/worktrees/ecstatic-blackburn/lib/features/portfolio/presentation/widgets/*.dart)",
+      "Bash(find /c/Users/guiga/Documents/Projetos/guilhermeeng99.github.io/.claude/worktrees/ecstatic-blackburn/lib/features/portfolio/presentation/widgets -name \"*.dart\" -type f -exec wc -l {} +)"
+    ]
+  }
+}
