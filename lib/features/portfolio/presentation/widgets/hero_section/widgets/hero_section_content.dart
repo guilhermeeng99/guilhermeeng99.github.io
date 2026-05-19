@@ -62,25 +62,25 @@ class HeroSectionContent extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 40),
-        const Row(
+        Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             SocialButton(
               icon: FontAwesomeIcons.github,
               url: AppConstants.githubUrl,
-              tooltip: 'GitHub',
+              tooltip: t.contact.github,
             ),
-            SizedBox(width: 12),
+            const SizedBox(width: 12),
             SocialButton(
               icon: FontAwesomeIcons.linkedin,
               url: AppConstants.linkedinUrl,
-              tooltip: 'LinkedIn',
+              tooltip: t.contact.linkedin,
             ),
-            SizedBox(width: 12),
+            const SizedBox(width: 12),
             SocialButton(
               icon: Icons.email_outlined,
               url: AppConstants.emailUrl,
-              tooltip: 'Email',
+              tooltip: t.contact.email,
             ),
           ],
         ),

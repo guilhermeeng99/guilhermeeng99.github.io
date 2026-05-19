@@ -8,14 +8,6 @@ import 'package:my_portfolio/app/widgets/nav_bar/widgets/theme_toggle_button.dar
 import 'package:my_portfolio/app/widgets/responsive_layout.dart';
 import 'package:my_portfolio/gen/i18n/strings.g.dart';
 
-const _kNavShadow = [
-  BoxShadow(
-    color: Color(0x40000000),
-    blurRadius: 12,
-    offset: Offset(0, 2),
-  ),
-];
-
 List<NavEntry> _buildNavEntries() => [
   (index: 1, label: t.nav.about),
   (index: 2, label: t.nav.projects),
@@ -52,7 +44,13 @@ class _NavBarState extends State<NavBar> {
             color: context.appColors.divider,
           ),
         ),
-        boxShadow: _kNavShadow,
+        boxShadow: [
+          BoxShadow(
+            color: context.appColors.navShadow,
+            blurRadius: 12,
+            offset: const Offset(0, 2),
+          ),
+        ],
       ),
       child: SafeArea(
         bottom: false,

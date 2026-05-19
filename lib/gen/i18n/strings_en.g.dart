@@ -162,6 +162,9 @@ class TranslationsProjectsEn {
 	/// en: 'View on Store'
 	String get view_on_store => 'View on Store';
 
+	/// en: 'downloads'
+	String get downloads_suffix => 'downloads';
+
 	late final TranslationsProjectsItemsEn items = TranslationsProjectsItemsEn._(_root);
 }
 
@@ -268,7 +271,6 @@ class TranslationsProjectsItemsEn {
 	late final TranslationsProjectsItemsNeverHaveIEverXEn never_have_i_ever_x = TranslationsProjectsItemsNeverHaveIEverXEn._(_root);
 	late final TranslationsProjectsItemsBoozeEn booze = TranslationsProjectsItemsBoozeEn._(_root);
 	late final TranslationsProjectsItemsVdxEn vdx = TranslationsProjectsItemsVdxEn._(_root);
-	late final TranslationsProjectsItemsFlutterBaseEn flutter_base = TranslationsProjectsItemsFlutterBaseEn._(_root);
 	late final TranslationsProjectsItemsFinancoEn financo = TranslationsProjectsItemsFinancoEn._(_root);
 	late final TranslationsProjectsItemsHarvestEn harvest = TranslationsProjectsItemsHarvestEn._(_root);
 	late final TranslationsProjectsItemsBluBiEn blu_bi = TranslationsProjectsItemsBluBiEn._(_root);
@@ -381,8 +383,8 @@ class TranslationsProjectsItemsMagicSortEn {
 	/// en: 'Magic Sort'
 	String get name => 'Magic Sort';
 
-	/// en: 'Hybrid casual puzzle game developed in partnership with Wildlife Studios. Selected for the Google Play Indie Games Accelerator 2024 program, with 1M+ downloads and live-ops driven monetization systems.'
-	String get description => 'Hybrid casual puzzle game developed in partnership with Wildlife Studios. Selected for the Google Play Indie Games Accelerator 2024 program, with 1M+ downloads and live-ops driven monetization systems.';
+	/// en: 'Hybrid casual puzzle game built in partnership with Wildlife Studios. Selected for Google Play's Indie Games Accelerator 2024 and reached 1M+ downloads, powered by live-ops-driven monetization and engagement systems.'
+	String get description => 'Hybrid casual puzzle game built in partnership with Wildlife Studios. Selected for Google Play\'s Indie Games Accelerator 2024 and reached 1M+ downloads, powered by live-ops-driven monetization and engagement systems.';
 
 	/// en: '1M+'
 	String get metric => '1M+';
@@ -390,8 +392,8 @@ class TranslationsProjectsItemsMagicSortEn {
 	/// en: 'Indie Games Accelerator 2024'
 	String get award => 'Indie Games Accelerator 2024';
 
-	/// en: 'Led high-performance UI architecture. Built monetization pipelines using Firebase Remote Config and A/B testing, improving engagement and revenue performance. Architected and stabilized a high-performance Flutter codebase optimized for low-end Android devices, focusing on rendering efficiency, memory footprint reduction, and frame stability through deep profiling and refactoring. Implemented event-driven state management and feature isolation to support scalable Live Ops releases.'
-	String get details => 'Led high-performance UI architecture. Built monetization pipelines using Firebase Remote Config and A/B testing, improving engagement and revenue performance. Architected and stabilized a high-performance Flutter codebase optimized for low-end Android devices, focusing on rendering efficiency, memory footprint reduction, and frame stability through deep profiling and refactoring. Implemented event-driven state management and feature isolation to support scalable Live Ops releases.';
+	/// en: 'Led the team's UI architecture and shipped a high-performance Flutter codebase tuned for low-end Android devices. Reduced frame build time, memory footprint, and frame jank via deep profiling, rendering optimizations, and targeted refactors. Built monetization and content-delivery pipelines using Firebase Remote Config and A/B testing, lifting engagement and revenue per session. Implemented event-driven state management with feature isolation, enabling fast, scalable Live Ops releases without regressions.'
+	String get details => 'Led the team\'s UI architecture and shipped a high-performance Flutter codebase tuned for low-end Android devices. Reduced frame build time, memory footprint, and frame jank via deep profiling, rendering optimizations, and targeted refactors. Built monetization and content-delivery pipelines using Firebase Remote Config and A/B testing, lifting engagement and revenue per session. Implemented event-driven state management with feature isolation, enabling fast, scalable Live Ops releases without regressions.';
 }
 
 // Path: projects.items.rabit
@@ -405,8 +407,8 @@ class TranslationsProjectsItemsRabitEn {
 	/// en: 'Rabit'
 	String get name => 'Rabit';
 
-	/// en: 'Gamified habit tracker that reached 5M+ downloads and selected for App of the Year 2021 (Google Play).'
-	String get description => 'Gamified habit tracker that reached 5M+ downloads and selected for App of the Year 2021 (Google Play).';
+	/// en: 'Gamified habit tracker that reached 5M+ downloads worldwide and earned a Google Play Best of 2021 selection. Turns daily routines into streaks worth keeping through delightful UX and behavior-driven engagement loops.'
+	String get description => 'Gamified habit tracker that reached 5M+ downloads worldwide and earned a Google Play Best of 2021 selection. Turns daily routines into streaks worth keeping through delightful UX and behavior-driven engagement loops.';
 
 	/// en: '5M+'
 	String get metric => '5M+';
@@ -414,8 +416,8 @@ class TranslationsProjectsItemsRabitEn {
 	/// en: 'Google Play Best of 2021'
 	String get award => 'Google Play Best of 2021';
 
-	/// en: 'Developed core engagement systems including push notifications, streak logic, Firestore sync, and high-performance animated UI. Implemented data-driven retention features that significantly improved user engagement and long-term retention.'
-	String get details => 'Developed core engagement systems including push notifications, streak logic, Firestore sync, and high-performance animated UI. Implemented data-driven retention features that significantly improved user engagement and long-term retention.';
+	/// en: 'Developed the core engagement systems: push notifications, streak logic, Firestore sync, and high-performance animated UI. Built data-driven retention features (cohort analysis, behavioral nudges, personalized reminder windows) that meaningfully lifted D1 and D7 retention. Tuned rendering and animation pipelines for smooth performance on low-end Android devices.'
+	String get details => 'Developed the core engagement systems: push notifications, streak logic, Firestore sync, and high-performance animated UI. Built data-driven retention features (cohort analysis, behavioral nudges, personalized reminder windows) that meaningfully lifted D1 and D7 retention. Tuned rendering and animation pipelines for smooth performance on low-end Android devices.';
 }
 
 // Path: projects.items.cups
@@ -429,14 +431,14 @@ class TranslationsProjectsItemsCupsEn {
 	/// en: 'Cups'
 	String get name => 'Cups';
 
-	/// en: 'Water sort puzzle game with 4.5M+ downloads and strong traction in the US market, developed in partnership with Homa Games.'
-	String get description => 'Water sort puzzle game with 4.5M+ downloads and strong traction in the US market, developed in partnership with Homa Games.';
+	/// en: 'Water-sort puzzle game co-developed with Homa Games. Reached 4.5M+ downloads with strong traction in the US market through tight gameplay loops and broad-reach monetization.'
+	String get description => 'Water-sort puzzle game co-developed with Homa Games. Reached 4.5M+ downloads with strong traction in the US market through tight gameplay loops and broad-reach monetization.';
 
 	/// en: '4.5M+'
 	String get metric => '4.5M+';
 
-	/// en: 'Implemented the full UI layer and monetization systems. Co-led performance optimization initiatives reducing frame build time and improving performance on low-end devices.'
-	String get details => 'Implemented the full UI layer and monetization systems. Co-led performance optimization initiatives reducing frame build time and improving performance on low-end devices.';
+	/// en: 'Implemented the full UI layer and the monetization stack (rewarded ads, interstitials, eCPM-aware placements). Co-led performance optimization initiatives that reduced frame build time and improved smoothness on low-end Android devices, directly expanding the addressable audience. Co-owned the publishing and release pipeline alongside the Homa partnership team.'
+	String get details => 'Implemented the full UI layer and the monetization stack (rewarded ads, interstitials, eCPM-aware placements). Co-led performance optimization initiatives that reduced frame build time and improved smoothness on low-end Android devices, directly expanding the addressable audience. Co-owned the publishing and release pipeline alongside the Homa partnership team.';
 }
 
 // Path: projects.items.farm_vs_aliens
@@ -450,14 +452,14 @@ class TranslationsProjectsItemsFarmVsAliensEn {
 	/// en: 'Farm vs Aliens'
 	String get name => 'Farm vs Aliens';
 
-	/// en: 'Mobile game combining merge mechanics and tower defense systems, backed by Google Play Indie Games Fund 2023.'
-	String get description => 'Mobile game combining merge mechanics and tower defense systems, backed by Google Play Indie Games Fund 2023.';
+	/// en: 'Mobile game blending merge mechanics with tower-defense progression. Backed by Google Play's Indie Games Fund 2023, recognized for original gameplay and a strong vertical slice.'
+	String get description => 'Mobile game blending merge mechanics with tower-defense progression. Backed by Google Play\'s Indie Games Fund 2023, recognized for original gameplay and a strong vertical slice.';
 
 	/// en: 'Indie Games Fund 2023'
 	String get award => 'Indie Games Fund 2023';
 
-	/// en: 'Led product direction and designed the core gameplay loop. Oversaw feature prioritization and implementation strategy, contributing to the studio securing fund backing.'
-	String get details => 'Led product direction and designed the core gameplay loop. Oversaw feature prioritization and implementation strategy, contributing to the studio securing fund backing.';
+	/// en: 'Led product direction and designed the core gameplay loop. Owned feature prioritization, scope, and implementation strategy across the team, work that directly contributed to the studio securing Google Play Indie Games Fund backing. Built in Unity to leverage its 2D animation tooling and performance characteristics suited for merge-grid simulations.'
+	String get details => 'Led product direction and designed the core gameplay loop. Owned feature prioritization, scope, and implementation strategy across the team, work that directly contributed to the studio securing Google Play Indie Games Fund backing. Built in Unity to leverage its 2D animation tooling and performance characteristics suited for merge-grid simulations.';
 }
 
 // Path: projects.items.capy
@@ -471,11 +473,11 @@ class TranslationsProjectsItemsCapyEn {
 	/// en: 'Capy – AI-Powered Virtual Wellness Companion'
 	String get name => 'Capy – AI-Powered Virtual Wellness Companion';
 
-	/// en: 'AI-powered self-care mobile application featuring a virtual pet driven by OpenAI APIs, combining habit tracking, mood journaling, and intelligent conversational interactions.'
-	String get description => 'AI-powered self-care mobile application featuring a virtual pet driven by OpenAI APIs, combining habit tracking, mood journaling, and intelligent conversational interactions.';
+	/// en: 'AI-powered self-care companion built around a virtual pet that grows with the user. Combines habit tracking, mood journaling, and context-aware conversations powered by OpenAI APIs to make daily wellness feel personal.'
+	String get description => 'AI-powered self-care companion built around a virtual pet that grows with the user. Combines habit tracking, mood journaling, and context-aware conversations powered by OpenAI APIs to make daily wellness feel personal.';
 
-	/// en: 'Built scalable daily engagement loops using push notifications and behavioral tracking, improving retention and reinforcing consistent user habits. Led high-performance UI architecture.'
-	String get details => 'Built scalable daily engagement loops using push notifications and behavioral tracking, improving retention and reinforcing consistent user habits. Led high-performance UI architecture.';
+	/// en: 'Designed and built scalable daily engagement loops with push notifications, streak mechanics, and behavioral tracking, driving retention and reinforcing consistent user habits. Led high-performance UI architecture with smooth pet animations and responsive interactions across devices. Integrated OpenAI APIs for context-aware companion responses tied to the user's current mood and journal entries.'
+	String get details => 'Designed and built scalable daily engagement loops with push notifications, streak mechanics, and behavioral tracking, driving retention and reinforcing consistent user habits. Led high-performance UI architecture with smooth pet animations and responsive interactions across devices. Integrated OpenAI APIs for context-aware companion responses tied to the user\'s current mood and journal entries.';
 }
 
 // Path: projects.items.drop_merge
@@ -489,11 +491,11 @@ class TranslationsProjectsItemsDropMergeEn {
 	/// en: 'Drop & Merge'
 	String get name => 'Drop & Merge';
 
-	/// en: 'Addictive drop and merge puzzle game combining strategic placement with satisfying merge mechanics for an engaging casual experience.'
-	String get description => 'Addictive drop and merge puzzle game combining strategic placement with satisfying merge mechanics for an engaging casual experience.';
+	/// en: 'Drop-and-merge puzzle game combining strategic placement with satisfying merge mechanics for a tight, engaging casual loop.'
+	String get description => 'Drop-and-merge puzzle game combining strategic placement with satisfying merge mechanics for a tight, engaging casual loop.';
 
-	/// en: 'Implemented the complete UI layer'
-	String get details => 'Implemented the complete UI layer';
+	/// en: 'Implemented the complete UI layer with smooth merge animations, drop physics feedback, and responsive grid interactions. Tuned rendering for stable frame times on low-end Android devices.'
+	String get details => 'Implemented the complete UI layer with smooth merge animations, drop physics feedback, and responsive grid interactions. Tuned rendering for stable frame times on low-end Android devices.';
 }
 
 // Path: projects.items.never_have_i_ever_x
@@ -507,14 +509,14 @@ class TranslationsProjectsItemsNeverHaveIEverXEn {
 	/// en: 'Never Have I Ever X'
 	String get name => 'Never Have I Ever X';
 
-	/// en: 'A fun party game app where players discover surprising facts about each other through classic 'Never Have I Ever' questions.'
-	String get description => 'A fun party game app where players discover surprising facts about each other through classic \'Never Have I Ever\' questions.';
+	/// en: 'Party game app where players uncover surprising facts about each other through classic 'Never Have I Ever' rounds. Reached 500K+ downloads on the back of share-driven viral loops.'
+	String get description => 'Party game app where players uncover surprising facts about each other through classic \'Never Have I Ever\' rounds. Reached 500K+ downloads on the back of share-driven viral loops.';
 
 	/// en: '500K+'
 	String get metric => '500K+';
 
-	/// en: 'Implemented UI and hundreds of curated questions across multiple categories, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.'
-	String get details => 'Implemented UI and hundreds of curated questions across multiple categories, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.';
+	/// en: 'Implemented the UI, hundreds of curated questions across multiple categories, and social sharing features. Integrated ad monetization (rewarded + interstitial) and analytics to optimize engagement and revenue per session.'
+	String get details => 'Implemented the UI, hundreds of curated questions across multiple categories, and social sharing features. Integrated ad monetization (rewarded + interstitial) and analytics to optimize engagement and revenue per session.';
 }
 
 // Path: projects.items.booze
@@ -528,14 +530,14 @@ class TranslationsProjectsItemsBoozeEn {
 	/// en: 'Booze'
 	String get name => 'Booze';
 
-	/// en: 'A drinking game app with creative challenges, mini-games, and social dynamics designed for fun group gatherings.'
-	String get description => 'A drinking game app with creative challenges, mini-games, and social dynamics designed for fun group gatherings.';
+	/// en: 'Drinking party game with creative challenges, mini-games, and social mechanics designed for fun group gatherings. Reached 500K+ downloads through friend-driven discovery.'
+	String get description => 'Drinking party game with creative challenges, mini-games, and social mechanics designed for fun group gatherings. Reached 500K+ downloads through friend-driven discovery.';
 
 	/// en: '500K+'
 	String get metric => '500K+';
 
-	/// en: 'Implemented UI and diverse challenge modes, customizable game rules, and group play mechanics. Implemented smooth animations, ad monetization, and Firebase analytics for tracking user engagement and session data.'
-	String get details => 'Implemented UI and diverse challenge modes, customizable game rules, and group play mechanics. Implemented smooth animations, ad monetization, and Firebase analytics for tracking user engagement and session data.';
+	/// en: 'Implemented the UI, diverse challenge modes, customizable game rules, and group-play mechanics. Built smooth animations, ad monetization (rewarded + interstitial), and Firebase analytics to track engagement and session data.'
+	String get details => 'Implemented the UI, diverse challenge modes, customizable game rules, and group-play mechanics. Built smooth animations, ad monetization (rewarded + interstitial), and Firebase analytics to track engagement and session data.';
 }
 
 // Path: projects.items.vdx
@@ -549,32 +551,14 @@ class TranslationsProjectsItemsVdxEn {
 	/// en: 'Truth or Dare X'
 	String get name => 'Truth or Dare X';
 
-	/// en: 'A fun party game app where players discover surprising facts about each other through classic 'Truth or Dare' questions.'
-	String get description => 'A fun party game app where players discover surprising facts about each other through classic \'Truth or Dare\' questions.';
+	/// en: 'Party game app where friends challenge each other through classic 'Truth or Dare' prompts. Reached 1M+ downloads through tight session loops and share-driven distribution.'
+	String get description => 'Party game app where friends challenge each other through classic \'Truth or Dare\' prompts. Reached 1M+ downloads through tight session loops and share-driven distribution.';
 
 	/// en: '1M+'
 	String get metric => '1M+';
 
-	/// en: 'Implemented UI and hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.'
-	String get details => 'Implemented UI and hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.';
-}
-
-// Path: projects.items.flutter_base
-class TranslationsProjectsItemsFlutterBaseEn {
-	TranslationsProjectsItemsFlutterBaseEn._(this._root);
-
-	final Translations _root; // ignore: unused_field
-
-	// Translations
-
-	/// en: 'Flutter Base'
-	String get name => 'Flutter Base';
-
-	/// en: 'Interactive Flutter learning platform. The goal is to make learning Flutter progressive and engaging, with gamification mechanics like XP, daily streaks, levels, and daily challenges.'
-	String get description => 'Interactive Flutter learning platform. The goal is to make learning Flutter progressive and engaging, with gamification mechanics like XP, daily streaks, levels, and daily challenges.';
-
-	/// en: 'Architected the platform following Clean Architecture principles with strict layer separation (presentation, domain, data), ensuring scalability and long-term maintainability. Applied SOLID, KISS, and DRY principles throughout the codebase to produce modular, readable, and reusable components. Implemented a complete authentication system with secure login, registration, and session persistence. Integrated a relational database layer with repository pattern abstraction, enabling flexible data source swapping. Leveraged AI-assisted development workflows to accelerate feature delivery, code generation, and iterative prototyping, significantly reducing implementation time without compromising code quality.'
-	String get details => 'Architected the platform following Clean Architecture principles with strict layer separation (presentation, domain, data), ensuring scalability and long-term maintainability. Applied SOLID, KISS, and DRY principles throughout the codebase to produce modular, readable, and reusable components. Implemented a complete authentication system with secure login, registration, and session persistence. Integrated a relational database layer with repository pattern abstraction, enabling flexible data source swapping. Leveraged AI-assisted development workflows to accelerate feature delivery, code generation, and iterative prototyping, significantly reducing implementation time without compromising code quality.';
+	/// en: 'Implemented the UI, hundreds of curated prompts across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization (rewarded + interstitial) and analytics to optimize engagement and revenue per session.'
+	String get details => 'Implemented the UI, hundreds of curated prompts across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization (rewarded + interstitial) and analytics to optimize engagement and revenue per session.';
 }
 
 // Path: projects.items.financo
@@ -588,11 +572,11 @@ class TranslationsProjectsItemsFinancoEn {
 	/// en: 'Financo'
 	String get name => 'Financo';
 
-	/// en: 'A personal finance manager desktop app for tracking transactions, credit cards, and financial movements, with support for importing and exporting data.'
-	String get description => 'A personal finance manager desktop app for tracking transactions, credit cards, and financial movements, with support for importing and exporting data.';
+	/// en: 'Cross-platform personal finance manager with AI-powered natural-language entry. Users describe expenses via text, receipt photos, or voice, and Vertex AI Gemini parses them into structured transactions for one-tap confirmation. Targets Android, iOS, and Web.'
+	String get description => 'Cross-platform personal finance manager with AI-powered natural-language entry. Users describe expenses via text, receipt photos, or voice, and Vertex AI Gemini parses them into structured transactions for one-tap confirmation. Targets Android, iOS, and Web.';
 
-	/// en: 'Built with Flutter targeting Windows desktop. Monorepo structure managed with Melos, split into app_core, app_database, and app_widgets packages. Uses flutter_modular for routing and dependency injection, Drift (SQLite) for local persistence, GetX and flutter_hooks for state management, and slang for internationalization (EN/PT).'
-	String get details => 'Built with Flutter targeting Windows desktop. Monorepo structure managed with Melos, split into app_core, app_database, and app_widgets packages. Uses flutter_modular for routing and dependency injection, Drift (SQLite) for local persistence, GetX and flutter_hooks for state management, and slang for internationalization (EN/PT).';
+	/// en: 'Built on Clean Architecture with feature-first layering (domain/data/presentation). Implemented multi-account management (checking + credit cards with linking), hierarchical categorization, cross-account transfers, recurring bills with auto-generation, CSV bulk import, and a dashboard with month/year filters, income-vs-expense summaries, category breakdowns, and evolution charts. Backed by Cloud Functions (Node.js 22 + TypeScript) running Vertex AI Gemini for the multimodal chat pipeline (text, image, voice transcription). Stack: flutter_bloc (Cubits + Blocs) • go_router • get_it • Firebase Auth + Google Sign-In • Cloud Firestore (sync) • Drift/SQLite (offline) • FCM + flutter_local_notifications (overdue-bill alerts) • fl_chart • dartz (Either<Failure, T>) • slang i18n. Spec-driven workflow with markdown contracts per feature. Layered testing with mocktail + bloc_test + fake_cloud_firestore. CI/CD via GitHub Actions signs and deploys Android + Web on every push to main.'
+	String get details => 'Built on Clean Architecture with feature-first layering (domain/data/presentation). Implemented multi-account management (checking + credit cards with linking), hierarchical categorization, cross-account transfers, recurring bills with auto-generation, CSV bulk import, and a dashboard with month/year filters, income-vs-expense summaries, category breakdowns, and evolution charts. Backed by Cloud Functions (Node.js 22 + TypeScript) running Vertex AI Gemini for the multimodal chat pipeline (text, image, voice transcription). Stack: flutter_bloc (Cubits + Blocs) • go_router • get_it • Firebase Auth + Google Sign-In • Cloud Firestore (sync) • Drift/SQLite (offline) • FCM + flutter_local_notifications (overdue-bill alerts) • fl_chart • dartz (Either<Failure, T>) • slang i18n. Spec-driven workflow with markdown contracts per feature. Layered testing with mocktail + bloc_test + fake_cloud_firestore. CI/CD via GitHub Actions signs and deploys Android + Web on every push to main.';
 }
 
 // Path: projects.items.harvest
@@ -609,11 +593,11 @@ class TranslationsProjectsItemsHarvestEn {
 	/// en: 'Production-Ready App 24-Hours-AI'
 	String get award => 'Production-Ready App 24-Hours-AI';
 
-	/// en: 'A fresh food e-commerce app connecting communities directly with local farmers, focused on perishable products with a fast, reliable, and elegant user experience.'
-	String get description => 'A fresh food e-commerce app connecting communities directly with local farmers, focused on perishable products with a fast, reliable, and elegant user experience.';
+	/// en: 'Fresh food e-commerce app connecting local farmers directly with their communities. Perishable-first product catalog with a fast, reliable shopping experience, shipped end-to-end in a 24-hour AI-assisted build.'
+	String get description => 'Fresh food e-commerce app connecting local farmers directly with their communities. Perishable-first product catalog with a fast, reliable shopping experience, shipped end-to-end in a 24-hour AI-assisted build.';
 
-	/// en: 'Architected the app with Clean Architecture and a feature-first structure across 13 features, ensuring long-term scalability and maintainability. Implemented Firebase Auth with email/password and Google Sign-In using platform-specific OAuth flows (popup on web, credential on mobile). Built a reusable UI component system with 8+ shared widgets and a complete design system (colors, typography, theme). Designed a centralized startup coordinator using BLoC to pre-load all data before navigation, eliminating per-page loading states. Structured a role-based admin system via a secure Firestore collection guarded by server-side security rules. Wrote 48+ unit tests covering domain entities, repository cache logic, and BLoC state machines using bloc_test and mocktail.'
-	String get details => 'Architected the app with Clean Architecture and a feature-first structure across 13 features, ensuring long-term scalability and maintainability. Implemented Firebase Auth with email/password and Google Sign-In using platform-specific OAuth flows (popup on web, credential on mobile). Built a reusable UI component system with 8+ shared widgets and a complete design system (colors, typography, theme). Designed a centralized startup coordinator using BLoC to pre-load all data before navigation, eliminating per-page loading states. Structured a role-based admin system via a secure Firestore collection guarded by server-side security rules. Wrote 48+ unit tests covering domain entities, repository cache logic, and BLoC state machines using bloc_test and mocktail.';
+	/// en: 'Architected with Clean Architecture and a feature-first structure across 13 features for long-term scalability and maintainability. Implemented Firebase Auth with email/password and Google Sign-In using platform-specific OAuth flows (popup on web, credential on mobile). Built a reusable UI component system with 8+ shared widgets and a complete Material 3 design system (Fresh Harvest palette, Poppins/Inter typography). Designed a centralized BLoC startup coordinator that pre-loads all data before navigation, eliminating per-page loading states. Structured a role-based admin system via a secure Firestore collection guarded by server-side security rules. Wrote 48+ unit tests covering domain entities, repository cache logic, and BLoC state machines with bloc_test and mocktail.'
+	String get details => 'Architected with Clean Architecture and a feature-first structure across 13 features for long-term scalability and maintainability. Implemented Firebase Auth with email/password and Google Sign-In using platform-specific OAuth flows (popup on web, credential on mobile). Built a reusable UI component system with 8+ shared widgets and a complete Material 3 design system (Fresh Harvest palette, Poppins/Inter typography). Designed a centralized BLoC startup coordinator that pre-loads all data before navigation, eliminating per-page loading states. Structured a role-based admin system via a secure Firestore collection guarded by server-side security rules. Wrote 48+ unit tests covering domain entities, repository cache logic, and BLoC state machines with bloc_test and mocktail.';
 }
 
 // Path: projects.items.blu_bi
@@ -627,11 +611,11 @@ class TranslationsProjectsItemsBluBiEn {
 	/// en: 'Blu BI'
 	String get name => 'Blu BI';
 
-	/// en: 'A Business Intelligence app for tracking and visualizing financial data, including revenue, expenses, and project-based results with reports such as Income Statement (DRE) and period analysis.'
-	String get description => 'A Business Intelligence app for tracking and visualizing financial data, including revenue, expenses, and project-based results with reports such as Income Statement (DRE) and period analysis.';
+	/// en: 'Business Intelligence app for tracking and visualizing financial data: revenue, expenses, and project-based results with charts, Income Statement (DRE) reports, and period analysis. Multiplatform (Android, iOS, Web, Windows, macOS, Linux).'
+	String get description => 'Business Intelligence app for tracking and visualizing financial data: revenue, expenses, and project-based results with charts, Income Statement (DRE) reports, and period analysis. Multiplatform (Android, iOS, Web, Windows, macOS, Linux).';
 
-	/// en: 'Flutter • GetX (state management & navigation) • Firebase Auth + Google Sign-In • Firebase Remote Config • Dio (REST API) • Isar (local database) • fl_chart (charts) • Freezed + json_serializable (models) • get_it (dependency injection) • local_auth (biometric authentication) • Clean Architecture (data/domain/presentation) • Multiplatform: Android, iOS, Web & Desktop'
-	String get details => 'Flutter • GetX (state management & navigation) • Firebase Auth + Google Sign-In • Firebase Remote Config • Dio (REST API) • Isar (local database) • fl_chart (charts) • Freezed + json_serializable (models) • get_it (dependency injection) • local_auth (biometric authentication) • Clean Architecture (data/domain/presentation) • Multiplatform: Android, iOS, Web & Desktop';
+	/// en: 'Built on Clean Architecture with self-contained feature modules (auth, finance, projects, company, personal) registered via GetX bindings. Implemented Google Sign-In with biometric (local_auth) protection, offline-first persistence via Isar, REST integration via Dio, and Firebase Remote Config for feature flags. Built dashboards and analytics with fl_chart: revenue/expense bar and pie charts, project-level financial breakdowns, money goals per category, and period-based reporting. Used Freezed + json_serializable for immutable models and get_it for dependency injection. Responsive layouts adapt cleanly from mobile to desktop. Stack: Flutter • GetX (state + navigation) • Firebase Auth + Google Sign-In • Firebase Remote Config • Dio • Isar • fl_chart • Freezed + json_serializable • get_it • local_auth.'
+	String get details => 'Built on Clean Architecture with self-contained feature modules (auth, finance, projects, company, personal) registered via GetX bindings. Implemented Google Sign-In with biometric (local_auth) protection, offline-first persistence via Isar, REST integration via Dio, and Firebase Remote Config for feature flags. Built dashboards and analytics with fl_chart: revenue/expense bar and pie charts, project-level financial breakdowns, money goals per category, and period-based reporting. Used Freezed + json_serializable for immutable models and get_it for dependency injection. Responsive layouts adapt cleanly from mobile to desktop. Stack: Flutter • GetX (state + navigation) • Firebase Auth + Google Sign-In • Firebase Remote Config • Dio • Isar • fl_chart • Freezed + json_serializable • get_it • local_auth.';
 }
 
 // Path: resume.experience.blu_studios
@@ -858,55 +842,53 @@ extension on Translations {
 			'projects.details_button' => 'What i did in this project',
 			'projects.other_projects_toggle' => 'Other Projects',
 			'projects.view_on_store' => 'View on Store',
+			'projects.downloads_suffix' => 'downloads',
 			'projects.items.magic_sort.name' => 'Magic Sort',
-			'projects.items.magic_sort.description' => 'Hybrid casual puzzle game developed in partnership with Wildlife Studios. Selected for the Google Play Indie Games Accelerator 2024 program, with 1M+ downloads and live-ops driven monetization systems.',
+			'projects.items.magic_sort.description' => 'Hybrid casual puzzle game built in partnership with Wildlife Studios. Selected for Google Play\'s Indie Games Accelerator 2024 and reached 1M+ downloads, powered by live-ops-driven monetization and engagement systems.',
 			'projects.items.magic_sort.metric' => '1M+',
 			'projects.items.magic_sort.award' => 'Indie Games Accelerator 2024',
-			'projects.items.magic_sort.details' => 'Led high-performance UI architecture. Built monetization pipelines using Firebase Remote Config and A/B testing, improving engagement and revenue performance. Architected and stabilized a high-performance Flutter codebase optimized for low-end Android devices, focusing on rendering efficiency, memory footprint reduction, and frame stability through deep profiling and refactoring. Implemented event-driven state management and feature isolation to support scalable Live Ops releases.',
+			'projects.items.magic_sort.details' => 'Led the team\'s UI architecture and shipped a high-performance Flutter codebase tuned for low-end Android devices. Reduced frame build time, memory footprint, and frame jank via deep profiling, rendering optimizations, and targeted refactors. Built monetization and content-delivery pipelines using Firebase Remote Config and A/B testing, lifting engagement and revenue per session. Implemented event-driven state management with feature isolation, enabling fast, scalable Live Ops releases without regressions.',
 			'projects.items.rabit.name' => 'Rabit',
-			'projects.items.rabit.description' => 'Gamified habit tracker that reached 5M+ downloads and selected for App of the Year 2021 (Google Play).',
+			'projects.items.rabit.description' => 'Gamified habit tracker that reached 5M+ downloads worldwide and earned a Google Play Best of 2021 selection. Turns daily routines into streaks worth keeping through delightful UX and behavior-driven engagement loops.',
 			'projects.items.rabit.metric' => '5M+',
 			'projects.items.rabit.award' => 'Google Play Best of 2021',
-			'projects.items.rabit.details' => 'Developed core engagement systems including push notifications, streak logic, Firestore sync, and high-performance animated UI. Implemented data-driven retention features that significantly improved user engagement and long-term retention.',
+			'projects.items.rabit.details' => 'Developed the core engagement systems: push notifications, streak logic, Firestore sync, and high-performance animated UI. Built data-driven retention features (cohort analysis, behavioral nudges, personalized reminder windows) that meaningfully lifted D1 and D7 retention. Tuned rendering and animation pipelines for smooth performance on low-end Android devices.',
 			'projects.items.cups.name' => 'Cups',
-			'projects.items.cups.description' => 'Water sort puzzle game with 4.5M+ downloads and strong traction in the US market, developed in partnership with Homa Games.',
+			'projects.items.cups.description' => 'Water-sort puzzle game co-developed with Homa Games. Reached 4.5M+ downloads with strong traction in the US market through tight gameplay loops and broad-reach monetization.',
 			'projects.items.cups.metric' => '4.5M+',
-			'projects.items.cups.details' => 'Implemented the full UI layer and monetization systems. Co-led performance optimization initiatives reducing frame build time and improving performance on low-end devices.',
+			'projects.items.cups.details' => 'Implemented the full UI layer and the monetization stack (rewarded ads, interstitials, eCPM-aware placements). Co-led performance optimization initiatives that reduced frame build time and improved smoothness on low-end Android devices, directly expanding the addressable audience. Co-owned the publishing and release pipeline alongside the Homa partnership team.',
 			'projects.items.farm_vs_aliens.name' => 'Farm vs Aliens',
-			'projects.items.farm_vs_aliens.description' => 'Mobile game combining merge mechanics and tower defense systems, backed by Google Play Indie Games Fund 2023.',
+			'projects.items.farm_vs_aliens.description' => 'Mobile game blending merge mechanics with tower-defense progression. Backed by Google Play\'s Indie Games Fund 2023, recognized for original gameplay and a strong vertical slice.',
 			'projects.items.farm_vs_aliens.award' => 'Indie Games Fund 2023',
-			'projects.items.farm_vs_aliens.details' => 'Led product direction and designed the core gameplay loop. Oversaw feature prioritization and implementation strategy, contributing to the studio securing fund backing.',
+			'projects.items.farm_vs_aliens.details' => 'Led product direction and designed the core gameplay loop. Owned feature prioritization, scope, and implementation strategy across the team, work that directly contributed to the studio securing Google Play Indie Games Fund backing. Built in Unity to leverage its 2D animation tooling and performance characteristics suited for merge-grid simulations.',
 			'projects.items.capy.name' => 'Capy – AI-Powered Virtual Wellness Companion',
-			'projects.items.capy.description' => 'AI-powered self-care mobile application featuring a virtual pet driven by OpenAI APIs, combining habit tracking, mood journaling, and intelligent conversational interactions.',
-			'projects.items.capy.details' => 'Built scalable daily engagement loops using push notifications and behavioral tracking, improving retention and reinforcing consistent user habits. Led high-performance UI architecture.',
+			'projects.items.capy.description' => 'AI-powered self-care companion built around a virtual pet that grows with the user. Combines habit tracking, mood journaling, and context-aware conversations powered by OpenAI APIs to make daily wellness feel personal.',
+			'projects.items.capy.details' => 'Designed and built scalable daily engagement loops with push notifications, streak mechanics, and behavioral tracking, driving retention and reinforcing consistent user habits. Led high-performance UI architecture with smooth pet animations and responsive interactions across devices. Integrated OpenAI APIs for context-aware companion responses tied to the user\'s current mood and journal entries.',
 			'projects.items.drop_merge.name' => 'Drop & Merge',
-			'projects.items.drop_merge.description' => 'Addictive drop and merge puzzle game combining strategic placement with satisfying merge mechanics for an engaging casual experience.',
-			'projects.items.drop_merge.details' => 'Implemented the complete UI layer',
+			'projects.items.drop_merge.description' => 'Drop-and-merge puzzle game combining strategic placement with satisfying merge mechanics for a tight, engaging casual loop.',
+			'projects.items.drop_merge.details' => 'Implemented the complete UI layer with smooth merge animations, drop physics feedback, and responsive grid interactions. Tuned rendering for stable frame times on low-end Android devices.',
 			'projects.items.never_have_i_ever_x.name' => 'Never Have I Ever X',
-			'projects.items.never_have_i_ever_x.description' => 'A fun party game app where players discover surprising facts about each other through classic \'Never Have I Ever\' questions.',
+			'projects.items.never_have_i_ever_x.description' => 'Party game app where players uncover surprising facts about each other through classic \'Never Have I Ever\' rounds. Reached 500K+ downloads on the back of share-driven viral loops.',
 			'projects.items.never_have_i_ever_x.metric' => '500K+',
-			'projects.items.never_have_i_ever_x.details' => 'Implemented UI and hundreds of curated questions across multiple categories, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.',
+			'projects.items.never_have_i_ever_x.details' => 'Implemented the UI, hundreds of curated questions across multiple categories, and social sharing features. Integrated ad monetization (rewarded + interstitial) and analytics to optimize engagement and revenue per session.',
 			'projects.items.booze.name' => 'Booze',
-			'projects.items.booze.description' => 'A drinking game app with creative challenges, mini-games, and social dynamics designed for fun group gatherings.',
+			'projects.items.booze.description' => 'Drinking party game with creative challenges, mini-games, and social mechanics designed for fun group gatherings. Reached 500K+ downloads through friend-driven discovery.',
 			'projects.items.booze.metric' => '500K+',
-			'projects.items.booze.details' => 'Implemented UI and diverse challenge modes, customizable game rules, and group play mechanics. Implemented smooth animations, ad monetization, and Firebase analytics for tracking user engagement and session data.',
+			'projects.items.booze.details' => 'Implemented the UI, diverse challenge modes, customizable game rules, and group-play mechanics. Built smooth animations, ad monetization (rewarded + interstitial), and Firebase analytics to track engagement and session data.',
 			'projects.items.vdx.name' => 'Truth or Dare X',
-			'projects.items.vdx.description' => 'A fun party game app where players discover surprising facts about each other through classic \'Truth or Dare\' questions.',
+			'projects.items.vdx.description' => 'Party game app where friends challenge each other through classic \'Truth or Dare\' prompts. Reached 1M+ downloads through tight session loops and share-driven distribution.',
 			'projects.items.vdx.metric' => '1M+',
-			'projects.items.vdx.details' => 'Implemented UI and hundreds of curated questions across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization and analytics to optimize engagement and revenue.',
-			'projects.items.flutter_base.name' => 'Flutter Base',
-			'projects.items.flutter_base.description' => 'Interactive Flutter learning platform. The goal is to make learning Flutter progressive and engaging, with gamification mechanics like XP, daily streaks, levels, and daily challenges.',
-			'projects.items.flutter_base.details' => 'Architected the platform following Clean Architecture principles with strict layer separation (presentation, domain, data), ensuring scalability and long-term maintainability. Applied SOLID, KISS, and DRY principles throughout the codebase to produce modular, readable, and reusable components. Implemented a complete authentication system with secure login, registration, and session persistence. Integrated a relational database layer with repository pattern abstraction, enabling flexible data source swapping. Leveraged AI-assisted development workflows to accelerate feature delivery, code generation, and iterative prototyping, significantly reducing implementation time without compromising code quality.',
+			'projects.items.vdx.details' => 'Implemented the UI, hundreds of curated prompts across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization (rewarded + interstitial) and analytics to optimize engagement and revenue per session.',
 			'projects.items.financo.name' => 'Financo',
-			'projects.items.financo.description' => 'A personal finance manager desktop app for tracking transactions, credit cards, and financial movements, with support for importing and exporting data.',
-			'projects.items.financo.details' => 'Built with Flutter targeting Windows desktop. Monorepo structure managed with Melos, split into app_core, app_database, and app_widgets packages. Uses flutter_modular for routing and dependency injection, Drift (SQLite) for local persistence, GetX and flutter_hooks for state management, and slang for internationalization (EN/PT).',
+			'projects.items.financo.description' => 'Cross-platform personal finance manager with AI-powered natural-language entry. Users describe expenses via text, receipt photos, or voice, and Vertex AI Gemini parses them into structured transactions for one-tap confirmation. Targets Android, iOS, and Web.',
+			'projects.items.financo.details' => 'Built on Clean Architecture with feature-first layering (domain/data/presentation). Implemented multi-account management (checking + credit cards with linking), hierarchical categorization, cross-account transfers, recurring bills with auto-generation, CSV bulk import, and a dashboard with month/year filters, income-vs-expense summaries, category breakdowns, and evolution charts. Backed by Cloud Functions (Node.js 22 + TypeScript) running Vertex AI Gemini for the multimodal chat pipeline (text, image, voice transcription). Stack: flutter_bloc (Cubits + Blocs) • go_router • get_it • Firebase Auth + Google Sign-In • Cloud Firestore (sync) • Drift/SQLite (offline) • FCM + flutter_local_notifications (overdue-bill alerts) • fl_chart • dartz (Either<Failure, T>) • slang i18n. Spec-driven workflow with markdown contracts per feature. Layered testing with mocktail + bloc_test + fake_cloud_firestore. CI/CD via GitHub Actions signs and deploys Android + Web on every push to main.',
 			'projects.items.harvest.name' => 'Harvest',
 			'projects.items.harvest.award' => 'Production-Ready App 24-Hours-AI',
-			'projects.items.harvest.description' => 'A fresh food e-commerce app connecting communities directly with local farmers, focused on perishable products with a fast, reliable, and elegant user experience.',
-			'projects.items.harvest.details' => 'Architected the app with Clean Architecture and a feature-first structure across 13 features, ensuring long-term scalability and maintainability. Implemented Firebase Auth with email/password and Google Sign-In using platform-specific OAuth flows (popup on web, credential on mobile). Built a reusable UI component system with 8+ shared widgets and a complete design system (colors, typography, theme). Designed a centralized startup coordinator using BLoC to pre-load all data before navigation, eliminating per-page loading states. Structured a role-based admin system via a secure Firestore collection guarded by server-side security rules. Wrote 48+ unit tests covering domain entities, repository cache logic, and BLoC state machines using bloc_test and mocktail.',
+			'projects.items.harvest.description' => 'Fresh food e-commerce app connecting local farmers directly with their communities. Perishable-first product catalog with a fast, reliable shopping experience, shipped end-to-end in a 24-hour AI-assisted build.',
+			'projects.items.harvest.details' => 'Architected with Clean Architecture and a feature-first structure across 13 features for long-term scalability and maintainability. Implemented Firebase Auth with email/password and Google Sign-In using platform-specific OAuth flows (popup on web, credential on mobile). Built a reusable UI component system with 8+ shared widgets and a complete Material 3 design system (Fresh Harvest palette, Poppins/Inter typography). Designed a centralized BLoC startup coordinator that pre-loads all data before navigation, eliminating per-page loading states. Structured a role-based admin system via a secure Firestore collection guarded by server-side security rules. Wrote 48+ unit tests covering domain entities, repository cache logic, and BLoC state machines with bloc_test and mocktail.',
 			'projects.items.blu_bi.name' => 'Blu BI',
-			'projects.items.blu_bi.description' => 'A Business Intelligence app for tracking and visualizing financial data, including revenue, expenses, and project-based results with reports such as Income Statement (DRE) and period analysis.',
-			'projects.items.blu_bi.details' => 'Flutter • GetX (state management & navigation) • Firebase Auth + Google Sign-In • Firebase Remote Config • Dio (REST API) • Isar (local database) • fl_chart (charts) • Freezed + json_serializable (models) • get_it (dependency injection) • local_auth (biometric authentication) • Clean Architecture (data/domain/presentation) • Multiplatform: Android, iOS, Web & Desktop',
+			'projects.items.blu_bi.description' => 'Business Intelligence app for tracking and visualizing financial data: revenue, expenses, and project-based results with charts, Income Statement (DRE) reports, and period analysis. Multiplatform (Android, iOS, Web, Windows, macOS, Linux).',
+			'projects.items.blu_bi.details' => 'Built on Clean Architecture with self-contained feature modules (auth, finance, projects, company, personal) registered via GetX bindings. Implemented Google Sign-In with biometric (local_auth) protection, offline-first persistence via Isar, REST integration via Dio, and Firebase Remote Config for feature flags. Built dashboards and analytics with fl_chart: revenue/expense bar and pie charts, project-level financial breakdowns, money goals per category, and period-based reporting. Used Freezed + json_serializable for immutable models and get_it for dependency injection. Responsive layouts adapt cleanly from mobile to desktop. Stack: Flutter • GetX (state + navigation) • Firebase Auth + Google Sign-In • Firebase Remote Config • Dio • Isar • fl_chart • Freezed + json_serializable • get_it • local_auth.',
 			'resume.title' => 'Resume',
 			'resume.subtitle' => 'A summary of my professional experience and education',
 			'resume.experience_title' => 'Professional Experience',

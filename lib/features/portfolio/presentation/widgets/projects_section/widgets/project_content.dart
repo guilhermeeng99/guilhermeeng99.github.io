@@ -255,7 +255,7 @@ class _MetricBadge extends StatelessWidget {
         color: context.appColors.primary.withValues(alpha: 0.85),
         borderRadius: _kBadgeRadius,
       ),
-      child: Text('$metric downloads', style: labelStyle),
+      child: Text('$metric ${t.projects.downloads_suffix}', style: labelStyle),
     );
   }
 }
@@ -267,8 +267,9 @@ class _AwardBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = context.appColors;
     final labelStyle = Theme.of(context).textTheme.labelMedium?.copyWith(
-      color: const Color(0xFF1A1A1A),
+      color: colors.awardForeground,
       fontWeight: FontWeight.w700,
       fontSize: 11,
     );
@@ -280,28 +281,23 @@ class _AwardBadge extends StatelessWidget {
         child: Container(
           padding: _kBadgePadding,
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                const Color(0xFFFFD700).withValues(alpha: 0.85),
-                const Color(0xFFFFA500).withValues(alpha: 0.85),
-              ],
-            ),
+            gradient: colors.awardGradient,
             borderRadius: _kBadgeRadius,
-            boxShadow: const [
+            boxShadow: [
               BoxShadow(
-                color: Color(0x40FFD700),
+                color: colors.awardShadow,
                 blurRadius: 8,
-                offset: Offset(0, 2),
+                offset: const Offset(0, 2),
               ),
             ],
           ),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(
+              Icon(
                 Icons.emoji_events_rounded,
                 size: 12,
-                color: Color(0xFF1A1A1A),
+                color: colors.awardForeground,
               ),
               const SizedBox(width: 4),
               Text(award.label, style: labelStyle),

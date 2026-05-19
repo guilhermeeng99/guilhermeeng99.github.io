@@ -100,11 +100,6 @@ class $LibAppAssetsImagesProjectsGen {
     'lib/app/assets/images/projects/financo_preview.webp',
   );
 
-  /// File path: lib/app/assets/images/projects/flutter_base_preview.webp
-  AssetGenImage get flutterBasePreview => const AssetGenImage(
-    'lib/app/assets/images/projects/flutter_base_preview.webp',
-  );
-
   /// File path: lib/app/assets/images/projects/harvest_preview.webp
   AssetGenImage get harvestPreview => const AssetGenImage(
     'lib/app/assets/images/projects/harvest_preview.webp',
@@ -133,7 +128,6 @@ class $LibAppAssetsImagesProjectsGen {
     dropPreview,
     farmPreview,
     financoPreview,
-    flutterBasePreview,
     harvestPreview,
     magicSortPreview,
     rabitPreview,

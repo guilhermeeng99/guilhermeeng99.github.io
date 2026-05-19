@@ -66,9 +66,6 @@ class RemoteConstants {
 
   String get vdxUrl => _getRemoteValue.callString(TypeEnum.vdxUrl);
 
-  String get flutterBaseUrl =>
-      _getRemoteValue.callString(TypeEnum.flutterBaseUrl);
-
   String get harvestUrl => _getRemoteValue.callString(TypeEnum.harvestUrl);
 
   String get financoUrl => _getRemoteValue.callString(TypeEnum.financoUrl);

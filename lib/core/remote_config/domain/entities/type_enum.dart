@@ -63,10 +63,6 @@ enum TypeEnum implements RemoteConfigEnum {
     'https://drive.google.com/file/d/1SoUNPSx_SgQX25yy_znxPR3DBGqPq-h3/view?usp=sharing',
   ),
   financoUrl('financo_url', 'https://github.com/guilhermeeng99/financo'),
-  flutterBaseUrl(
-    'flutter_base_url',
-    'https://guilhermeeng99.github.io/flutter_base/',
-  ),
   harvestUrl('harvest_url', 'https://guilhermeeng99.github.io/harvest/')
   ;
 

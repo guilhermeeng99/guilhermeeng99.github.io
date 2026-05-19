@@ -45,7 +45,6 @@ void main() {
       );
       expect(remote.boozeUrl, 'override:${TypeEnum.boozeUrl.key}');
       expect(remote.vdxUrl, 'override:${TypeEnum.vdxUrl.key}');
-      expect(remote.flutterBaseUrl, 'override:${TypeEnum.flutterBaseUrl.key}');
       expect(remote.harvestUrl, 'override:${TypeEnum.harvestUrl.key}');
       expect(remote.financoUrl, 'override:${TypeEnum.financoUrl.key}');
       expect(

@@ -34,7 +34,27 @@ void main() {
         expect(preset.primaryGradient, isA<LinearGradient>());
         expect(preset.heroGradient, isA<LinearGradient>());
         expect(preset.cardGradient, isA<LinearGradient>());
+        expect(preset.awardGradient, isA<LinearGradient>());
+        expect(preset.awardForeground, isA<Color>());
+        expect(preset.awardShadow, isA<Color>());
+        expect(preset.navShadow, isA<Color>());
       }
+    });
+
+    test('award tokens are shared across both presets', () {
+      const dark = AppColorsExtension.midnightOcean;
+      const light = AppColorsExtension.arcticLight;
+
+      expect(dark.awardGradient, light.awardGradient);
+      expect(dark.awardForeground, light.awardForeground);
+      expect(dark.awardShadow, light.awardShadow);
+    });
+
+    test('navShadow differs between dark and light presets', () {
+      expect(
+        AppColorsExtension.midnightOcean.navShadow,
+        isNot(equals(AppColorsExtension.arcticLight.navShadow)),
+      );
     });
   });
 

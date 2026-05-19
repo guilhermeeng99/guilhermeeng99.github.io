@@ -17,6 +17,10 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
     required this.primaryGradient,
     required this.heroGradient,
     required this.cardGradient,
+    required this.awardGradient,
+    required this.awardForeground,
+    required this.awardShadow,
+    required this.navShadow,
   });
 
   final Color background;
@@ -34,6 +38,16 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
   final LinearGradient primaryGradient;
   final LinearGradient heroGradient;
   final LinearGradient cardGradient;
+  final LinearGradient awardGradient;
+  final Color awardForeground;
+  final Color awardShadow;
+  final Color navShadow;
+
+  static const _awardGradient = LinearGradient(
+    colors: [Color(0xD9FFD700), Color(0xD9FFA500)],
+  );
+  static const _awardForeground = Color(0xFF1A1A1A);
+  static const _awardShadow = Color(0x40FFD700);
 
   static const midnightOcean = AppColorsExtension(
     background: Color(0xFF0A1628),
@@ -63,6 +77,10 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     ),
+    awardGradient: _awardGradient,
+    awardForeground: _awardForeground,
+    awardShadow: _awardShadow,
+    navShadow: Color(0x40000000),
   );
 
   static const arcticLight = AppColorsExtension(
@@ -93,6 +111,10 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     ),
+    awardGradient: _awardGradient,
+    awardForeground: _awardForeground,
+    awardShadow: _awardShadow,
+    navShadow: Color(0x14000000),
   );
 
   @override
@@ -112,6 +134,10 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
     LinearGradient? primaryGradient,
     LinearGradient? heroGradient,
     LinearGradient? cardGradient,
+    LinearGradient? awardGradient,
+    Color? awardForeground,
+    Color? awardShadow,
+    Color? navShadow,
   }) {
     return AppColorsExtension(
       background: background ?? this.background,
@@ -129,6 +155,10 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
       primaryGradient: primaryGradient ?? this.primaryGradient,
       heroGradient: heroGradient ?? this.heroGradient,
       cardGradient: cardGradient ?? this.cardGradient,
+      awardGradient: awardGradient ?? this.awardGradient,
+      awardForeground: awardForeground ?? this.awardForeground,
+      awardShadow: awardShadow ?? this.awardShadow,
+      navShadow: navShadow ?? this.navShadow,
     );
   }
 
@@ -155,6 +185,18 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
       )!,
       heroGradient: LinearGradient.lerp(heroGradient, other.heroGradient, t)!,
       cardGradient: LinearGradient.lerp(cardGradient, other.cardGradient, t)!,
+      awardGradient: LinearGradient.lerp(
+        awardGradient,
+        other.awardGradient,
+        t,
+      )!,
+      awardForeground: Color.lerp(
+        awardForeground,
+        other.awardForeground,
+        t,
+      )!,
+      awardShadow: Color.lerp(awardShadow, other.awardShadow, t)!,
+      navShadow: Color.lerp(navShadow, other.navShadow, t)!,
     );
   }
 }

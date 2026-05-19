@@ -2,6 +2,13 @@
 
 Guilherme Passos' personal portfolio — a single-page **Flutter Web** app deployed to **GitHub Pages** at `guilhermeeng99.github.io`. Showcases projects, skills, experience, and contact in a polished, responsive, themeable layout.
 
+## Project docs
+
+* [README.md](README.md) — public-facing project overview, what it does, tech stack, running locally, deploy.
+* [docs/roadmap.md](docs/roadmap.md) — active and planned work (Now / Next / Ideas / Done).
+* [docs/specs/](docs/specs/) — ADR-style design specs (`NNNN-<slug>.md`). Template at [docs/specs/README.md](docs/specs/README.md).
+* [test/harness/README.md](test/harness/README.md) — consumer-facing usage notes for the test harness.
+
 ---
 
 ## Architecture
@@ -96,7 +103,21 @@ flutter build web --release        # Production build → build/web/
 melos run build:web                # Same, via melos
 ```
 
-Deployment is **automated** via `.github/workflows/deploy.yml` on push to `master`: `flutter pub get` → `dart run slang` → `flutter analyze` → `flutter build web --release` → publish `build/web/` to the `gh-pages` branch.
+Deployment is **fully automated** via `.github/workflows/deploy.yml` on push to `master`:
+
+1. `flutter pub get` → `dart run slang` → `flutter analyze` → `flutter test`
+2. **Auto-bump version** in `pubspec.yaml` based on the last commit message:
+   * Default → patch bump (`1.2.0` → `1.2.1`)
+   * `feat(scope):` → minor bump (`1.2.0` → `1.3.0`)
+   * `BREAKING CHANGE` or `feat!:` / `fix!:` → major bump (`1.2.0` → `2.0.0`)
+   * Build number always set to `$GITHUB_RUN_NUMBER`
+3. `flutter build web --release --build-number=$GITHUB_RUN_NUMBER`
+4. Publish `build/web/` to the `gh-pages` branch
+5. Commit the bumped `pubspec.yaml` back to `master` (`chore(release): vX.Y.Z [skip ci]`)
+6. Tag the commit `vX.Y.Z`
+7. Create a GitHub Release with auto-generated notes
+
+The bot-pushed release commit does **not** retrigger the workflow (GitHub Actions ignores pushes made with `GITHUB_TOKEN`). Pull requests against `master` run the full CI (analyze + test + build) but skip the bump/deploy/release steps.
 
 ---
 
@@ -213,6 +234,14 @@ Importing the harness should be the first move in any new test file — if you'r
 * Never use raw `Color(0x...)` in widgets — use `context.appColors.<token>` (extension on `BuildContext` defined in `app_colors.dart`).
 * Never inline `TextStyle` — use `Theme.of(context).textTheme.<role>`.
 * Use the `urlLaunch` helper from `core/utils/url_launch.dart` for external links.
+
+### User-Facing Copy
+
+* **Never use em-dashes (`—`) in user-facing text** (i18n strings, descriptions, marketing copy, README portfolio content). They read as AI-generated. Use a period, comma, colon, or parentheses instead, picking the punctuation that best fits the sentence structure.
+  * Appositive / continuation: prefer `.` or `,` ("reached 1M+ downloads. Powered by..." or "reached 1M+ downloads, powered by...").
+  * Parenthetical aside: prefer `(...)` ("retention features (cohort analysis, behavioral nudges) lifted D1...").
+  * Introducing a list or definition: prefer `:` ("financial data: revenue, expenses, and project results").
+* This rule applies only to **user-facing copy**. Em-dashes remain acceptable inside this `CLAUDE.md` and other internal docs.
 
 ---
 

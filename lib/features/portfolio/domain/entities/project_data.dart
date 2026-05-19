@@ -58,7 +58,7 @@ class ProjectsSectionData {
   static List<ProjectsSectionData> projects(RemoteConstants remote) => [
     _magicSort(remote),
     _rabit(remote),
-    _harvest(remote),
+    _financo(remote),
     _capy(remote),
     _cups(remote),
     _farmVsAliens(remote),
@@ -66,10 +66,9 @@ class ProjectsSectionData {
 
   static List<ProjectsSectionData> otherProjects(RemoteConstants remote) => [
     _vdx(remote),
+    _harvest(remote),
     _dropMerge(remote),
-    _flutterBase(remote),
-    _financo(remote),
-    _bluBi,
+    _bluBi(),
     _booze(remote),
     _neverHaveIEverX(remote),
   ];
@@ -84,7 +83,13 @@ class ProjectsSectionData {
           label: t.projects.items.magic_sort.award,
           awardUrl: remote.googlePlayIndieGamesAccelerator2024Url,
         ),
-        technologies: const ['Flutter', 'Firebase', 'Riverpod', 'GetX'],
+        technologies: const [
+          'Flutter',
+          'Firebase',
+          'Riverpod',
+          'GetX',
+          'Remote Config',
+        ],
         image: _projectImages.magicSortPreview,
         downloadLink: remote.magicSortUrl,
         company: ProjectCompany.bluStudios,
@@ -100,7 +105,13 @@ class ProjectsSectionData {
           label: t.projects.items.rabit.award,
           awardUrl: remote.googlePlayBestOf2021Url,
         ),
-        technologies: const ['Flutter', 'Firebase', 'GetX', 'Analytics'],
+        technologies: const [
+          'Flutter',
+          'Firebase',
+          'Firestore',
+          'FCM',
+          'GetX',
+        ],
         image: _projectImages.rabitPreview,
         downloadLink: remote.rabitUrl,
         company: ProjectCompany.bluStudios,
@@ -112,7 +123,7 @@ class ProjectsSectionData {
         description: t.projects.items.cups.description,
         details: t.projects.items.cups.details,
         metric: t.projects.items.cups.metric,
-        technologies: const ['Flutter', 'Firebase', 'GetX', 'Ads SDK'],
+        technologies: const ['Flutter', 'Firebase', 'GetX', 'AdMob'],
         image: _projectImages.cupsPreview,
         downloadLink: remote.cupsUrl,
         company: ProjectCompany.bluStudios,
@@ -138,7 +149,12 @@ class ProjectsSectionData {
         name: t.projects.items.capy.name,
         description: t.projects.items.capy.description,
         details: t.projects.items.capy.details,
-        technologies: const ['Flutter', 'Firebase', 'Riverpod'],
+        technologies: const [
+          'Flutter',
+          'Firebase',
+          'Riverpod',
+          'OpenAI',
+        ],
         image: _projectImages.capyPreview,
         downloadLink: remote.capyUrl,
         company: ProjectCompany.bluStudios,
@@ -149,7 +165,7 @@ class ProjectsSectionData {
         name: t.projects.items.drop_merge.name,
         description: t.projects.items.drop_merge.description,
         details: t.projects.items.drop_merge.details,
-        technologies: const ['Flutter', 'Firebase', 'GetX'],
+        technologies: const ['Flutter', 'Firebase', 'GetX', 'AdMob'],
         image: _projectImages.dropPreview,
         company: ProjectCompany.bluStudios,
         downloadLink: remote.dropAndMergeUrl,
@@ -161,7 +177,7 @@ class ProjectsSectionData {
         description: t.projects.items.never_have_i_ever_x.description,
         details: t.projects.items.never_have_i_ever_x.details,
         metric: t.projects.items.never_have_i_ever_x.metric,
-        technologies: const ['Flutter', 'Firebase', 'GetX'],
+        technologies: const ['Flutter', 'Firebase', 'GetX', 'AdMob'],
         image: _projectImages.iNeverPreview,
         company: ProjectCompany.bluStudios,
         downloadLink: remote.neverHaveIEverXUrl,
@@ -173,7 +189,7 @@ class ProjectsSectionData {
         description: t.projects.items.booze.description,
         details: t.projects.items.booze.details,
         metric: t.projects.items.booze.metric,
-        technologies: const ['Flutter', 'Firebase', 'GetX'],
+        technologies: const ['Flutter', 'Firebase', 'GetX', 'AdMob'],
         image: _projectImages.boozePreview,
         company: ProjectCompany.bluStudios,
         downloadLink: remote.boozeUrl,
@@ -185,7 +201,7 @@ class ProjectsSectionData {
         description: t.projects.items.vdx.description,
         details: t.projects.items.vdx.details,
         metric: t.projects.items.vdx.metric,
-        technologies: const ['Flutter', 'Firebase', 'GetX'],
+        technologies: const ['Flutter', 'Firebase', 'GetX', 'AdMob'],
         image: _projectImages.vdxPreview,
         company: ProjectCompany.bluStudios,
         downloadLink: remote.vdxUrl,
@@ -200,19 +216,15 @@ class ProjectsSectionData {
           label: t.projects.items.harvest.award,
           awardUrl: remote.harvestArticleUrl,
         ),
-        technologies: const ['Flutter', 'Firebase', 'BLoC'],
+        technologies: const [
+          'Flutter',
+          'BLoC',
+          'Firebase',
+          'Firestore',
+          'go_router',
+        ],
         image: _projectImages.harvestPreview,
         downloadLink: remote.harvestUrl,
-      );
-
-  static ProjectsSectionData _flutterBase(RemoteConstants remote) =>
-      ProjectsSectionData(
-        name: t.projects.items.flutter_base.name,
-        description: t.projects.items.flutter_base.description,
-        details: t.projects.items.flutter_base.details,
-        technologies: const ['Flutter', 'Riverpod', 'SOLID'],
-        image: _projectImages.flutterBasePreview,
-        downloadLink: remote.flutterBaseUrl,
       );
 
   static ProjectsSectionData _financo(RemoteConstants remote) =>
@@ -220,16 +232,28 @@ class ProjectsSectionData {
         name: t.projects.items.financo.name,
         description: t.projects.items.financo.description,
         details: t.projects.items.financo.details,
-        technologies: const ['Flutter', 'BLoC'],
+        technologies: const [
+          'Flutter',
+          'BLoC',
+          'Vertex AI',
+          'Firestore',
+          'Cloud Functions',
+        ],
         image: _projectImages.financoPreview,
         downloadLink: remote.financoUrl,
       );
 
-  static final _bluBi = ProjectsSectionData(
+  static ProjectsSectionData _bluBi() => ProjectsSectionData(
     name: t.projects.items.blu_bi.name,
     description: t.projects.items.blu_bi.description,
     details: t.projects.items.blu_bi.details,
-    technologies: const ['Flutter', 'GetX'],
+    technologies: const [
+      'Flutter',
+      'GetX',
+      'Firebase',
+      'Isar',
+      'fl_chart',
+    ],
     image: _projectImages.bluBiPreview,
   );
 }

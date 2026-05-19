@@ -9,7 +9,7 @@ class GetRemoteValueUseCase {
   T call<T>(RemoteConfigEnum enumValue, {required T defaultValue}) {
     try {
       return repository.getValue<T>(enumValue);
-    } on Object {
+    } on Exception {
       return defaultValue;
     }
   }
