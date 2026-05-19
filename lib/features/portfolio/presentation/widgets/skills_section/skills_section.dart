@@ -37,26 +37,24 @@ class SkillsSection extends StatelessWidget {
                   padding: EdgeInsets.only(
                     bottom: i + 2 < categories.length ? 24 : 0,
                   ),
-                  child: IntrinsicHeight(
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: _SkillCategoryCard(
+                          category: categories[i],
+                        ),
+                      ),
+                      if (i + 1 < categories.length) ...[
+                        const SizedBox(width: 24),
                         Expanded(
                           child: _SkillCategoryCard(
-                            category: categories[i],
+                            category: categories[i + 1],
                           ),
                         ),
-                        if (i + 1 < categories.length) ...[
-                          const SizedBox(width: 24),
-                          Expanded(
-                            child: _SkillCategoryCard(
-                              category: categories[i + 1],
-                            ),
-                          ),
-                        ] else
-                          const Spacer(),
-                      ],
-                    ),
+                      ] else
+                        const Spacer(),
+                    ],
                   ),
                 ),
           ],
