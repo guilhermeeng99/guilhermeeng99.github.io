@@ -63,7 +63,15 @@ enum TypeEnum implements RemoteConfigEnum {
     'https://drive.google.com/file/d/1SoUNPSx_SgQX25yy_znxPR3DBGqPq-h3/view?usp=sharing',
   ),
   financoUrl('financo_url', 'https://github.com/guilhermeeng99/financo'),
-  harvestUrl('harvest_url', 'https://guilhermeeng99.github.io/harvest/')
+  harvestUrl('harvest_url', 'https://guilhermeeng99.github.io/harvest/'),
+  capyArticleUrl(
+    'capy_article_url',
+    'https://www.linkedin.com/pulse/adding-ai-app-easy-making-useful-hard-part-guilherme-passos-kndgf/',
+  ),
+  financoArticleUrl(
+    'financo_article_url',
+    'https://www.linkedin.com/pulse/how-i-build-side-projects-like-production-software-guilherme-passos-abq9f/',
+  )
   ;
 
   const TypeEnum(this.key, this.defaultValue);

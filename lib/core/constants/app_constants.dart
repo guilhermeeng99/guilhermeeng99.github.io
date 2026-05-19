@@ -69,4 +69,10 @@ class RemoteConstants {
   String get harvestUrl => _getRemoteValue.callString(TypeEnum.harvestUrl);
 
   String get financoUrl => _getRemoteValue.callString(TypeEnum.financoUrl);
+
+  String get capyArticleUrl =>
+      _getRemoteValue.callString(TypeEnum.capyArticleUrl);
+
+  String get financoArticleUrl =>
+      _getRemoteValue.callString(TypeEnum.financoArticleUrl);
 }

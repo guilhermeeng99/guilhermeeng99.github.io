@@ -52,6 +52,14 @@ void main() {
         'override:${TypeEnum.harvestArticleUrl.key}',
       );
       expect(
+        remote.capyArticleUrl,
+        'override:${TypeEnum.capyArticleUrl.key}',
+      );
+      expect(
+        remote.financoArticleUrl,
+        'override:${TypeEnum.financoArticleUrl.key}',
+      );
+      expect(
         remote.googlePlayIndieGamesAccelerator2024Url,
         'override:${TypeEnum.googlePlayIndieGamesAccelerator2024Url.key}',
       );

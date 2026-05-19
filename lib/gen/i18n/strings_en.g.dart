@@ -389,8 +389,8 @@ class TranslationsProjectsItemsMagicSortEn {
 	/// en: '1M+'
 	String get metric => '1M+';
 
-	/// en: 'Indie Games Accelerator 2024'
-	String get award => 'Indie Games Accelerator 2024';
+	/// en: 'Indie Games Accelerator'
+	String get award => 'Indie Games Accelerator';
 
 	/// en: 'Led the team's UI architecture and shipped a high-performance Flutter codebase tuned for low-end Android devices. Reduced frame build time, memory footprint, and frame jank via deep profiling, rendering optimizations, and targeted refactors. Built monetization and content-delivery pipelines using Firebase Remote Config and A/B testing, lifting engagement and revenue per session. Implemented event-driven state management with feature isolation, enabling fast, scalable Live Ops releases without regressions.'
 	String get details => 'Led the team\'s UI architecture and shipped a high-performance Flutter codebase tuned for low-end Android devices. Reduced frame build time, memory footprint, and frame jank via deep profiling, rendering optimizations, and targeted refactors. Built monetization and content-delivery pipelines using Firebase Remote Config and A/B testing, lifting engagement and revenue per session. Implemented event-driven state management with feature isolation, enabling fast, scalable Live Ops releases without regressions.';
@@ -413,8 +413,8 @@ class TranslationsProjectsItemsRabitEn {
 	/// en: '5M+'
 	String get metric => '5M+';
 
-	/// en: 'Google Play Best of 2021'
-	String get award => 'Google Play Best of 2021';
+	/// en: 'Google Play Best'
+	String get award => 'Google Play Best';
 
 	/// en: 'Developed the core engagement systems: push notifications, streak logic, Firestore sync, and high-performance animated UI. Built data-driven retention features (cohort analysis, behavioral nudges, personalized reminder windows) that meaningfully lifted D1 and D7 retention. Tuned rendering and animation pipelines for smooth performance on low-end Android devices.'
 	String get details => 'Developed the core engagement systems: push notifications, streak logic, Firestore sync, and high-performance animated UI. Built data-driven retention features (cohort analysis, behavioral nudges, personalized reminder windows) that meaningfully lifted D1 and D7 retention. Tuned rendering and animation pipelines for smooth performance on low-end Android devices.';
@@ -455,8 +455,8 @@ class TranslationsProjectsItemsFarmVsAliensEn {
 	/// en: 'Mobile game blending merge mechanics with tower-defense progression. Backed by Google Play's Indie Games Fund 2023, recognized for original gameplay and a strong vertical slice.'
 	String get description => 'Mobile game blending merge mechanics with tower-defense progression. Backed by Google Play\'s Indie Games Fund 2023, recognized for original gameplay and a strong vertical slice.';
 
-	/// en: 'Indie Games Fund 2023'
-	String get award => 'Indie Games Fund 2023';
+	/// en: 'Indie Games Fund'
+	String get award => 'Indie Games Fund';
 
 	/// en: 'Led product direction and designed the core gameplay loop. Owned feature prioritization, scope, and implementation strategy across the team, work that directly contributed to the studio securing Google Play Indie Games Fund backing. Built in Unity to leverage its 2D animation tooling and performance characteristics suited for merge-grid simulations.'
 	String get details => 'Led product direction and designed the core gameplay loop. Owned feature prioritization, scope, and implementation strategy across the team, work that directly contributed to the studio securing Google Play Indie Games Fund backing. Built in Unity to leverage its 2D animation tooling and performance characteristics suited for merge-grid simulations.';
@@ -470,8 +470,11 @@ class TranslationsProjectsItemsCapyEn {
 
 	// Translations
 
-	/// en: 'Capy – AI-Powered Virtual Wellness Companion'
-	String get name => 'Capy – AI-Powered Virtual Wellness Companion';
+	/// en: 'Capy'
+	String get name => 'Capy';
+
+	/// en: 'Useful AI, Not Demos'
+	String get award => 'Useful AI, Not Demos';
 
 	/// en: 'AI-powered self-care companion built around a virtual pet that grows with the user. Combines habit tracking, mood journaling, and context-aware conversations powered by OpenAI APIs to make daily wellness feel personal.'
 	String get description => 'AI-powered self-care companion built around a virtual pet that grows with the user. Combines habit tracking, mood journaling, and context-aware conversations powered by OpenAI APIs to make daily wellness feel personal.';
@@ -571,6 +574,9 @@ class TranslationsProjectsItemsFinancoEn {
 
 	/// en: 'Financo'
 	String get name => 'Financo';
+
+	/// en: 'Built Like Production'
+	String get award => 'Built Like Production';
 
 	/// en: 'Cross-platform personal finance manager with AI-powered natural-language entry. Users describe expenses via text, receipt photos, or voice, and Vertex AI Gemini parses them into structured transactions for one-tap confirmation. Targets Android, iOS, and Web.'
 	String get description => 'Cross-platform personal finance manager with AI-powered natural-language entry. Users describe expenses via text, receipt photos, or voice, and Vertex AI Gemini parses them into structured transactions for one-tap confirmation. Targets Android, iOS, and Web.';
@@ -846,12 +852,12 @@ extension on Translations {
 			'projects.items.magic_sort.name' => 'Magic Sort',
 			'projects.items.magic_sort.description' => 'Hybrid casual puzzle game built in partnership with Wildlife Studios. Selected for Google Play\'s Indie Games Accelerator 2024 and reached 1M+ downloads, powered by live-ops-driven monetization and engagement systems.',
 			'projects.items.magic_sort.metric' => '1M+',
-			'projects.items.magic_sort.award' => 'Indie Games Accelerator 2024',
+			'projects.items.magic_sort.award' => 'Indie Games Accelerator',
 			'projects.items.magic_sort.details' => 'Led the team\'s UI architecture and shipped a high-performance Flutter codebase tuned for low-end Android devices. Reduced frame build time, memory footprint, and frame jank via deep profiling, rendering optimizations, and targeted refactors. Built monetization and content-delivery pipelines using Firebase Remote Config and A/B testing, lifting engagement and revenue per session. Implemented event-driven state management with feature isolation, enabling fast, scalable Live Ops releases without regressions.',
 			'projects.items.rabit.name' => 'Rabit',
 			'projects.items.rabit.description' => 'Gamified habit tracker that reached 5M+ downloads worldwide and earned a Google Play Best of 2021 selection. Turns daily routines into streaks worth keeping through delightful UX and behavior-driven engagement loops.',
 			'projects.items.rabit.metric' => '5M+',
-			'projects.items.rabit.award' => 'Google Play Best of 2021',
+			'projects.items.rabit.award' => 'Google Play Best',
 			'projects.items.rabit.details' => 'Developed the core engagement systems: push notifications, streak logic, Firestore sync, and high-performance animated UI. Built data-driven retention features (cohort analysis, behavioral nudges, personalized reminder windows) that meaningfully lifted D1 and D7 retention. Tuned rendering and animation pipelines for smooth performance on low-end Android devices.',
 			'projects.items.cups.name' => 'Cups',
 			'projects.items.cups.description' => 'Water-sort puzzle game co-developed with Homa Games. Reached 4.5M+ downloads with strong traction in the US market through tight gameplay loops and broad-reach monetization.',
@@ -859,9 +865,10 @@ extension on Translations {
 			'projects.items.cups.details' => 'Implemented the full UI layer and the monetization stack (rewarded ads, interstitials, eCPM-aware placements). Co-led performance optimization initiatives that reduced frame build time and improved smoothness on low-end Android devices, directly expanding the addressable audience. Co-owned the publishing and release pipeline alongside the Homa partnership team.',
 			'projects.items.farm_vs_aliens.name' => 'Farm vs Aliens',
 			'projects.items.farm_vs_aliens.description' => 'Mobile game blending merge mechanics with tower-defense progression. Backed by Google Play\'s Indie Games Fund 2023, recognized for original gameplay and a strong vertical slice.',
-			'projects.items.farm_vs_aliens.award' => 'Indie Games Fund 2023',
+			'projects.items.farm_vs_aliens.award' => 'Indie Games Fund',
 			'projects.items.farm_vs_aliens.details' => 'Led product direction and designed the core gameplay loop. Owned feature prioritization, scope, and implementation strategy across the team, work that directly contributed to the studio securing Google Play Indie Games Fund backing. Built in Unity to leverage its 2D animation tooling and performance characteristics suited for merge-grid simulations.',
-			'projects.items.capy.name' => 'Capy – AI-Powered Virtual Wellness Companion',
+			'projects.items.capy.name' => 'Capy',
+			'projects.items.capy.award' => 'Useful AI, Not Demos',
 			'projects.items.capy.description' => 'AI-powered self-care companion built around a virtual pet that grows with the user. Combines habit tracking, mood journaling, and context-aware conversations powered by OpenAI APIs to make daily wellness feel personal.',
 			'projects.items.capy.details' => 'Designed and built scalable daily engagement loops with push notifications, streak mechanics, and behavioral tracking, driving retention and reinforcing consistent user habits. Led high-performance UI architecture with smooth pet animations and responsive interactions across devices. Integrated OpenAI APIs for context-aware companion responses tied to the user\'s current mood and journal entries.',
 			'projects.items.drop_merge.name' => 'Drop & Merge',
@@ -880,6 +887,7 @@ extension on Translations {
 			'projects.items.vdx.metric' => '1M+',
 			'projects.items.vdx.details' => 'Implemented the UI, hundreds of curated prompts across multiple categories, multiplayer session management, and social sharing features. Integrated ad monetization (rewarded + interstitial) and analytics to optimize engagement and revenue per session.',
 			'projects.items.financo.name' => 'Financo',
+			'projects.items.financo.award' => 'Built Like Production',
 			'projects.items.financo.description' => 'Cross-platform personal finance manager with AI-powered natural-language entry. Users describe expenses via text, receipt photos, or voice, and Vertex AI Gemini parses them into structured transactions for one-tap confirmation. Targets Android, iOS, and Web.',
 			'projects.items.financo.details' => 'Built on Clean Architecture with feature-first layering (domain/data/presentation). Implemented multi-account management (checking + credit cards with linking), hierarchical categorization, cross-account transfers, recurring bills with auto-generation, CSV bulk import, and a dashboard with month/year filters, income-vs-expense summaries, category breakdowns, and evolution charts. Backed by Cloud Functions (Node.js 22 + TypeScript) running Vertex AI Gemini for the multimodal chat pipeline (text, image, voice transcription). Stack: flutter_bloc (Cubits + Blocs) • go_router • get_it • Firebase Auth + Google Sign-In • Cloud Firestore (sync) • Drift/SQLite (offline) • FCM + flutter_local_notifications (overdue-bill alerts) • fl_chart • dartz (Either<Failure, T>) • slang i18n. Spec-driven workflow with markdown contracts per feature. Layered testing with mocktail + bloc_test + fake_cloud_firestore. CI/CD via GitHub Actions signs and deploys Android + Web on every push to main.',
 			'projects.items.harvest.name' => 'Harvest',

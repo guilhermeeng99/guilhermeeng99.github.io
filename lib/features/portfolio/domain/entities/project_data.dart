@@ -149,6 +149,10 @@ class ProjectsSectionData {
         name: t.projects.items.capy.name,
         description: t.projects.items.capy.description,
         details: t.projects.items.capy.details,
+        award: ProjectAward(
+          label: t.projects.items.capy.award,
+          awardUrl: remote.capyArticleUrl,
+        ),
         technologies: const [
           'Flutter',
           'Firebase',
@@ -232,6 +236,10 @@ class ProjectsSectionData {
         name: t.projects.items.financo.name,
         description: t.projects.items.financo.description,
         details: t.projects.items.financo.details,
+        award: ProjectAward(
+          label: t.projects.items.financo.award,
+          awardUrl: remote.financoArticleUrl,
+        ),
         technologies: const [
           'Flutter',
           'BLoC',
