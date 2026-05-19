@@ -54,14 +54,14 @@
         "name": "Magic Sort",
         "description": "Hybrid casual puzzle game built in partnership with Wildlife Studios. Selected for Google Play's Indie Games Accelerator 2024 and reached 1M+ downloads, powered by live-ops-driven monetization and engagement systems.",
         "metric": "1M+",
-        "award": "Indie Games Accelerator 2024",
+        "award": "Indie Games Accelerator",
         "details": "Led the team's UI architecture and shipped a high-performance Flutter codebase tuned for low-end Android devices. Reduced frame build time, memory footprint, and frame jank via deep profiling, rendering optimizations, and targeted refactors. Built monetization and content-delivery pipelines using Firebase Remote Config and A/B testing, lifting engagement and revenue per session. Implemented event-driven state management with feature isolation, enabling fast, scalable Live Ops releases without regressions."
       },
       "rabit": {
         "name": "Rabit",
         "description": "Gamified habit tracker that reached 5M+ downloads worldwide and earned a Google Play Best of 2021 selection. Turns daily routines into streaks worth keeping through delightful UX and behavior-driven engagement loops.",
         "metric": "5M+",
-        "award": "Google Play Best of 2021",
+        "award": "Google Play Best",
         "details": "Developed the core engagement systems: push notifications, streak logic, Firestore sync, and high-performance animated UI. Built data-driven retention features (cohort analysis, behavioral nudges, personalized reminder windows) that meaningfully lifted D1 and D7 retention. Tuned rendering and animation pipelines for smooth performance on low-end Android devices."
       },
       "cups": {
@@ -73,11 +73,12 @@
       "farm_vs_aliens": {
         "name": "Farm vs Aliens",
         "description": "Mobile game blending merge mechanics with tower-defense progression. Backed by Google Play's Indie Games Fund 2023, recognized for original gameplay and a strong vertical slice.",
-        "award": "Indie Games Fund 2023",
+        "award": "Indie Games Fund",
         "details": "Led product direction and designed the core gameplay loop. Owned feature prioritization, scope, and implementation strategy across the team, work that directly contributed to the studio securing Google Play Indie Games Fund backing. Built in Unity to leverage its 2D animation tooling and performance characteristics suited for merge-grid simulations."
       },
       "capy": {
-        "name": "Capy – AI-Powered Virtual Wellness Companion",
+        "name": "Capy",
+        "award": "Useful AI, Not Demos",
         "description": "AI-powered self-care companion built around a virtual pet that grows with the user. Combines habit tracking, mood journaling, and context-aware conversations powered by OpenAI APIs to make daily wellness feel personal.",
         "details": "Designed and built scalable daily engagement loops with push notifications, streak mechanics, and behavioral tracking, driving retention and reinforcing consistent user habits. Led high-performance UI architecture with smooth pet animations and responsive interactions across devices. Integrated OpenAI APIs for context-aware companion responses tied to the user's current mood and journal entries."
       },
@@ -106,6 +107,7 @@
       },
       "financo": {
         "name": "Financo",
+        "award": "Built Like Production",
         "description": "Cross-platform personal finance manager with AI-powered natural-language entry. Users describe expenses via text, receipt photos, or voice, and Vertex AI Gemini parses them into structured transactions for one-tap confirmation. Targets Android, iOS, and Web.",
         "details": "Built on Clean Architecture with feature-first layering (domain/data/presentation). Implemented multi-account management (checking + credit cards with linking), hierarchical categorization, cross-account transfers, recurring bills with auto-generation, CSV bulk import, and a dashboard with month/year filters, income-vs-expense summaries, category breakdowns, and evolution charts. Backed by Cloud Functions (Node.js 22 + TypeScript) running Vertex AI Gemini for the multimodal chat pipeline (text, image, voice transcription). Stack: flutter_bloc (Cubits + Blocs) • go_router • get_it • Firebase Auth + Google Sign-In • Cloud Firestore (sync) • Drift/SQLite (offline) • FCM + flutter_local_notifications (overdue-bill alerts) • fl_chart • dartz (Either<Failure, T>) • slang i18n. Spec-driven workflow with markdown contracts per feature. Layered testing with mocktail + bloc_test + fake_cloud_firestore. CI/CD via GitHub Actions signs and deploys Android + Web on every push to main."
       },
