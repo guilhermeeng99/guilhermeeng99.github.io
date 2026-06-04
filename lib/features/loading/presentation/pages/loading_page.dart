@@ -69,9 +69,7 @@ class _LoadingPageState extends State<LoadingPage> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              _AnimatedLogo(),
-              const SizedBox(height: 32),
-              _LoadingIndicator(),
+              _BreathingLogo(),
             ],
           ),
         ),
@@ -80,12 +78,15 @@ class _LoadingPageState extends State<LoadingPage> {
   }
 }
 
-class _AnimatedLogo extends StatefulWidget {
+/// Gently breathing GP logo. Mirrors the HTML splash logo (same size + pulse)
+/// so the handoff from the browser-painted splash to this Flutter screen is
+/// seamless — one continuous logo, never a second "logo appears" moment.
+class _BreathingLogo extends StatefulWidget {
   @override
-  State<_AnimatedLogo> createState() => _AnimatedLogoState();
+  State<_BreathingLogo> createState() => _BreathingLogoState();
 }
 
-class _AnimatedLogoState extends State<_AnimatedLogo>
+class _BreathingLogoState extends State<_BreathingLogo>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
   late final Animation<double> _scaleAnim;
@@ -96,23 +97,15 @@ class _AnimatedLogoState extends State<_AnimatedLogo>
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 800),
+      duration: const Duration(milliseconds: 1800),
     );
-    _scaleAnim = CurvedAnimation(
-      parent: _controller,
-      curve: Curves.easeOutBack,
+    _scaleAnim = Tween<double>(begin: 0.94, end: 1.04).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
     );
-    _opacityAnim = CurvedAnimation(
-      parent: _controller,
-      curve: Curves.easeOut,
+    _opacityAnim = Tween<double>(begin: 0.85, end: 1).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
     );
-    unawaited(
-      Future.delayed(const Duration(milliseconds: 200), () {
-        if (!mounted) return;
-        if (_controller.isAnimating || _controller.isCompleted) return;
-        unawaited(_controller.forward());
-      }),
-    );
+    unawaited(_controller.repeat(reverse: true));
   }
 
   @override
@@ -128,83 +121,12 @@ class _AnimatedLogoState extends State<_AnimatedLogo>
       builder: (context, child) {
         return Opacity(
           opacity: _opacityAnim.value,
-          child: Transform.scale(
-            scale: 0.5 + (_scaleAnim.value * 0.5),
-            child: child,
-          ),
+          child: Transform.scale(scale: _scaleAnim.value, child: child),
         );
       },
       child: Assets.lib.app.assets.images.logo.image(
-        width: 80,
-        height: 80,
-      ),
-    );
-  }
-}
-
-class _LoadingIndicator extends StatefulWidget {
-  @override
-  State<_LoadingIndicator> createState() => _LoadingIndicatorState();
-}
-
-class _LoadingIndicatorState extends State<_LoadingIndicator>
-    with SingleTickerProviderStateMixin {
-  late final AnimationController _controller;
-  late final Animation<double> _opacityAnim;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 1200),
-    );
-    _opacityAnim = CurvedAnimation(
-      parent: _controller,
-      curve: const Interval(0.3, 1, curve: Curves.easeOut),
-    );
-    unawaited(
-      Future.delayed(const Duration(milliseconds: 600), () {
-        if (!mounted) return;
-        if (_controller.isAnimating || _controller.isCompleted) return;
-        unawaited(_controller.forward());
-      }),
-    );
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return ListenableBuilder(
-      listenable: _controller,
-      builder: (context, child) {
-        return Opacity(
-          opacity: _opacityAnim.value,
-          child: child,
-        );
-      },
-      child: SizedBox(
-        width: 140,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(2),
-              child: LinearProgressIndicator(
-                minHeight: 3,
-                backgroundColor: context.appColors.surfaceLight,
-                valueColor: AlwaysStoppedAnimation<Color>(
-                  context.appColors.primary,
-                ),
-              ),
-            ),
-          ],
-        ),
+        width: 88,
+        height: 88,
       ),
     );
   }
