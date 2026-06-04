@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_portfolio/app/theme/app_colors.dart';
 import 'package:my_portfolio/app/widgets/responsive_layout.dart';
 import 'package:my_portfolio/app/widgets/section_title.dart';
-import 'package:my_portfolio/core/constants/app_constants.dart';
 import 'package:my_portfolio/features/portfolio/domain/entities/project_data.dart';
 import 'package:my_portfolio/features/portfolio/presentation/widgets/projects_section/widgets/project_content.dart';
 import 'package:my_portfolio/features/portfolio/presentation/widgets/projects_section/widgets/project_image.dart';
@@ -24,9 +22,8 @@ class _ProjectsSectionState extends State<ProjectsSection> {
   @override
   Widget build(BuildContext context) {
     final isMobile = ResponsiveLayout.isMobile(context);
-    final remote = context.read<RemoteConstants>();
-    final projects = ProjectsSectionData.projects(remote);
-    final otherProjects = ProjectsSectionData.otherProjects(remote);
+    final projects = ProjectsSectionData.projects();
+    final otherProjects = ProjectsSectionData.otherProjects();
 
     return Container(
       padding: ResponsiveLayout.sectionPadding(context),

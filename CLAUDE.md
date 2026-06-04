@@ -17,25 +17,25 @@ Guilherme Passos' personal portfolio — a single-page **Flutter Web** app deplo
 
 ```
 lib/
-├── app/         # App shell: routing, theme, DI, shared widgets, assets
-├── core/        # Shared cross-feature: constants, remote_config, utils
+├── app/         # App shell: routing, theme, shared widgets, assets
+├── core/        # Shared cross-feature: constants, utils
 ├── features/    # Feature modules (loading, portfolio)
 └── gen/         # Generated code (slang i18n, asset references)
 ```
 
-Each feature follows:
+The app has **no backend and no runtime data sources** (Firebase and Remote Config were removed, see [docs/specs/0006-remove-firebase-remote-config.md](docs/specs/0006-remove-firebase-remote-config.md)). Each feature follows:
 
-* `domain/` — entities, repository interfaces, use cases
-* `infra/` — service implementations (Firebase SDK adapters)
+* `domain/` — entities and, where a feature genuinely needs them, repository interfaces + use cases
+* `infra/` — service implementations (none today)
 * `presentation/` — pages, widgets, cubits
 
 Data flow:
 
 ```
-UI (Page → Section → Widget) → UseCase → Repository (abstract) → Service (Firebase)
+UI (Page → Section → Widget) → entities + AppConstants (compile-time data)
 ```
 
-Domain entities are plain Dart classes (no Firebase, no Flutter material imports). Static factories on entities (e.g. `ProjectsSectionData.projects(remote)`) keep section `build` methods free of data assembly.
+Domain entities are plain Dart classes (no Flutter material imports). Static factories on entities (e.g. `ProjectsSectionData.projects()`) keep section `build` methods free of data assembly, reading URLs from `AppConstants`.
 
 ---
 
@@ -77,14 +77,13 @@ Domain entities are plain Dart classes (no Firebase, no Flutter material imports
 | Aspect             | Detail                                                                              |
 | ------------------ | ----------------------------------------------------------------------------------- |
 | **Platform**       | Flutter Web only (Dart `^3.10.8`)                                                   |
-| **State**          | `flutter_bloc` — `ThemeCubit` for light/dark toggle; `MultiRepositoryProvider` for DI |
-| **DI**             | `AppDependencies` widget at root (`lib/app/providers/remote_config_providers.dart`) |
+| **State**          | `flutter_bloc` — `ThemeCubit` for light/dark toggle                                 |
+| **Data**           | Compile-time constants only — `AppConstants` (`lib/core/constants/app_constants.dart`). No backend. |
 | **Routing**        | `go_router` — declarative, 2 routes (`/` loading, `/home` portfolio)                |
-| **Firebase**       | `firebase_core`, `firebase_analytics`, `firebase_remote_config`                     |
-| **Remote Config**  | `lib/core/remote_config/` — domain/infra split, `TypeEnum` keys, `RemoteConstants` accessor |
 | **i18n**           | `slang` / `slang_flutter` — JSON-based, type-safe, English only                     |
 | **Theme**          | Light + Dark Material 3, `AppColorsExtension` (`midnightOcean` / `arcticLight`)     |
-| **Fonts**          | `google_fonts` — SpaceGrotesk (display), Inter (body), JetBrainsMono (labels)       |
+| **Fonts**          | Self-hosted, Latin-subset TTFs in `lib/app/assets/fonts/` (no runtime fetch) — SpaceGrotesk (display), Inter (body), JetBrainsMono (labels). Inter + SpaceGrotesk are variable fonts. `ThemeData.fontFamily` = Inter (stops CanvasKit fetching Roboto). |
+| **Icons**          | Material Icons + `flutter_svg` for brand marks (`BrandIcons` → SVGs in `lib/app/assets/icons/`, rendered via `SocialIcon`). |
 | **Linting**        | `very_good_analysis` ^10.2.0 (strict)                                               |
 | **Monorepo runner**| `melos` — `slang`, `build:web` scripts                                              |
 | **Logging**        | `logger`                                                                            |
@@ -142,7 +141,7 @@ Non-trivial changes start as a spec at `docs/specs/NNNN-<slug>.md` **before code
 ### When to write a spec
 
 * New portfolio sections.
-* New cross-cutting infrastructure (Firebase service, theme overhaul, routing changes).
+* New cross-cutting infrastructure (a backend/service layer, theme overhaul, routing changes).
 * Refactors that touch more than ~3 files or cross feature boundaries.
 * Anything you'd want to explain twice.
 
@@ -161,7 +160,7 @@ Skip for: typo fixes, dependency bumps, one-line bug fixes, adding a project ent
 
 * `## Context` — why this change, what's missing or wrong.
 * `## Requirements` — observable, testable statements. No implementation details.
-* `## Design` — files touched, shared widgets reused, data flow, theme/i18n/Remote Config keys, trade-offs.
+* `## Design` — files touched, shared widgets reused, data flow, theme/i18n keys, trade-offs.
 * `## Tasks` — ordered checklist, each item a coherent commit.
 * `## Verification` — manual + CI checks that prove it works end-to-end.
 
@@ -205,8 +204,8 @@ See `docs/specs/README.md` for the canonical template and naming rules.
 
 Test infrastructure lives in `test/harness/`:
 
-* `mocks.dart` — centralized mock declarations (mocktail).
-* `helpers.dart` — shared setup: `pumpMaterialApp`, theme wrapper, fake `RemoteConstants` builder.
+* `mocks.dart` — centralized mock declarations (mocktail). Empty today (no service/repository boundaries to mock); add mocks here as boundaries appear.
+* `helpers.dart` — shared setup: `pumpMaterialApp` (wires `MaterialApp` + slang `TranslationProvider`).
 * `factories/` — test data factories per entity (one file per entity).
 
 Importing the harness should be the first move in any new test file — if you're declaring a mock or building a fake entity inline, promote it into the harness.
@@ -217,7 +216,7 @@ Importing the harness should be the first move in any new test file — if you'r
 
 * Depend on abstractions, not implementations.
 * Inject dependencies via constructor (use cases, repositories) or `MultiRepositoryProvider` (widget tree).
-* External libraries (Firebase, url_launcher) must be wrapped behind a project-owned interface in `core/` or `infra/`.
+* External libraries (url_launcher, and any future service SDK) must be wrapped behind a project-owned interface in `core/` or `infra/`.
 
 ---
 
@@ -225,8 +224,8 @@ Importing the harness should be the first move in any new test file — if you'r
 
 * Use package imports (`package:my_portfolio/...`) — never relative.
 * Apply `const` constructors and `const` values wherever possible.
-* Use cases are single-method classes with `call()`. Typed variants like `callString`, `callInt` are allowed when generic dispatch isn't enough — see `GetRemoteValueUseCase`.
-* Repository methods that read external state should be designed to fail safely — the use case wraps with try/return-default (see `GetRemoteValueUseCase.call`).
+* Use cases are single-method classes with `call()`. Typed variants (`callString`, `callInt`, etc.) are allowed when generic dispatch isn't enough.
+* Repository methods that read external state should be designed to fail safely — the use case wraps with try/return-default.
 
 ### UI & Formatting
 
@@ -249,7 +248,7 @@ Importing the harness should be the first move in any new test file — if you'r
 
 * **Cubit** for simple state (e.g. `ThemeCubit` toggling `ThemeMode.dark` ↔ `ThemeMode.light`).
 * **Bloc** reserved for genuinely event-driven flows — none today.
-* **Repository providers** for read-only dependencies surfaced to the widget tree (`RemoteConstants`, `RemoteConfigInitializeUseCase`).
+* **Repository providers** for read-only dependencies surfaced to the widget tree (none today; the pattern remains available via `MultiRepositoryProvider` should a runtime dependency return).
 
 ### Rules
 
@@ -300,7 +299,7 @@ Access via `context.appColors.<token>` (extension on `BuildContext` defined in `
 
 | Path     | Page          | Purpose                                                              |
 | -------- | ------------- | -------------------------------------------------------------------- |
-| `/`      | `LoadingPage` | Splash: init Firebase Remote Config, precache assets, min ~1800ms    |
+| `/`      | `LoadingPage` | Splash: precache assets, min ~700ms                                  |
 | `/home`  | `HomePage`    | Portfolio (single-page, scroll-to-section navigation)                |
 
 * Route paths are static constants in `AppRoutes` (`lib/app/routes/app_router.dart`).
@@ -319,7 +318,7 @@ Section order (indices 0..5):
 
 1. **HeroSection** — Name, role, description, CTA buttons (Explore Projects → idx 2, Get In Touch → idx 5).
 2. **AboutSection** — Bio + stat cards.
-3. **ProjectsSection** — Featured + secondary projects. **Only section that reads Remote Config** (via `RemoteConstants` from the widget tree).
+3. **ProjectsSection** — Featured + secondary projects. Project data + links come from `ProjectsSectionData` factories reading `AppConstants`.
 4. **ResumeSection** — Experience + education + résumé download.
 5. **SkillsSection** — Skill categories with `TechChip` badges.
 6. **ContactSection** — Email, GitHub, LinkedIn, footer.
@@ -347,37 +346,22 @@ Section order (indices 0..5):
 
 ---
 
-## Remote Config (`lib/core/remote_config/`)
+## Constants (`lib/core/constants/app_constants.dart`)
 
-Layered:
+All non-i18n data is compile-time. `AppConstants` (an `abstract final class` of `static const`) holds:
 
-* `domain/entities/type_enum.dart` — every remote key + its default value (single source of truth).
-* `domain/entities/remote_config_enum.dart` — interface so other enums can extend the system.
-* `domain/repositories/remote_config_repository.dart` — abstract contract.
-* `domain/usecases/get_remote_value_usecase.dart` — typed accessors (`callString`, `callInt`, `callDouble`, `callBool`, `callIntList`); falls back to `enumValue.defaultValue` on any error.
-* `domain/usecases/remote_config_initialize.dart` — one-shot init (called from `LoadingPage`).
-* `infra/services/firebase_remote_config_service.dart` — Firebase SDK adapter.
-* `infra/repositories/remote_config_repository_impl.dart` — concrete repository.
+* Identity / contact (`owner`, `email`, `github`, `linkedin`, company + institution names).
+* Outbound URLs (résumé, store pages, award articles, per-project links).
 
-`RemoteConstants` (`lib/core/constants/app_constants.dart`) exposes named getters per remote key — sections consume this, not the use case directly.
+These URLs used to be served via Firebase Remote Config; they are now plain constants because the values are stable and never tuned at runtime. Removal recorded in [docs/specs/0006-remove-firebase-remote-config.md](docs/specs/0006-remove-firebase-remote-config.md) (supersedes the old Remote Config spec [0002](docs/specs/0002-remote-config.md)).
 
-### Adding a remote key
+> **No Firebase.** No `firebase_core`, analytics, Remote Config, Firestore, Auth, Storage, or Functions. The app has no backend. If a runtime data source is ever needed, wrap it behind a `core/`-owned interface and surface it via `MultiRepositoryProvider`.
 
-1. Add the entry to `TypeEnum` with a sane default URL/value.
-2. Add a getter on `RemoteConstants`.
+### Adding / changing a URL
+
+1. Add or edit the `static const String` on `AppConstants`.
+2. Reference it directly from the entity factory or widget (e.g. `AppConstants.resumeUrl`).
 3. (If exposed in i18n copy) update `en.i18n.json` and re-run `dart run slang`.
-
----
-
-## Firebase
-
-| Service                  | Usage                                                                       |
-| ------------------------ | --------------------------------------------------------------------------- |
-| `firebase_core`          | Initialised in `main.dart` with `DefaultFirebaseOptions.currentPlatform`    |
-| `firebase_analytics`     | `FirebaseAnalyticsObserver` attached to `GoRouter` (page-view tracking)     |
-| `firebase_remote_config` | Initialised in `LoadingPage` via `RemoteConfigInitializeUseCase`            |
-
-No Firestore, Auth, Storage, or Functions in this project.
 
 ---
 
@@ -398,7 +382,7 @@ No Firestore, Auth, Storage, or Functions in this project.
 1. Create the section under `lib/features/portfolio/presentation/widgets/` — flat file if simple, subfolder with `widgets/` if it owns nested pieces.
 2. Add any needed entity in `lib/features/portfolio/domain/entities/`.
 3. Add all user-facing strings to `lib/app/assets/i18n/en.i18n.json` and run `dart run slang`.
-4. If the section needs Remote Config values, add the key to `TypeEnum` and a getter on `RemoteConstants`.
+4. If the section needs URLs or other static data, add `static const` fields to `AppConstants`.
 5. Register the section in `HomePage`'s `CustomScrollView`, wrapped in `ScrollFadeIn`, with a fresh `GlobalKey` index.
 6. Add a nav entry in `NavBar` and (if mobile) in `MobileMenuButton`.
 7. Use `ResponsiveLayout` for breakpoint decisions.
@@ -406,9 +390,9 @@ No Firestore, Auth, Storage, or Functions in this project.
 
 ### Adding a new project
 
-1. Add the project to `ProjectsSectionData.projects(...)` or `.otherProjects(...)`.
+1. Add the project to `ProjectsSectionData.projects()` or `.otherProjects()`.
 2. Drop the image in `lib/app/assets/images/projects/` (asset generation auto-picks it up).
-3. If the project has a dynamic URL, add a `TypeEnum` entry + `RemoteConstants` getter.
+3. Add the project's URLs as `static const` fields on `AppConstants` and reference them in the factory.
 4. Add display strings to `en.i18n.json` and regenerate.
 
 ---

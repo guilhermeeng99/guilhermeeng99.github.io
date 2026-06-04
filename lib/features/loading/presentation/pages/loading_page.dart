@@ -1,12 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:logger/logger.dart';
 import 'package:my_portfolio/app/routes/app_router.dart';
 import 'package:my_portfolio/app/theme/app_colors.dart';
-import 'package:my_portfolio/core/remote_config/remote_config.dart';
 import 'package:my_portfolio/gen/assets.gen.dart';
 
 class LoadingPage extends StatefulWidget {
@@ -17,7 +14,7 @@ class LoadingPage extends StatefulWidget {
 }
 
 class _LoadingPageState extends State<LoadingPage> {
-  static const _kMinDisplayDuration = Duration(milliseconds: 1800);
+  static const _kMinDisplayDuration = Duration(milliseconds: 700);
 
   bool _fadeOut = false;
 
@@ -34,10 +31,7 @@ class _LoadingPageState extends State<LoadingPage> {
     if (!mounted) return;
 
     try {
-      await Future.wait([
-        _initializeRemoteConfig(),
-        _precacheImages(),
-      ]);
+      await _precacheImages();
     } on Exception catch (_) {}
 
     final elapsed = stopwatch.elapsed;
@@ -51,14 +45,6 @@ class _LoadingPageState extends State<LoadingPage> {
     await Future<void>.delayed(const Duration(milliseconds: 500));
     if (!mounted) return;
     context.go(AppRoutes.home);
-  }
-
-  Future<void> _initializeRemoteConfig() async {
-    try {
-      await context.read<RemoteConfigInitializeUseCase>().call();
-    } on Exception catch (e) {
-      Logger().e('Remote Config initialization failed', error: e);
-    }
   }
 
   Future<void> _precacheImages() async {

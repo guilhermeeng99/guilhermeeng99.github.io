@@ -1,5 +1,3 @@
-import 'package:my_portfolio/core/remote_config/remote_config.dart';
-
 abstract final class AppConstants {
   static const String owner = 'Guilherme Passos';
   static const String bluCompany = 'Blu Studios';
@@ -15,64 +13,49 @@ abstract final class AppConstants {
   static const String githubUrl = 'https://github.com/$github';
   static const String email = 'guilhermeeng99@gmail.com';
   static const String emailUrl = 'mailto:$email';
-}
 
-class RemoteConstants {
-  const RemoteConstants(this._getRemoteValue);
+  // Outbound links for projects, awards, store pages, and the résumé. These
+  // were previously served via Firebase Remote Config; they are now plain
+  // constants since the values are stable and never tuned at runtime.
+  static const String resumeUrl =
+      'https://drive.google.com/file/d/1SoUNPSx_SgQX25yy_znxPR3DBGqPq-h3/view?usp=sharing';
 
-  final GetRemoteValueUseCase _getRemoteValue;
+  static const String googlePlayStoreUrl =
+      'https://play.google.com/store/apps/dev?id=6372918774674573544';
+  static const String appleStoreUrl =
+      'https://apps.apple.com/developer/bluebook/id1467351824';
 
-  String get resumeUrl => _getRemoteValue.callString(TypeEnum.resumeUrl);
+  static const String googlePlayIndieGamesAccelerator2024Url =
+      'https://android-developers.googleblog.com/2024/03/meet-class-of-2024-for-google-play-indie-games-accelerator.html';
+  static const String googlePlayIndieGamesFund2023Url =
+      'https://blog.google/products-and-platforms/platforms/google-play/10-studios-selected-for-google-plays-2023-indie-games-fund/';
+  static const String googlePlayBestOf2021Url =
+      'https://blog.google/products-and-platforms/platforms/google-play/google-plays-best-of-2021/';
 
-  String get googlePlayIndieGamesAccelerator2024Url =>
-      _getRemoteValue.callString(
-        TypeEnum.googlePlayIndieGamesAccelerator2024Url,
-      );
+  static const String harvestArticleUrl =
+      'https://www.linkedin.com/pulse/i-built-production-ready-app-24-hours-using-ai-heres-what-passos-e6fcf/';
+  static const String capyArticleUrl =
+      'https://www.linkedin.com/pulse/adding-ai-app-easy-making-useful-hard-part-guilherme-passos-kndgf/';
+  static const String financoArticleUrl =
+      'https://www.linkedin.com/pulse/how-i-build-side-projects-like-production-software-guilherme-passos-abq9f/';
 
-  String get googlePlayIndieGamesFund2023Url => _getRemoteValue.callString(
-    TypeEnum.googlePlayIndieGamesFund2023Url,
-  );
-
-  String get harvestArticleUrl => _getRemoteValue.callString(
-    TypeEnum.harvestArticleUrl,
-  );
-
-  String get googlePlayBestOf2021Url =>
-      _getRemoteValue.callString(TypeEnum.googlePlayBestOf2021Url);
-
-  String get googlePlayStoreUrl =>
-      _getRemoteValue.callString(TypeEnum.googlePlayStoreUrl);
-
-  String get appleStoreUrl =>
-      _getRemoteValue.callString(TypeEnum.appleStoreUrl);
-
-  String get magicSortUrl => _getRemoteValue.callString(TypeEnum.magicSortUrl);
-
-  String get rabitUrl => _getRemoteValue.callString(TypeEnum.rabitUrl);
-
-  String get cupsUrl => _getRemoteValue.callString(TypeEnum.cupsUrl);
-
-  String get farmUrl => _getRemoteValue.callString(TypeEnum.farmUrl);
-
-  String get capyUrl => _getRemoteValue.callString(TypeEnum.capyUrl);
-
-  String get dropAndMergeUrl =>
-      _getRemoteValue.callString(TypeEnum.dropAndMergeUrl);
-
-  String get neverHaveIEverXUrl =>
-      _getRemoteValue.callString(TypeEnum.neverHaveIEverXUrl);
-
-  String get boozeUrl => _getRemoteValue.callString(TypeEnum.boozeUrl);
-
-  String get vdxUrl => _getRemoteValue.callString(TypeEnum.vdxUrl);
-
-  String get harvestUrl => _getRemoteValue.callString(TypeEnum.harvestUrl);
-
-  String get financoUrl => _getRemoteValue.callString(TypeEnum.financoUrl);
-
-  String get capyArticleUrl =>
-      _getRemoteValue.callString(TypeEnum.capyArticleUrl);
-
-  String get financoArticleUrl =>
-      _getRemoteValue.callString(TypeEnum.financoArticleUrl);
+  static const String magicSortUrl =
+      'https://appmagic.rocks/google-play/magic-sort/com.blu.wsp';
+  static const String rabitUrl =
+      'https://appmagic.rocks/google-play/rabit/com.blu.rabito';
+  static const String cupsUrl = 'https://appmagic.rocks/ipad/cups/1541421297';
+  static const String farmUrl =
+      'https://play.google.com/store/apps/details?gl=US&hl=en-US&id=com.blu.farmvsaliens';
+  static const String capyUrl =
+      'https://appmagic.rocks/iphone/capy-self-care-pet/6739744609';
+  static const String dropAndMergeUrl =
+      'https://appmagic.rocks/iphone/drop-and-merge/1559407907';
+  static const String neverHaveIEverXUrl =
+      'https://appmagic.rocks/iphone/never-have-i-ever-x/1467821712';
+  static const String boozeUrl =
+      'https://appmagic.rocks/iphone/booze-jogo-de-bebida/1495727658?hl=en';
+  static const String vdxUrl =
+      'https://drive.google.com/file/d/11Dj0-tAeB0LPlH9yPZUon_XQVrOVAf-l/view?usp=drive_link';
+  static const String harvestUrl = 'https://guilhermeeng99.github.io/harvest/';
+  static const String financoUrl = 'https://github.com/guilhermeeng99/financo';
 }

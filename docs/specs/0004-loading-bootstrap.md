@@ -1,6 +1,6 @@
 # 0004 — Loading + Bootstrap Flow
 
-**Status:** shipped (retroactive — documents existing code as of 2026-05-06)
+**Status:** shipped (retroactive — documents existing code as of 2026-05-06). **Amended by [0006](0006-remove-firebase-remote-config.md) (2026-06-04):** Firebase init and Remote Config warmup were removed from the bootstrap, and the min-display floor dropped from 1800ms to **700ms**. Sections below describing Firebase/Remote Config init no longer reflect the code; see 0006.
 **Date:** 2026-05-06
 
 ## Context

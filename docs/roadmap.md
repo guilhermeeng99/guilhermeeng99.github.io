@@ -19,9 +19,9 @@ Living document for active and planned work on the portfolio. Updated as scope s
 ## Next (planned, not started)
 
 * **Portfolio content review**: validate descriptions, tech stack chips, and metrics for every entry in `lib/features/portfolio/domain/entities/project_data.dart`. Closed-source items rely on copy alone; cross-check claims against actual delivery.
-* **Add `my_pet` / `foca` as projects**: public/private repos exist; needs preview images in `lib/app/assets/images/projects/`, `TypeEnum` entries for store URLs, and i18n strings in `en.i18n.json`.
+* **Add `my_pet` / `foca` as projects**: public/private repos exist; needs preview images in `lib/app/assets/images/projects/`, URL constants on `AppConstants`, and i18n strings in `en.i18n.json`.
 * **SEO and metadata polish**: review `web/index.html` `<meta>` tags, Open Graph image, favicon, and structured data. The site is the first impression for recruiters; the head matters.
-* **Analytics dashboards**: define the events worth tracking (section views, CTA clicks, project link-outs) and confirm they surface in Firebase Analytics with useful dimensions.
+* **Decide on analytics**: Firebase Analytics was removed (it was wired but never attached, see [spec 0006](specs/0006-remove-firebase-remote-config.md)). If page-view / CTA tracking is wanted, re-add a lightweight analytics layer deliberately and wire the observer into `go_router`.
 
 ---
 
@@ -29,13 +29,15 @@ Living document for active and planned work on the portfolio. Updated as scope s
 
 * **Localization beyond English**: slang already supports multi-locale; consider PT-BR once English copy stabilizes.
 * **Animated section transitions**: explore beyond the current `ScrollFadeIn`; potential gains in perceived polish without sacrificing performance budgets.
-* **CMS-driven projects**: let Remote Config drive the full project list (not just URLs) so adding a project does not require a code deploy. Trade-off: heavier startup + risk of broken state if Remote Config fetch fails.
+* **CMS-driven projects**: drive the full project list from a backend so adding a project does not require a code deploy. Trade-off: heavier startup + risk of broken state if the fetch fails. Note: Remote Config was removed in [spec 0006](specs/0006-remove-firebase-remote-config.md); this would mean re-introducing a runtime data source, so weigh it against the simplicity won by going all-constants.
 * **Dark/light system-preference toggle**: currently manual via `ThemeCubit`; could auto-follow `MediaQuery.platformBrightness` on first load.
 
 ---
 
 ## Done (recent, newest first)
 
+* **2026-06-04**: Faster web cold load. Instant HTML splash in `web/index.html` (no blank white frame), self-hosted + Latin-subset fonts (dropped `google_fonts`, killed the runtime `fonts.gstatic.com` fetch + FOUT), dropped `font_awesome_flutter` (only GitHub/LinkedIn marks used, now vendored SVGs via `flutter_svg`), and `--wasm` production build (skwasm with CanvasKit JS fallback). Net: cold-load transfer 2.57MB to 1.27MB, broadband first frame ~3.0s to ~2.25s. See [spec 0007](specs/0007-faster-web-load.md).
+* **2026-06-04**: Removed Firebase + Remote Config; faster load. Deleted `firebase_core` / `firebase_analytics` / `firebase_remote_config`, the `lib/core/remote_config/` module, `AppDependencies`, and `firebase_options.dart`. Outbound URLs are now `AppConstants` constants. Loading splash floor dropped from 1800ms to 700ms and no longer blocks on a network fetch. See [spec 0006](specs/0006-remove-firebase-remote-config.md).
 * **2026-05-19**: Fully automated release pipeline. Workflow now auto-bumps `pubspec.yaml` version (patch / minor / major based on Conventional-Commits prefix in last commit), tags `vX.Y.Z`, creates a GitHub Release with generated notes, and deploys to `gh-pages`. Concurrency control added so consecutive pushes queue instead of racing.
 * **2026-05-19**: Featured + Other Projects copy refresh. All 13 entries got rewritten descriptions, more specific tech-chip arrays, and the Financo entry was corrected (was claiming Windows desktop / Melos / flutter_modular; actual stack is mobile+web BLoC / go_router / Vertex AI Gemini via Cloud Functions). README and `User-Facing Copy` rule (no em-dashes) added to CLAUDE.md.
 * **2026-05-06**: Spec workflow shipped. Five specs land covering portfolio sections, Remote Config, theme system, loading bootstrap, and the test harness. See [docs/specs/](specs/).

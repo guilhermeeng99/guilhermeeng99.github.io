@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_portfolio/app/theme/app_colors.dart';
+import 'package:my_portfolio/app/widgets/brand_icons.dart';
 import 'package:my_portfolio/app/widgets/responsive_layout.dart';
+import 'package:my_portfolio/app/widgets/social_icon.dart';
 import 'package:my_portfolio/core/constants/app_constants.dart';
 import 'package:my_portfolio/core/utils/url_launch.dart';
 import 'package:my_portfolio/gen/i18n/strings.g.dart';
@@ -46,19 +47,19 @@ class ContactSection extends StatelessWidget {
               alignment: WrapAlignment.center,
               children: [
                 _ContactCard(
-                  icon: Icons.email_outlined,
+                  icon: Icons.email_rounded,
                   label: t.contact.email,
                   value: AppConstants.email,
                   url: AppConstants.emailUrl,
                 ),
                 _ContactCard(
-                  icon: FontAwesomeIcons.github,
+                  icon: BrandIcons.github,
                   label: t.contact.github,
                   value: AppConstants.github,
                   url: AppConstants.githubUrl,
                 ),
                 _ContactCard(
-                  icon: FontAwesomeIcons.linkedin,
+                  icon: BrandIcons.linkedin,
                   label: t.contact.linkedin,
                   value: AppConstants.linkedin,
                   url: AppConstants.linkedinUrl,
@@ -154,22 +155,13 @@ class _ContactCardState extends State<_ContactCard> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              if (widget.icon is FaIconData)
-                FaIcon(
-                  widget.icon as FaIconData,
-                  color: _hovered
-                      ? context.appColors.primary
-                      : context.appColors.textSecondary,
-                  size: 28,
-                )
-              else
-                Icon(
-                  widget.icon as IconData,
-                  color: _hovered
-                      ? context.appColors.primary
-                      : context.appColors.textSecondary,
-                  size: 28,
-                ),
+              SocialIcon(
+                icon: widget.icon,
+                size: 28,
+                color: _hovered
+                    ? context.appColors.primary
+                    : context.appColors.textSecondary,
+              ),
               const SizedBox(height: 12),
               Text(
                 widget.label,

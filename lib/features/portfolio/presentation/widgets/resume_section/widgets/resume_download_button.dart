@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_portfolio/app/theme/app_colors.dart';
 import 'package:my_portfolio/core/constants/app_constants.dart';
 import 'package:my_portfolio/core/utils/url_launch.dart';
@@ -19,14 +18,12 @@ class _ResumeSectionDownloadResumeButtonState
 
   @override
   Widget build(BuildContext context) {
-    final remote = context.read<RemoteConstants>();
-
     return MouseRegion(
       onEnter: (_) => setState(() => _hovering = true),
       onExit: (_) => setState(() => _hovering = false),
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
-        onTap: () => appUrlLaunch(remote.resumeUrl),
+        onTap: () => appUrlLaunch(AppConstants.resumeUrl),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 250),
           curve: Curves.easeOut,

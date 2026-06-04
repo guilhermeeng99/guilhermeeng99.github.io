@@ -9,15 +9,11 @@ environment:
   sdk: ^3.10.8
 
 dependencies:
-  firebase_analytics: ^12.4.1
-  firebase_core: ^4.9.0
-  firebase_remote_config: ^6.5.1
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.1
-  font_awesome_flutter: ^11.0.0
+  flutter_svg: ^2.0.17
   go_router: ^17.2.3
-  google_fonts: ^8.1.0
   logger: ^2.7.0
   slang: ^4.14.0
   slang_flutter: ^4.14.0
@@ -46,4 +42,20 @@ flutter:
     - lib/app/assets/i18n/
     - lib/app/assets/images/
     - lib/app/assets/images/projects/
+    - lib/app/assets/icons/
   uses-material-design: true
+
+  # Self-hosted to avoid the runtime network fetch (and font-swap flash) that
+  # google_fonts incurred. Inter + Space Grotesk are variable fonts (one file
+  # spans all weights; Flutter maps fontWeight to the wght axis). JetBrains
+  # Mono is only used at w400, so the static Regular is enough.
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: lib/app/assets/fonts/Inter-Variable.ttf
+    - family: SpaceGrotesk
+      fonts:
+        - asset: lib/app/assets/fonts/SpaceGrotesk-Variable.ttf
+    - family: JetBrainsMono
+      fonts:
+        - asset: lib/app/assets/fonts/JetBrainsMono-Regular.ttf

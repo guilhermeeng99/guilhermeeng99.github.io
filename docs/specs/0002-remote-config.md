@@ -1,6 +1,6 @@
 # 0002 — Remote Config Module
 
-**Status:** shipped (retroactive — documents existing code as of 2026-05-06)
+**Status:** superseded by [0006](0006-remove-firebase-remote-config.md) (2026-06-04) — the Remote Config module and Firebase were removed; outbound URLs are now plain `AppConstants` constants. This spec is kept as the record of how the layer was built, should runtime config ever be revived.
 **Date:** 2026-05-06
 
 ## Context

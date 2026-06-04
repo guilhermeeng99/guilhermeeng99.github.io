@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_portfolio/app/theme/app_colors.dart';
+import 'package:my_portfolio/app/widgets/social_icon.dart';
 import 'package:my_portfolio/core/utils/url_launch.dart';
 
 class SocialButton extends StatefulWidget {
@@ -11,6 +11,8 @@ class SocialButton extends StatefulWidget {
     this.tooltip = '',
   });
 
+  /// Either an [IconData] (Material icon) or a `String` SVG asset path (brand
+  /// logo, see `BrandIcons`).
   final Object icon;
   final String url;
   final String tooltip;
@@ -46,21 +48,13 @@ class _SocialButtonState extends State<SocialButton> {
                     : context.appColors.cardBorder,
               ),
             ),
-            child: widget.icon is FaIconData
-                ? FaIcon(
-                    widget.icon as FaIconData,
-                    color: _hovered
-                        ? context.appColors.primary
-                        : context.appColors.textSecondary,
-                    size: 22,
-                  )
-                : Icon(
-                    widget.icon as IconData,
-                    color: _hovered
-                        ? context.appColors.primary
-                        : context.appColors.textSecondary,
-                    size: 22,
-                  ),
+            child: SocialIcon(
+              icon: widget.icon,
+              size: 22,
+              color: _hovered
+                  ? context.appColors.primary
+                  : context.appColors.textSecondary,
+            ),
           ),
         ),
       ),

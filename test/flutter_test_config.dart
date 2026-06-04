@@ -2,10 +2,9 @@ import 'dart:async';
 import 'dart:io';
 
 Future<void> testExecutable(FutureOr<void> Function() testMain) async {
-  // GoogleFonts hits the network at runtime to fetch font files; in the test
-  // environment we silence those requests by intercepting the HttpClient.
-  // GoogleFonts catches the resulting failure and falls back to the default
-  // font — visual fidelity isn't what these tests are asserting on.
+  // Fonts are self-hosted now, so tests make no font network calls. This
+  // override stays as a safety net: any stray HTTP from test code gets a
+  // dead client instead of a real request, keeping tests hermetic.
   HttpOverrides.global = _SilentHttpOverrides();
   await testMain();
 }

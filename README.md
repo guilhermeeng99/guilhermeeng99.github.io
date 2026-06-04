@@ -8,7 +8,7 @@ Showcases my work as a Flutter Engineer and Mobile Entrepreneur. Products I have
 
 * **Hero**: name, role, description, CTAs that scroll to Projects or Contact.
 * **About**: bio + stat cards (downloads, years experience, products shipped, max team size).
-* **Projects**: featured + secondary projects, dynamic store URLs sourced from Firebase Remote Config.
+* **Projects**: featured + secondary projects with store / article links.
 * **Resume**: professional experience, education, and résumé download.
 * **Skills**: skill categories rendered as tech-chip badges.
 * **Contact**: email, GitHub, LinkedIn, footer.
@@ -22,8 +22,8 @@ Showcases my work as a Flutter Engineer and Mobile Entrepreneur. Products I have
 
 ```
 lib/
-├── app/          # App shell: routing, theme, DI, shared widgets, assets
-├── core/         # Shared cross-feature: constants, remote_config, utils
+├── app/          # App shell: routing, theme, shared widgets, assets
+├── core/         # Shared cross-feature: constants, utils
 ├── features/     # Feature modules (loading, portfolio)
 └── gen/          # Generated code (slang i18n, asset references)
 
@@ -36,11 +36,10 @@ test/
 
 Each feature follows:
 
-* `domain/`: entities, repository interfaces, use cases
-* `infra/`: service implementations (Firebase SDK adapters)
+* `domain/`: entities and (where needed) repository interfaces + use cases
 * `presentation/`: pages, widgets, cubits
 
-Data flow: UI (Page → Section → Widget) → UseCase → Repository (abstract) → Service (Firebase).
+The app has no backend. Project data and outbound links are compile-time constants (`AppConstants`); copy comes from `slang`. Data flow: UI (Page → Section → Widget) reads entities and constants directly.
 
 ## Tech stack
 
@@ -48,11 +47,10 @@ Data flow: UI (Page → Section → Widget) → UseCase → Repository (abstract
 |---------------------|---------------------------------------------------------------------|
 | State management    | `flutter_bloc` (`ThemeCubit` toggles light/dark; repository providers for read-only deps) |
 | Routing             | `go_router` (2 routes: `/` loading, `/home` portfolio)              |
-| Firebase            | `firebase_core`, `firebase_analytics`, `firebase_remote_config`     |
-| Remote Config       | Custom layer in `lib/core/remote_config/` with `TypeEnum` keys      |
 | i18n                | `slang` / `slang_flutter` (JSON-based, type-safe, English only)     |
 | Theme               | Material 3 with `AppColorsExtension` (`ThemeExtension`)             |
-| Fonts               | `google_fonts` (SpaceGrotesk, Inter, JetBrainsMono)                 |
+| Fonts               | Self-hosted, Latin-subset TTFs (SpaceGrotesk, Inter, JetBrainsMono) bundled via `pubspec` `fonts:` (no runtime fetch) |
+| Icons               | Material Icons + `flutter_svg` for the GitHub/LinkedIn brand marks      |
 | Linting             | `very_good_analysis` ^10.2.0 (strict)                               |
 | Monorepo runner     | `melos` (`slang`, `build:web` scripts)                              |
 | Testing             | `flutter_test`, `bloc_test`, `mocktail`                             |
@@ -116,7 +114,7 @@ Live URL: [guilhermeeng99.github.io](https://guilhermeeng99.github.io).
 
 ## Conventions and specs
 
-* Project conventions: [CLAUDE.md](CLAUDE.md) (architecture, code style, state management, theme, routing, sections, Remote Config, i18n, testing, performance, plan mode, quality gate).
+* Project conventions: [CLAUDE.md](CLAUDE.md) (architecture, code style, state management, theme, routing, sections, i18n, testing, performance, plan mode, quality gate).
 * Design specs: [docs/specs/](docs/specs/) (ADR-style: Context, Requirements, Design, Tasks, Verification). Template and naming rules in [docs/specs/README.md](docs/specs/README.md).
 * Active and planned work: [docs/roadmap.md](docs/roadmap.md).
 

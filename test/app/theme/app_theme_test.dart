@@ -5,10 +5,9 @@ import 'package:my_portfolio/app/theme/app_theme.dart';
 
 void main() {
   group('AppTheme', () {
-    // The theme getters call GoogleFonts.* which schedules async font
-    // fetches. In bare `test()` blocks an unhandled async error from a
-    // failed fetch fails the test; `testWidgets` runs inside FakeAsync
-    // so those errors are handled. Hence the testWidgets-everywhere shape.
+    // Fonts are self-hosted (declared in pubspec, no runtime fetch), so the
+    // theme getters are synchronous. testWidgets is kept here for the cases
+    // that pump a widget tree; the pure-data cases could be plain test().
 
     testWidgets('darkTheme registers AppColorsExtension(midnightOcean)',
         (tester) async {

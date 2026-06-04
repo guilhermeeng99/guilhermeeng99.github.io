@@ -82,6 +82,7 @@ jobs:
       - name: Build web
         run: |
           flutter build web --release \
+            --wasm \
             --base-href / \
             --no-wasm-dry-run \
             --build-number=$GITHUB_RUN_NUMBER

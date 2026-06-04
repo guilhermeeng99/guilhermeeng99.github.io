@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_portfolio/app/theme/app_colors.dart';
+import 'package:my_portfolio/app/widgets/brand_icons.dart';
 import 'package:my_portfolio/app/widgets/social_button.dart';
 import 'package:my_portfolio/core/constants/app_constants.dart';
 import 'package:my_portfolio/gen/i18n/strings.g.dart';
@@ -66,19 +66,19 @@ class HeroSectionContent extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             SocialButton(
-              icon: FontAwesomeIcons.github,
+              icon: BrandIcons.github,
               url: AppConstants.githubUrl,
               tooltip: t.contact.github,
             ),
             const SizedBox(width: 12),
             SocialButton(
-              icon: FontAwesomeIcons.linkedin,
+              icon: BrandIcons.linkedin,
               url: AppConstants.linkedinUrl,
               tooltip: t.contact.linkedin,
             ),
             const SizedBox(width: 12),
             SocialButton(
-              icon: Icons.email_outlined,
+              icon: Icons.email_rounded,
               url: AppConstants.emailUrl,
               tooltip: t.contact.email,
             ),

@@ -1,6 +1,6 @@
 # 0003 — Theme System (Light + Dark)
 
-**Status:** shipped (retroactive — documents existing code as of 2026-05-06)
+**Status:** shipped (retroactive — documents existing code as of 2026-05-06). **Amended by [0007](0007-faster-web-load.md) (2026-06-04):** `google_fonts` was dropped for self-hosted TTFs; `AppTheme` now uses `TextStyle(fontFamily: ...)` over `_textTheme(base, colors)` instead of `GoogleFonts.*`. The role/weight scale is unchanged.
 **Date:** 2026-05-06
 
 ## Context
