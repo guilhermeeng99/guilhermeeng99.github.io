@@ -33,8 +33,78 @@
 
   <title>Guilherme Passos - Flutter Engineer</title>
   <link rel="manifest" href="manifest.json">
+
+  <!-- Instant splash painted by the browser before the Flutter engine boots,
+       so the user never sees a blank white frame on a cold load. It matches
+       the in-app LoadingPage (midnightOcean background + primary spinner) and
+       fades out on the engine's `flutter-first-frame` event. -->
+  <style>
+    #splash {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0A1628;
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 0.4s ease-out;
+    }
+    #splash.splash--hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    #splash .orb {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Soft brand-colored halo that breathes behind the ring. */
+    #splash .glow {
+      position: absolute;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(108, 99, 255, 0.45), rgba(0, 217, 255, 0.12) 45%, transparent 70%);
+      animation: splash-pulse 1.8s ease-in-out infinite;
+    }
+    /* Gradient ring (primary -> secondary) masked to a thin band, rotating. */
+    #splash .ring {
+      position: relative;
+      z-index: 1;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: conic-gradient(from 90deg, #6C63FF, #00D9FF, #6C63FF);
+      -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 5px));
+              mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 5px));
+      animation: splash-spin 1s linear infinite;
+    }
+    @keyframes splash-spin {
+      to { transform: rotate(360deg); }
+    }
+    @keyframes splash-pulse {
+      0%, 100% { opacity: 0.35; transform: scale(0.85); }
+      50%      { opacity: 0.9;  transform: scale(1.1); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #splash .ring, #splash .glow { animation: none; }
+    }
+  </style>
 </head>
 <body>
+  <div id="splash"><div class="orb"><span class="glow"></span><span class="ring"></span></div></div>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var splash = document.getElementById('splash');
+      if (!splash) return;
+      splash.classList.add('splash--hidden');
+      splash.addEventListener('transitionend', function () {
+        splash.remove();
+      });
+    });
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
