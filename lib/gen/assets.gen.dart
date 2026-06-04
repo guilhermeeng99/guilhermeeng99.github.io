@@ -105,14 +105,31 @@ class $LibAppAssetsImagesProjectsGen {
     'lib/app/assets/images/projects/harvest_preview.webp',
   );
 
+  /// File path: lib/app/assets/images/projects/investanco_preview.webp
+  AssetGenImage get investancoPreview => const AssetGenImage(
+    'lib/app/assets/images/projects/investanco_preview.webp',
+  );
+
   /// File path: lib/app/assets/images/projects/magic_sort_preview.webp
   AssetGenImage get magicSortPreview => const AssetGenImage(
     'lib/app/assets/images/projects/magic_sort_preview.webp',
   );
 
+  /// File path: lib/app/assets/images/projects/mia_preview.webp
+  AssetGenImage get miaPreview =>
+      const AssetGenImage('lib/app/assets/images/projects/mia_preview.webp');
+
+  /// File path: lib/app/assets/images/projects/parrot_preview.webp
+  AssetGenImage get parrotPreview =>
+      const AssetGenImage('lib/app/assets/images/projects/parrot_preview.webp');
+
   /// File path: lib/app/assets/images/projects/rabit_preview.webp
   AssetGenImage get rabitPreview =>
       const AssetGenImage('lib/app/assets/images/projects/rabit_preview.webp');
+
+  /// File path: lib/app/assets/images/projects/toolzy_preview.webp
+  AssetGenImage get toolzyPreview =>
+      const AssetGenImage('lib/app/assets/images/projects/toolzy_preview.webp');
 
   /// File path: lib/app/assets/images/projects/vdx_preview.webp
   AssetGenImage get vdxPreview =>
@@ -129,8 +146,12 @@ class $LibAppAssetsImagesProjectsGen {
     farmPreview,
     financoPreview,
     harvestPreview,
+    investancoPreview,
     magicSortPreview,
+    miaPreview,
+    parrotPreview,
     rabitPreview,
+    toolzyPreview,
     vdxPreview,
   ];
 }

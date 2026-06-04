@@ -58,4 +58,9 @@ abstract final class AppConstants {
       'https://drive.google.com/file/d/11Dj0-tAeB0LPlH9yPZUon_XQVrOVAf-l/view?usp=drive_link';
   static const String harvestUrl = 'https://guilhermeeng99.github.io/harvest/';
   static const String financoUrl = 'https://github.com/guilhermeeng99/financo';
+  static const String investancoUrl =
+      'https://guilhermeeng99.github.io/Investanco/';
+  static const String miaUrl = 'https://guilhermeeng99.github.io/mia/';
+  static const String parrotUrl = 'https://guilhermeeng99.github.io/parrot/';
+  static const String toolzyUrl = 'https://guilhermeeng99.github.io/Toolzy/';
 }

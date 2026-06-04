@@ -65,6 +65,10 @@ class ProjectsSectionData {
   ];
 
   static List<ProjectsSectionData> otherProjects() => [
+    _mia(),
+    _parrot(),
+    _toolzy(),
+    _investanco(),
     _vdx(),
     _harvest(),
     _dropMerge(),
@@ -238,6 +242,66 @@ class ProjectsSectionData {
     ],
     image: _projectImages.financoPreview,
     downloadLink: AppConstants.financoUrl,
+  );
+
+  static ProjectsSectionData _mia() => ProjectsSectionData(
+    name: t.projects.items.mia.name,
+    description: t.projects.items.mia.description,
+    details: t.projects.items.mia.details,
+    technologies: const [
+      'Tauri 2',
+      'Rust',
+      'Svelte',
+      'whisper.cpp',
+      'Silero VAD',
+    ],
+    image: _projectImages.miaPreview,
+    downloadLink: AppConstants.miaUrl,
+  );
+
+  static ProjectsSectionData _parrot() => ProjectsSectionData(
+    name: t.projects.items.parrot.name,
+    description: t.projects.items.parrot.description,
+    details: t.projects.items.parrot.details,
+    technologies: const [
+      'Tauri 2',
+      'Rust',
+      'Svelte',
+      'Python',
+      'PyTorch',
+    ],
+    image: _projectImages.parrotPreview,
+    downloadLink: AppConstants.parrotUrl,
+  );
+
+  static ProjectsSectionData _toolzy() => ProjectsSectionData(
+    name: t.projects.items.toolzy.name,
+    description: t.projects.items.toolzy.description,
+    details: t.projects.items.toolzy.details,
+    technologies: const [
+      'Tauri 2',
+      'Rust',
+      'React',
+      'TypeScript',
+      'ffmpeg',
+    ],
+    image: _projectImages.toolzyPreview,
+    downloadLink: AppConstants.toolzyUrl,
+  );
+
+  static ProjectsSectionData _investanco() => ProjectsSectionData(
+    name: t.projects.items.investanco.name,
+    description: t.projects.items.investanco.description,
+    details: t.projects.items.investanco.details,
+    technologies: const [
+      'Flutter',
+      'BLoC',
+      'Drift',
+      'Firebase',
+      'fl_chart',
+    ],
+    image: _projectImages.investancoPreview,
+    downloadLink: AppConstants.investancoUrl,
   );
 
   static ProjectsSectionData _bluBi() => ProjectsSectionData(
