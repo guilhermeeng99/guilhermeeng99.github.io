@@ -14,6 +14,15 @@ abstract final class AppConstants {
   static const String email = 'guilhermeeng99@gmail.com';
   static const String emailUrl = 'mailto:$email';
 
+  /// Toptal public profile ("Top 3% Talent"), used by the credibility badge.
+  /// (The referral link stays only in web/index.html for Toptal's validator.)
+  static const String toptalUrl =
+      'https://talent.toptal.com/resume/developers/guilherme-passos';
+
+  /// Arc.dev profile, where the "Arc Certified Remote Developer" credential
+  /// (Flutter, AI, Anthropic Claude) is shown. Used by the credential badge.
+  static const String arcCertUrl = 'https://arc.dev/@guilhermepassos744364';
+
   // Outbound links for projects, awards, store pages, and the résumé. These
   // were previously served via Firebase Remote Config; they are now plain
   // constants since the values are stable and never tuned at runtime.

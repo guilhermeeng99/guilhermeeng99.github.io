@@ -354,8 +354,8 @@ class TranslationsAboutStatsProductsEn {
 
 	// Translations
 
-	/// en: '10+'
-	String get value => '10+';
+	/// en: '20+'
+	String get value => '20+';
 
 	/// en: 'Products Shipped'
 	String get label => 'Products Shipped';
@@ -915,7 +915,7 @@ extension on Translations {
 			'about.stats.downloads.label' => 'Downloads',
 			'about.stats.experience.value' => '7+',
 			'about.stats.experience.label' => 'Years Experience',
-			'about.stats.products.value' => '10+',
+			'about.stats.products.value' => '20+',
 			'about.stats.products.label' => 'Products Shipped',
 			'about.stats.teamSize.value' => '14',
 			'about.stats.teamSize.label' => 'Max Team Size Co-led',
