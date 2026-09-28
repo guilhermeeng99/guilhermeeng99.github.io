@@ -3,7 +3,7 @@ description: "My engineer portfolio app built with Flutter. Showcasing my projec
 
 publish_to: 'none'
 
-version: 1.4.0+15
+version: 1.5.0+17
 
 environment:
   sdk: ^3.10.8
