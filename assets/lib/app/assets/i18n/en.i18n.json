@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Guilherme Passos - Flutter Engineer",
+    "title": "Guilherme Passos - Senior Software Engineer",
     "total_downloads": "12M+"
   },
   "nav": {
@@ -12,25 +12,25 @@
   },
   "hero": {
     "name": "Guilherme\nPassos",
-    "role": "Senior Flutter Engineer",
-    "description": "Flutter Engineer & Mobile Entrepreneur with 7+ years crafting high-performance apps and games reaching @:app.total_downloads downloads worldwide.",
+    "role": "Senior Software Engineer",
+    "description": "Senior Software Engineer with 8+ years building Flutter, mobile, and full-stack products. Apps and games I've built have reached @:app.total_downloads downloads worldwide.",
     "explore_projects": "Explore Projects",
     "get_in_touch": "Get In Touch"
   },
   "about": {
     "title": "About Me",
     "subtitle": "Building digital products that scale",
-    "bio1": "Senior Flutter Engineer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.",
-    "bio2": "I've implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I've built and maintained have reached 12M+ downloads worldwide.",
-    "bio3": "I specialize in scalable architectures, long-term code maintainability, and high-performance mobile applications. My expertise spans multiple state management solutions (Riverpod, Bloc, MobX), native plugin integration, and the full Firebase ecosystem.",
+    "bio1": "Senior Software Engineer with 8+ years of software engineering experience, including more than seven years building mobile products as a co-founder at blu studios.",
+    "bio2": "I build products end to end, from scalable architecture and implementation to launch and live operations. Products I've developed and maintained have reached 12M+ downloads worldwide, including titles with 5M+ downloads and Google Play recognition.",
+    "bio3": "My work spans Flutter and full-stack engineering, production performance, team leadership, and AI-enabled product experiences.",
     "stats": {
       "downloads": {
         "value": "@:app.total_downloads",
         "label": "Downloads"
       },
       "experience": {
-        "value": "7+",
-        "label": "Years Experience"
+        "value": "8+",
+        "label": "Years of Experience"
       },
       "products": {
         "value": "20+",
@@ -171,11 +171,13 @@
         "period": "Mar 2026 – Aug 2026",
         "location": "Remote",
         "points": [
-          "Rebuilt a buggy, poorly optimized FlutterFlow app from scratch in Flutter, redesigning the UI and introducing a modular architecture for better performance and stability.",
-          "Built web and in-app admin consoles in the same codebase, with role-based access and event-specific permissions for managing events, teams, sub-teams, sponsors, charities, and organizers.",
-          "Delivered Apple Health and Health Connect sync, onboarding, challenge progress, and event-scoped rankings for teams, sub-teams, and participants using production activity data.",
-          "Built an event-scoped Community feed with posts, photos, likes, comments, reporting, and admin moderation. Implemented and validated row-level security across 14 production database tables.",
-          "Built Miles, an AI help assistant grounded in product guidance and event FAQs. Participants can type or record a voice question, which is transcribed before Miles responds in text."
+          "Rebuilt a buggy, poorly optimized FlutterFlow app from scratch in native Flutter, redesigning the UI/UX and introducing clean modular architecture to improve performance and stability.",
+          "Built a shared Flutter web and in-app admin console for managing events, teams, sub-teams, sponsors, charities, and organizers with role-based access and event-specific permissions.",
+          "Built Miles, an in-app AI help assistant using product guidance and event FAQs. Participants can type a question or record a voice question that is transcribed before Miles replies in text.",
+          "Implemented and validated row-level security across all 14 production database tables, with scoped participant access and admin permissions.",
+          "Delivered Apple Health and Health Connect activity sync alongside onboarding, team rankings, and challenge progress.",
+          "Built event-scoped leaderboards for teams, sub-teams, and participants using production activity data, with search, filtering, and sorting.",
+          "Built the Community feed for event-scoped posts, photos, likes, comments, reporting, and admin moderation."
         ]
       },
       "blu_studios": {
@@ -184,14 +186,14 @@
         "period": "Mar 2019 – Mar 2026",
         "location": "Hybrid",
         "points": [
-          "Led end-to-end development of mobile games and applications from concept through live operations, owning technical architecture and product decisions.",
-          "Built and maintained products reaching 12M+ downloads worldwide, including titles with 5M+ downloads and Google Play award recognition.",
+          "Led end-to-end development of mobile games and applications, from concept through live operations, owning technical architecture and product decisions.",
+          "Developed and maintained products with 12M+ downloads worldwide, including titles with 5M+ downloads and Google Play award recognition.",
           "Built Flutter products from scratch with scalable architectures focused on maintainability, performance, and production stability.",
-          "Reduced ANR rates from approximately 30% to below 2% and improved rendering stability on low-end Android devices.",
-          "Improved live product stability by resolving crashes, ANRs, memory leaks, and low-end device performance issues, supporting better retention, monetization, and store ratings.",
-          "Reduced APK size by 45% through asset restructuring, rendering optimization, and build configuration improvements.",
-          "Improved D1 retention from approximately 25% to approximately 40% through UX performance tuning and product iteration.",
-          "Partnered with designers and product owners on product decisions, and co-led remote teams of up to 14 people."
+          "Reduced ANR rates from about 30% to below 2% and improved frame rendering stability on low-end Android devices.",
+          "Resolved crashes, ANRs, memory leaks, and low-end device performance issues in live products, improving retention, monetization, and store ratings.",
+          "Reduced APK size by 45% through asset restructuring, rendering optimizations, and build configuration improvements.",
+          "Improved D1 retention from about 25% to about 40% through UX performance tuning and data-driven iteration.",
+          "Served as a technical reference, partnered with product and design teams, and co-led remote teams of up to 14 people."
         ]
       },
       "vx_case": {
@@ -200,9 +202,10 @@
         "period": "Feb 2018 – Mar 2019",
         "location": "Salvador, Bahia, Brazil · On-site",
         "points": [
-          "Developed a desktop application focused on user interface implementation using TypeScript, Angular, and VTEX.",
-          "Built reusable UI components ensuring usability, scalability, and design consistency.",
-          "Collaborated with senior engineers to integrate frontend features with backend services."
+          "Developed a desktop application with a focus on UI implementation using TypeScript, Angular, and VTEX.",
+          "Implemented and maintained UI components from design requirements, ensuring usability and consistency.",
+          "Collaborated with senior developers to integrate frontend features with existing systems and backend services.",
+          "Gained experience with desktop application workflows and team-based software development."
         ]
       },
       "tecall": {
