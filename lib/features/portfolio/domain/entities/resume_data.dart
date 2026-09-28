@@ -5,10 +5,10 @@ class ResumeSectionData {
   const ResumeSectionData({
     required this.title,
     required this.company,
-    this.employmentType,
     required this.period,
     required this.location,
     required this.points,
+    this.employmentType,
   });
 
   final String title;

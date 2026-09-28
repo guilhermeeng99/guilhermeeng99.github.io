@@ -17,7 +17,7 @@ class ResumeSectionExperienceTimelineItem extends StatelessWidget {
     final employmentType = resume.employmentType;
     final companyDetails = [
       resume.company,
-      if (employmentType != null) employmentType,
+      ?employmentType,
       resume.location,
     ].join(' · ');
 
