@@ -37,6 +37,7 @@ class ProjectsSectionData {
     required this.details,
     required this.technologies,
     required this.image,
+    this.preserveImageAspectRatio = false,
     this.downloadLink,
     this.company,
 
@@ -53,6 +54,7 @@ class ProjectsSectionData {
   final ProjectAward? award;
   final List<String> technologies;
   final AssetGenImage image;
+  final bool preserveImageAspectRatio;
   final String? downloadLink;
 
   static List<ProjectsSectionData> projects() => [
@@ -61,10 +63,11 @@ class ProjectsSectionData {
     _financo(),
     _capy(),
     _cups(),
-    _farmVsAliens(),
+    _movementChallengeApp(),
   ];
 
   static List<ProjectsSectionData> otherProjects() => [
+    _farmVsAliens(),
     _mia(),
     _parrot(),
     _toolzy(),
@@ -76,6 +79,22 @@ class ProjectsSectionData {
     _booze(),
     _neverHaveIEverX(),
   ];
+
+  static ProjectsSectionData _movementChallengeApp() => ProjectsSectionData(
+    name: t.projects.items.movement_challenge.name,
+    description: t.projects.items.movement_challenge.description,
+    details: t.projects.items.movement_challenge.details,
+    technologies: const [
+      'Flutter',
+      'Dart',
+      'flutter_bloc',
+      'Supabase',
+      'go_router',
+      'Gemini',
+    ],
+    image: _projectImages.movementChallengePreview,
+    preserveImageAspectRatio: true,
+  );
 
   static ProjectsSectionData _magicSort() => ProjectsSectionData(
     name: t.projects.items.magic_sort.name,

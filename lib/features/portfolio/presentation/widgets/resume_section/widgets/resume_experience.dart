@@ -14,6 +14,13 @@ class ResumeSectionExperienceTimelineItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final employmentType = resume.employmentType;
+    final companyDetails = [
+      resume.company,
+      if (employmentType != null) employmentType,
+      resume.location,
+    ].join(' · ');
+
     return Stack(
       children: [
         if (!isLast)
@@ -76,7 +83,7 @@ class ResumeSectionExperienceTimelineItem extends StatelessWidget {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      '${resume.company} · ${resume.location}',
+                      companyDetails,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: context.appColors.textMuted,
                       ),

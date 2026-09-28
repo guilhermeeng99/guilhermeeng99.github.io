@@ -50,6 +50,11 @@
     "view_on_store": "View on Store",
     "downloads_suffix": "downloads",
     "items": {
+      "movement_challenge": {
+        "name": "Movement Challenge App",
+        "description": "Production movement-challenge app for walking, running, cycling, teams, and charity impact. Rebuilt the participant app in Flutter and unified the web admin console in one codebase.",
+        "details": "Rankings for teams, sub-teams, and participants use production activity data, while each event's Community feed keeps posts, photos, likes, comments, and moderation scoped to that event. Delivered health-data sync, onboarding, role-based access, testing, and release workflows. Added Miles, an in-app AI help assistant grounded in product guidance and event FAQs, with typed or transcribed voice questions and text answers."
+      },
       "magic_sort": {
         "name": "Magic Sort",
         "description": "Hybrid casual puzzle game built in partnership with Wildlife Studios. Selected for Google Play's Indie Games Accelerator 2024 and reached 1M+ downloads, powered by live-ops-driven monetization and engagement systems.",
@@ -151,28 +156,49 @@
     "education_title": "Education",
     "download_resume": "Download Resume",
     "experience": {
-      "blu_studios": {
-        "title": "Co-founder & Senior Flutter Engineer",
-        "period": "2019 – 2026",
+      "sixty_six_degrees": {
+        "title": "Full-Stack Engineer",
+        "employment_type": "Contract",
+        "period": "Aug 2026 – Present",
         "location": "Remote",
         "points": [
-          "Built and maintained multiple mobile apps and games totaling @:app.total_downloads downloads worldwide.",
-          "Architected scalable Flutter applications supporting millions of users.",
-          "Executed deep performance optimization initiatives, reducing ANR rates from approximately 30% to below 2% and improving frame rendering stability on low-end Android devices.",
-          "Designed and implemented live ops systems (Battle Pass, Leaderboards, Events, Ranking Systems).",
-          "Improved D1 retention from approximately 25% to approximately 40% through UX performance tuning and data-driven iteration.",
-          "Reduced APK size by 45% through asset restructuring, rendering optimizations, and build configuration improvements.",
-          "Integrated Firebase (Analytics, Firestore, Remote Config, Crashlytics, Cloud Messaging).",
-          "Implemented monetization systems (Rewarded Ads, Interstitials, IAP) achieving high eCPM performance.",
-          "Co-owned the full product lifecycle: architecture, development, CI/CD, publishing, ASO, live ops, store compliance.",
-          "Co-led fully remote teams of up to 14 members.",
-          "Established partnerships with Wildlife Studios and Homa Games."
+          "Work across full-stack engineering with a focus on Flutter and mobile product development."
+        ]
+      },
+      "arc_dev": {
+        "title": "Senior Flutter Engineer",
+        "employment_type": "Freelance",
+        "period": "Mar 2026 – Aug 2026",
+        "location": "Remote",
+        "points": [
+          "Rebuilt a buggy, poorly optimized FlutterFlow app from scratch in Flutter, redesigning the UI and introducing a modular architecture for better performance and stability.",
+          "Built web and in-app admin consoles in the same codebase, with role-based access and event-specific permissions for managing events, teams, sub-teams, sponsors, charities, and organizers.",
+          "Delivered Apple Health and Health Connect sync, onboarding, challenge progress, and event-scoped rankings for teams, sub-teams, and participants using production activity data.",
+          "Built an event-scoped Community feed with posts, photos, likes, comments, reporting, and admin moderation. Implemented and validated row-level security across 14 production database tables.",
+          "Built Miles, an AI help assistant grounded in product guidance and event FAQs. Participants can type or record a voice question, which is transcribed before Miles responds in text."
+        ]
+      },
+      "blu_studios": {
+        "title": "Co-founder & Senior Flutter Engineer",
+        "employment_type": "Self-employed",
+        "period": "Mar 2019 – Mar 2026",
+        "location": "Hybrid",
+        "points": [
+          "Led end-to-end development of mobile games and applications from concept through live operations, owning technical architecture and product decisions.",
+          "Built and maintained products reaching 12M+ downloads worldwide, including titles with 5M+ downloads and Google Play award recognition.",
+          "Built Flutter products from scratch with scalable architectures focused on maintainability, performance, and production stability.",
+          "Reduced ANR rates from approximately 30% to below 2% and improved rendering stability on low-end Android devices.",
+          "Improved live product stability by resolving crashes, ANRs, memory leaks, and low-end device performance issues, supporting better retention, monetization, and store ratings.",
+          "Reduced APK size by 45% through asset restructuring, rendering optimization, and build configuration improvements.",
+          "Improved D1 retention from approximately 25% to approximately 40% through UX performance tuning and product iteration.",
+          "Partnered with designers and product owners on product decisions, and co-led remote teams of up to 14 people."
         ]
       },
       "vx_case": {
-        "title": "Desktop Engineer",
-        "period": "Oct 2018 – Mar 2019",
-        "location": "Salvador, Brazil",
+        "title": "Desktop Developer",
+        "employment_type": "Full-time",
+        "period": "Feb 2018 – Mar 2019",
+        "location": "Salvador, Bahia, Brazil · On-site",
         "points": [
           "Developed a desktop application focused on user interface implementation using TypeScript, Angular, and VTEX.",
           "Built reusable UI components ensuring usability, scalability, and design consistency.",
@@ -181,8 +207,9 @@
       },
       "tecall": {
         "title": "IT Support",
-        "period": "Jan 2018 – Oct 2018",
-        "location": "Salvador, Brazil",
+        "employment_type": "Internship",
+        "period": "Aug 2016 – Jan 2018",
+        "location": "Greater Salvador",
         "points": [
           "Provided technical support and infrastructure troubleshooting for corporate clients.",
           "Assisted in system maintenance and hardware configuration.",
@@ -192,7 +219,7 @@
     },
     "education": {
       "ucsal": {
-        "degree": "Bachelor's Degree in Software Engineering",
+        "degree": "Bachelor's Degree, Software Engineering",
         "period": "2017 – 2019",
         "location": "Salvador, Brazil",
         "points": [
@@ -202,7 +229,7 @@
         ]
       },
       "senai_cimatec": {
-        "degree": "Technical Course in Computer Networks",
+        "degree": "Technical Course, Computer Networks",
         "period": "2017 – 2018",
         "location": "Salvador, Brazil",
         "points": [
@@ -212,7 +239,7 @@
         ]
       },
       "all": {
-        "degree": "Certificate in English Language",
+        "degree": "Certificate in English Language, English Language",
         "period": "2013 – 2016",
         "location": "Salvador, Brazil",
         "points": [

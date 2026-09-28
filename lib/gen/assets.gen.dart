@@ -119,6 +119,11 @@ class $LibAppAssetsImagesProjectsGen {
   AssetGenImage get miaPreview =>
       const AssetGenImage('lib/app/assets/images/projects/mia_preview.webp');
 
+  /// File path: lib/app/assets/images/projects/movement_challenge_preview.webp
+  AssetGenImage get movementChallengePreview => const AssetGenImage(
+    'lib/app/assets/images/projects/movement_challenge_preview.webp',
+  );
+
   /// File path: lib/app/assets/images/projects/parrot_preview.webp
   AssetGenImage get parrotPreview =>
       const AssetGenImage('lib/app/assets/images/projects/parrot_preview.webp');
@@ -149,6 +154,7 @@ class $LibAppAssetsImagesProjectsGen {
     investancoPreview,
     magicSortPreview,
     miaPreview,
+    movementChallengePreview,
     parrotPreview,
     rabitPreview,
     toolzyPreview,

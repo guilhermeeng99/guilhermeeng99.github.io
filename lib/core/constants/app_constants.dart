@@ -2,8 +2,10 @@ abstract final class AppConstants {
   static const String owner = 'Guilherme Passos';
   static const String bluCompany = 'Blu Studios';
   static const String bluCompanyUrl = 'https://blury.studio/';
+  static const String sixtySixDegreesCompany = '66degrees';
+  static const String arcDevCompany = 'Arc.dev';
   static const String vxCaseCompany = 'VX Case';
-  static const String tecallCompany = 'Tecall Consultoria';
+  static const String tecallCompany = 'TECALL CONSULTORIA E SISTEMAS LTDA';
   static const String ucsalInstitution = 'Universidade Católica do Salvador';
   static const String senaiInstitution = 'SENAI CIMATEC';
   static const String allInstitution = 'Alternative Language Learning (ALL)';

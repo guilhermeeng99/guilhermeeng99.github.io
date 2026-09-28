@@ -34,8 +34,12 @@ class ProjectsSectionProjectImage extends StatelessWidget {
           child: Stack(
             fit: StackFit.expand,
             children: [
+              if (project.preserveImageAspectRatio)
+                const ColoredBox(color: Colors.black),
               project.image.image(
-                fit: BoxFit.cover,
+                fit: project.preserveImageAspectRatio
+                    ? BoxFit.contain
+                    : BoxFit.cover,
               ),
               if (Theme.of(context).brightness == Brightness.dark)
                 DecoratedBox(

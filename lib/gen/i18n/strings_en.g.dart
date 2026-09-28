@@ -262,6 +262,7 @@ class TranslationsProjectsItemsEn {
 	final Translations _root; // ignore: unused_field
 
 	// Translations
+	late final TranslationsProjectsItemsMovementChallengeEn movement_challenge = TranslationsProjectsItemsMovementChallengeEn._(_root);
 	late final TranslationsProjectsItemsMagicSortEn magic_sort = TranslationsProjectsItemsMagicSortEn._(_root);
 	late final TranslationsProjectsItemsRabitEn rabit = TranslationsProjectsItemsRabitEn._(_root);
 	late final TranslationsProjectsItemsCupsEn cups = TranslationsProjectsItemsCupsEn._(_root);
@@ -287,6 +288,8 @@ class TranslationsResumeExperienceEn {
 	final Translations _root; // ignore: unused_field
 
 	// Translations
+	late final TranslationsResumeExperienceSixtySixDegreesEn sixty_six_degrees = TranslationsResumeExperienceSixtySixDegreesEn._(_root);
+	late final TranslationsResumeExperienceArcDevEn arc_dev = TranslationsResumeExperienceArcDevEn._(_root);
 	late final TranslationsResumeExperienceBluStudiosEn blu_studios = TranslationsResumeExperienceBluStudiosEn._(_root);
 	late final TranslationsResumeExperienceVxCaseEn vx_case = TranslationsResumeExperienceVxCaseEn._(_root);
 	late final TranslationsResumeExperienceTecallEn tecall = TranslationsResumeExperienceTecallEn._(_root);
@@ -374,6 +377,24 @@ class TranslationsAboutStatsTeamSizeEn {
 
 	/// en: 'Max Team Size Co-led'
 	String get label => 'Max Team Size Co-led';
+}
+
+// Path: projects.items.movement_challenge
+class TranslationsProjectsItemsMovementChallengeEn {
+	TranslationsProjectsItemsMovementChallengeEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Movement Challenge App'
+	String get name => 'Movement Challenge App';
+
+	/// en: 'Production movement-challenge app for walking, running, cycling, teams, and charity impact. Rebuilt the participant app in Flutter and unified the web admin console in one codebase.'
+	String get description => 'Production movement-challenge app for walking, running, cycling, teams, and charity impact. Rebuilt the participant app in Flutter and unified the web admin console in one codebase.';
+
+	/// en: 'Rankings for teams, sub-teams, and participants use production activity data, while each event's Community feed keeps posts, photos, likes, comments, and moderation scoped to that event. Delivered health-data sync, onboarding, role-based access, testing, and release workflows. Added Miles, an in-app AI help assistant grounded in product guidance and event FAQs, with typed or transcribed voice questions and text answers.'
+	String get details => 'Rankings for teams, sub-teams, and participants use production activity data, while each event\'s Community feed keeps posts, photos, likes, comments, and moderation scoped to that event. Delivered health-data sync, onboarding, role-based access, testing, and release workflows. Added Miles, an in-app AI help assistant grounded in product guidance and event FAQs, with typed or transcribed voice questions and text answers.';
 }
 
 // Path: projects.items.magic_sort
@@ -700,6 +721,60 @@ class TranslationsProjectsItemsInvestancoEn {
 	String get details => 'Built on Clean Architecture with flutter_bloc, get_it, and go_router. Firestore is the source of truth and a local Drift (SQLite) cache is rebuilt at sign-in so reads render immediately, then refresh in the background (it runs on web via sqlite3 WASM). Automatic valuation computes per-holding market value, profit/loss, and return, with fixed-income accrual (CDI, Selic, prefixed, IPCA+) modeled as dated cash flows. Aggregates live and historical prices, FX, and rate series from six public sources (brapi.dev, CoinGecko, Finnhub, Tesouro Direto, BCB SGS, AwesomeAPI). Features user-defined allocation classes with target percentages and a rebalancing plan, bulk CSV import for assets and transactions with a review screen, daily snapshots for history, and Firebase Auth (Google) with a single-owner lock. Charts via fl_chart, functional error handling via dartz (Either), i18n via slang, and API tokens injected at build time through dart-define.';
 }
 
+// Path: resume.experience.sixty_six_degrees
+class TranslationsResumeExperienceSixtySixDegreesEn {
+	TranslationsResumeExperienceSixtySixDegreesEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Full-Stack Engineer'
+	String get title => 'Full-Stack Engineer';
+
+	/// en: 'Contract'
+	String get employment_type => 'Contract';
+
+	/// en: 'Aug 2026 – Present'
+	String get period => 'Aug 2026 – Present';
+
+	/// en: 'Remote'
+	String get location => 'Remote';
+
+	List<String> get points => [
+		'Work across full-stack engineering with a focus on Flutter and mobile product development.',
+	];
+}
+
+// Path: resume.experience.arc_dev
+class TranslationsResumeExperienceArcDevEn {
+	TranslationsResumeExperienceArcDevEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Senior Flutter Engineer'
+	String get title => 'Senior Flutter Engineer';
+
+	/// en: 'Freelance'
+	String get employment_type => 'Freelance';
+
+	/// en: 'Mar 2026 – Aug 2026'
+	String get period => 'Mar 2026 – Aug 2026';
+
+	/// en: 'Remote'
+	String get location => 'Remote';
+
+	List<String> get points => [
+		'Rebuilt a buggy, poorly optimized FlutterFlow app from scratch in Flutter, redesigning the UI and introducing a modular architecture for better performance and stability.',
+		'Built web and in-app admin consoles in the same codebase, with role-based access and event-specific permissions for managing events, teams, sub-teams, sponsors, charities, and organizers.',
+		'Delivered Apple Health and Health Connect sync, onboarding, challenge progress, and event-scoped rankings for teams, sub-teams, and participants using production activity data.',
+		'Built an event-scoped Community feed with posts, photos, likes, comments, reporting, and admin moderation. Implemented and validated row-level security across 14 production database tables.',
+		'Built Miles, an AI help assistant grounded in product guidance and event FAQs. Participants can type or record a voice question, which is transcribed before Miles responds in text.',
+	];
+}
+
 // Path: resume.experience.blu_studios
 class TranslationsResumeExperienceBluStudiosEn {
 	TranslationsResumeExperienceBluStudiosEn._(this._root);
@@ -711,24 +786,24 @@ class TranslationsResumeExperienceBluStudiosEn {
 	/// en: 'Co-founder & Senior Flutter Engineer'
 	String get title => 'Co-founder & Senior Flutter Engineer';
 
-	/// en: '2019 – 2026'
-	String get period => '2019 – 2026';
+	/// en: 'Self-employed'
+	String get employment_type => 'Self-employed';
 
-	/// en: 'Remote'
-	String get location => 'Remote';
+	/// en: 'Mar 2019 – Mar 2026'
+	String get period => 'Mar 2019 – Mar 2026';
+
+	/// en: 'Hybrid'
+	String get location => 'Hybrid';
 
 	List<String> get points => [
-		'Built and maintained multiple mobile apps and games totaling ${_root.app.total_downloads} downloads worldwide.',
-		'Architected scalable Flutter applications supporting millions of users.',
-		'Executed deep performance optimization initiatives, reducing ANR rates from approximately 30% to below 2% and improving frame rendering stability on low-end Android devices.',
-		'Designed and implemented live ops systems (Battle Pass, Leaderboards, Events, Ranking Systems).',
-		'Improved D1 retention from approximately 25% to approximately 40% through UX performance tuning and data-driven iteration.',
-		'Reduced APK size by 45% through asset restructuring, rendering optimizations, and build configuration improvements.',
-		'Integrated Firebase (Analytics, Firestore, Remote Config, Crashlytics, Cloud Messaging).',
-		'Implemented monetization systems (Rewarded Ads, Interstitials, IAP) achieving high eCPM performance.',
-		'Co-owned the full product lifecycle: architecture, development, CI/CD, publishing, ASO, live ops, store compliance.',
-		'Co-led fully remote teams of up to 14 members.',
-		'Established partnerships with Wildlife Studios and Homa Games.',
+		'Led end-to-end development of mobile games and applications from concept through live operations, owning technical architecture and product decisions.',
+		'Built and maintained products reaching 12M+ downloads worldwide, including titles with 5M+ downloads and Google Play award recognition.',
+		'Built Flutter products from scratch with scalable architectures focused on maintainability, performance, and production stability.',
+		'Reduced ANR rates from approximately 30% to below 2% and improved rendering stability on low-end Android devices.',
+		'Improved live product stability by resolving crashes, ANRs, memory leaks, and low-end device performance issues, supporting better retention, monetization, and store ratings.',
+		'Reduced APK size by 45% through asset restructuring, rendering optimization, and build configuration improvements.',
+		'Improved D1 retention from approximately 25% to approximately 40% through UX performance tuning and product iteration.',
+		'Partnered with designers and product owners on product decisions, and co-led remote teams of up to 14 people.',
 	];
 }
 
@@ -740,14 +815,17 @@ class TranslationsResumeExperienceVxCaseEn {
 
 	// Translations
 
-	/// en: 'Desktop Engineer'
-	String get title => 'Desktop Engineer';
+	/// en: 'Desktop Developer'
+	String get title => 'Desktop Developer';
 
-	/// en: 'Oct 2018 – Mar 2019'
-	String get period => 'Oct 2018 – Mar 2019';
+	/// en: 'Full-time'
+	String get employment_type => 'Full-time';
 
-	/// en: 'Salvador, Brazil'
-	String get location => 'Salvador, Brazil';
+	/// en: 'Feb 2018 – Mar 2019'
+	String get period => 'Feb 2018 – Mar 2019';
+
+	/// en: 'Salvador, Bahia, Brazil · On-site'
+	String get location => 'Salvador, Bahia, Brazil · On-site';
 
 	List<String> get points => [
 		'Developed a desktop application focused on user interface implementation using TypeScript, Angular, and VTEX.',
@@ -767,11 +845,14 @@ class TranslationsResumeExperienceTecallEn {
 	/// en: 'IT Support'
 	String get title => 'IT Support';
 
-	/// en: 'Jan 2018 – Oct 2018'
-	String get period => 'Jan 2018 – Oct 2018';
+	/// en: 'Internship'
+	String get employment_type => 'Internship';
 
-	/// en: 'Salvador, Brazil'
-	String get location => 'Salvador, Brazil';
+	/// en: 'Aug 2016 – Jan 2018'
+	String get period => 'Aug 2016 – Jan 2018';
+
+	/// en: 'Greater Salvador'
+	String get location => 'Greater Salvador';
 
 	List<String> get points => [
 		'Provided technical support and infrastructure troubleshooting for corporate clients.',
@@ -788,8 +869,8 @@ class TranslationsResumeEducationUcsalEn {
 
 	// Translations
 
-	/// en: 'Bachelor's Degree in Software Engineering'
-	String get degree => 'Bachelor\'s Degree in Software Engineering';
+	/// en: 'Bachelor's Degree, Software Engineering'
+	String get degree => 'Bachelor\'s Degree, Software Engineering';
 
 	/// en: '2017 – 2019'
 	String get period => '2017 – 2019';
@@ -812,8 +893,8 @@ class TranslationsResumeEducationSenaiCimatecEn {
 
 	// Translations
 
-	/// en: 'Technical Course in Computer Networks'
-	String get degree => 'Technical Course in Computer Networks';
+	/// en: 'Technical Course, Computer Networks'
+	String get degree => 'Technical Course, Computer Networks';
 
 	/// en: '2017 – 2018'
 	String get period => '2017 – 2018';
@@ -836,8 +917,8 @@ class TranslationsResumeEducationAllEn {
 
 	// Translations
 
-	/// en: 'Certificate in English Language'
-	String get degree => 'Certificate in English Language';
+	/// en: 'Certificate in English Language, English Language'
+	String get degree => 'Certificate in English Language, English Language';
 
 	/// en: '2013 – 2016'
 	String get period => '2013 – 2016';
@@ -925,6 +1006,9 @@ extension on Translations {
 			'projects.other_projects_toggle' => 'Other Projects',
 			'projects.view_on_store' => 'View on Store',
 			'projects.downloads_suffix' => 'downloads',
+			'projects.items.movement_challenge.name' => 'Movement Challenge App',
+			'projects.items.movement_challenge.description' => 'Production movement-challenge app for walking, running, cycling, teams, and charity impact. Rebuilt the participant app in Flutter and unified the web admin console in one codebase.',
+			'projects.items.movement_challenge.details' => 'Rankings for teams, sub-teams, and participants use production activity data, while each event\'s Community feed keeps posts, photos, likes, comments, and moderation scoped to that event. Delivered health-data sync, onboarding, role-based access, testing, and release workflows. Added Miles, an in-app AI help assistant grounded in product guidance and event FAQs, with typed or transcribed voice questions and text answers.',
 			'projects.items.magic_sort.name' => 'Magic Sort',
 			'projects.items.magic_sort.description' => 'Hybrid casual puzzle game built in partnership with Wildlife Studios. Selected for Google Play\'s Indie Games Accelerator 2024 and reached 1M+ downloads, powered by live-ops-driven monetization and engagement systems.',
 			'projects.items.magic_sort.metric' => '1M+',
@@ -990,45 +1074,59 @@ extension on Translations {
 			'resume.experience_title' => 'Professional Experience',
 			'resume.education_title' => 'Education',
 			'resume.download_resume' => 'Download Resume',
+			'resume.experience.sixty_six_degrees.title' => 'Full-Stack Engineer',
+			'resume.experience.sixty_six_degrees.employment_type' => 'Contract',
+			'resume.experience.sixty_six_degrees.period' => 'Aug 2026 – Present',
+			'resume.experience.sixty_six_degrees.location' => 'Remote',
+			'resume.experience.sixty_six_degrees.points.0' => 'Work across full-stack engineering with a focus on Flutter and mobile product development.',
+			'resume.experience.arc_dev.title' => 'Senior Flutter Engineer',
+			'resume.experience.arc_dev.employment_type' => 'Freelance',
+			'resume.experience.arc_dev.period' => 'Mar 2026 – Aug 2026',
+			'resume.experience.arc_dev.location' => 'Remote',
+			'resume.experience.arc_dev.points.0' => 'Rebuilt a buggy, poorly optimized FlutterFlow app from scratch in Flutter, redesigning the UI and introducing a modular architecture for better performance and stability.',
+			'resume.experience.arc_dev.points.1' => 'Built web and in-app admin consoles in the same codebase, with role-based access and event-specific permissions for managing events, teams, sub-teams, sponsors, charities, and organizers.',
+			'resume.experience.arc_dev.points.2' => 'Delivered Apple Health and Health Connect sync, onboarding, challenge progress, and event-scoped rankings for teams, sub-teams, and participants using production activity data.',
+			'resume.experience.arc_dev.points.3' => 'Built an event-scoped Community feed with posts, photos, likes, comments, reporting, and admin moderation. Implemented and validated row-level security across 14 production database tables.',
+			'resume.experience.arc_dev.points.4' => 'Built Miles, an AI help assistant grounded in product guidance and event FAQs. Participants can type or record a voice question, which is transcribed before Miles responds in text.',
 			'resume.experience.blu_studios.title' => 'Co-founder & Senior Flutter Engineer',
-			'resume.experience.blu_studios.period' => '2019 – 2026',
-			'resume.experience.blu_studios.location' => 'Remote',
-			'resume.experience.blu_studios.points.0' => 'Built and maintained multiple mobile apps and games totaling ${_root.app.total_downloads} downloads worldwide.',
-			'resume.experience.blu_studios.points.1' => 'Architected scalable Flutter applications supporting millions of users.',
-			'resume.experience.blu_studios.points.2' => 'Executed deep performance optimization initiatives, reducing ANR rates from approximately 30% to below 2% and improving frame rendering stability on low-end Android devices.',
-			'resume.experience.blu_studios.points.3' => 'Designed and implemented live ops systems (Battle Pass, Leaderboards, Events, Ranking Systems).',
-			'resume.experience.blu_studios.points.4' => 'Improved D1 retention from approximately 25% to approximately 40% through UX performance tuning and data-driven iteration.',
-			'resume.experience.blu_studios.points.5' => 'Reduced APK size by 45% through asset restructuring, rendering optimizations, and build configuration improvements.',
-			'resume.experience.blu_studios.points.6' => 'Integrated Firebase (Analytics, Firestore, Remote Config, Crashlytics, Cloud Messaging).',
-			'resume.experience.blu_studios.points.7' => 'Implemented monetization systems (Rewarded Ads, Interstitials, IAP) achieving high eCPM performance.',
-			'resume.experience.blu_studios.points.8' => 'Co-owned the full product lifecycle: architecture, development, CI/CD, publishing, ASO, live ops, store compliance.',
-			'resume.experience.blu_studios.points.9' => 'Co-led fully remote teams of up to 14 members.',
-			'resume.experience.blu_studios.points.10' => 'Established partnerships with Wildlife Studios and Homa Games.',
-			'resume.experience.vx_case.title' => 'Desktop Engineer',
-			'resume.experience.vx_case.period' => 'Oct 2018 – Mar 2019',
-			'resume.experience.vx_case.location' => 'Salvador, Brazil',
+			'resume.experience.blu_studios.employment_type' => 'Self-employed',
+			'resume.experience.blu_studios.period' => 'Mar 2019 – Mar 2026',
+			'resume.experience.blu_studios.location' => 'Hybrid',
+			'resume.experience.blu_studios.points.0' => 'Led end-to-end development of mobile games and applications from concept through live operations, owning technical architecture and product decisions.',
+			'resume.experience.blu_studios.points.1' => 'Built and maintained products reaching 12M+ downloads worldwide, including titles with 5M+ downloads and Google Play award recognition.',
+			'resume.experience.blu_studios.points.2' => 'Built Flutter products from scratch with scalable architectures focused on maintainability, performance, and production stability.',
+			'resume.experience.blu_studios.points.3' => 'Reduced ANR rates from approximately 30% to below 2% and improved rendering stability on low-end Android devices.',
+			'resume.experience.blu_studios.points.4' => 'Improved live product stability by resolving crashes, ANRs, memory leaks, and low-end device performance issues, supporting better retention, monetization, and store ratings.',
+			'resume.experience.blu_studios.points.5' => 'Reduced APK size by 45% through asset restructuring, rendering optimization, and build configuration improvements.',
+			'resume.experience.blu_studios.points.6' => 'Improved D1 retention from approximately 25% to approximately 40% through UX performance tuning and product iteration.',
+			'resume.experience.blu_studios.points.7' => 'Partnered with designers and product owners on product decisions, and co-led remote teams of up to 14 people.',
+			'resume.experience.vx_case.title' => 'Desktop Developer',
+			'resume.experience.vx_case.employment_type' => 'Full-time',
+			'resume.experience.vx_case.period' => 'Feb 2018 – Mar 2019',
+			'resume.experience.vx_case.location' => 'Salvador, Bahia, Brazil · On-site',
 			'resume.experience.vx_case.points.0' => 'Developed a desktop application focused on user interface implementation using TypeScript, Angular, and VTEX.',
 			'resume.experience.vx_case.points.1' => 'Built reusable UI components ensuring usability, scalability, and design consistency.',
 			'resume.experience.vx_case.points.2' => 'Collaborated with senior engineers to integrate frontend features with backend services.',
 			'resume.experience.tecall.title' => 'IT Support',
-			'resume.experience.tecall.period' => 'Jan 2018 – Oct 2018',
-			'resume.experience.tecall.location' => 'Salvador, Brazil',
+			'resume.experience.tecall.employment_type' => 'Internship',
+			'resume.experience.tecall.period' => 'Aug 2016 – Jan 2018',
+			'resume.experience.tecall.location' => 'Greater Salvador',
 			'resume.experience.tecall.points.0' => 'Provided technical support and infrastructure troubleshooting for corporate clients.',
 			'resume.experience.tecall.points.1' => 'Assisted in system maintenance and hardware configuration.',
 			'resume.experience.tecall.points.2' => 'Gained foundational experience in networking, system administration, and customer support.',
-			'resume.education.ucsal.degree' => 'Bachelor\'s Degree in Software Engineering',
+			'resume.education.ucsal.degree' => 'Bachelor\'s Degree, Software Engineering',
 			'resume.education.ucsal.period' => '2017 – 2019',
 			'resume.education.ucsal.location' => 'Salvador, Brazil',
 			'resume.education.ucsal.points.0' => 'Emphasis on software development methodologies, object-oriented programming, data structures, algorithms, databases, and system architecture.',
 			'resume.education.ucsal.points.1' => 'Gained experience in designing, developing, testing, and maintaining software applications using modern technologies and industry best practices.',
 			'resume.education.ucsal.points.2' => 'Participated in collaborative projects and hands-on activities that strengthened problem-solving skills and prepared me to work effectively in team-based development environments.',
-			'resume.education.senai_cimatec.degree' => 'Technical Course in Computer Networks',
+			'resume.education.senai_cimatec.degree' => 'Technical Course, Computer Networks',
 			'resume.education.senai_cimatec.period' => '2017 – 2018',
 			'resume.education.senai_cimatec.location' => 'Salvador, Brazil',
 			'resume.education.senai_cimatec.points.0' => 'Focusing on the installation, configuration, administration, and maintenance of computer networks in both home and corporate environments.',
 			'resume.education.senai_cimatec.points.1' => 'Throughout the training, I developed skills in network topologies, device connectivity, network infrastructure, communication protocols, and information security practices.',
 			'resume.education.senai_cimatec.points.2' => 'The program included extensive hands-on lab experience, enabling me to implement network solutions effectively and apply industry-standard technical best practices.',
-			'resume.education.all.degree' => 'Certificate in English Language',
+			'resume.education.all.degree' => 'Certificate in English Language, English Language',
 			'resume.education.all.period' => '2013 – 2016',
 			'resume.education.all.location' => 'Salvador, Brazil',
 			'resume.education.all.points.0' => 'Intensive English language program with focus on grammar, reading, writing, listening and speaking skills. Prepared for advanced communication in academic and professional environments.',
