@@ -58,8 +58,8 @@ class TranslationsAppEn {
 
 	// Translations
 
-	/// en: 'Guilherme Passos - Flutter Engineer'
-	String get title => 'Guilherme Passos - Flutter Engineer';
+	/// en: 'Guilherme Passos - Senior Software Engineer'
+	String get title => 'Guilherme Passos - Senior Software Engineer';
 
 	/// en: '12M+'
 	String get total_downloads => '12M+';
@@ -100,11 +100,11 @@ class TranslationsHeroEn {
 	/// en: 'Guilherme Passos'
 	String get name => 'Guilherme\nPassos';
 
-	/// en: 'Senior Flutter Engineer'
-	String get role => 'Senior Flutter Engineer';
+	/// en: 'Senior Software Engineer'
+	String get role => 'Senior Software Engineer';
 
-	/// en: 'Flutter Engineer & Mobile Entrepreneur with 7+ years crafting high-performance apps and games reaching 12M+ downloads worldwide.'
-	String get description => 'Flutter Engineer & Mobile Entrepreneur with 7+ years crafting high-performance apps and games reaching ${_root.app.total_downloads} downloads worldwide.';
+	/// en: 'Senior Software Engineer with 8+ years building Flutter, mobile, and full-stack products. Apps and games I've built have reached 12M+ downloads worldwide.'
+	String get description => 'Senior Software Engineer with 8+ years building Flutter, mobile, and full-stack products. Apps and games I\'ve built have reached ${_root.app.total_downloads} downloads worldwide.';
 
 	/// en: 'Explore Projects'
 	String get explore_projects => 'Explore Projects';
@@ -127,14 +127,14 @@ class TranslationsAboutEn {
 	/// en: 'Building digital products that scale'
 	String get subtitle => 'Building digital products that scale';
 
-	/// en: 'Senior Flutter Engineer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.'
-	String get bio1 => 'Senior Flutter Engineer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.';
+	/// en: 'Senior Software Engineer with 8+ years of software engineering experience, including more than seven years building mobile products as a co-founder at blu studios.'
+	String get bio1 => 'Senior Software Engineer with 8+ years of software engineering experience, including more than seven years building mobile products as a co-founder at blu studios.';
 
-	/// en: 'I've implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I've built and maintained have reached 12M+ downloads worldwide.'
-	String get bio2 => 'I\'ve implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I\'ve built and maintained have reached 12M+ downloads worldwide.';
+	/// en: 'I build products end to end, from scalable architecture and implementation to launch and live operations. Products I've developed and maintained have reached 12M+ downloads worldwide, including titles with 5M+ downloads and Google Play recognition.'
+	String get bio2 => 'I build products end to end, from scalable architecture and implementation to launch and live operations. Products I\'ve developed and maintained have reached 12M+ downloads worldwide, including titles with 5M+ downloads and Google Play recognition.';
 
-	/// en: 'I specialize in scalable architectures, long-term code maintainability, and high-performance mobile applications. My expertise spans multiple state management solutions (Riverpod, Bloc, MobX), native plugin integration, and the full Firebase ecosystem.'
-	String get bio3 => 'I specialize in scalable architectures, long-term code maintainability, and high-performance mobile applications. My expertise spans multiple state management solutions (Riverpod, Bloc, MobX), native plugin integration, and the full Firebase ecosystem.';
+	/// en: 'My work spans Flutter and full-stack engineering, production performance, team leadership, and AI-enabled product experiences.'
+	String get bio3 => 'My work spans Flutter and full-stack engineering, production performance, team leadership, and AI-enabled product experiences.';
 
 	late final TranslationsAboutStatsEn stats = TranslationsAboutStatsEn._(_root);
 }
@@ -235,7 +235,7 @@ class TranslationsContactEn {
 	/// en: 'LinkedIn'
 	String get linkedin => 'LinkedIn';
 
-	/// en: '© 2026 Guilherme Passos - Flutter Engineer. Built with'
+	/// en: '© 2026 Guilherme Passos - Senior Software Engineer. Built with'
 	String get footer => '© 2026 ${_root.app.title}. Built with';
 
 	/// en: 'Flutter.'
@@ -342,11 +342,11 @@ class TranslationsAboutStatsExperienceEn {
 
 	// Translations
 
-	/// en: '7+'
-	String get value => '7+';
+	/// en: '8+'
+	String get value => '8+';
 
-	/// en: 'Years Experience'
-	String get label => 'Years Experience';
+	/// en: 'Years of Experience'
+	String get label => 'Years of Experience';
 }
 
 // Path: about.stats.products
@@ -767,11 +767,13 @@ class TranslationsResumeExperienceArcDevEn {
 	String get location => 'Remote';
 
 	List<String> get points => [
-		'Rebuilt a buggy, poorly optimized FlutterFlow app from scratch in Flutter, redesigning the UI and introducing a modular architecture for better performance and stability.',
-		'Built web and in-app admin consoles in the same codebase, with role-based access and event-specific permissions for managing events, teams, sub-teams, sponsors, charities, and organizers.',
-		'Delivered Apple Health and Health Connect sync, onboarding, challenge progress, and event-scoped rankings for teams, sub-teams, and participants using production activity data.',
-		'Built an event-scoped Community feed with posts, photos, likes, comments, reporting, and admin moderation. Implemented and validated row-level security across 14 production database tables.',
-		'Built Miles, an AI help assistant grounded in product guidance and event FAQs. Participants can type or record a voice question, which is transcribed before Miles responds in text.',
+		'Rebuilt a buggy, poorly optimized FlutterFlow app from scratch in native Flutter, redesigning the UI/UX and introducing clean modular architecture to improve performance and stability.',
+		'Built a shared Flutter web and in-app admin console for managing events, teams, sub-teams, sponsors, charities, and organizers with role-based access and event-specific permissions.',
+		'Built Miles, an in-app AI help assistant using product guidance and event FAQs. Participants can type a question or record a voice question that is transcribed before Miles replies in text.',
+		'Implemented and validated row-level security across all 14 production database tables, with scoped participant access and admin permissions.',
+		'Delivered Apple Health and Health Connect activity sync alongside onboarding, team rankings, and challenge progress.',
+		'Built event-scoped leaderboards for teams, sub-teams, and participants using production activity data, with search, filtering, and sorting.',
+		'Built the Community feed for event-scoped posts, photos, likes, comments, reporting, and admin moderation.',
 	];
 }
 
@@ -796,14 +798,14 @@ class TranslationsResumeExperienceBluStudiosEn {
 	String get location => 'Hybrid';
 
 	List<String> get points => [
-		'Led end-to-end development of mobile games and applications from concept through live operations, owning technical architecture and product decisions.',
-		'Built and maintained products reaching 12M+ downloads worldwide, including titles with 5M+ downloads and Google Play award recognition.',
+		'Led end-to-end development of mobile games and applications, from concept through live operations, owning technical architecture and product decisions.',
+		'Developed and maintained products with 12M+ downloads worldwide, including titles with 5M+ downloads and Google Play award recognition.',
 		'Built Flutter products from scratch with scalable architectures focused on maintainability, performance, and production stability.',
-		'Reduced ANR rates from approximately 30% to below 2% and improved rendering stability on low-end Android devices.',
-		'Improved live product stability by resolving crashes, ANRs, memory leaks, and low-end device performance issues, supporting better retention, monetization, and store ratings.',
-		'Reduced APK size by 45% through asset restructuring, rendering optimization, and build configuration improvements.',
-		'Improved D1 retention from approximately 25% to approximately 40% through UX performance tuning and product iteration.',
-		'Partnered with designers and product owners on product decisions, and co-led remote teams of up to 14 people.',
+		'Reduced ANR rates from about 30% to below 2% and improved frame rendering stability on low-end Android devices.',
+		'Resolved crashes, ANRs, memory leaks, and low-end device performance issues in live products, improving retention, monetization, and store ratings.',
+		'Reduced APK size by 45% through asset restructuring, rendering optimizations, and build configuration improvements.',
+		'Improved D1 retention from about 25% to about 40% through UX performance tuning and data-driven iteration.',
+		'Served as a technical reference, partnered with product and design teams, and co-led remote teams of up to 14 people.',
 	];
 }
 
@@ -828,9 +830,10 @@ class TranslationsResumeExperienceVxCaseEn {
 	String get location => 'Salvador, Bahia, Brazil · On-site';
 
 	List<String> get points => [
-		'Developed a desktop application focused on user interface implementation using TypeScript, Angular, and VTEX.',
-		'Built reusable UI components ensuring usability, scalability, and design consistency.',
-		'Collaborated with senior engineers to integrate frontend features with backend services.',
+		'Developed a desktop application with a focus on UI implementation using TypeScript, Angular, and VTEX.',
+		'Implemented and maintained UI components from design requirements, ensuring usability and consistency.',
+		'Collaborated with senior developers to integrate frontend features with existing systems and backend services.',
+		'Gained experience with desktop application workflows and team-based software development.',
 	];
 }
 
@@ -975,7 +978,7 @@ class TranslationsSkillsCategoriesDevopsProductionEn {
 extension on Translations {
 	dynamic _flatMapFunction(String path) {
 		return switch (path) {
-			'app.title' => 'Guilherme Passos - Flutter Engineer',
+			'app.title' => 'Guilherme Passos - Senior Software Engineer',
 			'app.total_downloads' => '12M+',
 			'nav.about' => 'About',
 			'nav.projects' => 'Projects',
@@ -983,19 +986,19 @@ extension on Translations {
 			'nav.skills' => 'Skills',
 			'nav.contact' => 'Contact',
 			'hero.name' => 'Guilherme\nPassos',
-			'hero.role' => 'Senior Flutter Engineer',
-			'hero.description' => 'Flutter Engineer & Mobile Entrepreneur with 7+ years crafting high-performance apps and games reaching ${_root.app.total_downloads} downloads worldwide.',
+			'hero.role' => 'Senior Software Engineer',
+			'hero.description' => 'Senior Software Engineer with 8+ years building Flutter, mobile, and full-stack products. Apps and games I\'ve built have reached ${_root.app.total_downloads} downloads worldwide.',
 			'hero.explore_projects' => 'Explore Projects',
 			'hero.get_in_touch' => 'Get In Touch',
 			'about.title' => 'About Me',
 			'about.subtitle' => 'Building digital products that scale',
-			'about.bio1' => 'Senior Flutter Engineer with over seven years of experience and seven years as an entrepreneur focused exclusively on mobile games and mobile applications.',
-			'about.bio2' => 'I\'ve implemented mobile products from scratch, including titles that surpassed 1M+ downloads, one of which was selected and awarded by the Google Play Indie Games Fund. Altogether, the apps and games I\'ve built and maintained have reached 12M+ downloads worldwide.',
-			'about.bio3' => 'I specialize in scalable architectures, long-term code maintainability, and high-performance mobile applications. My expertise spans multiple state management solutions (Riverpod, Bloc, MobX), native plugin integration, and the full Firebase ecosystem.',
+			'about.bio1' => 'Senior Software Engineer with 8+ years of software engineering experience, including more than seven years building mobile products as a co-founder at blu studios.',
+			'about.bio2' => 'I build products end to end, from scalable architecture and implementation to launch and live operations. Products I\'ve developed and maintained have reached 12M+ downloads worldwide, including titles with 5M+ downloads and Google Play recognition.',
+			'about.bio3' => 'My work spans Flutter and full-stack engineering, production performance, team leadership, and AI-enabled product experiences.',
 			'about.stats.downloads.value' => _root.app.total_downloads,
 			'about.stats.downloads.label' => 'Downloads',
-			'about.stats.experience.value' => '7+',
-			'about.stats.experience.label' => 'Years Experience',
+			'about.stats.experience.value' => '8+',
+			'about.stats.experience.label' => 'Years of Experience',
 			'about.stats.products.value' => '20+',
 			'about.stats.products.label' => 'Products Shipped',
 			'about.stats.teamSize.value' => '14',
@@ -1083,30 +1086,33 @@ extension on Translations {
 			'resume.experience.arc_dev.employment_type' => 'Freelance',
 			'resume.experience.arc_dev.period' => 'Mar 2026 – Aug 2026',
 			'resume.experience.arc_dev.location' => 'Remote',
-			'resume.experience.arc_dev.points.0' => 'Rebuilt a buggy, poorly optimized FlutterFlow app from scratch in Flutter, redesigning the UI and introducing a modular architecture for better performance and stability.',
-			'resume.experience.arc_dev.points.1' => 'Built web and in-app admin consoles in the same codebase, with role-based access and event-specific permissions for managing events, teams, sub-teams, sponsors, charities, and organizers.',
-			'resume.experience.arc_dev.points.2' => 'Delivered Apple Health and Health Connect sync, onboarding, challenge progress, and event-scoped rankings for teams, sub-teams, and participants using production activity data.',
-			'resume.experience.arc_dev.points.3' => 'Built an event-scoped Community feed with posts, photos, likes, comments, reporting, and admin moderation. Implemented and validated row-level security across 14 production database tables.',
-			'resume.experience.arc_dev.points.4' => 'Built Miles, an AI help assistant grounded in product guidance and event FAQs. Participants can type or record a voice question, which is transcribed before Miles responds in text.',
+			'resume.experience.arc_dev.points.0' => 'Rebuilt a buggy, poorly optimized FlutterFlow app from scratch in native Flutter, redesigning the UI/UX and introducing clean modular architecture to improve performance and stability.',
+			'resume.experience.arc_dev.points.1' => 'Built a shared Flutter web and in-app admin console for managing events, teams, sub-teams, sponsors, charities, and organizers with role-based access and event-specific permissions.',
+			'resume.experience.arc_dev.points.2' => 'Built Miles, an in-app AI help assistant using product guidance and event FAQs. Participants can type a question or record a voice question that is transcribed before Miles replies in text.',
+			'resume.experience.arc_dev.points.3' => 'Implemented and validated row-level security across all 14 production database tables, with scoped participant access and admin permissions.',
+			'resume.experience.arc_dev.points.4' => 'Delivered Apple Health and Health Connect activity sync alongside onboarding, team rankings, and challenge progress.',
+			'resume.experience.arc_dev.points.5' => 'Built event-scoped leaderboards for teams, sub-teams, and participants using production activity data, with search, filtering, and sorting.',
+			'resume.experience.arc_dev.points.6' => 'Built the Community feed for event-scoped posts, photos, likes, comments, reporting, and admin moderation.',
 			'resume.experience.blu_studios.title' => 'Co-founder & Senior Flutter Engineer',
 			'resume.experience.blu_studios.employment_type' => 'Self-employed',
 			'resume.experience.blu_studios.period' => 'Mar 2019 – Mar 2026',
 			'resume.experience.blu_studios.location' => 'Hybrid',
-			'resume.experience.blu_studios.points.0' => 'Led end-to-end development of mobile games and applications from concept through live operations, owning technical architecture and product decisions.',
-			'resume.experience.blu_studios.points.1' => 'Built and maintained products reaching 12M+ downloads worldwide, including titles with 5M+ downloads and Google Play award recognition.',
+			'resume.experience.blu_studios.points.0' => 'Led end-to-end development of mobile games and applications, from concept through live operations, owning technical architecture and product decisions.',
+			'resume.experience.blu_studios.points.1' => 'Developed and maintained products with 12M+ downloads worldwide, including titles with 5M+ downloads and Google Play award recognition.',
 			'resume.experience.blu_studios.points.2' => 'Built Flutter products from scratch with scalable architectures focused on maintainability, performance, and production stability.',
-			'resume.experience.blu_studios.points.3' => 'Reduced ANR rates from approximately 30% to below 2% and improved rendering stability on low-end Android devices.',
-			'resume.experience.blu_studios.points.4' => 'Improved live product stability by resolving crashes, ANRs, memory leaks, and low-end device performance issues, supporting better retention, monetization, and store ratings.',
-			'resume.experience.blu_studios.points.5' => 'Reduced APK size by 45% through asset restructuring, rendering optimization, and build configuration improvements.',
-			'resume.experience.blu_studios.points.6' => 'Improved D1 retention from approximately 25% to approximately 40% through UX performance tuning and product iteration.',
-			'resume.experience.blu_studios.points.7' => 'Partnered with designers and product owners on product decisions, and co-led remote teams of up to 14 people.',
+			'resume.experience.blu_studios.points.3' => 'Reduced ANR rates from about 30% to below 2% and improved frame rendering stability on low-end Android devices.',
+			'resume.experience.blu_studios.points.4' => 'Resolved crashes, ANRs, memory leaks, and low-end device performance issues in live products, improving retention, monetization, and store ratings.',
+			'resume.experience.blu_studios.points.5' => 'Reduced APK size by 45% through asset restructuring, rendering optimizations, and build configuration improvements.',
+			'resume.experience.blu_studios.points.6' => 'Improved D1 retention from about 25% to about 40% through UX performance tuning and data-driven iteration.',
+			'resume.experience.blu_studios.points.7' => 'Served as a technical reference, partnered with product and design teams, and co-led remote teams of up to 14 people.',
 			'resume.experience.vx_case.title' => 'Desktop Developer',
 			'resume.experience.vx_case.employment_type' => 'Full-time',
 			'resume.experience.vx_case.period' => 'Feb 2018 – Mar 2019',
 			'resume.experience.vx_case.location' => 'Salvador, Bahia, Brazil · On-site',
-			'resume.experience.vx_case.points.0' => 'Developed a desktop application focused on user interface implementation using TypeScript, Angular, and VTEX.',
-			'resume.experience.vx_case.points.1' => 'Built reusable UI components ensuring usability, scalability, and design consistency.',
-			'resume.experience.vx_case.points.2' => 'Collaborated with senior engineers to integrate frontend features with backend services.',
+			'resume.experience.vx_case.points.0' => 'Developed a desktop application with a focus on UI implementation using TypeScript, Angular, and VTEX.',
+			'resume.experience.vx_case.points.1' => 'Implemented and maintained UI components from design requirements, ensuring usability and consistency.',
+			'resume.experience.vx_case.points.2' => 'Collaborated with senior developers to integrate frontend features with existing systems and backend services.',
+			'resume.experience.vx_case.points.3' => 'Gained experience with desktop application workflows and team-based software development.',
 			'resume.experience.tecall.title' => 'IT Support',
 			'resume.experience.tecall.employment_type' => 'Internship',
 			'resume.experience.tecall.period' => 'Aug 2016 – Jan 2018',

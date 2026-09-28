@@ -25,11 +25,9 @@ abstract final class AppConstants {
   /// (Flutter, AI, Anthropic Claude) is shown. Used by the credential badge.
   static const String arcCertUrl = 'https://arc.dev/@guilhermepassos744364';
 
-  // Outbound links for projects, awards, store pages, and the résumé. These
-  // were previously served via Firebase Remote Config; they are now plain
-  // constants since the values are stable and never tuned at runtime.
-  static const String resumeUrl =
-      'https://drive.google.com/file/d/1SoUNPSx_SgQX25yy_znxPR3DBGqPq-h3/view?usp=sharing';
+  // Static site asset resolved against the current origin in the download
+  // button so the same résumé works in local preview and GitHub Pages.
+  static const String resumeUrl = '/resume.pdf';
 
   static const String googlePlayStoreUrl =
       'https://play.google.com/store/apps/dev?id=6372918774674573544';

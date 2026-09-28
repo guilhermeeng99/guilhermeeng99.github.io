@@ -23,7 +23,9 @@ class _ResumeSectionDownloadResumeButtonState
       onExit: (_) => setState(() => _hovering = false),
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
-        onTap: () => appUrlLaunch(AppConstants.resumeUrl),
+        onTap: () => appUrlLaunch(
+          Uri.base.resolve(AppConstants.resumeUrl).toString(),
+        ),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 250),
           curve: Curves.easeOut,

@@ -2,7 +2,7 @@
 
 Personal portfolio built with Flutter Web. Deployed to GitHub Pages at [guilhermeeng99.github.io](https://guilhermeeng99.github.io).
 
-Showcases my work as a Flutter Engineer and Mobile Entrepreneur. Products I have built and maintained have reached **12M+ downloads worldwide**.
+Showcases my work as a Senior Software Engineer building Flutter, mobile, and full-stack products. I have 8+ years of software engineering experience, and products I've built and maintained have reached **12M+ downloads worldwide**.
 
 ## What it does
 
