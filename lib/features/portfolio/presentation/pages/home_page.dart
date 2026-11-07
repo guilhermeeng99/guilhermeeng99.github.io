@@ -53,12 +53,10 @@ class _HomePageState extends State<HomePage> {
 
   void _scrollToSection(int index) {
     if (index == 0) {
-      unawaited(
-        _scrollController.animateTo(
-          0,
-          duration: const Duration(milliseconds: 600),
-          curve: Curves.easeInOutCubic,
-        ),
+      _scrollController.animateTo(
+        0,
+        duration: const Duration(milliseconds: 600),
+        curve: Curves.easeInOutCubic,
       );
       return;
     }
@@ -72,12 +70,10 @@ class _HomePageState extends State<HomePage> {
       ancestor: context.findRenderObject(),
     );
 
-    unawaited(
-      _scrollController.animateTo(
-        _scrollController.offset + offset.dy - 80,
-        duration: const Duration(milliseconds: 600),
-        curve: Curves.easeInOutCubic,
-      ),
+    _scrollController.animateTo(
+      _scrollController.offset + offset.dy - 80,
+      duration: const Duration(milliseconds: 600),
+      curve: Curves.easeInOutCubic,
     );
   }
 
