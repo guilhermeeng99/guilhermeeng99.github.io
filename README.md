@@ -97,7 +97,7 @@ GitHub Actions automates the release on every push to `master` ([`.github/workfl
 2. `dart run slang`
 3. `flutter analyze`
 4. `flutter test`
-5. **Auto-bump `pubspec.yaml` version** based on the last commit message:
+5. **Auto-bump [`pubspec.yaml`](pubspec.yaml) version** based on the last commit message:
    * default: patch bump (`1.2.0` to `1.2.1`)
    * `feat(scope):` prefix: minor bump (`1.2.0` to `1.3.0`)
    * `BREAKING CHANGE` or `feat!:` / `fix!:`: major bump (`1.2.0` to `2.0.0`)

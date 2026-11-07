@@ -121,7 +121,7 @@ Retrospective. The work is shipped; this list is a completeness check against as
 
 ## Verification
 
-* [x] CI: `.github/workflows/deploy.yml` runs `flutter analyze` + `flutter build web --release` green on `master`.
+* [x] CI: [`.github/workflows/deploy.yml`](../../.github/workflows/deploy.yml) runs `flutter analyze` + `flutter build web --release` green on `master`.
 * [x] Tests: [`test/app/widgets/scroll_fade_in_test.dart`](../../test/app/widgets/scroll_fade_in_test.dart), [`test/app/widgets/nav_bar/mobile_menu_button_test.dart`](../../test/app/widgets/nav_bar/mobile_menu_button_test.dart), [`test/app/widgets/section_title_test.dart`](../../test/app/widgets/section_title_test.dart), [`test/app/widgets/glass_card_test.dart`](../../test/app/widgets/glass_card_test.dart) cover the shared widgets behind this system.
 * [ ] Manual: render `/home` at 360px (mobile), 800px (tablet), 1440px (desktop) — every section legible, no overflows.
 * [ ] Manual: tap each `NavBar` entry — page smoothly scrolls to the correct section with ~80px breathing room under the nav.

@@ -21,7 +21,7 @@ This spec records the decision to delete the entire Firebase/Remote Config stack
 * `ProjectsSectionData.projects()` / `.otherProjects()` shall read URLs directly from `AppConstants` and take no `RemoteConstants` argument.
 * The résumé download button shall read `AppConstants.resumeUrl` directly.
 * The entire `lib/core/remote_config/` module, `lib/app/providers/remote_config_providers.dart` (`AppDependencies`), and `lib/core/utils/firebase_options.dart` shall be deleted.
-* `firebase_core`, `firebase_analytics`, `firebase_remote_config` shall be removed from `pubspec.yaml`.
+* `firebase_core`, `firebase_analytics`, `firebase_remote_config` shall be removed from [`pubspec.yaml`](../../pubspec.yaml).
 * `main.dart` shall no longer initialise Firebase; it binds Flutter, syncs the slang locale, and runs `TranslationProvider(child: AppWidget())` directly.
 * `AppWidget` shall no longer reference `FirebaseAnalytics` / `FirebaseAnalyticsObserver`.
 * `LoadingPage` shall drop Remote Config init from `_preload` (image precache only) and lower the min-display floor to **700ms**.
@@ -59,7 +59,7 @@ The old flow was `Section → context.read<RemoteConstants>() → ProjectsSectio
 * [x] Strip Firebase from `main.dart` and `AppWidget`.
 * [x] Drop Remote Config from `LoadingPage._preload`; lower floor to 700ms.
 * [x] Delete `lib/core/remote_config/`, `remote_config_providers.dart`, `firebase_options.dart`.
-* [x] Remove the three `firebase_*` deps from `pubspec.yaml`.
+* [x] Remove the three `firebase_*` deps from [`pubspec.yaml`](../../pubspec.yaml).
 * [x] Update the test harness; delete Remote Config tests + factory.
 * [x] Update docs: README, CLAUDE.md, roadmap, harness README, supersede 0002, amend 0004.
 
@@ -68,4 +68,4 @@ The old flow was `Section → context.read<RemoteConstants>() → ProjectsSectio
 * [x] `flutter analyze` — zero issues.
 * [x] `flutter test` — all 29 tests pass.
 * [ ] Manual: hard-reload `/` in Chrome — splash visible ~700ms, fades out, `/home` arrives; project links + résumé download open correct URLs.
-* [ ] CI: `.github/workflows/deploy.yml` builds `flutter build web --release` green on `master`.
+* [ ] CI: [`.github/workflows/deploy.yml`](../../.github/workflows/deploy.yml) builds `flutter build web --release` green on `master`.

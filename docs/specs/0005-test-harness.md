@@ -14,8 +14,8 @@ This spec pins the harness shape, naming, and layering rules so the test surface
 ## Requirements
 
 * All shared test infrastructure shall live in `test/harness/`.
-* `test/harness/mocks.dart` shall hold every `mocktail` mock declaration plus a `registerFallbacks()` for `mocktail` matchers that need fallback values.
-* `test/harness/helpers.dart` shall expose `pumpMaterialApp(tester, child: ...)` and `buildFakeRemoteConstants(...)`. It shall **re-export** `mocks.dart` so test files import a single path.
+* [`test/harness/mocks.dart`](../../test/harness/mocks.dart) shall hold every `mocktail` mock declaration plus a `registerFallbacks()` for `mocktail` matchers that need fallback values.
+* [`test/harness/helpers.dart`](../../test/harness/helpers.dart) shall expose `pumpMaterialApp(tester, child: ...)` and `buildFakeRemoteConstants(...)`. It shall **re-export** `mocks.dart` so test files import a single path.
 * `test/harness/factories/` shall hold one file per entity. Each file exposes static builders so tests never hardcode entity instances.
 * Test files shall mirror the `lib/` tree — `lib/foo/bar.dart` → `test/foo/bar_test.dart`.
 * Mocking happens at boundaries: repositories for use cases, services for repositories, use cases for cubits, repositories or use cases for widgets.
@@ -132,10 +132,10 @@ Never mock multiple layers at once — a test that mocks both the repository and
 
 Retrospective. The work is shipped; this list is a completeness check against as-built code.
 
-* [x] `test/harness/mocks.dart` declares `MockRemoteConfigRepository`, `MockRemoteConfigService`, `FakeRemoteConfigEnum`, `registerFallbacks()`.
-* [x] `test/harness/helpers.dart` exposes `pumpMaterialApp` and `buildFakeRemoteConstants`; re-exports `mocks.dart`.
+* [x] [`test/harness/mocks.dart`](../../test/harness/mocks.dart) declares `MockRemoteConfigRepository`, `MockRemoteConfigService`, `FakeRemoteConfigEnum`, `registerFallbacks()`.
+* [x] [`test/harness/helpers.dart`](../../test/harness/helpers.dart) exposes `pumpMaterialApp` and `buildFakeRemoteConstants`; re-exports `mocks.dart`.
 * [x] `test/harness/factories/remote_config_enum_factory.dart` exposes `TestRemoteEnum` + `RemoteConfigEnumFactory.string|integer|boolean|integerList`.
-* [x] `test/harness/README.md` documents file purpose, layering rules, and the "promote to harness" rule.
+* [x] [`test/harness/README.md`](../../test/harness/README.md) documents file purpose, layering rules, and the "promote to harness" rule.
 * [x] First wave of tests imports the harness and follows the layering rules — `get_remote_value_usecase_test`, `theme_cubit_test`, `tech_chip_test`.
 
 ## Verification
@@ -143,4 +143,4 @@ Retrospective. The work is shipped; this list is a completeness check against as
 * [x] Tests: [`test/harness/helpers_test.dart`](../../test/harness/helpers_test.dart) self-tests `pumpMaterialApp` (TranslationProvider wired, optional `RemoteConstants` provider) and `buildFakeRemoteConstants` (returns defaults; overrides applied).
 * [x] `flutter analyze` reports zero issues across `test/`.
 * [x] `flutter test` runs every file in `test/` (excluding `harness/`), all green.
-* [ ] Manual review: a new test file added in this repo by a contributor with no prior context can be authored end-to-end by reading only `test/harness/README.md` and one existing example.
+* [ ] Manual review: a new test file added in this repo by a contributor with no prior context can be authored end-to-end by reading only [`test/harness/README.md`](../../test/harness/README.md) and one existing example.

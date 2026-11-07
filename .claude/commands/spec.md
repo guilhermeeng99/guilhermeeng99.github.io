@@ -17,7 +17,7 @@ Treat `$ARGUMENTS` as the kebab-case slug for the new spec (e.g. `blog-section`,
 
 2. **Determine the next number.** Use the Glob tool on `docs/specs/[0-9][0-9][0-9][0-9]-*.md` to list existing specs. Parse the leading `NNNN` from each filename, take the max, add 1. If no specs exist, start at `0001`. Zero-pad to four digits.
 
-3. **Read the template.** Read `docs/specs/README.md` and extract the markdown template block (fenced under a ` ```markdown ` fence). That block is the canonical template — do not improvise your own.
+3. **Read the template.** Read [`docs/specs/README.md`](../../docs/specs/README.md) and extract the markdown template block (fenced under a ` ```markdown ` fence). That block is the canonical template — do not improvise your own.
 
 4. **Write the new file** at `docs/specs/NNNN-<slug>.md` using Write, substituting:
    - `NNNN — <Title>` → `NNNN — <Title From Slug>` (slug → Title Case, hyphens → spaces; leave `<Title>` if the slug is too cryptic and ask the user for a title).
@@ -29,7 +29,7 @@ Treat `$ARGUMENTS` as the kebab-case slug for the new spec (e.g. `blog-section`,
 
 ## Rules
 
-- Do not create any other files. Do not modify `docs/specs/README.md`.
+- Do not create any other files. Do not modify [`docs/specs/README.md`](../../docs/specs/README.md).
 - Do not commit the new spec — leave that to the user.
 - Do not pre-fill `## Tasks` or `## Verification` with guesses; those emerge from `## Design`.
 - If the slug collides with an existing spec slug, append `-v2` (or `-v3`, etc.) and warn the user.

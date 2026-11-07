@@ -11,7 +11,7 @@ This spec documents the layered module that wraps Remote Config behind a domain-
 
 ## Requirements
 
-* Every Remote Config key shall live in `TypeEnum` ([lib/core/remote_config/domain/entities/type_enum.dart](../../lib/core/remote_config/domain/entities/type_enum.dart)) with a sane default value baked in.
+* Every Remote Config key shall live in `TypeEnum` (`lib/core/remote_config/domain/entities/type_enum.dart`) with a sane default value baked in.
 * Reading a value must never throw to the UI. If the underlying repository or service fails for any reason, the use case shall return the enum's `defaultValue`.
 * Sections shall consume `RemoteConstants` (named getters), never `GetRemoteValueUseCase` directly.
 * The Firebase SDK is reachable only from `infra/services/firebase_remote_config_service.dart`. Domain code must not import `package:firebase_remote_config/...`.
@@ -40,7 +40,7 @@ infra/
     remote_config_repository_impl.dart   # delegates to service
 ```
 
-The barrel [lib/core/remote_config/remote_config.dart](../../lib/core/remote_config/remote_config.dart) re-exports the public surface so consumers import a single path.
+The barrel `lib/core/remote_config/remote_config.dart` re-exports the public surface so consumers import a single path.
 
 ### Type-safe accessors and the fail-safe wrapper
 
@@ -61,11 +61,11 @@ This is invoked from `LoadingPage._initializeRemoteConfig()` while the splash is
 
 ### `RemoteConstants` accessor surface
 
-[lib/core/constants/app_constants.dart](../../lib/core/constants/app_constants.dart) exposes one getter per key (`resumeUrl`, `magicSortUrl`, `googlePlayBestOf2021Url`, …). This is the only API sections call. The widget tree provides it via `MultiRepositoryProvider` in `AppDependencies` ([lib/app/providers/remote_config_providers.dart](../../lib/app/providers/remote_config_providers.dart)).
+[lib/core/constants/app_constants.dart](../../lib/core/constants/app_constants.dart) exposes one getter per key (`resumeUrl`, `magicSortUrl`, `googlePlayBestOf2021Url`, …). This is the only API sections call. The widget tree provides it via `MultiRepositoryProvider` in `AppDependencies` (`lib/app/providers/remote_config_providers.dart`).
 
 ### `FirebaseRemoteConfigServiceImpl` source-checked default
 
-The service ([lib/core/remote_config/infra/services/firebase_remote_config_service.dart](../../lib/core/remote_config/infra/services/firebase_remote_config_service.dart)) inspects `RemoteValue.source` — if it's `ValueSource.valueStatic` (no default registered, no remote value) it returns the enum default directly instead of letting Firebase return an empty string / zero. This catches the case where a new `TypeEnum` entry hasn't been pushed via `setDefaults` yet (e.g. dev environment, first boot before init completes).
+The service (`lib/core/remote_config/infra/services/firebase_remote_config_service.dart`) inspects `RemoteValue.source` — if it's `ValueSource.valueStatic` (no default registered, no remote value) it returns the enum default directly instead of letting Firebase return an empty string / zero. This catches the case where a new `TypeEnum` entry hasn't been pushed via `setDefaults` yet (e.g. dev environment, first boot before init completes).
 
 ### Trade-offs considered and rejected
 
@@ -90,8 +90,8 @@ Retrospective. The work is shipped; this list is a completeness check against as
 
 ## Verification
 
-* [x] Tests: [`test/core/remote_config/domain/usecases/get_remote_value_usecase_test.dart`](../../test/core/remote_config/domain/usecases/get_remote_value_usecase_test.dart) covers typed accessors + fail-safe path.
-* [x] Tests: [`test/core/remote_config/infra/repositories/remote_config_repository_impl_test.dart`](../../test/core/remote_config/infra/repositories/remote_config_repository_impl_test.dart) covers service delegation.
-* [x] Tests: [`test/core/constants/remote_constants_test.dart`](../../test/core/constants/remote_constants_test.dart) covers each `RemoteConstants` getter wiring to its `TypeEnum` key.
+* [x] Tests: `test/core/remote_config/domain/usecases/get_remote_value_usecase_test.dart` covers typed accessors + fail-safe path.
+* [x] Tests: `test/core/remote_config/infra/repositories/remote_config_repository_impl_test.dart` covers service delegation.
+* [x] Tests: `test/core/constants/remote_constants_test.dart` covers each `RemoteConstants` getter wiring to its `TypeEnum` key.
 * [ ] Manual: temporarily break the network in DevTools, hard-reload `/` — `LoadingPage` still proceeds to `/home` after ~1.8s and Projects section renders with default URLs.
 * [ ] Manual: change `resume_url` in the Firebase Remote Config console, hard-reload — résumé download button picks up the new URL within one minute (fetch interval).

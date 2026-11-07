@@ -41,7 +41,7 @@ runApp(
 
 The locale call is **before** Firebase so `TranslationProvider` has a valid locale available even if Firebase init throws. `Firebase.initializeApp` is wrapped in `try/on Exception` so the app boots in degraded mode (no analytics, no remote config) rather than showing a blank screen.
 
-`AppDependencies` ([lib/app/providers/remote_config_providers.dart](../../lib/app/providers/remote_config_providers.dart)) wraps `MultiRepositoryProvider` providing:
+`AppDependencies` (`lib/app/providers/remote_config_providers.dart`) wraps `MultiRepositoryProvider` providing:
 
 * `RemoteConfigInitializeUseCase` (no construction args — this is a `const` use case).
 * `RemoteConstants` (built from `GetRemoteValueUseCase(RemoteConfigRepositoryImpl(FirebaseRemoteConfigServiceImpl()))`).
@@ -110,4 +110,4 @@ Retrospective. The work is shipped; this list is a completeness check against as
 * [ ] Manual: throttle network to "Slow 3G" in DevTools, hard-reload — splash visible for the duration of init, no white flash.
 * [ ] Manual: simulate Remote Config failure (block `firebaseremoteconfig.googleapis.com` in DevTools network) — splash still proceeds; Projects section renders with `TypeEnum` defaults.
 * [ ] Manual: rapidly navigate away from `/` (close tab) before splash completes — no `setState() called after dispose()` errors in the console.
-* [ ] CI: `.github/workflows/deploy.yml` builds `flutter build web --release` green on `master`.
+* [ ] CI: [`.github/workflows/deploy.yml`](../../.github/workflows/deploy.yml) builds `flutter build web --release` green on `master`.

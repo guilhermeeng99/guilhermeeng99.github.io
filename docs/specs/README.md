@@ -15,7 +15,7 @@ Skip for:
 
 * Typo fixes, dependency bumps, one-line bug fixes.
 * Isolated cosmetic tweaks (padding, copy changes).
-* Adding a project entry through the existing `ProjectsSectionData` flow (the checklist in `CLAUDE.md` is sufficient).
+* Adding a project entry through the existing `ProjectsSectionData` flow (the checklist in [`CLAUDE.md`](../../CLAUDE.md) is sufficient).
 
 ## File naming
 
@@ -35,7 +35,7 @@ Mark `shipped` only after the `## Verification` checklist passes end-to-end.
 
 ## Template
 
-Copy the block below into a new `docs/specs/NNNN-<slug>.md` file. The `/spec` slash command (`.claude/commands/spec.md`) scaffolds this automatically — pass it a kebab-case slug.
+Copy the block below into a new `docs/specs/NNNN-<slug>.md` file. The `/spec` slash command ([`.claude/commands/spec.md`](../../.claude/commands/spec.md)) scaffolds this automatically — pass it a kebab-case slug.
 
 ```markdown
 # NNNN — <Title>
@@ -101,7 +101,7 @@ How to confirm the change works end-to-end. Mix of automated and manual checks.
 
 Every requirement in `## Requirements` should be backed by either a test (preferred) or a manual verification step in `## Verification`. The Financo-derived rule applies: if a behavior matters enough to spec, it matters enough to test.
 
-Test files mirror the `lib/` tree under `test/` (e.g. `lib/core/remote_config/.../foo.dart` → `test/core/remote_config/.../foo_test.dart`). The harness lives at `test/harness/` — see `test/harness/README.md`.
+Test files mirror the `lib/` tree under `test/` (e.g. `lib/core/remote_config/.../foo.dart` → `test/core/remote_config/.../foo_test.dart`). The harness lives at `test/harness/` — see [`test/harness/README.md`](../../test/harness/README.md).
 
 ## Current specs
 
@@ -110,3 +110,13 @@ The filesystem is the index — no separate list to keep in sync. List with:
 ```bash
 ls docs/specs/
 ```
+
+## Index
+
+* [0001 — Portfolio Sections System](0001-portfolio-sections.md)
+* [0002 — Remote Config Module](0002-remote-config.md)
+* [0003 — Theme System (Light + Dark)](0003-theme-system.md)
+* [0004 — Loading + Bootstrap Flow](0004-loading-bootstrap.md)
+* [0005 — Test Harness](0005-test-harness.md)
+* [0006 — Remove Firebase + Remote Config, Speed Up Loading](0006-remove-firebase-remote-config.md)
+* [0007 — Faster Web Cold Load](0007-faster-web-load.md)

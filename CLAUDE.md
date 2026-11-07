@@ -60,6 +60,10 @@ Domain entities are plain Dart classes (no Flutter material imports). Static fac
 
 ---
 
+## Docs links
+
+- **Cite files with links**: when a doc mentions a file in this repo, use a relative markdown link from the citing file, like [`docs/roadmap.md`](docs/roadmap.md), not just a backtick path or an Obsidian wikilink (`[[...]]`). Templates and globs stay in backticks. The repo lives in the Jarvis Obsidian vault: links make the graph work and `Sistema/status.sh` flags broken ones.
+
 ## Comments
 
 * Write **WHY**, not WHAT.
@@ -78,7 +82,7 @@ Domain entities are plain Dart classes (no Flutter material imports). Static fac
 | ------------------ | ----------------------------------------------------------------------------------- |
 | **Platform**       | Flutter Web only (Dart `^3.10.8`)                                                   |
 | **State**          | `flutter_bloc` — `ThemeCubit` for light/dark toggle                                 |
-| **Data**           | Compile-time constants only — `AppConstants` (`lib/core/constants/app_constants.dart`). No backend. |
+| **Data**           | Compile-time constants only — `AppConstants` ([`lib/core/constants/app_constants.dart`](lib/core/constants/app_constants.dart)). No backend. |
 | **Routing**        | `go_router` — declarative, 2 routes (`/` loading, `/home` portfolio)                |
 | **i18n**           | `slang` / `slang_flutter` — JSON-based, type-safe, English only                     |
 | **Theme**          | Light + Dark Material 3, `AppColorsExtension` (`midnightOcean` / `arcticLight`)     |
@@ -102,17 +106,17 @@ flutter build web --release        # Production build → build/web/
 melos run build:web                # Same, via melos
 ```
 
-Deployment is **fully automated** via `.github/workflows/deploy.yml` on push to `master`:
+Deployment is **fully automated** via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) on push to `master`:
 
 1. `flutter pub get` → `dart run slang` → `flutter analyze` → `flutter test`
-2. **Auto-bump version** in `pubspec.yaml` based on the last commit message:
+2. **Auto-bump version** in [`pubspec.yaml`](pubspec.yaml) based on the last commit message:
    * Default → patch bump (`1.2.0` → `1.2.1`)
    * `feat(scope):` → minor bump (`1.2.0` → `1.3.0`)
    * `BREAKING CHANGE` or `feat!:` / `fix!:` → major bump (`1.2.0` → `2.0.0`)
    * Build number always set to `$GITHUB_RUN_NUMBER`
 3. `flutter build web --release --build-number=$GITHUB_RUN_NUMBER`
 4. Publish `build/web/` to the `gh-pages` branch
-5. Commit the bumped `pubspec.yaml` back to `master` (`chore(release): vX.Y.Z [skip ci]`)
+5. Commit the bumped [`pubspec.yaml`](pubspec.yaml) back to `master` (`chore(release): vX.Y.Z [skip ci]`)
 6. Tag the commit `vX.Y.Z`
 7. Create a GitHub Release with auto-generated notes
 
@@ -149,7 +153,7 @@ Skip for: typo fixes, dependency bumps, one-line bug fixes, adding a project ent
 
 ### Workflow
 
-1. Scaffold a new spec with `/spec <slug>` (or copy the template from `docs/specs/README.md`).
+1. Scaffold a new spec with `/spec <slug>` (or copy the template from [`docs/specs/README.md`](docs/specs/README.md)).
 2. Fill `## Context` and `## Requirements` (observable, testable statements).
 3. Enter **plan mode** to fill `## Design` — design thinking lands in the spec, not a throwaway plan.
 4. Derive `## Tasks` from `## Design`; work through them one commit at a time.
@@ -164,7 +168,7 @@ Skip for: typo fixes, dependency bumps, one-line bug fixes, adding a project ent
 * `## Tasks` — ordered checklist, each item a coherent commit.
 * `## Verification` — manual + CI checks that prove it works end-to-end.
 
-See `docs/specs/README.md` for the canonical template and naming rules.
+See [`docs/specs/README.md`](docs/specs/README.md) for the canonical template and naming rules.
 
 ---
 
@@ -302,7 +306,7 @@ Access via `context.appColors.<token>` (extension on `BuildContext` defined in `
 | `/`      | `LoadingPage` | Splash: precache assets, min ~700ms                                  |
 | `/home`  | `HomePage`    | Portfolio (single-page, scroll-to-section navigation)                |
 
-* Route paths are static constants in `AppRoutes` (`lib/app/routes/app_router.dart`).
+* Route paths are static constants in `AppRoutes` ([`lib/app/routes/app_router.dart`](lib/app/routes/app_router.dart)).
 * `HomePage` transition: `CustomTransitionPage` + `FadeTransition` (400ms).
 * **Internal navigation within HomePage is scroll-based**, not route-based — driven by `_sectionKeys` (`List<GlobalKey>`) and `_scrollToSection(int index)`.
 
@@ -346,7 +350,7 @@ Section order (indices 0..5):
 
 ---
 
-## Constants (`lib/core/constants/app_constants.dart`)
+## Constants ([`lib/core/constants/app_constants.dart`](lib/core/constants/app_constants.dart))
 
 All non-i18n data is compile-time. `AppConstants` (an `abstract final class` of `static const`) holds:
 
@@ -367,8 +371,8 @@ These URLs used to be served via Firebase Remote Config; they are now plain cons
 
 ## i18n — Slang
 
-* Config: `slang.yaml` (base locale `en`, input `lib/app/assets/i18n/`, output `lib/gen/i18n/`).
-* Source: `lib/app/assets/i18n/en.i18n.json`, structured by section (`app`, `nav`, `hero`, `about`, `projects`, `resume`, `skills`, `contact`).
+* Config: [`slang.yaml`](slang.yaml) (base locale `en`, input `lib/app/assets/i18n/`, output `lib/gen/i18n/`).
+* Source: [`lib/app/assets/i18n/en.i18n.json`](lib/app/assets/i18n/en.i18n.json), structured by section (`app`, `nav`, `hero`, `about`, `projects`, `resume`, `skills`, `contact`).
 * Access: global `t` object (e.g. `t.hero.name`, `t.about.title`).
 * Bootstrapping: `LocaleSettings.useDeviceLocaleSync()` in `main.dart`.
 * Regenerate after every JSON edit: `dart run slang`.
@@ -381,7 +385,7 @@ These URLs used to be served via Firebase Remote Config; they are now plain cons
 
 1. Create the section under `lib/features/portfolio/presentation/widgets/` — flat file if simple, subfolder with `widgets/` if it owns nested pieces.
 2. Add any needed entity in `lib/features/portfolio/domain/entities/`.
-3. Add all user-facing strings to `lib/app/assets/i18n/en.i18n.json` and run `dart run slang`.
+3. Add all user-facing strings to [`lib/app/assets/i18n/en.i18n.json`](lib/app/assets/i18n/en.i18n.json) and run `dart run slang`.
 4. If the section needs URLs or other static data, add `static const` fields to `AppConstants`.
 5. Register the section in `HomePage`'s `CustomScrollView`, wrapped in `ScrollFadeIn`, with a fresh `GlobalKey` index.
 6. Add a nav entry in `NavBar` and (if mobile) in `MobileMenuButton`.
