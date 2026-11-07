@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
@@ -92,7 +93,7 @@ class _BouncingArrowState extends State<_BouncingArrow>
       vsync: this,
       duration: const Duration(milliseconds: 1500),
     );
-    _controller.repeat();
+    unawaited(_controller.repeat());
   }
 
   @override

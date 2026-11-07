@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -49,7 +51,7 @@ class _ScrollFadeInState extends State<ScrollFadeIn>
   void _onVisible() {
     if (!_isVisible) {
       _isVisible = true;
-      _controller.forward();
+      unawaited(_controller.forward());
     }
   }
 

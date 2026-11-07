@@ -105,7 +105,7 @@ class _BreathingLogoState extends State<_BreathingLogo>
     _opacityAnim = Tween<double>(begin: 0.85, end: 1).animate(
       CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
     );
-    _controller.repeat(reverse: true);
+    unawaited(_controller.repeat(reverse: true));
   }
 
   @override
