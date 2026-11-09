@@ -62,7 +62,7 @@ Domain entities are plain Dart classes (no Flutter material imports). Static fac
 
 ## Docs links
 
-- **Cite files with links**: when a doc mentions a file in this repo, use a relative markdown link from the citing file, like [`docs/roadmap.md`](docs/roadmap.md), not just a backtick path or an Obsidian wikilink (`[[...]]`). Templates and globs stay in backticks. The repo lives in the Jarvis Obsidian vault: links make the graph work and `Sistema/status.sh` flags broken ones.
+- **Cite files with links**: when a doc mentions a file in this repo, use a relative markdown link from the citing file, like [`docs/roadmap.md`](docs/roadmap.md), not just a backtick path. Templates and globs stay in backticks. Links work on GitHub and in editors, and the Jarvis monitor (`Sistema/status.sh`) flags broken ones.
 
 ## Comments
 
